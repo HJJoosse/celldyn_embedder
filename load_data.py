@@ -1,6 +1,10 @@
+"""
+Original Author: Jille van der Togt
+"""
 import numpy as np
 import pandas as pd
 from scipy import stats
+from config import BASE_URL
 
 class LoadData:
 	def __init__(self):
@@ -35,7 +39,7 @@ class LoadData:
 		-
 
 		"""
-		self.processed_df = pd.read_csv('C:/Users/jtogt2/Notebook/data/processed_dataframe.csv')
+		self.processed_df = pd.read_csv(BASE_URL+'data/processed_celldyn.csv')
 
 	def preprocess(self):
 		"""Preprocesses data.
@@ -65,7 +69,7 @@ class LoadData:
 		self.processed_df.loc[:, 'gender'] = self.processed_df['gender'].str.decode('UTF-8')
 		self.processed_df.loc[:, 'gender'].replace({'M':0, 'F':1, 'O':1}, inplace=True)
 		self.processed_df.loc[:, 'gender'] = pd.to_numeric(self.processed_df['gender'])
-		self.processed_df.to_csv('C:/Users/jtogt2/Notebook/data/processed_dataframe.csv', index=False)
+		self.processed_df.to_csv(BASE_URL+'data/processed_celldyn.csv', index=False)
 
 	def retrieve_processed_frame(self):
 		"""Returns processed dataframe.

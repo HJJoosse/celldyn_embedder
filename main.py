@@ -1,3 +1,6 @@
+"""
+Original Author: Jille van der Togt
+"""
 import os.path
 import time
 import seaborn as sns
@@ -15,6 +18,7 @@ import plotly.express as px
 from sklearn import metrics
 from tqdm import tqdm
 
+from config import BASE_URL
 from embedding import Embedding
 from load_data import LoadData
 from base import *
@@ -33,9 +37,9 @@ def load_data_set():
 
 		"""
 	loader = LoadData()
-	PATH = 'C:/Users/jtogt2/Notebook/data/'
+	PATH = BASE_URL+'data'
 
-	if os.path.isfile(PATH + 'processed_dataframe.csv'):
+	if os.path.isfile(PATH + 'processed_celldyn.csv'):
 		print("Loading saved data...")
 		start = time.time()
 		loader.load_processed_frame()
@@ -51,7 +55,7 @@ def load_data_set():
 
 	return dataset
 
-def load_embedding(subset_wo_ga, dimensions, n_neighbors, min_dist):
+def load_embedding(subset_wo_ga, dimensions, n_neighbors, min_dist,embedder_type = 'umap'):
 	"""HELPER FUNCTION: loads embedding
 		
 		Parameters
@@ -71,13 +75,13 @@ def load_embedding(subset_wo_ga, dimensions, n_neighbors, min_dist):
 			Embedding trained on full processed celldyn data
 
 		"""
-	PATH = 'C:/Users/jtogt2/Notebook/data/embeddings/'
+	PATH = BASE_URL+'embedder/'
 	embedder = Embedding()
 	
-	if os.path.isfile(f'{PATH}embedding_{dimensions}_{n_neighbors}'):
+	if os.path.isfile(PATH+f'{embedder_type}_embedding_celldyn.pkl'):
 		print("Loading saved embedding...")
 		start = time.time()
-		embedding = pickle.load((open(f'{PATH}embedding_{dimensions}_{n_neighbors}', 'rb')))
+		embedding = pickle.load((open(PATH+f'{embedder_type}_embedding_celldyn.pkl', 'rb')))
 		print(f"Embedding loaded in: {time.time() - start} seconds")
 	
 	else:
@@ -89,7 +93,7 @@ def load_embedding(subset_wo_ga, dimensions, n_neighbors, min_dist):
 		
 		print("Saving embedding...")
 		start = time.time()
-		pickle.dump(embedding, open(f'{PATH}embedding_{dimensions}_{n_neighbors}', 'wb'))
+		pickle.dump(embedding, open(PATH+f'{embedder_type}_embedding_celldyn.pkl', 'wb'))
 		print(f"Embedding saved in: {time.time() - start} seconds")
 
 	return embedding
@@ -114,7 +118,7 @@ def load_labels(embedded_dataset, dimensions, min_samples, min_cluster_size):
 			List with all cluster labels for all samples
 
 		"""
-	PATH = 'C:/Users/jtogt2/Notebook/data/embeddings/'
+	PATH = BASE_URL+'data/embeddings/'
 	cleaned_df = pd.DataFrame(data=embedded_dataset,
 						  index=np.arange(0,len(embedded_dataset)),
 						  columns=['f' + str(i) for i in range(len(embedded_dataset[0]))])
@@ -183,7 +187,7 @@ def calculate_plots(cleaned_dataset):
 		-
 
 		"""
-	PATH = 'C:/Users/jtogt2/Notebook/cluster_analysis/plots/'
+	PATH = BASE_URL+'cluster_analysis/plots/'
 	grouped_cleaned = np.array(cleaned_dataset.groupby('cluster_assignment'))
 	for cluster in grouped_cleaned:
 		if cluster[1].shape[0] > 80000:
@@ -235,13 +239,13 @@ def calculate_frames(cleaned_dataset, labels, subset_wi_ga, dimensions, save=Fal
 	clustered = cleaned_dataset.groupby('cluster_assignment')
 	id_counts = []
 	for i in clustered:
-	    if i[0] == -1:
-	        continue
-	    else:
-	        ids_counter = len(Counter(i[1]['ID']))
-	        id_counts.append(ids_counter)
+		if i[0] == -1:
+			continue
+		else:
+			ids_counter = len(Counter(i[1]['ID']))
+			id_counts.append(ids_counter)
 
-	PATH = 'C:/Users/jtogt2/Notebook/cluster_analysis/frames/'
+	PATH = BASE_URL+'cluster_analysis/frames/'
 	mean = cleaned_dataset.groupby('cluster_assignment').mean()
 	mean.insert(0, 'cluster size', li)
 	mean['ID'] = id_counts
@@ -254,7 +258,15 @@ def calculate_frames(cleaned_dataset, labels, subset_wi_ga, dimensions, save=Fal
 
 	return result
 
-def run_dimension(dimensions, n_neighbors=30, min_dist=0.0, min_samples=30, min_cluster_size=1000, plots=False, scores=False, frames=False, save=False):
+def run_dimension(dimensions,
+				  n_neighbors=30,
+				  min_dist=0.0,
+				  min_samples=30,
+				  min_cluster_size=1000,
+				  plots=False,
+				  scores=False,
+				  frames=False,
+				  save=False):
 	"""Runs all helper functions and does everything
 		
 		Parameters

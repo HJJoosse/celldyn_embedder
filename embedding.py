@@ -1,17 +1,25 @@
+"""
+Original author: Jille van der Togt
+"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+from sklearn.decomposition import PCA
 import umap
 import umap.plot
+import pacmap
+import trimap
+
 from tqdm.notebook import tqdm
 from multiprocessing.dummy import Pool as ThreadPool
 
 class Embedding:
 	def __init__(self):
 		self.embedding_df = None
+		self.embedder = None
 
-	def create_embedding(self, dimensions, n_neighbors=30, min_dist=0.0):
+	def umap_embedding(self, dimensions, n_neighbors=30, min_dist=0.0):
 		"""Create embedding
 		
 		Parameters
@@ -34,16 +42,25 @@ class Embedding:
 
 		"""
 
-		embedding = umap.UMAP(
+
+		self.embedder = umap.UMAP(
 			n_neighbors=n_neighbors,
 			min_dist=min_dist,
 			n_components=dimensions,
 			random_state=42,
-		) 
-		return embedding
+		)
 
-	def fit_embedding(self, embedding, subset):
-		return embedding.fit(subset);
+	def pca_embedder(self,dimensions):
+		self.embedder = PCA()
+
+	def trimap_embedder(self,):
+		self.embedder = trimap.TRIMAP()
+
+	def pacmap_embedder(self):
+		self.embedder = pacmap.PaCMAP()
+
+	def fit_embedding(self, subset):
+		return self.embedder.fit(subset)
 
 	def plot_embedding_2d(self, embedding, labels, features=[0,1], size=0.1):
 		"""Plot embedding in 2D

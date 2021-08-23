@@ -4,7 +4,7 @@ Original Author: Jille van der Togt
 import numpy as np
 import pandas as pd
 from scipy import stats
-from config import BASE_URL
+from .config import BASE_URL
 
 class LoadData:
 	def __init__(self):

@@ -10,6 +10,7 @@ import umap
 import umap.plot
 import pacmap
 import trimap
+from sklearn.manifold import TSNE
 
 from tqdm.notebook import tqdm
 from multiprocessing.dummy import Pool as ThreadPool
@@ -19,8 +20,8 @@ class Embedding:
 		self.embedding_df = None
 		self.embedder = None
 
-	def umap_embedding(self, dimensions, n_neighbors=30, min_dist=0.0):
-		"""Create embedding
+	def umap_embedding(self, dimensions: int, n_neighbors: int = 30, min_dist: int = 0.0):
+		"""Create UMAP embedding
 		
 		Parameters
 		----------
@@ -50,14 +51,17 @@ class Embedding:
 			random_state=42,
 		)
 
-	def pca_embedder(self,dimensions):
-		self.embedder = PCA()
+	def pca_embedder(self,dimensions: int):
+		self.embedder = PCA(n_components=dimensions)
 
-	def trimap_embedder(self,):
-		self.embedder = trimap.TRIMAP()
+	def trimap_embedder(self,dimensions: int, n_inliers: int, n_outliers: int, n_random: int):
+		self.embedder = trimap.TRIMAP(n_dims=dimensions, n_inliers=n_inliers, n_outliers=n_outliers, n_random=n_random)
 
-	def pacmap_embedder(self):
-		self.embedder = pacmap.PaCMAP()
+	def pacmap_embedder(self, dimensions: int, n_neighbors: int, distance: str = 'euclidean'):
+		self.embedder = pacmap.PaCMAP(n_dims=dimensions,n_neighbors=n_neighbors, distance=distance)
+
+	def tsne_embedder(self,dimensions):
+		self.embedder = TSNE(n_components=dimensions)
 
 	def fit_embedding(self, subset):
 		return self.embedder.fit(subset)

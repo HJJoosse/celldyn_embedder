@@ -17,6 +17,10 @@ import math
 from tqdm import tqdm
 
 '''
+https://github.com/dmlc/dgl
+PyTorch Geometric
+Networkx/Karateclub
+
 [x] Sammon
 [x] MaximumVarianceUnfolding
 [x] LandmarkMDS
@@ -129,7 +133,7 @@ class Sammon(BaseEstimator, TransformerMixin):
 
             if (objective_function<self.min_score):
                 return X_low_dim
-            elif (delta_score)<0.5 & (delta_score>0):
+            elif (delta_score<1.) & (delta_score>0):
                 idecay_rate = 1/self.decay_rate
                 print(f"Relative delta score dropped below 0.5%, \
                         increasing learning rate to {str(idecay_rate)}")

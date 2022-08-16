@@ -265,7 +265,7 @@ class QcControl(BaseEstimator, TransformerMixin):
                 logger.debug(f'Exception: {e}, for {fail_name}')
         return df
 
-    def fit(self, X, y=None):
+    def fit(self, X: pd.DataFrame, y=None):
         X.columns = [c.lower() for c in X.columns]
         self._get_cols(X)
         _X = X.copy() 
@@ -274,6 +274,7 @@ class QcControl(BaseEstimator, TransformerMixin):
             _X = v(_X.copy())
             logger.debug(f"Completed filtering: {k}")
         self.X_transformed = _X
+        return self
     
-    def transform(self, X=None, y=None):
+    def transform(self, X: pd.DataFrame, y=None):
         return self.X_transformed

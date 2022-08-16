@@ -3,6 +3,8 @@ import numpy as np
 from tqdm import tqdm
 from sklearn.base import BaseEstimator, TransformerMixin
 
+import polars as pl
+
 from pandarallel import pandarallel
 pandarallel.initialize(progress_bar=False)
 
@@ -47,14 +49,35 @@ fail_mapping = {
 class QcControl(BaseEstimator, TransformerMixin):
 # cast in sklearn api
 
-    def __init__(self, param_file=None, reference_file=None, filters=[]):
+    def __init__(self, param_file=None, reference_file=None, filters=[], backend='pandas'):
+        '''
+        Initialize the QC control object.
+
+        Parameters
+        ----------
+        param_file : str -- path to the parameter file with hard bounds
+        reference_file : str -- path to the reference file with soft bounds
+        filters : list of str -- list of filters to apply to the data
+        backend : str -- pandas, polars
+        '''
+        
         if (param_file is not None) and (reference_file is not None):
             self.param_file = param_file
             self.reference_file = reference_file
             self._parse_filter()
+
+        self.backend = backend
         
         assert(filters, list), "filters must be a list"
         self._parse_filter_list(filters)
+
+    @staticmethod
+    def _convert_to_polars(df: pd.DataFrame):
+        '''
+        Convert the dataframe to polars.
+        '''
+        return pl.from_pandas(df)
+
 
     def _parse_filter_list(self, filters):
         self.filters=dict()
@@ -62,8 +85,7 @@ class QcControl(BaseEstimator, TransformerMixin):
             self.filters = {'leuko': self.qc_leuko,
                             'rbc': self.qc_rbc,
                             'ranges': self.qc_plausible_range_filter,
-                            'suspect': self.suspect_flag_filter,
-                            'fail': self.fail_filter}
+                            'suspect': self.suspect_flag_filter}
         else:
             for _filter in filters:
                 if 'leuko' in _filter:
@@ -99,7 +121,7 @@ class QcControl(BaseEstimator, TransformerMixin):
         self.filter_dict = read_filters[['measurement_name', 'Intra', 'Inter', 'Min', 'Max']]\
                                                 .set_index('measurement_name').to_dict('index')
 
-        read_filter_man =  pd.read_excel(self.reference_file)
+        """  read_filter_man =  pd.read_excel(self.reference_file)
         read_filter_man['measurement_name'] = read_filter_man.Value.str.split('_')\
                                                 .apply(lambda x: "_".join(x[2:]))
         self.filter_dict_man = read_filter_man[['measurement_name', 'min', 'max']]\
@@ -114,7 +136,8 @@ class QcControl(BaseEstimator, TransformerMixin):
                 if np.isnan(man_max) == False:
                     self.filter_dict[k]['Max'] = man_max
             except Exception as  e:
-                logger.debug(f'Exception:{e}, key:{k}')        
+                logger.debug(f'Exception:{e}, key:{k}')
+        """  
 
     def qc_leuko(self, df: pd.DataFrame):
         temp_cols =[c.lower() for c in df]
@@ -230,8 +253,7 @@ class QcControl(BaseEstimator, TransformerMixin):
             if (val>=_min) & (val<=_max):
                 return val
             return np.nan
-       
-
+        
         for meas_name in self.meas_names:
             meas_val = "c_b_"+meas_name
             meas_flag = "c_s_"+meas_name
@@ -267,8 +289,9 @@ class QcControl(BaseEstimator, TransformerMixin):
 
     def fit(self, X: pd.DataFrame, y=None):
         X.columns = [c.lower() for c in X.columns]
-        self._get_cols(X)
-        _X = X.copy() 
+        self._get_cols(X)       
+        _X = X.copy()
+
         for k, v in self.filters.items():
             logger.debug(f"Start filtering: {k}")
             _X = v(_X.copy())

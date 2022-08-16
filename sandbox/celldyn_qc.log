@@ -1971,3 +1971,69 @@
 2022-08-16 11:52:58,754:celldyn_qc:Processing faillicv
 2022-08-16 11:53:20,034:celldyn_qc:Processing faillacv
 2022-08-16 11:53:41,453:celldyn_qc:Completed filtering: fail
+2022-08-16 15:41:47,552:celldyn_qc:Exception:'', key:
+2022-08-16 15:41:49,178:celldyn_qc:Start filtering: leuko
+2022-08-16 15:41:51,613:celldyn_qc:Completed filtering: leuko
+2022-08-16 15:41:51,614:celldyn_qc:Start filtering: rbc
+2022-08-16 15:41:53,327:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-16 15:41:53,328:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-16 15:41:53,329:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-16 15:41:53,330:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-16 15:41:53,331:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-16 15:41:53,332:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-16 15:41:53,333:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-16 15:41:53,334:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-16 15:41:53,404:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-16 15:41:53,405:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-16 15:41:53,407:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-16 15:41:53,408:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-16 15:41:53,410:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-16 15:41:53,905:celldyn_qc:Completed filtering: rbc
+2022-08-16 15:41:53,908:celldyn_qc:Start filtering: ranges
+2022-08-16 15:41:56,381:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,383:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,385:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,560:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,562:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,564:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,566:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,568:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,569:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,571:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,578:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,580:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,582:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,584:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,586:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,588:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,591:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,593:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,597:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:56,598:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 15:41:57,122:celldyn_qc:Completed filtering: ranges
+2022-08-16 15:41:57,124:celldyn_qc:Start filtering: suspect
+2022-08-16 15:58:45,489:celldyn_qc:Completed filtering: suspect
+2022-08-16 15:58:45,491:celldyn_qc:Start filtering: fail
+2022-08-16 15:58:47,232:celldyn_qc:Processing failmode
+2022-08-16 15:58:47,234:celldyn_qc:Exception: 'failmode', for failmode
+2022-08-16 15:58:47,235:celldyn_qc:Processing failreti
+2022-08-16 15:59:13,079:celldyn_qc:Processing failpreti
+2022-08-16 15:59:36,839:celldyn_qc:Processing failirf
+2022-08-16 15:59:59,965:celldyn_qc:Processing failimn
+2022-08-16 16:01:32,610:celldyn_qc:Processing failicv
+2022-08-16 16:02:42,869:celldyn_qc:Processing failfmn
+2022-08-16 16:03:57,508:celldyn_qc:Processing failfcv
+2022-08-16 16:05:10,503:celldyn_qc:Processing failmchcr
+2022-08-16 16:05:33,658:celldyn_qc:Processing failhdw
+2022-08-16 16:05:56,916:celldyn_qc:Processing failmchr
+2022-08-16 16:06:17,413:celldyn_qc:Processing failmcvr
+2022-08-16 16:06:38,089:celldyn_qc:Processing failhpo
+2022-08-16 16:07:02,807:celldyn_qc:Processing failhpr
+2022-08-16 16:07:25,609:celldyn_qc:Processing failnacv
+2022-08-16 16:07:50,482:celldyn_qc:Processing failnicv
+2022-08-16 16:08:14,590:celldyn_qc:Processing failndcv
+2022-08-16 16:08:40,088:celldyn_qc:Processing failnfcv
+2022-08-16 16:09:06,490:celldyn_qc:Processing failnpcv
+2022-08-16 16:09:29,321:celldyn_qc:Processing faillicv
+2022-08-16 16:09:52,693:celldyn_qc:Processing faillacv
+2022-08-16 16:10:15,172:celldyn_qc:Completed filtering: fail

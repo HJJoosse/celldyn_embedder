@@ -71,7 +71,8 @@ cut_offs = {
     "c_b_HDW": {'min':0,'max':20},
     "c_b_hb": {'min':0,'max':15},
     "c_b_eos": {'min':0,'max':2},
-    "c_b_bas": {'min':0, 'max':0.4}
+    "c_b_bas": {'min':0, 'max':0.4},
+    "c_b_wvf": {'min':0.75,'max':1.}
 }
 
 
@@ -110,11 +111,14 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
         except KeyError:
             return vec
 
+
     def fit(self, X: pd.DataFrame, y=None):
         X_transformed = X.copy()
         for var in self.log_scale:
             X_transformed[var] = self._log_scaler(X_transformed[var])
         self.X_transformed = X_transformed.apply(lambda x:self._apply_transformers(x),axis = 0)
+        if 'c_b_wvf' in self.X_transformed.columns:
+            self.X_transformed['c_b_wvf'] = np.arcsin(self.X_transformed['c_b_wvf'])
         return self
 
     def transform(self, X=None, y=None):

@@ -1,12 +1,12 @@
-import pandas as pd
+#import pandas as pd
 import numpy as np
 from tqdm import tqdm
 from sklearn.base import BaseEstimator, TransformerMixin
 
 import polars as pl
 
-from pandarallel import pandarallel
-pandarallel.initialize(progress_bar=False)
+import modin.pandas as pd
+
 
 '''
 I want to add a logger to this script.
@@ -61,9 +61,8 @@ class QcControl(BaseEstimator, TransformerMixin):
         backend : str -- pandas, polars
         '''
         
-        if (param_file is not None) and (reference_file is not None):
+        if (param_file is not None):
             self.param_file = param_file
-            self.reference_file = reference_file
             self._parse_filter()
 
         self.backend = backend
@@ -113,9 +112,7 @@ class QcControl(BaseEstimator, TransformerMixin):
 
     def _parse_filter(self):
         
-        read_filters = pd.read_excel(self.param_file, sheet_name="Parameters", skiprows=1)
-        read_filters.rename(columns={'Unnamed: 0': 'measurement_name', 
-                    'Unnamed: 1': 'measurement_description'}, inplace=True)
+        read_filters = pd.read_csv(self.param_file, sep=";", encoding='latin1')
         read_filters['measurement_name'] = read_filters.measurement_name.str.split('_')\
                                                 .apply(lambda x: "_".join(x[2:]))
         self.filter_dict = read_filters[['measurement_name', 'Intra', 'Inter', 'Min', 'Max']]\
@@ -224,16 +221,14 @@ class QcControl(BaseEstimator, TransformerMixin):
         return df
 
     def qc_plausible_range_filter(self, df: pd.DataFrame):
-        cut_offs = pd.read_excel(self.param_file, sheet_name="Parameters", skiprows=1)
-        cut_offs.rename(columns={'Unnamed: 0': 'Kolomnaam', 
-                    'Unnamed: 1': 'measurement_description'}, inplace=True)
+        cut_offs = pd.read_csv(self.param_file, sep=";", encoding='latin1')
         col_names = cut_offs.columns
         cut_offs = pd.DataFrame(np.where(cut_offs == '-', np.nan,cut_offs),
                                 columns=col_names)
         for c in self.meas_columns:
             try:
-                min_val = float(cut_offs.loc[cut_offs.Kolomnaam == c,'Min'].iloc[0])
-                max_val = float(cut_offs.loc[cut_offs.Kolomnaam == c,'Max'].iloc[0])
+                min_val = float(cut_offs.loc[cut_offs.measurement_name == c,'Min'].iloc[0])
+                max_val = float(cut_offs.loc[cut_offs.measurement_name == c,'Max'].iloc[0])
                 if not pd.isna(min_val):
                     df.loc[lambda x:(x[c] > max_val) & (x[c] < min_val), c] = np.nan 
             except IndexError as e:

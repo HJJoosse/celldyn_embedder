@@ -2037,3 +2037,715 @@
 2022-08-16 16:09:29,321:celldyn_qc:Processing faillicv
 2022-08-16 16:09:52,693:celldyn_qc:Processing faillacv
 2022-08-16 16:10:15,172:celldyn_qc:Completed filtering: fail
+2022-08-16 18:01:38,342:celldyn_qc:Start filtering: leuko
+2022-08-16 18:01:40,393:celldyn_qc:Completed filtering: leuko
+2022-08-16 18:01:40,395:celldyn_qc:Start filtering: rbc
+2022-08-16 18:01:41,955:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-16 18:01:41,957:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-16 18:01:41,959:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-16 18:01:41,960:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-16 18:01:41,962:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-16 18:01:41,963:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-16 18:01:41,964:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-16 18:01:41,965:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-16 18:01:42,015:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-16 18:01:42,017:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-16 18:01:42,018:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-16 18:01:42,019:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-16 18:01:42,020:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-16 18:01:42,374:celldyn_qc:Completed filtering: rbc
+2022-08-16 18:01:42,377:celldyn_qc:Start filtering: ranges
+2022-08-16 18:01:44,919:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:44,920:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:44,921:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,074:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,078:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,079:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,081:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,084:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,086:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,088:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,098:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,100:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,102:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,103:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,105:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,107:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,109:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,111:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,115:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,117:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 18:01:45,567:celldyn_qc:Completed filtering: ranges
+2022-08-16 18:01:45,568:celldyn_qc:Start filtering: suspect
+2022-08-16 18:16:31,575:celldyn_qc:Completed filtering: suspect
+2022-08-16 21:19:03,393:celldyn_qc:Start filtering: leuko
+2022-08-16 21:19:07,310:celldyn_qc:Completed filtering: leuko
+2022-08-16 21:19:07,318:celldyn_qc:Start filtering: rbc
+2022-08-16 21:19:07,321:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-16 21:19:07,323:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-16 21:19:07,324:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-16 21:19:07,325:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-16 21:19:07,326:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-16 21:19:07,327:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-16 21:19:07,327:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-16 21:19:07,328:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-16 21:19:07,913:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-16 21:19:07,918:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-16 21:19:07,920:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-16 21:19:07,921:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-16 21:19:07,923:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-16 21:19:07,925:celldyn_qc:Completed filtering: rbc
+2022-08-16 21:19:07,926:celldyn_qc:Start filtering: ranges
+2022-08-16 21:19:39,621:celldyn_qc:Start filtering: leuko
+2022-08-16 21:19:43,485:celldyn_qc:Completed filtering: leuko
+2022-08-16 21:19:43,486:celldyn_qc:Start filtering: rbc
+2022-08-16 21:19:43,488:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-16 21:19:43,489:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-16 21:19:43,491:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-16 21:19:43,491:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-16 21:19:43,492:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-16 21:19:43,493:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-16 21:19:43,494:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-16 21:19:43,495:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-16 21:19:43,962:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-16 21:19:43,964:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-16 21:19:43,965:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-16 21:19:43,966:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-16 21:19:43,967:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-16 21:19:43,969:celldyn_qc:Completed filtering: rbc
+2022-08-16 21:19:43,971:celldyn_qc:Start filtering: ranges
+2022-08-16 21:19:55,239:celldyn_qc:Start filtering: leuko
+2022-08-16 21:19:58,975:celldyn_qc:Completed filtering: leuko
+2022-08-16 21:19:58,977:celldyn_qc:Start filtering: rbc
+2022-08-16 21:19:58,981:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-16 21:19:58,983:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-16 21:19:58,984:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-16 21:19:58,985:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-16 21:19:58,986:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-16 21:19:58,988:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-16 21:19:58,988:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-16 21:19:58,990:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-16 21:19:59,585:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-16 21:19:59,586:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-16 21:19:59,587:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-16 21:19:59,588:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-16 21:19:59,589:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-16 21:19:59,591:celldyn_qc:Completed filtering: rbc
+2022-08-16 21:19:59,592:celldyn_qc:Start filtering: ranges
+2022-08-16 21:36:00,444:celldyn_qc:Start filtering: leuko
+2022-08-16 21:36:04,311:celldyn_qc:Completed filtering: leuko
+2022-08-16 21:36:04,313:celldyn_qc:Start filtering: rbc
+2022-08-16 21:36:04,317:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-16 21:36:04,318:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-16 21:36:04,320:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-16 21:36:04,321:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-16 21:36:04,322:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-16 21:36:04,323:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-16 21:36:04,325:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-16 21:36:04,326:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-16 21:36:04,996:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-16 21:36:04,998:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-16 21:36:04,999:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-16 21:36:05,000:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-16 21:36:05,001:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-16 21:36:05,004:celldyn_qc:Completed filtering: rbc
+2022-08-16 21:36:05,006:celldyn_qc:Start filtering: ranges
+2022-08-16 21:44:58,628:celldyn_qc:Start filtering: leuko
+2022-08-16 21:45:02,582:celldyn_qc:Completed filtering: leuko
+2022-08-16 21:45:02,583:celldyn_qc:Start filtering: rbc
+2022-08-16 21:45:02,585:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-16 21:45:02,586:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-16 21:45:02,587:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-16 21:45:02,587:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-16 21:45:02,588:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-16 21:45:02,589:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-16 21:45:02,590:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-16 21:45:02,591:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-16 21:45:03,070:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-16 21:45:03,072:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-16 21:45:03,073:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-16 21:45:03,074:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-16 21:45:03,075:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-16 21:45:03,076:celldyn_qc:Completed filtering: rbc
+2022-08-16 21:45:03,077:celldyn_qc:Start filtering: ranges
+2022-08-16 22:59:56,094:celldyn_qc:Start filtering: leuko
+2022-08-16 23:00:00,227:celldyn_qc:Completed filtering: leuko
+2022-08-16 23:00:00,229:celldyn_qc:Start filtering: rbc
+2022-08-16 23:00:00,232:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-16 23:00:00,234:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-16 23:00:00,236:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-16 23:00:00,238:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-16 23:00:00,240:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-16 23:00:00,241:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-16 23:00:00,242:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-16 23:00:00,243:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-16 23:00:00,980:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-16 23:00:00,982:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-16 23:00:00,983:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-16 23:00:00,985:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-16 23:00:00,986:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-16 23:00:00,989:celldyn_qc:Completed filtering: rbc
+2022-08-16 23:00:00,990:celldyn_qc:Start filtering: ranges
+2022-08-16 23:00:48,342:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:48,404:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:48,464:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:58,421:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:58,477:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:58,533:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:58,591:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:58,658:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:58,702:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:58,732:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:59,387:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:59,414:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:59,477:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:59,508:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:59,560:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:59,589:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:59,623:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:59,652:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:59,917:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:00:59,945:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-16 23:01:02,706:celldyn_qc:Completed filtering: ranges
+2022-08-16 23:01:02,707:celldyn_qc:Start filtering: suspect
+2022-08-16 23:05:56,665:celldyn_qc:Completed filtering: suspect
+2022-08-17 10:02:47,837:celldyn_qc:Start filtering: leuko
+2022-08-17 10:02:47,837:celldyn_qc:Start filtering: leuko
+2022-08-17 10:02:50,009:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:02:50,009:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:02:50,016:celldyn_qc:Start filtering: rbc
+2022-08-17 10:02:50,016:celldyn_qc:Start filtering: rbc
+2022-08-17 10:02:51,727:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:02:51,727:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:02:51,730:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:02:51,730:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:02:51,732:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:02:51,732:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:02:51,733:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:02:51,733:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:02:51,735:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:02:51,735:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:02:51,737:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:02:51,737:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:02:51,738:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:02:51,738:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:02:51,740:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:02:51,740:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:02:51,802:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:02:51,802:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:02:51,811:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:02:51,811:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:02:51,813:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:02:51,813:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:02:51,816:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:02:51,816:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:02:51,817:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:02:51,817:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:02:52,145:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:02:52,145:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:02:52,149:celldyn_qc:Start filtering: ranges
+2022-08-17 10:02:52,149:celldyn_qc:Start filtering: ranges
+2022-08-17 10:04:06,318:celldyn_qc:Start filtering: leuko
+2022-08-17 10:04:06,318:celldyn_qc:Start filtering: leuko
+2022-08-17 10:04:06,318:celldyn_qc:Start filtering: leuko
+2022-08-17 10:04:08,407:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:04:08,407:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:04:08,407:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:04:08,427:celldyn_qc:Start filtering: rbc
+2022-08-17 10:04:08,427:celldyn_qc:Start filtering: rbc
+2022-08-17 10:04:08,427:celldyn_qc:Start filtering: rbc
+2022-08-17 10:04:10,068:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:04:10,068:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:04:10,068:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:04:10,072:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:04:10,072:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:04:10,072:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:04:10,077:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:04:10,077:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:04:10,077:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:04:10,082:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:04:10,082:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:04:10,082:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:04:10,085:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:04:10,085:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:04:10,085:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:04:10,089:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:04:10,089:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:04:10,089:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:04:10,093:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:04:10,093:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:04:10,093:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:04:10,096:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:04:10,096:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:04:10,096:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:04:10,151:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:04:10,151:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:04:10,151:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:04:10,155:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:04:10,155:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:04:10,155:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:04:10,158:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:04:10,158:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:04:10,158:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:04:10,162:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:04:10,162:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:04:10,162:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:04:10,165:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:04:10,165:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:04:10,165:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:04:10,530:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:04:10,530:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:04:10,530:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:04:10,534:celldyn_qc:Start filtering: ranges
+2022-08-17 10:04:10,534:celldyn_qc:Start filtering: ranges
+2022-08-17 10:04:10,534:celldyn_qc:Start filtering: ranges
+2022-08-17 10:04:51,838:celldyn_qc:Start filtering: leuko
+2022-08-17 10:04:51,838:celldyn_qc:Start filtering: leuko
+2022-08-17 10:04:51,838:celldyn_qc:Start filtering: leuko
+2022-08-17 10:04:51,838:celldyn_qc:Start filtering: leuko
+2022-08-17 10:04:54,438:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:04:54,438:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:04:54,438:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:04:54,438:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:04:54,444:celldyn_qc:Start filtering: rbc
+2022-08-17 10:04:54,444:celldyn_qc:Start filtering: rbc
+2022-08-17 10:04:54,444:celldyn_qc:Start filtering: rbc
+2022-08-17 10:04:54,444:celldyn_qc:Start filtering: rbc
+2022-08-17 10:04:56,477:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:04:56,477:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:04:56,477:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:04:56,477:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:04:56,481:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:04:56,481:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:04:56,481:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:04:56,481:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:04:56,484:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:04:56,484:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:04:56,484:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:04:56,484:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:04:56,490:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:04:56,490:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:04:56,490:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:04:56,490:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:04:56,493:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:04:56,493:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:04:56,493:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:04:56,493:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:04:56,496:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:04:56,496:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:04:56,496:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:04:56,496:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:04:56,499:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:04:56,499:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:04:56,499:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:04:56,499:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:04:56,502:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:04:56,502:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:04:56,502:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:04:56,502:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:04:56,594:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:04:56,594:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:04:56,594:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:04:56,594:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:04:56,598:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:04:56,598:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:04:56,598:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:04:56,598:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:04:56,601:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:04:56,601:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:04:56,601:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:04:56,601:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:04:56,605:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:04:56,605:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:04:56,605:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:04:56,605:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:04:56,608:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:04:56,608:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:04:56,608:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:04:56,608:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:04:57,238:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:04:57,238:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:04:57,238:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:04:57,238:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:04:57,242:celldyn_qc:Start filtering: ranges
+2022-08-17 10:04:57,242:celldyn_qc:Start filtering: ranges
+2022-08-17 10:04:57,242:celldyn_qc:Start filtering: ranges
+2022-08-17 10:04:57,242:celldyn_qc:Start filtering: ranges
+2022-08-17 10:06:17,565:celldyn_qc:Start filtering: leuko
+2022-08-17 10:06:17,565:celldyn_qc:Start filtering: leuko
+2022-08-17 10:06:17,565:celldyn_qc:Start filtering: leuko
+2022-08-17 10:06:17,565:celldyn_qc:Start filtering: leuko
+2022-08-17 10:06:17,565:celldyn_qc:Start filtering: leuko
+2022-08-17 10:06:27,340:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:06:27,340:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:06:27,340:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:06:27,340:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:06:27,340:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:06:27,349:celldyn_qc:Start filtering: rbc
+2022-08-17 10:06:27,349:celldyn_qc:Start filtering: rbc
+2022-08-17 10:06:27,349:celldyn_qc:Start filtering: rbc
+2022-08-17 10:06:27,349:celldyn_qc:Start filtering: rbc
+2022-08-17 10:06:27,349:celldyn_qc:Start filtering: rbc
+2022-08-17 10:06:29,024:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:06:29,024:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:06:29,024:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:06:29,024:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:06:29,024:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:06:29,034:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:06:29,034:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:06:29,034:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:06:29,034:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:06:29,034:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:06:29,039:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:06:29,039:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:06:29,039:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:06:29,039:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:06:29,039:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:06:29,044:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:06:29,044:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:06:29,044:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:06:29,044:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:06:29,044:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:06:29,048:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:06:29,048:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:06:29,048:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:06:29,048:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:06:29,048:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:06:29,053:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:06:29,053:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:06:29,053:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:06:29,053:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:06:29,053:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:06:29,057:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:06:29,057:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:06:29,057:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:06:29,057:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:06:29,057:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:06:29,061:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:06:29,061:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:06:29,061:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:06:29,061:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:06:29,061:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:06:29,124:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:06:29,124:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:06:29,124:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:06:29,124:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:06:29,124:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:06:29,132:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:06:29,132:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:06:29,132:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:06:29,132:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:06:29,132:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:06:29,138:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:06:29,138:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:06:29,138:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:06:29,138:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:06:29,138:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:06:29,143:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:06:29,143:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:06:29,143:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:06:29,143:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:06:29,143:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:06:29,149:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:06:29,149:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:06:29,149:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:06:29,149:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:06:29,149:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:06:29,895:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:06:29,895:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:06:29,895:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:06:29,895:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:06:29,895:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:06:29,900:celldyn_qc:Start filtering: ranges
+2022-08-17 10:06:29,900:celldyn_qc:Start filtering: ranges
+2022-08-17 10:06:29,900:celldyn_qc:Start filtering: ranges
+2022-08-17 10:06:29,900:celldyn_qc:Start filtering: ranges
+2022-08-17 10:06:29,900:celldyn_qc:Start filtering: ranges
+2022-08-17 10:10:01,149:celldyn_qc:Start filtering: leuko
+2022-08-17 10:10:03,135:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:10:03,139:celldyn_qc:Start filtering: rbc
+2022-08-17 10:10:04,720:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:10:04,722:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:10:04,723:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:10:04,724:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:10:04,725:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:10:04,726:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:10:04,728:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:10:04,729:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:10:04,782:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:10:04,783:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:10:04,784:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:10:04,785:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:10:04,786:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:10:05,130:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:10:05,131:celldyn_qc:Start filtering: ranges
+2022-08-17 10:11:01,535:celldyn_qc:Start filtering: leuko
+2022-08-17 10:11:03,515:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:11:03,519:celldyn_qc:Start filtering: rbc
+2022-08-17 10:11:05,350:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:11:05,352:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:11:05,353:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:11:05,354:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:11:05,355:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:11:05,356:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:11:05,357:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:11:05,359:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:11:05,422:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:11:05,423:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:11:05,425:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:11:05,426:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:11:05,428:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:11:05,818:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:11:05,820:celldyn_qc:Start filtering: ranges
+2022-08-17 10:12:06,711:celldyn_qc:Start filtering: leuko
+2022-08-17 10:12:06,711:celldyn_qc:Start filtering: leuko
+2022-08-17 10:12:06,711:celldyn_qc:Start filtering: leuko
+2022-08-17 10:12:08,935:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:12:08,935:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:12:08,935:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:12:08,941:celldyn_qc:Start filtering: rbc
+2022-08-17 10:12:08,941:celldyn_qc:Start filtering: rbc
+2022-08-17 10:12:08,941:celldyn_qc:Start filtering: rbc
+2022-08-17 10:12:10,602:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:12:10,602:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:12:10,602:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:12:10,606:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:12:10,606:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:12:10,606:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:12:10,608:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:12:10,608:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:12:10,608:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:12:10,611:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:12:10,611:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:12:10,611:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:12:10,614:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:12:10,614:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:12:10,614:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:12:10,617:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:12:10,617:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:12:10,617:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:12:10,619:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:12:10,619:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:12:10,619:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:12:10,622:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:12:10,622:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:12:10,622:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:12:10,686:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:12:10,686:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:12:10,686:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:12:10,690:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:12:10,690:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:12:10,690:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:12:10,692:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:12:10,692:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:12:10,692:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:12:10,695:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:12:10,695:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:12:10,695:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:12:10,698:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:12:10,698:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:12:10,698:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:12:11,069:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:12:11,069:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:12:11,069:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:12:11,071:celldyn_qc:Start filtering: ranges
+2022-08-17 10:12:11,071:celldyn_qc:Start filtering: ranges
+2022-08-17 10:12:11,071:celldyn_qc:Start filtering: ranges
+2022-08-17 10:12:32,762:celldyn_qc:Start filtering: leuko
+2022-08-17 10:12:32,762:celldyn_qc:Start filtering: leuko
+2022-08-17 10:12:32,762:celldyn_qc:Start filtering: leuko
+2022-08-17 10:12:32,762:celldyn_qc:Start filtering: leuko
+2022-08-17 10:12:36,349:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:12:36,349:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:12:36,349:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:12:36,349:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:12:36,353:celldyn_qc:Start filtering: rbc
+2022-08-17 10:12:36,353:celldyn_qc:Start filtering: rbc
+2022-08-17 10:12:36,353:celldyn_qc:Start filtering: rbc
+2022-08-17 10:12:36,353:celldyn_qc:Start filtering: rbc
+2022-08-17 10:12:38,315:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:12:38,315:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:12:38,315:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:12:38,315:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:12:38,320:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:12:38,320:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:12:38,320:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:12:38,320:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:12:38,325:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:12:38,325:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:12:38,325:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:12:38,325:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:12:38,328:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:12:38,328:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:12:38,328:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:12:38,328:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:12:38,332:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:12:38,332:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:12:38,332:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:12:38,332:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:12:38,335:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:12:38,335:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:12:38,335:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:12:38,335:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:12:38,339:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:12:38,339:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:12:38,339:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:12:38,339:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:12:38,343:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:12:38,343:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:12:38,343:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:12:38,343:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:12:38,432:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:12:38,432:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:12:38,432:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:12:38,432:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:12:38,436:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:12:38,436:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:12:38,436:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:12:38,436:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:12:38,443:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:12:38,443:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:12:38,443:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:12:38,443:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:12:38,446:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:12:38,446:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:12:38,446:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:12:38,446:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:12:38,450:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:12:38,450:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:12:38,450:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:12:38,450:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:12:39,184:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:12:39,184:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:12:39,184:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:12:39,184:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:12:39,240:celldyn_qc:Start filtering: ranges
+2022-08-17 10:12:39,240:celldyn_qc:Start filtering: ranges
+2022-08-17 10:12:39,240:celldyn_qc:Start filtering: ranges
+2022-08-17 10:12:39,240:celldyn_qc:Start filtering: ranges
+2022-08-17 10:17:36,992:celldyn_qc:Start filtering: leuko
+2022-08-17 10:17:36,992:celldyn_qc:Start filtering: leuko
+2022-08-17 10:17:36,992:celldyn_qc:Start filtering: leuko
+2022-08-17 10:17:36,992:celldyn_qc:Start filtering: leuko
+2022-08-17 10:17:36,992:celldyn_qc:Start filtering: leuko
+2022-08-17 10:17:59,244:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:17:59,244:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:17:59,244:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:17:59,244:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:17:59,244:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:17:59,257:celldyn_qc:Start filtering: rbc
+2022-08-17 10:17:59,257:celldyn_qc:Start filtering: rbc
+2022-08-17 10:17:59,257:celldyn_qc:Start filtering: rbc
+2022-08-17 10:17:59,257:celldyn_qc:Start filtering: rbc
+2022-08-17 10:17:59,257:celldyn_qc:Start filtering: rbc
+2022-08-17 10:18:00,883:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:18:00,883:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:18:00,883:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:18:00,883:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:18:00,883:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:18:00,891:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:18:00,891:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:18:00,891:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:18:00,891:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:18:00,891:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:18:00,896:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:18:00,896:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:18:00,896:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:18:00,896:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:18:00,896:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:18:00,901:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:18:00,901:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:18:00,901:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:18:00,901:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:18:00,901:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:18:00,906:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:18:00,906:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:18:00,906:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:18:00,906:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:18:00,906:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:18:00,911:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:18:00,911:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:18:00,911:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:18:00,911:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:18:00,911:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:18:00,915:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:18:00,915:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:18:00,915:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:18:00,915:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:18:00,915:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:18:00,920:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:18:00,920:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:18:00,920:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:18:00,920:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:18:00,920:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:18:00,987:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:18:00,987:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:18:00,987:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:18:00,987:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:18:00,987:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:18:00,992:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:18:00,992:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:18:00,992:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:18:00,992:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:18:00,992:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:18:00,999:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:18:00,999:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:18:00,999:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:18:00,999:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:18:00,999:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:18:01,005:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:18:01,005:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:18:01,005:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:18:01,005:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:18:01,005:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:18:01,010:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:18:01,010:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:18:01,010:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:18:01,010:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:18:01,010:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:18:01,633:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:18:01,633:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:18:01,633:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:18:01,633:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:18:01,633:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:18:01,637:celldyn_qc:Start filtering: ranges
+2022-08-17 10:18:01,637:celldyn_qc:Start filtering: ranges
+2022-08-17 10:18:01,637:celldyn_qc:Start filtering: ranges
+2022-08-17 10:18:01,637:celldyn_qc:Start filtering: ranges
+2022-08-17 10:18:01,637:celldyn_qc:Start filtering: ranges
+2022-08-17 10:25:48,787:celldyn_qc:Start filtering: leuko
+2022-08-17 10:25:50,888:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:25:50,890:celldyn_qc:Start filtering: rbc
+2022-08-17 10:25:52,531:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:25:52,532:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:25:52,533:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:25:52,535:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:25:52,536:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:25:52,537:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:25:52,539:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:25:52,540:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:25:52,596:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:25:52,610:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:25:52,624:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:25:52,642:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:25:52,643:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:25:53,004:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:25:53,005:celldyn_qc:Start filtering: ranges
+2022-08-17 10:26:56,746:celldyn_qc:Start filtering: leuko
+2022-08-17 10:26:58,963:celldyn_qc:Completed filtering: leuko
+2022-08-17 10:26:58,965:celldyn_qc:Start filtering: rbc
+2022-08-17 10:27:00,658:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 10:27:00,660:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 10:27:00,661:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 10:27:00,662:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 10:27:00,664:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 10:27:00,665:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 10:27:00,666:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 10:27:00,667:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 10:27:00,721:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 10:27:00,722:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 10:27:00,723:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 10:27:00,724:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 10:27:00,725:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 10:27:01,036:celldyn_qc:Completed filtering: rbc
+2022-08-17 10:27:01,038:celldyn_qc:Start filtering: ranges

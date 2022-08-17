@@ -1,5 +1,16 @@
 """
 Original author: Jille van der Togt
+Edited by: Huibert-Jan Joosse, Bram van Es
+
+pacmap
+trimap
+dbmap
+phate
+umap
+densemap
+sklearn manifold/decomposition methods
+pymde
+
 """
 import numpy as np
 import pandas as pd

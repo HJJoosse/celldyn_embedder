@@ -21,8 +21,10 @@ class CDEmbeddingPerformance:
     def _return_trustworthiness(self):
         return trustworthiness(self.X_org,self.X_emb)
 
+    def _create_knn_search(self):
+        pass
+    
     def _return_knn_overlap(self):
-        
         pass
 
     def _distance_correlation(self):

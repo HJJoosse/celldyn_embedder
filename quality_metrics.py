@@ -7,13 +7,14 @@
 ### knn_overlap -> find knn in true space random sample. Then embedding do the same for indices -> jaccard score
 
 import scipy as sc
+import numpy as np
 from sklearn.manifold import trustworthiness
 from sklearn.metrics import jaccard_score
 import dcor
 
 class CDEmbeddingPerformance:
 
-    def __init__(self,X_org:np.array,X_emb:np.array,metric:function):
+    def __init__(self,X_org:np.array,X_emb:np.array,metric):
         self.X_org = X_org
         self.X_emb = X_emb
         self.metric = metric

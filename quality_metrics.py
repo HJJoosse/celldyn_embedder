@@ -7,31 +7,42 @@
 ### knn_overlap -> find knn in true space random sample. Then embedding do the same for indices -> jaccard score
 
 import scipy as sc
+from scipy.spatial.distance import jaccard, hamming
 import numpy as np
 from sklearn.manifold import trustworthiness
-from sklearn.metrics import jaccard_score
 import dcor
+import faiss
 
 class CDEmbeddingPerformance:
 
-    def __init__(self,X_org:np.array,X_emb:np.array,metric):
+    def __init__(self,X_org:np.array,X_emb:np.array,metric,n_neighbours:int=10):
         self.X_org = X_org
         self.X_emb = X_emb
         self.metric = metric
+        self.n_neighbours = n_neighbours
 
     def _return_trustworthiness(self):
         return trustworthiness(self.X_org,self.X_emb)
 
-    def _create_knn_search(self):
-        pass
+    @staticmethod
+    def _create_knn_search(X,k):
+        index = faiss.IndexFlatL2(X.shape[1])
+        index.add(X.astype(np.float32))
+        D,I = index.search(X.astype(np.float32), k)
+        return D,I
     
     def _return_knn_overlap(self):
-        pass
+        D,I = self._create_knn_search(self.X_org,self.n_neighbours)
+        D_emb,I_emb = self._create_knn_search(self.X_emb,self.n_neighbours)
+        jaccard_ds, hamming_ds = np.zeros(I.shape[0]), np.zeros(I.shape[0])
+        for i in range(I.shape[0]):
+            jaccard_ds[i] = jaccard(I[i,:],I_emb[i,:])
+            hamming_ds = hamming(I[i,:],I_emb[i,:])
+        return jaccard_ds, hamming_ds
 
     def _distance_correlation(self):
         dist_before = sc.spatial.distance.pdist(self.X_org,metric = self.metric)
         dist_after = sc.spatial.distance.pdist(self.X_emb,metric = self.metric)
-
         return dcor.distance_correlation(dist_before, dist_after)
             
     def score(self):

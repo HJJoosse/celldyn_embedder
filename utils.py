@@ -1,13 +1,11 @@
-import torch.linalg as la
-from torch import arccosh
+from numba import njit
+import numpy as np
+from numpy import linalg as la
 
-import torch
 
-
+@njit
 def poincarre_dist(x,y):
-    x = torch.from_numpy(x)
-    y = torch.from_numpy(y)
-    return arccosh(\
+    return np.arccosh(\
     1 + 2*(\
         la.norm(x-y, ord=1)/((1-la.norm(x, ord=1))*(1-la.norm(y, ord=1)))
         )

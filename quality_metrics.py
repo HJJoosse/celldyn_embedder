@@ -22,7 +22,13 @@ class CDEmbeddingPerformance:
         self.n_neighbours = n_neighbours
 
     def _return_trustworthiness(self):
-        return trustworthiness(self.X_org,self.X_emb)
+        trustworth_score = []
+        for _ in range(10):
+            sample = np.random.choice(np.arange(len(self.X_org)),size = 1000)
+            X_org = self.X_org[sample,:]
+            X_emb = self.X_emb[sample,:]
+            trustworth_score.append(trustworthiness(X_org,X_emb))
+        return trustworth_score
 
     @staticmethod
     def _create_knn_search(X,k):
@@ -37,13 +43,19 @@ class CDEmbeddingPerformance:
         jaccard_ds, hamming_ds = np.zeros(I.shape[0]), np.zeros(I.shape[0])
         for i in range(I.shape[0]):
             jaccard_ds[i] = jaccard(I[i,:],I_emb[i,:])
-            hamming_ds = hamming(I[i,:],I_emb[i,:])
+            hamming_ds[i] = hamming(I[i,:],I_emb[i,:])
         return jaccard_ds, hamming_ds
 
     def _distance_correlation(self):
-        dist_before = sc.spatial.distance.pdist(self.X_org,metric = self.metric)
-        dist_after = sc.spatial.distance.pdist(self.X_emb,metric = self.metric)
-        return dcor.distance_correlation(dist_before, dist_after)
+        dist_correlation = []
+        for _ in range(10):
+            sample = np.random.choice(np.arange(len(self.X_org)),size = 1000)
+            X_org = self.X_org[sample,:]
+            X_emb = self.X_emb[sample,:]
+            dist_before = sc.spatial.distance.pdist(X_org,metric = self.metric)
+            dist_after = sc.spatial.distance.pdist(X_emb,metric = self.metric)
+            dist_correlation.append(dcor.distance_correlation(dist_before, dist_after))
+        return dist_correlation
             
     def score(self):
-        pass
+        return self._return_knn_overlap(), self._distance_correlation(), self._return_trustworthiness()

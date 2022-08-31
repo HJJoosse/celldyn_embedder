@@ -16,8 +16,9 @@ default_combinations = [(['mon','mone'],['lym', 'lyme', 'vlym']),
                         (['pneu', 'pbas', 'peos'], ['pseg', 'pbnd', 'pmon', 
                                                 'pvlym', 'plyme','plym',
                                                 'pnrbc'])]
-default_combo_functions = [(lambda x,y: (np.log10(x+1)+1)/(np.log(y+1)+1), lambda col1,col2: f"{col1}:{col2}")]
-default_removal = ['pneu:pseg', 'pbas:pseg', 'peos:pseg', 'neu:seg']
+default_combo_functions = [(lambda x,y: (np.log10(x+1)+1)/(np.log(y+1)+1), 
+                            lambda col1,col2: f"COMBO_{col1}:{col2}")]
+default_removal = ['COMBO_pneu:pseg', 'COMBO_pbas:pseg', 'COMBO_peos:pseg', 'COMBO_neu:seg']
 
 class CellDynRecombinator(BaseEstimator, TransformerMixin):
     def __init__(self, combinations: list=[], combo_functions: list=[], removal: list=[]):

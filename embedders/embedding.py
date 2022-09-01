@@ -562,13 +562,25 @@ class LandmarkMaximumVarianceUnfolding(BaseEstimator, TransformerMixin):
 class LandmarkMultiDimensionalScaling(BaseEstimator, TransformerMixin):
     #  source: https://github.com/danilomotta/LMDS
 
-    def __init__(self,  n_components=2, n_landmarks=100):
+    global dist_list 
+
+    dist_list = ['braycurtis', 'canberra', 'chebyshev', 'cityblock', 'correlation',
+                'cosine', 'dice', 'euclidean', 'hamming', 'jaccard', 'jensenshannon', 
+                'kulczynski1', 'mahalanobis', 'matching', 'minkowski', 'rogerstanimoto', 
+                'russellrao', 'seuclidean', 'sokalmichener', 'sokalsneath', 'sqeuclidean', 'yule']
+
+    def __init__(self,  n_components=2, n_landmarks=100, metric='euclidean'):
         self.n_components = n_components
         self.n_landmarks = n_landmarks
 
+        if (isinstance(metric,str)) and (metric not in dist_list):
+            raise ValueError(f"dist_fun must be one of the following: {dist_list}")
+        self.metric = metric
+
     def fit(self, X, y=0):
+        # this sucks, the landmark should be based on exemplars!
         self.landmarks = np.random.randint(0, X.shape[0], self.n_landmarks)
-        self.D = sc.spatial.distance.cdist(X[self.landmarks,:], X, 'euclidean')        
+        self.D = sc.spatial.distance.cdist(X[self.landmarks,:], X, self.metric )        
 
         self.Dl = self.D[:,self.landmarks]
         n = len(self.Dl)

@@ -1,1 +1,1 @@
-from .graph_embedding import Sammon, MaximumVarianceUnfolding, LandmarkMaximumVarianceUnfolding, LandmarkMultiDimensionalScaling
+from .embedding import Sammon, MaximumVarianceUnfolding, LandmarkMaximumVarianceUnfolding, LandmarkMultiDimensionalScaling

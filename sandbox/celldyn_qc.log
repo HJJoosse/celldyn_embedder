@@ -2749,3 +2749,44 @@
 2022-08-17 10:27:00,725:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
 2022-08-17 10:27:01,036:celldyn_qc:Completed filtering: rbc
 2022-08-17 10:27:01,038:celldyn_qc:Start filtering: ranges
+2022-08-17 20:15:46,506:celldyn_qc:Start filtering: leuko
+2022-08-17 20:15:51,365:celldyn_qc:Completed filtering: leuko
+2022-08-17 20:15:51,366:celldyn_qc:Start filtering: rbc
+2022-08-17 20:15:51,368:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-08-17 20:15:51,369:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-08-17 20:15:51,370:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-08-17 20:15:51,371:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-08-17 20:15:51,372:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-08-17 20:15:51,373:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-08-17 20:15:51,374:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-08-17 20:15:51,375:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-08-17 20:15:52,056:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-08-17 20:15:52,058:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-08-17 20:15:52,059:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-08-17 20:15:52,060:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-08-17 20:15:52,061:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-08-17 20:15:52,063:celldyn_qc:Completed filtering: rbc
+2022-08-17 20:15:52,064:celldyn_qc:Start filtering: ranges
+2022-08-17 20:16:40,473:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:40,523:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:40,564:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:51,383:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:51,411:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:51,439:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:51,468:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:51,495:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:51,528:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:51,560:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:52,220:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:52,249:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:52,277:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:52,307:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:52,337:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:52,366:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:52,393:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:52,421:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:52,712:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:52,739:celldyn_qc:single positional indexer is out-of-bounds
+2022-08-17 20:16:55,697:celldyn_qc:Completed filtering: ranges
+2022-08-17 20:16:55,699:celldyn_qc:Start filtering: suspect
+2022-08-17 20:21:43,633:celldyn_qc:Completed filtering: suspect

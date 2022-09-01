@@ -2,7 +2,6 @@
 Sklearn api class for transforming the CELLDYN data
 '''
 
-from re import T
 import numpy as np
 import pandas as pd
 import scipy as sc

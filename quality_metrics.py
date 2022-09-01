@@ -27,7 +27,7 @@ class CDEmbeddingPerformance:
             sample = np.random.choice(np.arange(len(self.X_org)),size = 1000)
             X_org = self.X_org[sample,:]
             X_emb = self.X_emb[sample,:]
-            trustworth_score.append(trustworthiness(X_org,X_emb))
+            trustworth_score.append(trustworthiness(X_org,X_emb,n_neighbors=self.n_neighbours,metric = self.metric))
         return trustworth_score
 
     @staticmethod

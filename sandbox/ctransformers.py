@@ -79,7 +79,11 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
     '''
     Class for transforming the CELLDYN data
     '''
-    def __init__(self, scaler='standard', log_scale: list = [], **kwargs):
+    def __init__(self, 
+                scaler: str='standard', 
+                log_scale: list = [],
+                cat_scale: list = [], 
+                **kwargs):
         '''
         Initialize the class
         '''
@@ -88,6 +92,16 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
         assert(log_scale,list)
         self.log_scale = log_scale
         self.cut_offs = cut_offs
+
+    def get_category_bin_dict(df: pd.DataFrame, 
+                            value_cols: list, 
+                            min_val: float=0.0) -> dict:
+        category_bin_dict = {}
+        for c in tqdm(value_cols):
+            q25, q5, q75 = df[df[c]>min_val][c]\
+                            .quantile([0.25, 0.5, 0.75])
+            category_bin_dict[c] = [min_val, q25, q5, q75]
+        return category_bin_dict
               
     @staticmethod
     def _log_scaler(vec:pd.Series):       

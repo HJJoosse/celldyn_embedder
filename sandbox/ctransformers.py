@@ -115,7 +115,8 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
         X_transformed = X.copy()
         for var in self.log_scale:
             X_transformed[var] = self._log_scaler(X_transformed[var])
-        self.X_transformed = X_transformed.apply(lambda x:self._apply_transformers(x),axis = 0)
+        self.X_transformed = X_transformed\
+                    .apply(lambda x:self._apply_transformers(x),axis = 0)
         if 'c_b_wvf' in self.X_transformed.columns:
             self.X_transformed['c_b_wvf'] = np.arcsin(self.X_transformed['c_b_wvf'])
         return self

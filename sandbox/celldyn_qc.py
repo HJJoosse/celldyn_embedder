@@ -3,10 +3,9 @@ import numpy as np
 from tqdm import tqdm
 from sklearn.base import BaseEstimator, TransformerMixin
 
-import polars as pl
-
-import modin.pandas as pd
-
+#import polars as pl
+#import modin.pandas as pd
+import pandas as pd
 
 '''
 I want to add a logger to this script.
@@ -49,7 +48,8 @@ fail_mapping = {
 class QcControl(BaseEstimator, TransformerMixin):
 # cast in sklearn api
 
-    def __init__(self, param_file=None, reference_file=None, filters=[], backend='pandas'):
+    def __init__(self, param_file=None, 
+                reference_file=None, filters=[], backend='pandas'):
         '''
         Initialize the QC control object.
 
@@ -70,12 +70,12 @@ class QcControl(BaseEstimator, TransformerMixin):
         assert(filters, list), "filters must be a list"
         self._parse_filter_list(filters)
 
-    @staticmethod
-    def _convert_to_polars(df: pd.DataFrame):
-        '''
-        Convert the dataframe to polars.
-        '''
-        return pl.from_pandas(df)
+    #@staticmethod
+    #def _convert_to_polars(df: pd.DataFrame):
+    #    '''
+    #    Convert the dataframe to polars.
+    #    '''
+    #    return pl.from_pandas(df)
 
 
     def _parse_filter_list(self, filters):

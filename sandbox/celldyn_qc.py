@@ -263,7 +263,7 @@ class QcControl(BaseEstimator, TransformerMixin):
                 else:
                     df.loc[:, meas_val] = df[[meas_val, meas_flag]]\
                                     .apply(lambda  x:
-                                    _flag_val_check(x[0],x[1], min_val, max_val),
+                                    _flag_val_check(x[0], x[1], min_val, max_val),
                                     axis=1)
 
             except Exception as e:

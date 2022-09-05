@@ -2790,3 +2790,93 @@
 2022-08-17 20:16:55,697:celldyn_qc:Completed filtering: ranges
 2022-08-17 20:16:55,699:celldyn_qc:Start filtering: suspect
 2022-08-17 20:21:43,633:celldyn_qc:Completed filtering: suspect
+2022-09-04 22:13:00,049:celldyn_qc:Start filtering: leuko
+2022-09-04 22:13:05,284:celldyn_qc:Completed filtering: leuko
+2022-09-04 22:13:05,294:celldyn_qc:Start filtering: rbc
+2022-09-04 22:13:07,678:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-04 22:13:07,690:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-04 22:13:07,704:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-04 22:13:07,717:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-04 22:13:07,727:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-04 22:13:07,736:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-04 22:13:07,746:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-04 22:13:07,755:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-04 22:13:07,807:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-04 22:13:07,807:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-04 22:13:07,807:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-04 22:13:07,807:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-04 22:13:07,807:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-04 22:13:08,172:celldyn_qc:Completed filtering: rbc
+2022-09-04 22:13:08,172:celldyn_qc:Start filtering: ranges
+2022-09-04 22:13:11,885:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:11,885:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:11,886:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:11,994:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:11,994:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:11,995:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:11,995:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:11,995:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:11,996:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:11,996:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,002:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,002:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,003:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,003:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,003:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,004:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,004:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,004:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,007:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,007:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,057:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,058:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,058:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,058:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,059:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,059:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,060:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,060:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,060:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,061:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,061:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,061:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,062:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,062:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,062:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,063:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,063:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,063:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,064:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,064:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,064:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,065:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,065:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,066:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,066:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,066:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,067:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,067:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,067:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,068:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,068:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,068:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,069:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,069:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,069:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,070:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,070:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,070:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,071:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,071:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,071:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,072:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,072:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,072:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,073:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,073:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,074:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,074:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,074:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,075:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-04 22:13:12,249:celldyn_qc:Completed filtering: ranges
+2022-09-04 22:13:12,249:celldyn_qc:Start filtering: suspect

@@ -74,6 +74,8 @@ cut_offs = {
     "c_b_wvf": {'min':0.75,'max':1.}
 }
 
+ord_scale_cols = ['c_b_bnd', 'c_b_ig', 'c_b_vlym', 'c_b_blst',
+                  'c_b_nrbc', 'c_b_vlym', 'c_b_pblst']
 
 class CellDynTrans(BaseEstimator, TransformerMixin):
     '''
@@ -82,26 +84,88 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
     def __init__(self, 
                 scaler: str='standard', 
                 log_scale: list = [],
-                cat_scale: list = [], 
+                ord_scale: list = [], 
                 **kwargs):
         '''
         Initialize the class
         '''
+        
         self.scaler = scaler
         self.kwargs = kwargs
         assert(log_scale,list)
         self.log_scale = log_scale
         self.cut_offs = cut_offs
-
-    def get_category_bin_dict(df: pd.DataFrame, 
-                            value_cols: list, 
+        if all([type(e)==str for e in ord_scale]):
+            self.ord_cols = ord_scale
+        else:
+            self.ord_cols = ord_scale_cols
+    
+    def get_category_bin_dict(self,
+                            df: pd.DataFrame, 
+                            num_quantiles: int=3,
+                            min_num_nonzero: int=5000,
                             min_val: float=0.0) -> dict:
-        category_bin_dict = {}
+
+        value_cols = self.ord_cols
+
+        category_bin_dict = {}    
+        if num_quantiles%2==0:
+            num_quantiles += 1
+
+        self.quantile_list = []
+        for c in range(num_quantiles+1):
+            if c>0:
+                self.quantile_list.append(c*1.0/(num_quantiles+1))
+
+
+        ord_cols = []
+        nonord_cols = []
         for c in tqdm(value_cols):
-            q25, q5, q75 = df[df[c]>min_val][c]\
-                            .quantile([0.25, 0.5, 0.75])
-            category_bin_dict[c] = [min_val, q25, q5, q75]
-        return category_bin_dict
+            if (df[c]>min_val).sum()>min_num_nonzero:              
+                quants = df[df[c]>min_val][c]\
+                                .quantile(self.quantile_list, 
+                                interpolation='higher').round(3)
+                category_bin_dict[c] = dict(
+                                            zip(
+                                        ['zero']+[f'q_{str(c).replace("0.","")}'
+                                                        for c in self.quantile_list
+                                                    ],
+                                            [min_val]+list(quants)                                            
+                                            )
+                                        )
+                ord_cols.append(c)
+            else:
+                nonord_cols.append(c)
+                
+
+        return category_bin_dict, num_quantiles, ord_cols, nonord_cols
+
+    def assign_category_bins(self,
+                            df: pd.DataFrame, 
+                            num_quantiles: int=3, 
+                            min_val: float=0.0) -> pd.DataFrame:
+
+        category_bins, num_quantiles, ord_cols, nonord_cols \
+                            = self.get_category_bin_dict(df=df, 
+                                            num_quantiles=num_quantiles,
+                                            min_val=min_val)
+
+        for column, qbins in category_bins.items():
+            cname = f'ORD_{column}'
+            df[cname]= 0
+            for k, (q, qbin) in enumerate(qbins.items()):
+                if q=='zero':
+                    df.loc[df[column]<=qbin, cname] = 0
+                    df.loc[df[column]>qbin, cname] = 1/(num_quantiles+1)
+                else:
+                    df.loc[df[column]>=qbin, cname] = (k+1)/(num_quantiles+1)
+        try:
+            if self.kwargs['remove_original_columns']:
+                df.drop(columns=ord_cols+nonord_cols, inplace=True)
+        except:
+            pass
+
+        return df
               
     @staticmethod
     def _log_scaler(vec:pd.Series):       
@@ -133,6 +197,10 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
                     .apply(lambda x:self._apply_transformers(x),axis = 0)
         if 'c_b_wvf' in self.X_transformed.columns:
             self.X_transformed['c_b_wvf'] = np.arcsin(self.X_transformed['c_b_wvf'])
+
+        if isinstance(self.ord_cols, list):
+            self.X_transformed = self.assign_category_bins(self.X_transformed)
+
         return self
 
     def transform(self, X=None, y=None):

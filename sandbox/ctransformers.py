@@ -79,7 +79,11 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
     '''
     Class for transforming the CELLDYN data
     '''
-    def __init__(self, scaler='standard', log_scale: list = [], **kwargs):
+    def __init__(self, 
+                scaler: str='standard', 
+                log_scale: list = [],
+                cat_scale: list = [], 
+                **kwargs):
         '''
         Initialize the class
         '''
@@ -88,6 +92,16 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
         assert(log_scale,list)
         self.log_scale = log_scale
         self.cut_offs = cut_offs
+
+    def get_category_bin_dict(df: pd.DataFrame, 
+                            value_cols: list, 
+                            min_val: float=0.0) -> dict:
+        category_bin_dict = {}
+        for c in tqdm(value_cols):
+            q25, q5, q75 = df[df[c]>min_val][c]\
+                            .quantile([0.25, 0.5, 0.75])
+            category_bin_dict[c] = [min_val, q25, q5, q75]
+        return category_bin_dict
               
     @staticmethod
     def _log_scaler(vec:pd.Series):       
@@ -115,7 +129,8 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
         X_transformed = X.copy()
         for var in self.log_scale:
             X_transformed[var] = self._log_scaler(X_transformed[var])
-        self.X_transformed = X_transformed.apply(lambda x:self._apply_transformers(x),axis = 0)
+        self.X_transformed = X_transformed\
+                    .apply(lambda x:self._apply_transformers(x),axis = 0)
         if 'c_b_wvf' in self.X_transformed.columns:
             self.X_transformed['c_b_wvf'] = np.arcsin(self.X_transformed['c_b_wvf'])
         return self

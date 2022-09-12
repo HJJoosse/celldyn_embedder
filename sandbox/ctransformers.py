@@ -12,6 +12,8 @@ from sklearn.compose import ColumnTransformer
 
 from sklearn.base import BaseEstimator, TransformerMixin
 
+from tqdm import tqdm
+
 cut_offs = {
     "c_b_wbc" :  {'min':0,'max':6},
     "c_b_neu" :  {'min':0,'max':4},
@@ -120,7 +122,7 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
 
         ord_cols = []
         nonord_cols = []
-        for c in tqdm(value_cols):
+        for c in value_cols:
             if (df[c]>min_val).sum()>min_num_nonzero:              
                 quants = df[df[c]>min_val][c]\
                                 .quantile(self.quantile_list, 
@@ -203,5 +205,5 @@ class CellDynTrans(BaseEstimator, TransformerMixin):
 
         return self
 
-    def transform(self, X=None, y=None):
+    def transform(self, X: pd.DataFrame, y=None):
         return self.X_transformed

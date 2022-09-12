@@ -7,21 +7,12 @@ import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 
-from miceforest import ImputationKernel
-from miceforest import mean_match_default, mean_match_fast_cat, mean_match_shap
-from fancyimpute import KNN, SoftImpute, IterativeSVD, BiScaler, 
-from fancyimpute import NuclearNormMinimization, MatrixFactorization
-from autoimpute.imputations import SingleImputer, MultipleImputer
-
-from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import IterativeImputer
-from sklearn.impute import KNNImputer
-
 # add an output logger that can be used to log the imputation process
 import logging
 logger = logging.getLogger(__name__)
 
-
+from miceforest import ImputationKernel
+from miceforest import mean_match_default, mean_match_fast_cat, mean_match_shap
 
 backend_compat ={
     'miceforest':{
@@ -72,40 +63,63 @@ class Imputer(BaseEstimator, TransformerMixin):
         self.add_mia = add_mia
         self.kwargs = kwargs
 
-        if backend == 'miceforest':
+        if backend == 'miceforest':            
             try:
-                num_mean_matches = self.kwargs['num_match_candidates']
+                self.num_estimators = self.kwargs['num_estimators']
             except KeyError:
-                num_mean_matches = 5
+                self.num_estimators = 100
 
-            self.mean_math = mean_match_default
-            self.mean_match.set_mean_match_candidates()
-        elif backend == 'fancyimpute':
-            
-        elif backend == 'autoimpute':
+            try:
+                self.iterations = self.kwargs['iterations']
+            except KeyError:
+                self.iterations = 10            
 
-        elif backend == 'sklearn':
-            self.imputer = IterativeImputer(**kwargs)
+            try:
+                num_match_candidates = self.kwargs['num_match_candidates']
+            except KeyError:
+                num_match_candidates = 5
+
+            self.mean_match = mean_match_default
+            self.mean_match.set_mean_match_candidates(num_match_candidates)
+        #elif backend == 'fancyimpute':
+        # from fancyimpute import KNN, SoftImpute, IterativeSVD, BiScaler
+        # from fancyimpute import NuclearNormMinimization, MatrixFactorization
+        #elif backend == 'autoimpute':
+        # from autoimpute.imputations import SingleImputer, MultipleImputer
+        #elif backend == 'sklearn':
+        # from sklearn.experimental import enable_iterative_imputer
+        # from sklearn.impute import IterativeImputer
+        # from sklearn.impute import KNNImputer
+        #    self.imputer = IterativeImputer(**kwargs)
 
     def fit(self, X, y=None):
         if self.backend == 'miceforest':
             self.imputer = ImputationKernel(
-                                X[self.meas_columns],
+                                X[self.meas_cols],
                                 save_all_iterations=False,
                                 random_state=1283,
                                 mean_match_scheme=self.mean_match
                                 )
-            self.imputer.mice(iterations=5, verbose=True, n_estimators=100)
+            self.imputer.mice(iterations=self.iterations,
+                                 verbose=False, 
+                                 n_estimators=self.num_estimators)
+        self.X = X
 
         return self
 
-    def transform(self, X):
+    def transform(self, X=None):
         if self.backend == 'miceforest':
-            imputed_df = self.imputer.complete_data(X[self.meas_columns])
+            # self.X[self.meas_cols]
+            imputed_df = self.imputer.complete_data(variables=self.meas_cols)
+            
+        X_out = self.X.copy()
+        X_out.loc[:, self.meas_cols] = imputed_df
 
         if self.add_mia:
-            mia_df = X.isna().astype(int)
-            imputed_df = pd.concat([imputed_df, mia_df], axis=1)
+            mia_df = self.X.isna().astype(int)
+            X_out = pd.concat([X_out, mia_df], axis=1)
+        
+        return X_out
 
     def get_params(self, deep=True):
         return self.kwargs

@@ -2880,3 +2880,1643 @@
 2022-09-04 22:13:12,075:celldyn_qc:single positional indexer is out-of-bounds
 2022-09-04 22:13:12,249:celldyn_qc:Completed filtering: ranges
 2022-09-04 22:13:12,249:celldyn_qc:Start filtering: suspect
+2022-09-08 13:41:37,547:celldyn_qc:Start filtering: leuko
+2022-09-08 13:41:37,559:celldyn_qc:Completed filtering: leuko
+2022-09-08 13:41:37,560:celldyn_qc:Start filtering: rbc
+2022-09-08 13:41:37,562:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 13:41:37,563:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 13:41:37,563:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 13:41:37,564:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 13:41:37,565:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 13:41:37,566:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 13:41:37,567:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 13:41:37,568:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 13:41:37,571:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 13:41:37,572:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 13:41:37,573:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 13:41:37,574:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 13:41:37,575:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 13:41:37,576:celldyn_qc:Completed filtering: rbc
+2022-09-08 13:41:37,577:celldyn_qc:Start filtering: ranges
+2022-09-08 13:41:37,615:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,617:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,618:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,628:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,630:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,631:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,633:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,634:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,636:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,637:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,643:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,644:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,646:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,647:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,648:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,650:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,651:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,653:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,657:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,658:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:41:37,663:celldyn_qc:Completed filtering: ranges
+2022-09-08 13:41:37,665:celldyn_qc:Start filtering: suspect
+2022-09-08 13:41:37,981:celldyn_qc:Completed filtering: suspect
+2022-09-08 13:42:48,390:celldyn_qc:Start filtering: leuko
+2022-09-08 13:42:48,401:celldyn_qc:Completed filtering: leuko
+2022-09-08 13:42:48,402:celldyn_qc:Start filtering: rbc
+2022-09-08 13:42:48,404:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 13:42:48,405:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 13:42:48,407:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 13:42:48,408:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 13:42:48,410:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 13:42:48,412:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 13:42:48,413:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 13:42:48,414:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 13:42:48,417:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 13:42:48,418:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 13:42:48,418:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 13:42:48,420:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 13:42:48,420:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 13:42:48,422:celldyn_qc:Completed filtering: rbc
+2022-09-08 13:42:48,423:celldyn_qc:Start filtering: ranges
+2022-09-08 13:42:48,460:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,462:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,463:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,476:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,477:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,478:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,479:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,480:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,482:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,483:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,491:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,492:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,493:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,494:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,496:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,497:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,499:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,500:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,504:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,505:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:42:48,510:celldyn_qc:Completed filtering: ranges
+2022-09-08 13:42:48,511:celldyn_qc:Start filtering: suspect
+2022-09-08 13:42:48,826:celldyn_qc:Completed filtering: suspect
+2022-09-08 13:43:09,812:celldyn_qc:Start filtering: leuko
+2022-09-08 13:43:09,823:celldyn_qc:Completed filtering: leuko
+2022-09-08 13:43:09,825:celldyn_qc:Start filtering: rbc
+2022-09-08 13:43:09,827:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 13:43:09,828:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 13:43:09,829:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 13:43:09,830:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 13:43:09,831:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 13:43:09,832:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 13:43:09,833:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 13:43:09,834:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 13:43:09,837:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 13:43:09,838:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 13:43:09,839:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 13:43:09,841:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 13:43:09,842:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 13:43:09,844:celldyn_qc:Completed filtering: rbc
+2022-09-08 13:43:09,845:celldyn_qc:Start filtering: ranges
+2022-09-08 13:43:09,886:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,887:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,888:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,898:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,899:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,900:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,901:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,903:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,905:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,907:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,913:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,914:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,916:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,917:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,918:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,920:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,921:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,923:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,926:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,928:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:09,933:celldyn_qc:Completed filtering: ranges
+2022-09-08 13:43:09,934:celldyn_qc:Start filtering: suspect
+2022-09-08 13:43:10,266:celldyn_qc:Completed filtering: suspect
+2022-09-08 13:43:41,035:celldyn_qc:Start filtering: leuko
+2022-09-08 13:43:41,046:celldyn_qc:Completed filtering: leuko
+2022-09-08 13:43:41,047:celldyn_qc:Start filtering: rbc
+2022-09-08 13:43:41,049:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 13:43:41,050:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 13:43:41,051:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 13:43:41,052:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 13:43:41,053:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 13:43:41,054:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 13:43:41,054:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 13:43:41,055:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 13:43:41,057:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 13:43:41,058:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 13:43:41,059:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 13:43:41,060:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 13:43:41,061:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 13:43:41,062:celldyn_qc:Completed filtering: rbc
+2022-09-08 13:43:41,063:celldyn_qc:Start filtering: ranges
+2022-09-08 13:43:41,110:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,111:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,113:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,122:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,124:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,125:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,126:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,127:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,128:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,129:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,136:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,137:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,138:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,139:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,141:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,142:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,143:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,144:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,147:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,148:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:43:41,154:celldyn_qc:Completed filtering: ranges
+2022-09-08 13:43:41,155:celldyn_qc:Start filtering: suspect
+2022-09-08 13:43:41,476:celldyn_qc:Completed filtering: suspect
+2022-09-08 13:45:54,550:celldyn_qc:Start filtering: leuko
+2022-09-08 13:45:54,564:celldyn_qc:Completed filtering: leuko
+2022-09-08 13:45:54,583:celldyn_qc:Start filtering: rbc
+2022-09-08 13:45:54,587:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 13:45:54,588:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 13:45:54,598:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 13:45:54,616:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 13:45:54,621:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 13:45:54,631:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 13:45:54,635:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 13:45:54,656:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 13:45:54,661:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 13:45:54,664:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 13:45:54,667:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 13:45:54,688:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 13:45:54,694:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 13:45:54,697:celldyn_qc:Completed filtering: rbc
+2022-09-08 13:45:54,700:celldyn_qc:Start filtering: ranges
+2022-09-08 13:45:54,847:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,858:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,870:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,887:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,892:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,901:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,916:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,921:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,925:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,943:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,961:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:54,983:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:55,005:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:55,013:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:55,019:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:55,045:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:55,057:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:55,072:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:55,080:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:55,089:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 13:45:55,110:celldyn_qc:Completed filtering: ranges
+2022-09-08 13:45:55,112:celldyn_qc:Start filtering: suspect
+2022-09-08 13:45:55,770:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:01:14,204:celldyn_qc:Start filtering: leuko
+2022-09-08 14:01:14,215:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:01:14,217:celldyn_qc:Start filtering: rbc
+2022-09-08 14:01:14,219:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:01:14,220:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:01:14,221:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:01:14,222:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:01:14,223:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:01:14,224:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:01:14,224:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:01:14,225:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:01:14,228:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:01:14,229:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:01:14,230:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:01:14,231:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:01:14,232:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:01:14,233:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:01:14,234:celldyn_qc:Start filtering: ranges
+2022-09-08 14:01:14,302:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,304:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,305:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,314:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,316:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,318:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,319:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,320:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,321:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,322:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,328:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,330:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,331:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,332:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,333:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,334:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,335:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,337:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,340:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,341:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:01:14,346:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:01:14,347:celldyn_qc:Start filtering: suspect
+2022-09-08 14:01:14,726:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:07:36,397:celldyn_qc:Start filtering: leuko
+2022-09-08 14:07:36,411:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:07:36,412:celldyn_qc:Start filtering: rbc
+2022-09-08 14:07:36,415:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:07:36,416:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:07:36,417:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:07:36,419:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:07:36,420:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:07:36,421:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:07:36,422:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:07:36,422:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:07:36,425:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:07:36,426:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:07:36,427:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:07:36,428:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:07:36,429:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:07:36,431:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:07:36,432:celldyn_qc:Start filtering: ranges
+2022-09-08 14:07:36,478:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,480:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,481:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,491:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,493:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,495:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,497:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,498:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,500:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,501:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,507:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,509:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,510:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,512:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,513:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,514:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,516:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,517:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,520:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,522:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:07:36,527:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:07:36,528:celldyn_qc:Start filtering: suspect
+2022-09-08 14:07:36,820:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:12:27,461:celldyn_qc:Start filtering: leuko
+2022-09-08 14:12:27,477:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:12:27,478:celldyn_qc:Start filtering: rbc
+2022-09-08 14:12:27,480:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:12:27,481:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:12:27,482:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:12:27,482:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:12:27,483:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:12:27,485:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:12:27,485:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:12:27,487:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:12:27,492:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:12:27,493:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:12:27,494:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:12:27,495:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:12:27,496:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:12:27,498:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:12:27,499:celldyn_qc:Start filtering: ranges
+2022-09-08 14:12:27,537:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,539:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,540:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,549:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,550:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,552:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,553:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,554:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,555:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,556:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,561:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,563:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,564:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,565:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,567:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,568:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,570:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,571:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,574:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,575:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:27,580:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:12:27,581:celldyn_qc:Start filtering: suspect
+2022-09-08 14:12:27,862:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:12:43,433:celldyn_qc:Start filtering: leuko
+2022-09-08 14:12:43,443:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:12:43,444:celldyn_qc:Start filtering: rbc
+2022-09-08 14:12:43,446:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:12:43,447:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:12:43,448:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:12:43,449:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:12:43,450:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:12:43,451:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:12:43,451:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:12:43,452:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:12:43,454:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:12:43,455:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:12:43,456:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:12:43,457:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:12:43,457:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:12:43,460:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:12:43,461:celldyn_qc:Start filtering: ranges
+2022-09-08 14:12:43,497:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,499:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,501:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,513:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,514:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,516:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,517:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,518:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,520:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,521:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,526:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,527:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,528:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,530:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,531:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,532:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,533:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,534:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,537:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,538:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:43,543:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:12:43,544:celldyn_qc:Start filtering: suspect
+2022-09-08 14:12:43,812:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:12:54,315:celldyn_qc:Start filtering: leuko
+2022-09-08 14:12:54,340:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:12:54,341:celldyn_qc:Start filtering: rbc
+2022-09-08 14:12:54,343:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:12:54,344:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:12:54,345:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:12:54,347:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:12:54,348:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:12:54,350:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:12:54,352:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:12:54,354:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:12:54,358:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:12:54,359:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:12:54,360:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:12:54,361:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:12:54,361:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:12:54,362:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:12:54,363:celldyn_qc:Start filtering: ranges
+2022-09-08 14:12:54,399:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,400:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,401:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,411:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,412:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,414:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,416:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,418:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,419:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,421:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,425:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,427:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,428:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,429:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,430:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,431:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,432:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,433:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,436:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,437:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:12:54,441:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:12:54,442:celldyn_qc:Start filtering: suspect
+2022-09-08 14:12:54,725:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:19:34,893:celldyn_qc:Start filtering: leuko
+2022-09-08 14:19:34,904:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:19:34,905:celldyn_qc:Start filtering: rbc
+2022-09-08 14:19:34,908:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:19:34,929:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:19:34,931:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:19:34,932:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:19:34,933:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:19:34,934:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:19:34,939:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:19:34,966:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:19:35,479:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:19:35,555:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:19:35,557:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:19:35,558:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:19:35,561:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:19:35,563:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:19:35,565:celldyn_qc:Start filtering: ranges
+2022-09-08 14:19:35,658:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,077:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,215:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,226:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,247:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,250:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,252:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,261:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,287:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,654:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,897:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,900:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,901:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,902:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,904:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,927:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,929:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,930:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,933:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,935:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:19:36,943:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:19:37,336:celldyn_qc:Start filtering: suspect
+2022-09-08 14:19:38,009:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:25:07,669:celldyn_qc:Start filtering: leuko
+2022-09-08 14:25:07,684:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:25:07,685:celldyn_qc:Start filtering: rbc
+2022-09-08 14:25:07,688:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:25:07,689:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:25:07,690:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:25:07,690:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:25:07,692:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:25:07,693:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:25:07,694:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:25:07,695:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:25:07,697:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:25:07,698:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:25:07,700:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:25:07,703:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:25:07,704:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:25:07,706:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:25:07,706:celldyn_qc:Start filtering: ranges
+2022-09-08 14:25:07,747:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,748:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,750:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,759:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,760:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,763:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,765:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,766:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,767:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,770:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,777:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,779:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,780:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,781:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,782:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,785:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,786:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,787:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,790:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,791:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:25:07,798:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:25:07,799:celldyn_qc:Start filtering: suspect
+2022-09-08 14:25:08,117:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:30:20,803:celldyn_qc:Start filtering: leuko
+2022-09-08 14:30:20,856:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:30:20,857:celldyn_qc:Start filtering: rbc
+2022-09-08 14:30:20,859:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:30:20,861:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:30:20,862:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:30:20,863:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:30:20,864:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:30:20,865:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:30:20,865:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:30:20,866:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:30:20,869:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:30:20,870:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:30:20,871:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:30:20,871:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:30:20,872:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:30:20,874:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:30:20,874:celldyn_qc:Start filtering: ranges
+2022-09-08 14:30:20,948:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:20,970:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:20,977:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:20,998:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,002:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,012:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,035:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,050:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,069:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,096:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,106:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,109:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,136:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,141:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,143:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,169:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,175:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,179:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,206:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,209:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:30:21,217:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:30:21,239:celldyn_qc:Start filtering: suspect
+2022-09-08 14:30:21,938:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:32:11,765:celldyn_qc:Start filtering: leuko
+2022-09-08 14:32:11,789:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:32:11,796:celldyn_qc:Start filtering: rbc
+2022-09-08 14:32:11,821:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:32:11,831:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:32:11,851:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:32:11,856:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:32:11,870:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:32:11,891:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:32:11,893:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:32:11,903:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:32:11,929:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:32:11,937:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:32:11,962:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:32:11,970:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:32:11,984:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:32:12,003:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:32:12,018:celldyn_qc:Start filtering: ranges
+2022-09-08 14:32:12,295:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,333:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,364:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,382:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,394:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,411:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,416:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,431:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,442:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,444:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,468:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,475:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,477:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,494:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,501:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,508:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,509:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,529:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,536:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,541:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:12,569:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:32:12,581:celldyn_qc:Start filtering: suspect
+2022-09-08 14:32:13,208:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:32:19,092:celldyn_qc:Start filtering: leuko
+2022-09-08 14:32:19,139:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:32:19,162:celldyn_qc:Start filtering: rbc
+2022-09-08 14:32:19,195:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:32:19,197:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:32:19,215:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:32:19,235:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:32:19,254:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:32:19,274:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:32:19,307:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:32:19,316:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:32:19,349:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:32:19,384:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:32:19,404:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:32:19,429:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:32:19,456:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:32:19,467:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:32:19,497:celldyn_qc:Start filtering: ranges
+2022-09-08 14:32:19,678:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,681:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,707:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,725:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,748:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,755:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,758:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,761:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,781:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,790:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,801:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,814:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,822:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,844:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,859:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,902:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,917:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,943:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,964:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:19,997:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:32:20,034:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:32:20,073:celldyn_qc:Start filtering: suspect
+2022-09-08 14:32:20,832:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:33:36,241:celldyn_qc:Start filtering: leuko
+2022-09-08 14:33:36,297:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:33:36,298:celldyn_qc:Start filtering: rbc
+2022-09-08 14:33:36,301:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:33:36,302:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:33:36,303:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:33:36,304:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:33:36,305:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:33:36,306:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:33:36,307:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:33:36,309:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:33:36,312:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:33:36,313:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:33:36,314:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:33:36,315:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:33:36,316:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:33:36,317:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:33:36,318:celldyn_qc:Start filtering: ranges
+2022-09-08 14:33:36,537:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,548:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,580:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,608:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,621:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,650:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,660:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,695:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,703:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,743:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,777:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,810:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,831:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,849:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,873:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,884:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,912:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,939:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,952:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:36,974:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:33:37,000:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:33:37,022:celldyn_qc:Start filtering: suspect
+2022-09-08 14:33:37,684:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:38:25,722:celldyn_qc:Start filtering: leuko
+2022-09-08 14:38:25,757:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:38:25,772:celldyn_qc:Start filtering: rbc
+2022-09-08 14:38:25,790:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:38:25,808:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:38:25,823:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:38:25,838:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:38:25,864:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:38:25,879:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:38:25,881:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:38:25,903:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:38:25,921:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:38:25,936:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:38:25,953:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:38:25,964:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:38:25,971:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:38:25,985:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:38:25,990:celldyn_qc:Start filtering: ranges
+2022-09-08 14:38:26,115:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,123:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,135:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,165:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,168:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,188:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,201:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,214:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,225:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,244:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,260:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,262:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,278:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,296:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,329:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,338:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,359:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,376:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,385:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,400:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:38:26,424:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:38:26,442:celldyn_qc:Start filtering: suspect
+2022-09-08 14:38:27,093:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:46:42,999:celldyn_qc:Start filtering: leuko
+2022-09-08 14:46:43,071:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:46:43,111:celldyn_qc:Start filtering: rbc
+2022-09-08 14:46:43,156:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:46:43,191:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:46:43,222:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:46:43,232:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:46:43,262:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:46:43,289:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:46:43,302:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:46:43,329:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:46:43,363:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:46:43,382:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:46:43,397:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:46:43,409:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:46:43,440:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:46:43,443:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:46:43,453:celldyn_qc:Start filtering: ranges
+2022-09-08 14:46:43,732:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,742:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,765:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,790:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,814:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,841:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,856:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,868:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,880:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,892:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,911:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,913:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,925:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,948:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,956:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:43,987:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:44,001:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:44,033:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:44,046:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:44,091:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:46:44,138:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:46:44,173:celldyn_qc:Start filtering: suspect
+2022-09-08 14:46:45,010:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:47:20,174:celldyn_qc:Start filtering: leuko
+2022-09-08 14:47:20,226:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:47:20,232:celldyn_qc:Start filtering: rbc
+2022-09-08 14:47:20,263:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:47:20,283:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:47:20,295:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:47:20,311:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:47:20,324:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:47:20,328:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:47:20,331:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:47:20,354:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:47:20,364:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:47:20,418:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:47:20,442:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:47:20,453:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:47:20,486:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:47:20,494:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:47:20,511:celldyn_qc:Start filtering: ranges
+2022-09-08 14:47:20,735:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,747:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,752:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,790:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,799:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,818:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,851:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,859:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,885:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,897:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,919:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,945:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,953:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,985:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:20,998:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:21,034:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:21,042:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:21,097:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:21,110:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:21,140:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:21,153:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:47:21,172:celldyn_qc:Start filtering: suspect
+2022-09-08 14:47:21,918:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:47:36,231:celldyn_qc:Start filtering: leuko
+2022-09-08 14:47:36,259:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:47:36,264:celldyn_qc:Start filtering: rbc
+2022-09-08 14:47:36,267:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:47:36,280:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:47:36,297:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:47:36,312:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:47:36,330:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:47:36,336:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:47:36,346:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:47:36,363:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:47:36,372:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:47:36,381:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:47:36,382:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:47:36,405:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:47:36,411:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:47:36,414:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:47:36,418:celldyn_qc:Start filtering: ranges
+2022-09-08 14:47:36,561:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,566:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,593:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,609:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,629:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,642:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,661:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,682:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,695:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,705:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,729:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,741:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,761:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,764:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,786:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,798:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,816:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,823:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,832:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,852:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:47:36,861:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:47:36,865:celldyn_qc:Start filtering: suspect
+2022-09-08 14:47:37,473:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:49:33,732:celldyn_qc:Start filtering: leuko
+2022-09-08 14:49:33,770:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:49:33,794:celldyn_qc:Start filtering: rbc
+2022-09-08 14:49:33,822:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:49:33,827:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:49:33,856:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:49:33,864:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:49:33,890:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:49:33,903:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:49:33,929:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:49:33,935:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:49:33,940:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:49:33,948:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:49:33,967:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:49:33,973:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:49:33,981:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:49:34,003:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:49:34,006:celldyn_qc:Start filtering: ranges
+2022-09-08 14:49:34,128:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,147:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,153:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,189:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,193:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,197:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,218:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,228:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,247:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,262:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,275:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,287:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,296:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,307:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,313:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,322:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,331:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,344:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,350:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,362:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:49:34,376:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:49:34,385:celldyn_qc:Start filtering: suspect
+2022-09-08 14:49:34,931:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:51:24,843:celldyn_qc:Start filtering: leuko
+2022-09-08 14:51:24,865:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:51:24,891:celldyn_qc:Start filtering: rbc
+2022-09-08 14:51:24,950:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:51:24,982:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:51:25,002:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:51:25,026:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:51:25,036:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:51:25,050:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:51:25,069:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:51:25,075:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:51:25,103:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:51:25,106:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:51:25,108:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:51:25,110:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:51:25,111:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:51:25,113:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:51:25,114:celldyn_qc:Start filtering: ranges
+2022-09-08 14:51:25,185:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,203:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,214:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,232:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,238:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,247:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,266:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,276:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,286:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,308:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,333:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,380:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,407:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,445:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,477:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,496:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,508:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,516:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,541:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,550:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:25,565:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:51:25,574:celldyn_qc:Start filtering: suspect
+2022-09-08 14:51:26,251:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:51:31,520:celldyn_qc:Start filtering: leuko
+2022-09-08 14:51:31,566:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:51:31,576:celldyn_qc:Start filtering: rbc
+2022-09-08 14:51:31,603:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:51:31,636:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:51:31,654:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:51:31,672:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:51:31,691:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:51:31,723:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:51:31,769:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:51:31,807:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:51:31,843:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:51:31,870:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:51:31,905:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:51:31,915:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:51:31,934:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:51:31,943:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:51:31,948:celldyn_qc:Start filtering: ranges
+2022-09-08 14:51:32,102:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,113:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,149:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,197:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,232:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,264:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,269:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,294:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,302:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,332:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,350:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,358:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,375:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,379:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,385:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,393:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,413:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,418:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,439:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,446:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:51:32,458:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:51:32,469:celldyn_qc:Start filtering: suspect
+2022-09-08 14:51:33,132:celldyn_qc:Completed filtering: suspect
+2022-09-08 14:57:50,251:celldyn_qc:Start filtering: leuko
+2022-09-08 14:57:50,270:celldyn_qc:Completed filtering: leuko
+2022-09-08 14:57:50,279:celldyn_qc:Start filtering: rbc
+2022-09-08 14:57:50,295:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 14:57:50,302:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 14:57:50,303:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 14:57:50,304:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 14:57:50,312:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 14:57:50,330:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 14:57:50,332:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 14:57:50,351:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 14:57:50,364:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 14:57:50,383:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 14:57:50,397:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 14:57:50,406:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 14:57:50,415:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 14:57:50,429:celldyn_qc:Completed filtering: rbc
+2022-09-08 14:57:50,431:celldyn_qc:Start filtering: ranges
+2022-09-08 14:57:50,559:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,561:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,563:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,578:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,579:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,581:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,582:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,583:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,584:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,586:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,594:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,595:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,596:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,598:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,599:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,600:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,601:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,603:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,613:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,637:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 14:57:50,648:celldyn_qc:Completed filtering: ranges
+2022-09-08 14:57:50,652:celldyn_qc:Start filtering: suspect
+2022-09-08 14:57:51,284:celldyn_qc:Completed filtering: suspect
+2022-09-08 15:07:39,409:celldyn_qc:Start filtering: leuko
+2022-09-08 15:07:39,429:celldyn_qc:Completed filtering: leuko
+2022-09-08 15:07:39,430:celldyn_qc:Start filtering: rbc
+2022-09-08 15:07:39,435:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-08 15:07:39,437:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-08 15:07:39,438:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-08 15:07:39,440:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-08 15:07:39,441:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-08 15:07:39,442:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-08 15:07:39,447:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-08 15:07:39,449:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-08 15:07:39,452:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-08 15:07:39,454:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-08 15:07:39,455:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-08 15:07:39,456:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-08 15:07:39,458:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-08 15:07:39,460:celldyn_qc:Completed filtering: rbc
+2022-09-08 15:07:39,462:celldyn_qc:Start filtering: ranges
+2022-09-08 15:07:39,542:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,544:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,545:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,553:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,555:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,556:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,557:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,558:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,560:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,562:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,568:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,570:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,571:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,572:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,573:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,574:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,575:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,576:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,580:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,582:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-08 15:07:39,587:celldyn_qc:Completed filtering: ranges
+2022-09-08 15:07:39,587:celldyn_qc:Start filtering: suspect
+2022-09-08 15:07:39,855:celldyn_qc:Completed filtering: suspect
+2022-09-12 10:55:03,601:celldyn_qc:Start filtering: leuko
+2022-09-12 10:55:03,614:celldyn_qc:Completed filtering: leuko
+2022-09-12 10:55:03,615:celldyn_qc:Start filtering: rbc
+2022-09-12 10:55:03,617:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 10:55:03,619:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 10:55:03,620:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 10:55:03,621:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 10:55:03,622:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 10:55:03,623:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 10:55:03,623:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 10:55:03,624:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 10:55:03,627:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 10:55:03,628:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 10:55:03,629:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 10:55:03,629:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 10:55:03,630:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 10:55:03,631:celldyn_qc:Completed filtering: rbc
+2022-09-12 10:55:03,632:celldyn_qc:Start filtering: ranges
+2022-09-12 10:55:03,684:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,686:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,688:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,696:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,698:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,700:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,702:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,703:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,705:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,707:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,713:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,714:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,716:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,718:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,720:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,721:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,723:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,724:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,728:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,730:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 10:55:03,735:celldyn_qc:Completed filtering: ranges
+2022-09-12 10:55:03,737:celldyn_qc:Start filtering: suspect
+2022-09-12 10:55:04,057:celldyn_qc:Completed filtering: suspect
+2022-09-12 11:01:05,158:celldyn_qc:Start filtering: leuko
+2022-09-12 11:01:05,170:celldyn_qc:Completed filtering: leuko
+2022-09-12 11:01:05,171:celldyn_qc:Start filtering: rbc
+2022-09-12 11:01:05,173:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 11:01:05,174:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 11:01:05,175:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 11:01:05,176:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 11:01:05,177:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 11:01:05,179:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 11:01:05,180:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 11:01:05,181:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 11:01:05,184:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 11:01:05,185:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 11:01:05,186:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 11:01:05,187:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 11:01:05,189:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 11:01:05,190:celldyn_qc:Completed filtering: rbc
+2022-09-12 11:01:05,191:celldyn_qc:Start filtering: ranges
+2022-09-12 11:01:05,235:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,236:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,237:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,247:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,248:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,249:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,251:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,253:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,255:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,265:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,272:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,273:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,274:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,275:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,277:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,278:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,280:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,281:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,284:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,285:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:01:05,291:celldyn_qc:Completed filtering: ranges
+2022-09-12 11:01:05,292:celldyn_qc:Start filtering: suspect
+2022-09-12 11:01:05,678:celldyn_qc:Completed filtering: suspect
+2022-09-12 11:19:35,746:celldyn_qc:Start filtering: leuko
+2022-09-12 11:19:35,759:celldyn_qc:Completed filtering: leuko
+2022-09-12 11:19:35,760:celldyn_qc:Start filtering: rbc
+2022-09-12 11:19:35,762:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 11:19:35,763:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 11:19:35,764:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 11:19:35,765:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 11:19:35,766:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 11:19:35,768:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 11:19:35,769:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 11:19:35,770:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 11:19:35,774:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 11:19:35,776:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 11:19:35,777:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 11:19:35,778:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 11:19:35,779:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 11:19:35,780:celldyn_qc:Completed filtering: rbc
+2022-09-12 11:19:35,781:celldyn_qc:Start filtering: ranges
+2022-09-12 11:19:35,842:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,844:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,846:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,864:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,866:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,868:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,870:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,872:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,873:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,875:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,882:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,884:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,886:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,888:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,890:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,891:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,892:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,893:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,897:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,898:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:35,907:celldyn_qc:Completed filtering: ranges
+2022-09-12 11:19:35,908:celldyn_qc:Start filtering: suspect
+2022-09-12 11:19:36,246:celldyn_qc:Completed filtering: suspect
+2022-09-12 11:19:48,866:celldyn_qc:Start filtering: leuko
+2022-09-12 11:19:48,877:celldyn_qc:Completed filtering: leuko
+2022-09-12 11:19:48,877:celldyn_qc:Start filtering: rbc
+2022-09-12 11:19:48,890:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 11:19:48,893:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 11:19:48,894:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 11:19:48,895:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 11:19:48,896:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 11:19:48,898:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 11:19:48,899:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 11:19:48,900:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 11:19:48,902:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 11:19:48,903:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 11:19:48,904:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 11:19:48,905:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 11:19:48,907:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 11:19:48,910:celldyn_qc:Completed filtering: rbc
+2022-09-12 11:19:48,911:celldyn_qc:Start filtering: ranges
+2022-09-12 11:19:48,952:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,953:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,955:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,964:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,965:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,966:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,968:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,970:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,971:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,972:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,978:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,979:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,981:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,982:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,983:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,984:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,985:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,988:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:48,999:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:49,001:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:19:49,017:celldyn_qc:Completed filtering: ranges
+2022-09-12 11:19:49,019:celldyn_qc:Start filtering: suspect
+2022-09-12 11:19:49,310:celldyn_qc:Completed filtering: suspect
+2022-09-12 11:24:53,008:celldyn_qc:Start filtering: leuko
+2022-09-12 11:24:53,018:celldyn_qc:Completed filtering: leuko
+2022-09-12 11:24:53,019:celldyn_qc:Start filtering: rbc
+2022-09-12 11:24:53,021:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 11:24:53,022:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 11:24:53,023:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 11:24:53,024:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 11:24:53,025:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 11:24:53,026:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 11:24:53,026:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 11:24:53,028:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 11:24:53,030:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 11:24:53,031:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 11:24:53,032:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 11:24:53,033:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 11:24:53,034:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 11:24:53,036:celldyn_qc:Completed filtering: rbc
+2022-09-12 11:24:53,037:celldyn_qc:Start filtering: ranges
+2022-09-12 11:24:53,075:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,076:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,077:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,086:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,087:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,089:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,090:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,091:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,092:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,093:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,098:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,100:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,102:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,103:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,105:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,106:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,107:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,108:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,111:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,113:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:24:53,119:celldyn_qc:Completed filtering: ranges
+2022-09-12 11:24:53,121:celldyn_qc:Start filtering: suspect
+2022-09-12 11:24:53,438:celldyn_qc:Completed filtering: suspect
+2022-09-12 11:25:35,161:celldyn_qc:Start filtering: leuko
+2022-09-12 11:25:35,171:celldyn_qc:Completed filtering: leuko
+2022-09-12 11:25:35,172:celldyn_qc:Start filtering: rbc
+2022-09-12 11:25:35,174:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 11:25:35,176:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 11:25:35,177:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 11:25:35,178:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 11:25:35,179:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 11:25:35,181:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 11:25:35,182:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 11:25:35,183:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 11:25:35,186:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 11:25:35,187:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 11:25:35,188:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 11:25:35,189:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 11:25:35,190:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 11:25:35,192:celldyn_qc:Completed filtering: rbc
+2022-09-12 11:25:35,193:celldyn_qc:Start filtering: ranges
+2022-09-12 11:25:35,235:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,237:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,239:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,247:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,249:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,251:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,252:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,253:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,254:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,256:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,261:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,263:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,264:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,266:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,268:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,270:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,271:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,273:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,276:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,278:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:25:35,284:celldyn_qc:Completed filtering: ranges
+2022-09-12 11:25:35,284:celldyn_qc:Start filtering: suspect
+2022-09-12 11:25:35,521:celldyn_qc:Completed filtering: suspect
+2022-09-12 11:46:11,749:celldyn_qc:Start filtering: leuko
+2022-09-12 11:46:11,759:celldyn_qc:Completed filtering: leuko
+2022-09-12 11:46:11,760:celldyn_qc:Start filtering: rbc
+2022-09-12 11:46:11,763:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 11:46:11,764:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 11:46:11,765:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 11:46:11,767:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 11:46:11,768:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 11:46:11,769:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 11:46:11,771:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 11:46:11,772:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 11:46:11,775:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 11:46:11,777:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 11:46:11,778:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 11:46:11,779:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 11:46:11,780:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 11:46:11,781:celldyn_qc:Completed filtering: rbc
+2022-09-12 11:46:11,783:celldyn_qc:Start filtering: ranges
+2022-09-12 11:46:11,829:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,830:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,832:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,841:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,843:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,845:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,847:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,848:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,850:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,852:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,857:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,859:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,861:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,864:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,865:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,867:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,869:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,871:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,875:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,877:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:46:11,882:celldyn_qc:Completed filtering: ranges
+2022-09-12 11:46:11,884:celldyn_qc:Start filtering: suspect
+2022-09-12 11:46:12,145:celldyn_qc:Completed filtering: suspect
+2022-09-12 11:49:42,571:celldyn_qc:Start filtering: leuko
+2022-09-12 11:49:42,651:celldyn_qc:Completed filtering: leuko
+2022-09-12 11:49:42,657:celldyn_qc:Start filtering: rbc
+2022-09-12 11:49:42,668:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 11:49:42,669:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 11:49:42,670:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 11:49:42,672:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 11:49:42,676:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 11:49:42,679:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 11:49:42,681:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 11:49:42,683:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 11:49:42,687:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 11:49:42,689:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 11:49:42,693:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 11:49:42,699:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 11:49:42,702:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 11:49:42,708:celldyn_qc:Completed filtering: rbc
+2022-09-12 11:49:42,710:celldyn_qc:Start filtering: ranges
+2022-09-12 11:49:42,758:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,797:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,857:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,871:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,873:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,875:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,877:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,878:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,880:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,882:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,889:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,890:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,899:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,936:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,939:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,941:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,945:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,948:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,955:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,957:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:49:42,968:celldyn_qc:Completed filtering: ranges
+2022-09-12 11:49:42,986:celldyn_qc:Start filtering: suspect
+2022-09-12 11:49:43,371:celldyn_qc:Completed filtering: suspect
+2022-09-12 11:50:45,771:celldyn_qc:Start filtering: leuko
+2022-09-12 11:50:45,783:celldyn_qc:Completed filtering: leuko
+2022-09-12 11:50:45,784:celldyn_qc:Start filtering: rbc
+2022-09-12 11:50:45,786:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 11:50:45,787:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 11:50:45,788:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 11:50:45,789:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 11:50:45,790:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 11:50:45,791:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 11:50:45,792:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 11:50:45,793:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 11:50:45,796:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 11:50:45,797:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 11:50:45,798:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 11:50:45,799:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 11:50:45,800:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 11:50:45,801:celldyn_qc:Completed filtering: rbc
+2022-09-12 11:50:45,802:celldyn_qc:Start filtering: ranges
+2022-09-12 11:50:45,841:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,842:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,844:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,855:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,857:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,858:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,859:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,860:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,862:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,864:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,870:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,871:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,872:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,874:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,875:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,876:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,878:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,879:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,883:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,884:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:50:45,889:celldyn_qc:Completed filtering: ranges
+2022-09-12 11:50:45,890:celldyn_qc:Start filtering: suspect
+2022-09-12 11:50:46,158:celldyn_qc:Completed filtering: suspect
+2022-09-12 11:53:36,544:celldyn_qc:Start filtering: leuko
+2022-09-12 11:53:36,564:celldyn_qc:Completed filtering: leuko
+2022-09-12 11:53:36,566:celldyn_qc:Start filtering: rbc
+2022-09-12 11:53:36,569:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 11:53:36,569:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 11:53:36,570:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 11:53:36,571:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 11:53:36,571:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 11:53:36,572:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 11:53:36,575:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 11:53:36,577:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 11:53:36,582:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 11:53:36,583:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 11:53:36,584:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 11:53:36,585:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 11:53:36,585:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 11:53:36,587:celldyn_qc:Completed filtering: rbc
+2022-09-12 11:53:36,588:celldyn_qc:Start filtering: ranges
+2022-09-12 11:53:36,636:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,637:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,639:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,652:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,654:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,655:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,656:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,659:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,660:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,661:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,669:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,670:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,671:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,672:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,674:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,676:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,678:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,679:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,682:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,683:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 11:53:36,687:celldyn_qc:Completed filtering: ranges
+2022-09-12 11:53:36,688:celldyn_qc:Start filtering: suspect
+2022-09-12 11:53:37,036:celldyn_qc:Completed filtering: suspect
+2022-09-12 14:36:36,942:celldyn_qc:Start filtering: leuko
+2022-09-12 14:36:36,953:celldyn_qc:Completed filtering: leuko
+2022-09-12 14:36:36,954:celldyn_qc:Start filtering: rbc
+2022-09-12 14:36:36,956:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 14:36:36,957:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 14:36:36,958:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 14:36:36,958:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 14:36:36,959:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 14:36:36,960:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 14:36:36,961:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 14:36:36,962:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 14:36:36,964:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 14:36:36,965:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 14:36:36,966:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 14:36:36,967:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 14:36:36,968:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 14:36:36,969:celldyn_qc:Completed filtering: rbc
+2022-09-12 14:36:36,970:celldyn_qc:Start filtering: ranges
+2022-09-12 14:36:37,012:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,013:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,014:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,022:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,023:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,024:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,027:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,029:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,030:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,032:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,045:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,047:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,050:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,053:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,055:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,056:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,058:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,060:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,064:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,065:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 14:36:37,075:celldyn_qc:Completed filtering: ranges
+2022-09-12 14:36:37,076:celldyn_qc:Start filtering: suspect
+2022-09-12 14:36:37,328:celldyn_qc:Completed filtering: suspect
+2022-09-12 15:15:31,204:celldyn_qc:Start filtering: leuko
+2022-09-12 15:15:31,219:celldyn_qc:Completed filtering: leuko
+2022-09-12 15:15:31,220:celldyn_qc:Start filtering: rbc
+2022-09-12 15:15:31,222:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 15:15:31,223:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 15:15:31,224:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 15:15:31,225:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 15:15:31,225:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 15:15:31,226:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 15:15:31,227:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 15:15:31,228:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 15:15:31,232:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 15:15:31,234:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 15:15:31,238:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 15:15:31,239:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 15:15:31,240:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 15:15:31,241:celldyn_qc:Completed filtering: rbc
+2022-09-12 15:15:31,242:celldyn_qc:Start filtering: ranges
+2022-09-12 15:15:31,292:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,293:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,294:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,308:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,309:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,310:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,311:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,312:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,314:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,319:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,327:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,328:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,329:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,330:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,333:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,334:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,335:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,336:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,339:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,341:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:15:31,346:celldyn_qc:Completed filtering: ranges
+2022-09-12 15:15:31,346:celldyn_qc:Start filtering: suspect
+2022-09-12 15:15:31,659:celldyn_qc:Completed filtering: suspect
+2022-09-12 15:32:49,791:celldyn_qc:Start filtering: leuko
+2022-09-12 15:32:49,800:celldyn_qc:Completed filtering: leuko
+2022-09-12 15:32:49,801:celldyn_qc:Start filtering: rbc
+2022-09-12 15:32:49,803:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 15:32:49,804:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 15:32:49,804:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 15:32:49,805:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 15:32:49,806:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 15:32:49,807:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 15:32:49,808:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 15:32:49,808:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 15:32:49,811:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 15:32:49,812:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 15:32:49,812:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 15:32:49,813:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 15:32:49,814:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 15:32:49,815:celldyn_qc:Completed filtering: rbc
+2022-09-12 15:32:49,816:celldyn_qc:Start filtering: ranges
+2022-09-12 15:32:49,867:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,868:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,869:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,879:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,880:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,881:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,882:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,883:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,884:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,885:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,890:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,892:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,893:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,894:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,895:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,896:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,897:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,898:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,901:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,902:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:32:49,907:celldyn_qc:Completed filtering: ranges
+2022-09-12 15:32:49,908:celldyn_qc:Start filtering: suspect
+2022-09-12 15:32:50,157:celldyn_qc:Completed filtering: suspect
+2022-09-12 15:52:13,247:celldyn_qc:Start filtering: leuko
+2022-09-12 15:52:13,258:celldyn_qc:Completed filtering: leuko
+2022-09-12 15:52:13,260:celldyn_qc:Start filtering: rbc
+2022-09-12 15:52:13,261:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 15:52:13,262:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 15:52:13,264:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 15:52:13,265:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 15:52:13,266:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 15:52:13,267:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 15:52:13,269:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 15:52:13,270:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 15:52:13,275:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 15:52:13,276:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 15:52:13,277:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 15:52:13,278:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 15:52:13,279:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 15:52:13,280:celldyn_qc:Completed filtering: rbc
+2022-09-12 15:52:13,281:celldyn_qc:Start filtering: ranges
+2022-09-12 15:52:13,327:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,329:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,331:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,342:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,344:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,345:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,346:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,347:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,350:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,352:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,361:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,363:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,364:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,365:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,367:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,368:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,369:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,372:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,377:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,378:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:52:13,382:celldyn_qc:Completed filtering: ranges
+2022-09-12 15:52:13,383:celldyn_qc:Start filtering: suspect
+2022-09-12 15:52:13,393:celldyn_qc:Completed filtering: suspect
+2022-09-12 15:53:09,559:celldyn_qc:Start filtering: leuko
+2022-09-12 15:53:09,567:celldyn_qc:Completed filtering: leuko
+2022-09-12 15:53:09,571:celldyn_qc:Start filtering: rbc
+2022-09-12 15:53:09,574:celldyn_qc:The c_mode_rtc variable was not present in CELLDYN
+2022-09-12 15:53:09,575:celldyn_qc:The c_b_retc variable was not present in CELLDYN
+2022-09-12 15:53:09,577:celldyn_qc:The c_b_pretc variable was not present in CELLDYN
+2022-09-12 15:53:09,579:celldyn_qc:The c_b_irf variable was not present in CELLDYN
+2022-09-12 15:53:09,580:celldyn_qc:The c_b_rbcicv variable was not present in CELLDYN
+2022-09-12 15:53:09,582:celldyn_qc:The c_b_rbcimn variable was not present in CELLDYN
+2022-09-12 15:53:09,583:celldyn_qc:The c_b_rbcfmn variable was not present in CELLDYN
+2022-09-12 15:53:09,587:celldyn_qc:The c_b_rbcfcv variable was not present in CELLDYN
+2022-09-12 15:53:09,589:celldyn_qc:The c_b_mchr variable was not present in CELLDYN
+2022-09-12 15:53:09,595:celldyn_qc:The c_b_mchcr variable was not present in CELLDYN
+2022-09-12 15:53:09,597:celldyn_qc:The c_b_mcvr variable was not present in CELLDYN
+2022-09-12 15:53:09,598:celldyn_qc:The c_b_phpo variable was not present in CELLDYN
+2022-09-12 15:53:09,600:celldyn_qc:The c_b_phpr variable was not present in CELLDYN
+2022-09-12 15:53:09,601:celldyn_qc:Completed filtering: rbc
+2022-09-12 15:53:09,603:celldyn_qc:Start filtering: ranges
+2022-09-12 15:53:09,644:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,646:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,648:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,662:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,665:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,666:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,669:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,671:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,674:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,677:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,683:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,686:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,689:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,691:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,693:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,695:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,698:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,700:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,705:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,708:celldyn_qc:single positional indexer is out-of-bounds
+2022-09-12 15:53:09,714:celldyn_qc:Completed filtering: ranges
+2022-09-12 15:53:09,716:celldyn_qc:Start filtering: suspect
+2022-09-12 15:53:09,726:celldyn_qc:Completed filtering: suspect

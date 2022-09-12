@@ -1,6 +1,5 @@
 #import pandas as pd
 import numpy as np
-from tqdm import tqdm
 from sklearn.base import BaseEstimator, TransformerMixin
 
 #import polars as pl
@@ -48,15 +47,13 @@ fail_mapping = {
 class QcControl(BaseEstimator, TransformerMixin):
 # cast in sklearn api
 
-    def __init__(self, param_file=None, 
-                reference_file=None, filters=[], backend='pandas'):
+    def __init__(self, param_file=None, filters=[], backend='pandas'):
         '''
         Initialize the QC control object.
 
         Parameters
         ----------
         param_file : str -- path to the parameter file with hard bounds
-        reference_file : str -- path to the reference file with soft bounds
         filters : list of str -- list of filters to apply to the data
         backend : str -- pandas, polars
         '''
@@ -287,10 +284,11 @@ class QcControl(BaseEstimator, TransformerMixin):
         self._get_cols(X)       
         _X = X.copy()
 
-        for k, v in self.filters.items():
+        for k, filter_fun in self.filters.items():
             logger.debug(f"Start filtering: {k}")
-            _X = v(_X.copy())
+            _X = filter_fun(_X.copy())
             logger.debug(f"Completed filtering: {k}")
+
         self.X_transformed = _X
         return self
     

@@ -11,6 +11,6 @@ def poincarre_dist(x,y):
         )
     )
 
-@njit(float32(float32[:],float32[:]), fastmath=True)
+@njit(float32(float32[:],float32[:],float32), fastmath=True)
 def fractional_distance(x, y, f=0.5):
     return np.power(np.abs(np.sum(np.power(x-y, f))), 1/f)

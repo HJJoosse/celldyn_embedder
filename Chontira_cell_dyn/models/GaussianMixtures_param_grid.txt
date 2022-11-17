@@ -1,0 +1,1 @@
+{'n_components': list(range(2, 6, 1)),'n_init': list(range(2, 20, 2)),'covariance_type' : ('full', 'tied', 'diag', 'spherical'),'init_params':('kmeans', 'k-means++', 'random', 'random_from_data')}

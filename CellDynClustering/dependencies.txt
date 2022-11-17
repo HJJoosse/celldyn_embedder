@@ -1,0 +1,11 @@
+Libraries:
+pandas
+numpy
+matplotlib
+seaborn
+tabulate
+hdbscan
+dynamicTreeCut
+scipy
+openpyxl
+colour

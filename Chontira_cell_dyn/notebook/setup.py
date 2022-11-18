@@ -1,3 +1,5 @@
+import os
+os.chdir("T:/laupodteam/AIOS/Chontira/CellDynClustering")
 import numpy as np
 from sklearn.metrics import silhouette_score, davies_bouldin_score
 import pandas as pd
@@ -8,6 +10,7 @@ import ast
 from graphic_stuffs import *
 import pickle
 from evaluation.util import *
+
 
 
 

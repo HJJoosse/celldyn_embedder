@@ -101,7 +101,7 @@ def metrics_scores_dict(x, labels, evaluators ,verbose=False, return_dict = Fals
 def fit_predict_score(data,model, param,evaluators=None ,verbose=True, return_model_with_label = True, remove_noise = False):
 
     """
-    Feed in model as a parameter as a parameter and score the model based on provided metrics 
+    Feed in a model as a parameter and score the model based on provided metrics 
     (not in unit test)
 
     Parameter
@@ -169,7 +169,7 @@ def fit_predict_score(data,model, param,evaluators=None ,verbose=True, return_mo
 def subsampling_evaluate_scores(data,model, param,evaluators, subsampling = 20000,num_iters = 10, remove_noise = False):
 
     """
-    Feed in model as a parameter as a parameter and score the model based on provided metrics 
+    Feed in model as a parameter and score the model based on provided metrics 
     using sampling instead of full data and average the scores(not in unit test).
 
     Parameter

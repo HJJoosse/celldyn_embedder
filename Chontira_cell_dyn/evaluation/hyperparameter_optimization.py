@@ -44,7 +44,7 @@ def random_seach_optimization(X, model, evaluators, param_grid ,ascending,subsam
         the dictionary that stores all the evaluators for measuring the performace of the clusters
 
     param_grid: dict
-        dictionary of the model's parameters with range of values to be seleted by the search.
+        dictionary of the model parameters with range of values to be seleted by the search.
     
     ascending: list of bool
         list length equals to the number of evaluator
@@ -55,7 +55,7 @@ def random_seach_optimization(X, model, evaluators, param_grid ,ascending,subsam
         will be used.
     
     seperating_param_values: optional, bool
-        whether to seperate the paramter column into seperated columns 
+        whether to seperate the paramter result column into seperated columns 
 
     max_evals: optional, int
         max number of evaluation to seach for the ideal hyperparameter.
@@ -187,7 +187,7 @@ def grid_seach_optimization(X, model, evaluators, param_grid ,ascending,subsampl
         the dictionary that stores all the evaluators for measuring the performace of the clusters
 
     param_grid: dict
-        dictionary of the model's parameters with range of values to be seleted by the search.
+        dictionary of the model parameters with range of values to be seleted by the search.
     
     ascending: list of bool
         list length equals to the number of evaluator
@@ -198,7 +198,7 @@ def grid_seach_optimization(X, model, evaluators, param_grid ,ascending,subsampl
         will be used.
 
     seperating_param_values: optional, bool
-        whether to seperate the paramter column into seperated columns 
+        whether to seperate the paramter result column into seperated columns 
     
     num_iters: optional, int
         number of iterations to run for each hyperparameter setting.

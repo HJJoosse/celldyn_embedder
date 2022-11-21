@@ -114,8 +114,8 @@ def fit_predict_score(data,model, param,evaluators=None ,verbose=True, return_mo
             the model as function to train the dataset.
 
     evaluators: optional, dict
-        further arguments to include the metrics (as function statement in a dict)
-        if the functions take x and labels as argument.
+        further arguments to include the metrics  (as a dict)
+        only if the evaluator take x and labels as argument.
     
     params: dict
             the model paramters.
@@ -130,6 +130,9 @@ def fit_predict_score(data,model, param,evaluators=None ,verbose=True, return_mo
         
     Return
     --------
+
+    model: model object
+            return trained model for further analysis
 
     labels: list
             the predicted labels from the model.
@@ -185,8 +188,8 @@ def subsampling_evaluate_scores(data,model, param,evaluators, subsampling = 2000
             the model paramters.
 
     evaluators: dict
-        further arguments to include the metrics (as function statement in a dict)
-        if the functions take x and labels as argument.
+        further arguments to include the metrics (as a dict)
+        only if the evaluator function take x and labels as argument.
     
     subsampling: int
         amount of samples to be subsampled from the full data

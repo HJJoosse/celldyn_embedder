@@ -1,0 +1,98 @@
+measurement_name;measurement_description;Intra;Inter;Min;Max;Eenheid;;;;;;
+c_b_wbc;White Blood Cell Count;10.8;16.4;0;1000;*10^9/L;;;;;;
+c_b_wvf;White cell viability fraction;-;-;-;-;-;;;;;;
+c_b_neu;neutrofielen;14.0;23.6;0;300;*10^9/L;;;;;;
+c_b_seg;segmenten;-;-;0;300;*10^9/L;De meest mature vorm van de neutrofiel;;;;;
+c_b_bnd;staven;-;-;0;300;*10^9/L;;;;;;
+c_b_ig;immature granulocyten;-;-;0;300;*10^9/L;;;;;;
+c_b_lym;lymfocyten;10.8;22.7;0;1000;*10^9/L;Met name chronische lymfatische leukemieen kunnen zéér hoge aantallen 'normale' lymfocyten tot gevolg hebben;;;;;
+c_b_lyme;lymfocyten;-;-;-;-;-;;;;;;
+c_b_vlym;"absolute concentratie atypische
+lymfocyten";-;-;0;1000;*10^9/L;Atypische lymfocyten worden gezien bij infecties of maligniteiten;;;;;
+c_b_mon;monocyten;13.3;22.2;0;300;*10^9/L;;;;;;
+c_b_mone;"abs conc monocyten als
+opgesplitst in mon en blast";-;-;-;-;-;;;;;;
+c_b_blst;absolute concentratie blasten;-;-;0;1000;*10^9/L;;;;;;
+c_b_eos;eosinofiele granulocyten;15.0;64.4;0;100;*10^9/L;;;;;;
+c_b_bas;basofiele granulocyten;12.4;26.3;0;100;*10^9/L;;;;;;
+c_b_nrbc;erytroblasten;-;-;0;50;*10^9/L;;;;;;
+c_b_pneu;procentueel aantal neutro's;-;-;0;100;%;;;;;;
+c_b_pseg;procentueel aantal segmenten;-;-;0;100;%;;;;;;
+c_b_pbnd;procentueel aantal staven;-;-;0;100;%;;;;;;
+c_b_pig;"procentueel aantal immature
+granulocyten";-;-;0;100;%;;;;;;
+c_b_plym;procentueel aantal lymfocyten;-;-;0;100;%;;;;;;
+c_b_plyme;"proc conc lymfocyten als
+opgesplitst in lym en vlym";-;-;-;-;-;;;;;;
+c_b_pvlym;"procentuele concentratie
+atypische lymfocyten";-;-;0;100;%;;;;;;
+c_b_pmon;procentueel aantal monocyten;-;-;0;60;%;;;;;;
+c_b_pmone;"proc conc monocyten als
+opgesplitst in mon en blasten";-;-;-;-;-;;;;;;
+c_b_pblst;procentueel aantal blasten;-;-;0;100;%;;;;;;
+c_b_peos;"procentueel aantal eosinofiele
+granulocyten";-;-;0;80;%;;;;;;
+c_b_pbas;"procentueel aantal basofiele
+granulocyten";-;-;0;80;%;;;;;;
+c_b_pnrbc;procentueel aantal erytroblasten per 100 WBC;-;-;0;80;%;;;;;;
+c_b_rbci;RBC impedantie uitslag;2.6;6.5;0.1;15;*10^12/L;;;;;;
+c_b_rbco;RBC optische uitslag;2.6;6.5;0.1;15;*10^12/L;;;;;;
+c_b_hgb_usa;Hb uitslag (in USA eenheden);2.7;5.9;0.8;25;g/dL;Ik heb in de praktijk een aantal lage Hb metingen gezien. Die patienten waren niet (lang) meer in leven, maar ze waren in principe wel juist.;;;;;
+c_b_mcv;MCV uitslag;0.8;3.7;40;160;fL;;;;;;
+c_b_rdw;RDW uitslag;1.7;4.3;5;50;%;;;;;;
+c_b_pMIC;"percent of RBCs with volume
+less than 60 fL";-;-;0;100;%;Hemoglobinopathieen kunnen een laag MCV hebben;;;;;
+c_b_pMAC;"percent of RBCs with volume
+greater than 120 fL";-;-;0;100;%;;;;;;
+c_b_mch_Usa;"MCH uitslag (in USA
+eenheden)";0.8;4.4;1.6;161;pg/cell;MCH = Hb / RBC;;;;;
+c_b_mchc_usa;"MCHC uitslag (in USA
+eenheden)";1.0;1.4;0;80;g/dL;MCHC = Hb / Ht;;;;;
+c_b_ht;Hematocriet uitslag;2.8;5.5;20;80;L/L (%);;;;;;
+PLT;PLT;;;;;;;;;;;
+c_b_plto;PLT optische uitslag;7.6;18.7;0;2000;*10^9/L;;;;;;
+c_b_plti;PLT impedantie uitslag;7.6;18.7;0;2000;*10^9/L;;;;;;
+c_b_mpv;MPV uitslag;2.3;7.1;1;20;fL;;;;;;
+c_b_pct;PCT uitslag;6.4;13.5;-;-;-;;;;;;
+c_b_pdw;PDW uitslag;3.8;12.3;-;-;-;;;;;;
+c_b_prP;Enumeration of reticulated platelets;-;-;-;-;-;;;;;;
+c_b_retc;absoluut aantal reticulocyten;9.7;27.1;0;600;*10^9/L;Omgekeerd evenredig met het hemoglobine. Bij een laag Hb verwacht je in gezonde personen een verhoogd aantal reticulocyten. Bij een hoog/normaal Hb verwacht je weinig tot geen reticulocyten. Kunnen afwezig zijnbij aanmaakstoornissen.;;;;;
+c_b_pretc;percentage reticulocyten;-;-;-;-;-;;;;;;
+c_b_irf;immature reticulocyte fraction;-;-;-;-;-;;;;;;
+c_b_pHPO;"percent of RBCs with HGB
+concentration less than 28 g/dL";-;-;-;-;-;;;;;;
+c_b_pHPR;"percent of RBCs with HGB
+concentration more than 41
+g/dL";-;-;-;-;-;;;;;;
+c_b_HDW;CV of the HGB concentration;-;-;-;-;-;;;;;;
+c_b_MCVr;mean volume of reticulocytes;-;-;-;-;-;;;;;;
+c_b_MCHr;mean HGB per reticulocyte;-;-;-;-;-;;;;;;
+c_b_MCHCr;mean HGB concentration of reticulocytes;-;-;-;-;-;;;;;;
+c_b_hb;;2.7;5.9;0.2;15;mmol/L;Ik heb in de praktijk een aantal lage Hb metingen gezien. Die patienten waren niet (lang) meer in leven, maar ze waren in principe wel juist.;;;;;
+c_b_mch; ;0.8;4.4;0.1;10;mmol/L;;;;;;
+c_b_mchc; ;1.0;1.4;0;50;mmol/L;;;;;;
+c_b_namn;mean neutro's 0 graden (ALL);-;-;-;-;-;;;;;;
+c_b_nacv;CV% neutro's 0 graden (ALL);-;-;-;-;-;;;;;;
+c_b_nimn;mean neutro's 7 graden (IAS);-;-;-;-;-;;;;;;
+c_b_nicv;CV% neutro's 7 graden (IAS);-;-;-;-;-;;;;;;
+c_b_npmn;mean neutro's 90 graden (PSS);-;-;-;-;-;;;;;;
+c_b_npcv;CV% neutro's 90 graden (PSS);-;-;-;-;-;;;;;;
+c_b_ndmn;"mean neutro's 90 graden
+gedepolariseerd (DSS)";-;-;-;-;-;;;;;;
+c_b_ndcv;"CV% neutro's 90 graden
+gedepolariseerd (DSS)";-;-;-;-;-;;;;;;
+c_b_nfmn;mean neutro's FL3 kanaal (FL3);-;-;-;-;-;;;;;;
+c_b_nfcv;CV% neutro's FL3 kanaal (FL3);-;-;-;-;-;;;;;;
+c_b_Lamn;mean lymfo's 0 graden (ALL);-;-;-;-;-;;;;;;
+c_b_Lacv;CV% lymfo's 0 graden (ALL);-;-;-;-;-;;;;;;
+c_b_Limn;mean lymfo's 7 graden (IAS);-;-;-;-;-;;;;;;
+c_b_Licv;CV% lymfo's 7 graden (IAS);-;-;-;-;-;;;;;;
+c_b_Pimn;mean trombo's 7 graden (IAS);-;-;-;-;-;;;;;;
+c_b_Picv;CV% trombo's 7 graden (IAS);-;-;-;-;-;;;;;;
+c_b_Ppmn;"mean trombo's 90 graden
+(PSS)";-;-;-;-;-;;;;;;
+c_b_Ppcv;CV% trombo's 90 graden (PSS);-;-;-;-;-;;;;;;
+c_b_rbcimn;mean rbc  7 graden (IAS);-;-;-;-;-;;;;;;
+c_b_rbcicv;CV% rbc  7 graden (IAS);-;-;-;-;-;;;;;;
+c_b_rbcfmn;mean rbc  FL3 kanaal (FL3);-;-;-;-;-;;;;;;
+c_b_rbcfcv;CV% rbc  FL3 kanaal (FL3);-;-;-;-;-;;;;;;

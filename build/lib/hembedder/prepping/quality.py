@@ -10,14 +10,11 @@ import pandas as pd
 I want to add a logger to this script.
 """
 import logging
+import os
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter("%(asctime)s:%(name)s:%(message)s")
-file_handler = logging.FileHandler("celldyn_qc.log")
-file_handler.setFormatter(formatter)
-logger.addHandler(file_handler)
-logger.setLevel(logging.DEBUG)
 
 
 fail_mapping = {
@@ -75,6 +72,16 @@ class QcControl(BaseEstimator, TransformerMixin):
     #    '''
     #    return pl.from_pandas(df)
 
+    def _start_logger(self):
+        """
+        Start the logger.
+        """
+        real_local_directory = os.path.dirname(os.path.realpath(__file__))
+        file_handler = logging.FileHandler("celldyn_qc.log")
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+        logger.setLevel(logging.DEBUG)
+
     def _parse_filter_list(self, filters):
         self.filters = dict()
         if len(filters) == 0:
@@ -109,11 +116,40 @@ class QcControl(BaseEstimator, TransformerMixin):
         self.meas_names = ["_".join(c.split("_")[2:]) for c in self.meas_columns]
 
     def _parse_filter(self):
+        try:
+            read_filters = pd.read_excel(
+                self.param_file
+            )  # , sep=";", encoding="latin1")
+        except Exception as e:
+            print("Could not read the parameter file: {}".format(e))
+            raise e
 
-        read_filters = pd.read_csv(self.param_file, sep=";", encoding="latin1")
+        assert all(
+            [
+                c in read_filters.columns
+                for c in [
+                    "measurement_name",
+                    "measurement_description",
+                    "Intra",
+                    "Inter",
+                    "Min",
+                    "Max",
+                    "Eenheid",
+                ]
+            ]
+        ), "The parameter file is not in the correct format. It should contain: \
+                    measurement_name,\
+                    measurement_description,\
+                    Intra,\
+                    Inter,\
+                    Min,\
+                    Max,\
+                    Eenheid"
+
         read_filters["measurement_name"] = read_filters.measurement_name.str.split(
             "_"
         ).apply(lambda x: "_".join(x[2:]))
+
         self.filter_dict = (
             read_filters[["measurement_name", "Intra", "Inter", "Min", "Max"]]
             .set_index("measurement_name")
@@ -333,6 +369,8 @@ class QcControl(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X: pd.DataFrame, y=None):
+        self._start_logger()
+
         X.columns = [c.lower() for c in X.columns]
         self._get_cols(X)
         _X = X.copy()

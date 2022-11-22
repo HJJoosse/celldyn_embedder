@@ -5,6 +5,7 @@ hembedder.egg-info/SOURCES.txt
 hembedder.egg-info/dependency_links.txt
 hembedder.egg-info/top_level.txt
 src/prepping/__init__.py
+src/prepping/generator.py
 src/prepping/imputer.py
 src/prepping/quality.py
 src/prepping/recombinator.py

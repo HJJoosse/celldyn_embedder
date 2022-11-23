@@ -16,7 +16,6 @@ A class to thinly wrap different imputers in the sklearn api
 
 """
 
-from statistics import mean
 import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
@@ -80,6 +79,7 @@ class Imputer(BaseEstimator, TransformerMixin):
         backend: str = "miceforest",
         add_mia: bool = False,
         remove_working_data: bool = False,
+        synthesize_working_data: bool = False,
         meas_cols: list = [],
         **kwargs,
     ):
@@ -104,6 +104,7 @@ class Imputer(BaseEstimator, TransformerMixin):
         self.backend = backend
         self.meas_cols = meas_cols
         self.add_mia = add_mia
+        self.synthesize_working_data = synthesize_working_data
         self.remove_working_data = remove_working_data
         self.kwargs = kwargs
 
@@ -157,6 +158,20 @@ class Imputer(BaseEstimator, TransformerMixin):
         logger.addHandler(file_handler)
         logger.setLevel(logging.DEBUG)
 
+    def _add_noise(self, X, perc=0.05):
+        """
+        Add noise to the data to make it more realistic.
+        """
+        noise = np.random.uniform(0, perc, X.shape)
+        return X + np.multiply(X, noise)
+    
+    def _add_mask(self, X, perc=0.25):
+        """
+        Add mask to the data to make it more realistic.
+        """
+        X.ravel()[np.random.choice(X.size, int(X.size * perc), replace=False)] = np.nan
+        return X
+
     def fit(self, X: pd.DataFrame, y=None):
         if self.backend == "miceforest":
             self.imputer = ImputationKernel(
@@ -166,6 +181,7 @@ class Imputer(BaseEstimator, TransformerMixin):
                 mean_match_scheme=self.mean_match,
                 save_all_iterations=self.save_all_iterations,
                 data_subset=self.data_subset,
+                train_nonmissing=self.synthesize_working_data
             )
             self.imputer.mice(
                 iterations=self.iterations,
@@ -174,7 +190,18 @@ class Imputer(BaseEstimator, TransformerMixin):
             )
             self.imputer.compile_candidate_preds()
             if self.remove_working_data:
+                # will probaby fail because exemplars are needed for inference
                 self.imputer.working_data = np.ones((1, 1))
+            if self.synthesize_working_data:
+                # random distortion of the working data
+                distorted = self._add_noise(X[self.meas_cols], perc=0.01)
+                # random mask of the working data
+                distorted = self._add_mask(distorted, perc=0.3)
+                # imputation of the masked/distorted working data
+                self.imputer.working_data  = self.imputer.impute_new_data(
+                                new_data=distorted, copy_data=False, datasets=[0]
+                            ).complete_data(0, inplace=False)
+                    
         return self
 
     def transform(self, X: pd.DataFrame = None):

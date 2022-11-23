@@ -34328,3 +34328,139 @@
 2022-11-22 17:21:30,453:hembedder.prepping.quality:Start filtering: ranges
 2022-11-22 17:21:30,453:hembedder.prepping.quality:Start filtering: ranges
 2022-11-22 17:21:30,453:hembedder.prepping.quality:Start filtering: ranges
+2022-11-23 13:56:55,259:hembedder.prepping.quality:Start filtering: leuko
+2022-11-23 13:56:55,269:hembedder.prepping.quality:Completed filtering: leuko
+2022-11-23 13:56:55,270:hembedder.prepping.quality:Start filtering: rbc
+2022-11-23 13:56:55,273:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2022-11-23 13:56:55,274:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2022-11-23 13:56:55,276:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2022-11-23 13:56:55,278:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2022-11-23 13:56:55,279:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2022-11-23 13:56:55,280:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2022-11-23 13:56:55,282:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2022-11-23 13:56:55,283:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2022-11-23 13:56:55,285:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2022-11-23 13:56:55,286:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2022-11-23 13:56:55,289:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2022-11-23 13:56:55,292:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2022-11-23 13:56:55,294:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2022-11-23 13:56:55,297:hembedder.prepping.quality:Completed filtering: rbc
+2022-11-23 13:56:55,299:hembedder.prepping.quality:Start filtering: ranges
+2022-11-23 13:59:25,653:hembedder.prepping.quality:Start filtering: leuko
+2022-11-23 13:59:25,653:hembedder.prepping.quality:Start filtering: leuko
+2022-11-23 13:59:25,667:hembedder.prepping.quality:Completed filtering: leuko
+2022-11-23 13:59:25,667:hembedder.prepping.quality:Completed filtering: leuko
+2022-11-23 13:59:25,670:hembedder.prepping.quality:Start filtering: rbc
+2022-11-23 13:59:25,670:hembedder.prepping.quality:Start filtering: rbc
+2022-11-23 13:59:25,672:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2022-11-23 13:59:25,672:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2022-11-23 13:59:25,674:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2022-11-23 13:59:25,674:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2022-11-23 13:59:25,677:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2022-11-23 13:59:25,677:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2022-11-23 13:59:25,679:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2022-11-23 13:59:25,679:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2022-11-23 13:59:25,681:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2022-11-23 13:59:25,681:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2022-11-23 13:59:25,684:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2022-11-23 13:59:25,684:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2022-11-23 13:59:25,686:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2022-11-23 13:59:25,686:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2022-11-23 13:59:25,688:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2022-11-23 13:59:25,688:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2022-11-23 13:59:25,691:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2022-11-23 13:59:25,691:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2022-11-23 13:59:25,694:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2022-11-23 13:59:25,694:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2022-11-23 13:59:25,699:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2022-11-23 13:59:25,699:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2022-11-23 13:59:25,701:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2022-11-23 13:59:25,701:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2022-11-23 13:59:25,703:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2022-11-23 13:59:25,703:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2022-11-23 13:59:25,705:hembedder.prepping.quality:Completed filtering: rbc
+2022-11-23 13:59:25,705:hembedder.prepping.quality:Completed filtering: rbc
+2022-11-23 13:59:25,707:hembedder.prepping.quality:Start filtering: ranges
+2022-11-23 13:59:25,707:hembedder.prepping.quality:Start filtering: ranges
+2022-11-23 13:59:27,222:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,222:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,225:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,225:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,228:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,228:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,239:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,239:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,243:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,243:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,246:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,246:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,249:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,249:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,252:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,252:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,255:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,255:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,258:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,258:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,267:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,267:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,270:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,270:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,273:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,273:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,276:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,276:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,279:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,279:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,283:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,283:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,286:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,286:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,289:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,289:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,294:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,294:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,297:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,297:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2022-11-23 13:59:27,304:hembedder.prepping.quality:Completed filtering: ranges
+2022-11-23 13:59:27,304:hembedder.prepping.quality:Completed filtering: ranges
+2022-11-23 13:59:27,306:hembedder.prepping.quality:Start filtering: suspect
+2022-11-23 13:59:27,306:hembedder.prepping.quality:Start filtering: suspect
+2022-11-23 13:59:27,315:hembedder.prepping.quality:Completed filtering: suspect
+2022-11-23 13:59:27,315:hembedder.prepping.quality:Completed filtering: suspect
+2022-11-23 14:03:06,334:hembedder.prepping.quality:Start filtering: leuko
+2022-11-23 14:03:06,334:hembedder.prepping.quality:Start filtering: leuko
+2022-11-23 14:03:06,345:hembedder.prepping.quality:Completed filtering: leuko
+2022-11-23 14:03:06,345:hembedder.prepping.quality:Completed filtering: leuko
+2022-11-23 14:03:06,351:hembedder.prepping.quality:Start filtering: rbc
+2022-11-23 14:03:06,351:hembedder.prepping.quality:Start filtering: rbc
+2022-11-23 14:03:06,358:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2022-11-23 14:03:06,358:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2022-11-23 14:03:06,365:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2022-11-23 14:03:06,365:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2022-11-23 14:03:06,369:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2022-11-23 14:03:06,369:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2022-11-23 14:03:06,374:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2022-11-23 14:03:06,374:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2022-11-23 14:03:06,377:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2022-11-23 14:03:06,377:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2022-11-23 14:03:06,382:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2022-11-23 14:03:06,382:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2022-11-23 14:03:06,389:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2022-11-23 14:03:06,389:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2022-11-23 14:03:06,392:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2022-11-23 14:03:06,392:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2022-11-23 14:03:06,397:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2022-11-23 14:03:06,397:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2022-11-23 14:03:06,402:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2022-11-23 14:03:06,402:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2022-11-23 14:03:06,407:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2022-11-23 14:03:06,407:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2022-11-23 14:03:06,411:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2022-11-23 14:03:06,411:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2022-11-23 14:03:06,415:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2022-11-23 14:03:06,415:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2022-11-23 14:03:06,419:hembedder.prepping.quality:Completed filtering: rbc
+2022-11-23 14:03:06,419:hembedder.prepping.quality:Completed filtering: rbc
+2022-11-23 14:03:06,423:hembedder.prepping.quality:Start filtering: ranges
+2022-11-23 14:03:06,423:hembedder.prepping.quality:Start filtering: ranges

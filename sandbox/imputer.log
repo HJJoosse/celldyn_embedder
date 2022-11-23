@@ -1258,3 +1258,7 @@
 2022-11-19 00:01:07,494:hembedder.prepping.imputer:Input type:<class 'pandas.core.frame.DataFrame'>
 2022-11-19 00:01:07,494:hembedder.prepping.imputer:Input type:<class 'pandas.core.frame.DataFrame'>
 2022-11-19 00:01:07,494:hembedder.prepping.imputer:Input type:<class 'pandas.core.frame.DataFrame'>
+2022-11-22 17:01:57,391:hembedder.prepping.imputer:Imputing with miceforest
+2022-11-22 17:01:57,391:hembedder.prepping.imputer:Imputing with miceforest
+2022-11-22 17:01:57,391:hembedder.prepping.imputer:Input type:<class 'pandas.core.frame.DataFrame'>
+2022-11-22 17:01:57,391:hembedder.prepping.imputer:Input type:<class 'pandas.core.frame.DataFrame'>

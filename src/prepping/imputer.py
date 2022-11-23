@@ -22,15 +22,14 @@ import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 
 # add an output logger that can be used to log the imputation process
+
 import logging
+
+import os
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter("%(asctime)s:%(name)s:%(message)s")
-file_handler = logging.FileHandler("imputer.log")
-file_handler.setFormatter(formatter)
-logger.addHandler(file_handler)
-logger.setLevel(logging.DEBUG)
 
 
 from miceforest import ImputationKernel
@@ -148,6 +147,16 @@ class Imputer(BaseEstimator, TransformerMixin):
         # from sklearn.impute import KNNImputer
         #    self.imputer = IterativeImputer(**kwargs)
 
+    def _start_logger(self):
+        """
+        Start the logger.
+        """
+        real_local_directory = os.path.dirname(os.path.realpath(__file__))
+        file_handler = logging.FileHandler("imputer.log")
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+        logger.setLevel(logging.DEBUG)
+
     def fit(self, X: pd.DataFrame, y=None):
         if self.backend == "miceforest":
             self.imputer = ImputationKernel(
@@ -169,6 +178,8 @@ class Imputer(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X: pd.DataFrame = None):
+        self._start_logger()
+
         if self.backend == "miceforest":
             # self.X[self.meas_cols]
             # imputed_df = self.imputer.complete_data(variables=self.meas_cols)

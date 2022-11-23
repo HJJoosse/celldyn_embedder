@@ -10,7 +10,7 @@ from numba import jit, njit, float32
 from numpy import linalg as la
 
 
-@njit(float32(float32[:], float32[:]), fastmath=True)
+@njit(fastmath=True)
 def poincarre_dist(x, y):
     return numpy.arccosh(
         1

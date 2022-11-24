@@ -11,7 +11,7 @@ from numpy import linalg as la
 
 
 @njit(fastmath=True)
-def poincarre_dist(x, y):
+def poincarre_dist(x: numpy.array, y: numpy.array) -> float:
     return numpy.arccosh(
         1
         + 2

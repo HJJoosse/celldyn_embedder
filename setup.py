@@ -13,7 +13,7 @@ setup(
     description="A package for embedding  hematological data",
     author="Huibert-Jan Joosse, Bram van Es, Chontira Chumsaeng",
     author_email="bes3@umcutrecht.nl",
-    packages=["hembedder.prepping"],
+    packages=["hembedder.prepping", "hembedder.utils"],
     package_dir={"hembedder": "src"},
     install_requires=["numpy", "pandas", "scikit-learn", "scipy", "tqdm", "miceforest"],
 )

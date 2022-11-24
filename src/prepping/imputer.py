@@ -161,15 +161,18 @@ class Imputer(BaseEstimator, TransformerMixin):
     def _add_noise(self, X, perc=0.05):
         """
         Add noise to the data to make it more realistic.
+        ASSUMPTION: the data is strictly positive
         """
-        noise = np.random.uniform(0, perc, X.shape)
-        return X + np.multiply(X, noise)
+        noise = np.random.uniform(-perc, perc, X.shape)
+        return np.maximum(X + np.multiply(X, noise), 0)
     
     def _add_mask(self, X, perc=0.25):
         """
-        Add mask to the data to make it more realistic.
+        Add mask to the data
         """
-        X.ravel()[np.random.choice(X.size, int(X.size * perc), replace=False)] = np.nan
+        Xv = X.values
+        Xv.ravel()[np.random.choice(X.size, int(X.size * perc), replace=False)] = np.nan
+        X.loc[:,:] = Xv
         return X
 
     def fit(self, X: pd.DataFrame, y=None):

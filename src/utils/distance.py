@@ -9,23 +9,44 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from numba import jit, njit, float32
 from numpy import linalg as la
 
+from typing import List, Tuple
 
 @njit(fastmath=True)
-def poincarre_dist(x: numpy.array, y: numpy.array) -> float:
-    return numpy.arccosh(
-        1
-        + 2
-        * (
-            la.norm(x - y, ord=2) ** 2
-            / ((1 - la.norm(x, ord=2) ** 2) * (1 - la.norm(y, ord=2) ** 2))
-        )
-    )
+def poincarre_dist(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array]:
+    """Compute the Poincarre distance between two points in the Poincarre disk model.
+        Including the gradient
+    """
 
+    normx = la.norm(x)
+    normy = la.norm(y)
+    normxy = la.norm(x - y)
+    a = 1. - normx ** 2
+    b = 1. - normy ** 2
+    c = 1. + 2./a/b*normxy**2
+    inp = numpy.dot(x,y)
+
+    distance = numpy.arccosh(
+                        1
+                        + 2
+                        * (
+                            normxy ** 2
+                            / ((1 - normx ** 2) * (1 - normy ** 2))
+                        )
+    )
+    gradient = 4./b/numpy.sqrt(c**2-1.)*((normy**2 - 2*inp+1)/a**2 * x - y/a)
+
+    return distance, gradient
+
+@njit(fastmath=True)
+def hyperboloid_dist(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array]:
+    distance = numpy.arccosh(-numpy.dot(x,y))
+    #gradient = -y/numpy.sqrt(-numpy.dot(x,y))**3
+    gradient = -y/numpy.sqrt(numpy.dot(x,y)**2-1)
+    return distance, gradient
 
 @njit(float32(float32[:], float32[:], float32), fastmath=True)
 def fractional_distance(x, y, f=0.5):
     return numpy.power(numpy.abs(numpy.sum(numpy.power(x - y, f))), 1 / f)
-
 
 class Distance(BaseEstimator, TransformerMixin):
     def __init__(self, metric="seuclidean", n_jobs=1, batch_size=1000, threshold=0.75):

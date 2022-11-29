@@ -17,23 +17,22 @@ def poincarre_dist(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array]:
         Including the gradient
     """
 
-    normx = la.norm(x)
-    normy = la.norm(y)
-    normxy = la.norm(x - y)
-    a = 1. - normx ** 2
-    b = 1. - normy ** 2
-    c = 1. + 2./a/b*normxy**2
+    normx = la.norm(x, ord=2)
+    normy = la.norm(y, ord=2)
+    normxy = la.norm(x - y, ord=2)
+    a = 1 - normx ** 2
+    b = 1 - normy ** 2
+    c = 1 + 2/a/b*normxy**2
     inp = numpy.dot(x,y)
 
     distance = numpy.arccosh(
                         1
                         + 2
                         * (
-                            normxy ** 2
-                            / ((1 - normx ** 2) * (1 - normy ** 2))
+                            normxy**2/(a * b)
                         )
     )
-    gradient = 4./b/numpy.sqrt(c**2-1.)*((normy**2 - 2*inp+1)/a**2 * x - y/a)
+    gradient = 4/b/numpy.sqrt(c**2-1)*((normy**2 - 2*inp+1)/a**2 * x - y/a)
 
     return distance, gradient
 
@@ -47,6 +46,7 @@ def hyperboloid_dist(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array
 @njit(float32(float32[:], float32[:], float32), fastmath=True)
 def fractional_distance(x, y, f=0.5):
     return numpy.power(numpy.abs(numpy.sum(numpy.power(x - y, f))), 1 / f)
+
 
 class Distance(BaseEstimator, TransformerMixin):
     def __init__(self, metric="seuclidean", n_jobs=1, batch_size=1000, threshold=0.75):

@@ -24,7 +24,8 @@ def poincarre_dist(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array]:
     b = 1 - normy ** 2
     c = 1 + 2/a/b*normxy**2
     inp = numpy.dot(x,y)
-
+    
+    # distance
     distance = numpy.arccosh(
                         1
                         + 2
@@ -32,20 +33,28 @@ def poincarre_dist(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array]:
                             normxy**2/(a * b)
                         )
     )
+
+    # gradient
     gradient = 4/b/numpy.sqrt(c**2-1)*((normy**2 - 2*inp+1)/a**2 * x - y/a)
 
     return distance, gradient
 
 @njit(fastmath=True)
 def hyperboloid_dist(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array]:
+    # distance
     distance = numpy.arccosh(-numpy.dot(x,y))
     #gradient = -y/numpy.sqrt(-numpy.dot(x,y))**3
     gradient = -y/numpy.sqrt(numpy.dot(x,y)**2-1)
     return distance, gradient
 
-@njit(float32(float32[:], float32[:], float32), fastmath=True)
-def fractional_distance(x, y, f=0.5):
-    return numpy.power(numpy.abs(numpy.sum(numpy.power(x - y, f))), 1 / f)
+@njit(fastmath=True)
+def fractional_distance(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array]:
+    f = 0.5
+    # distance
+    distance = numpy.power(numpy.sum(numpy.power(numpy.abs(x - y), f)), 1 / f)
+    # gradient
+    gradient = (x-y)/numpy.absolute(x-y)
+    return distance, gradient
 
 
 class Distance(BaseEstimator, TransformerMixin):
@@ -79,6 +88,7 @@ class Distance(BaseEstimator, TransformerMixin):
                 result.append((dist, i, j))
         self.distance_tuples = result
 
+    @jit
     def _set_range(self):
         """
         Make sure that the bounds are [-1,1] or [0,1]

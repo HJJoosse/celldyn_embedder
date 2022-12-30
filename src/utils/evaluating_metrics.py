@@ -56,7 +56,7 @@ class CDEmbeddingEvaluator:
     def _return_distance_correlation(self,X_org:np.array,X_emb:np.array):
         dist_before = sc.spatial.distance.pdist(X_org,metric = self.metric)
         dist_after = sc.spatial.distance.pdist(X_emb,metric = self.metric)
-        return dcor.distance_correlation(X_org,X_emb)
+        return dcor.distance_correlation(dist_before,dist_after)
             
     
     def random_triplet_eval(self,X_org:np.array, X_emb:np.array):

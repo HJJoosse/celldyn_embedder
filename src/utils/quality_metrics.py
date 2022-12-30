@@ -17,7 +17,7 @@ from tabulate import tabulate
 from collections import defaultdict
 
 
-class CDEmbeddingEvaluator:
+class CDEmbeddingPerformance:
 
     def __init__(self,metric='euclidean',n_neighbours:int=10, knn_dist:str='jaccard', knn_return_median:bool = True, num_triplets:int=5):
         self.metric = metric
@@ -117,22 +117,17 @@ def metrics_scores_iter(x:np.array, output:np.array, evaluators:dict ,
                         verbose:bool=True, return_dict:bool = False):
     """
     Calculates scores for embedder using different metrics (evaluators). 
-    
     Parameters
     ---------
     x: np.array
         original unemedded data 
-
     output: np.array
         output array from the embedder for evaluation
-    
     evaluators: dict
         further arguments to include the metrics (as function statement in a dict)
         if the functions take x and output as arguments.
-        
     verbose: bool, optional
         whether to print the results.
-
     Returns
     ---------
     results: dict
@@ -143,7 +138,6 @@ def metrics_scores_iter(x:np.array, output:np.array, evaluators:dict ,
         results.update({name: metric(x, output)})
     if(verbose):
         print_metric_scores(results)
-
     if(return_dict):
         return results
 
@@ -151,7 +145,6 @@ def metrics_scores_iter(x:np.array, output:np.array, evaluators:dict ,
 def print_metric_scores(results:dict):
     """
     Print mertic scores in a table format.
-    
     Parameters
     ---------
     results: dict
@@ -167,7 +160,6 @@ def print_metric_scores(results:dict):
 def print_means_metric_scores(results:dict):
     """
     Print means of metric scores in a table format with standard deviation.
-    
     Parameters
     ---------
     results: dict

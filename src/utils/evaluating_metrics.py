@@ -112,6 +112,7 @@ class CDEmbeddingEvaluator:
             return final_results
 
 
+
 def metrics_scores_iter(x:np.array, output:np.array, evaluators:dict ,
                         verbose:bool=True, return_dict:bool = False):
     """
@@ -163,6 +164,22 @@ def print_metric_scores(results:dict):
     print("\n")
 
 
+def print_means_metric_scores(results:dict):
+    """
+    Print means of metric scores in a table format with standard deviation.
+    
+    Parameters
+    ---------
+    results: dict
+            dictionary of results to be printed in a table format. 
+    """
+    tab = []
+    for metric, score in results.items():
+        tab.append([metric, score[0][0], score[0][1]])
+    print(tabulate(tab, headers = ["Metric","Mean", "Standard deviation"]))
+    print("\n")
+
+
 def score_subsampling(X:np.array,output:np.array, evaluators:dict, size:int=1000, 
                     num_iter:int = 10,verbose:bool=True, return_dict:bool = False):
     method_start = time.time()
@@ -176,13 +193,15 @@ def score_subsampling(X:np.array,output:np.array, evaluators:dict, size:int=1000
         for name, score in results.items():
             output_results[name].append(score)
 
-    final_results = {}
+    final_results = defaultdict(list)
     for name, scores in output_results.items():
-        final_results.update({name:np.mean(scores)})
+        final_results[name].append([np.mean(scores), np.std(scores)])
     
     if(verbose):
-        print_metric_scores(final_results)
+        print_means_metric_scores(final_results)
+        print(f"Supsampling of {size} samples for {num_iter} rounds each")
         print(f"Time taken {round((time.time()-method_start)/60, 2)} minutes")
     
     if(return_dict):
         return final_results
+

@@ -6,7 +6,7 @@ from random import randint
 from collections import defaultdict
 import math
 import itertools
-from utils.quality_metrics import *
+from utils.quality_metrics import metrics_scores_iter
 
 
 

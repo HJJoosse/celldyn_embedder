@@ -11,7 +11,7 @@ setup(
     name="hembedder",
     version="0.1",
     description="A package for embedding  hematological data",
-    author="Huibert-Jan Joosse, Bram van Es, Chontira Chumsaeng",
+    author="Huibert-Jan Joosse, Bram van Es, Chontira Chumsaeng, Jille van der Togt",
     author_email="bes3@umcutrecht.nl",
     packages=["hembedder.prepping", "hembedder.utils"],
     package_dir={"hembedder": "src"},

@@ -238,7 +238,7 @@ def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,fil
             # Evaluate randomly selected hyperparameters
             embedded = embedder(**hyperparameters).fit_transform(sub)            
             times.append(time.time()-start)
-            metric_results = metrics_scores_iter(sub, embedded, evaluators, return_dict= True)
+            metric_results = metrics_scores_iter(sub, embedded, evaluators, return_dict= True,verbose=False)
             for metric, score in metric_results.items():
                 scores[metric].append(score)
         for metric, score_ls in scores.items():

@@ -115,7 +115,7 @@ class CDEmbeddingPerformance:
         """
         dist_before = sc.spatial.distance.pdist(X_org,metric = self.metric)
         dist_after = sc.spatial.distance.pdist(X_emb,metric = self.metric)
-        return dcor.distance_correlation(dist_before,dist_after)
+        return dcor.distance_correlation(dist_before,dist_after,method='AVL')
             
     
     def random_triplet_eval(self,X_org:np.array, X_emb:np.array):

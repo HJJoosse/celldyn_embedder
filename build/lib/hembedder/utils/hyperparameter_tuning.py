@@ -29,7 +29,7 @@ def roundup(x):
 
 
 
-def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,file_name:str,subsampling = False,standardised:bool = False, max_evals:int = 300, num_iter:int = 5, random_state = None, **kwargs):
+def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,file_name:str,subsampling:int,standardised:bool = False, max_evals:int = 300, num_iter:int = 5, random_state = None, **kwargs):
     """
     Random hyperparameter optimization for embedding algorithm. Measuring the results using multiple evaluators
     Adapted from Will Koehrsen for randomized search of hyperpameters for embedding algorithm.
@@ -49,9 +49,8 @@ def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,f
         whether the scores should be displayed in ascending order or descending order. True = ascending
     file_name:string
         name of the csv file for saving of the results on disc
-    subsampling: optional, bool or int 
-        needs to be an int if subsampling is to be used with a certain number of rows, otherwise the full dataset
-        will be used. 
+    subsampling:int 
+        number of samples to subsample to
     standardised:optional, bool
         whether to standardise the data
     max_evals: optional, int
@@ -112,10 +111,8 @@ def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,f
 
         #Run evaluation for each hyperparameter setting per num_iter
         for num in range(num_iter):
-            sub = X.copy()
             start = time.time()
-            if(type(subsampling) == int):
-                sub = numpy_sampling(sub, subsampling)
+            sub = numpy_sampling(sub, subsampling)
             # Evaluate randomly selected hyperparameters
             CD_scaled = sub.copy()
             if(standardised):
@@ -155,7 +152,7 @@ def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,f
 
 
 
-def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,file_name:str,subsampling = False,standardised:bool = False,num_iter:int = 5, random_state = None, **kwargs):
+def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,file_name:str,subsampling:int,standardised:bool = False,num_iter:int = 5, random_state = None, **kwargs):
     """
     Grid hyperparameter optimization for embedding algorithm. Measuring the results using multiple evaluators
     Adapted from Will Koehrsen for grid searching of hyperpameters for embedding algorithm.
@@ -174,9 +171,8 @@ def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,fil
         whether the scores should be displayed in ascending order or descending order. True = ascending
     file_name:string
         name of the csv file for saving of the results on disc
-    subsampling: optional, bool or int 
-        needs to be an int if subsampling is to be used with a certain number of rows, otherwise the full dataset
-        will be used. 
+    subsampling:int 
+        number of samples to subsample to
     standardised:optional, bool
         whether to standardise the data
     num_iters: optional, int
@@ -240,10 +236,8 @@ def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,fil
         times = []
         #Run evaluation for each hyperparameter setting per num_iter
         for num in range(num_iter):
-            sub = X.copy()
             start = time.time()
-            if(type(subsampling) == int):
-                sub = numpy_sampling(sub, subsampling)
+            sub = numpy_sampling(sub, subsampling)
             # Evaluate randomly selected hyperparameters
             CD_scaled = sub.copy()
             if(standardised):

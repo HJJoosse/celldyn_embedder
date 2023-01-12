@@ -112,7 +112,7 @@ def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,f
         #Run evaluation for each hyperparameter setting per num_iter
         for num in range(num_iter):
             start = time.time()
-            sub = numpy_sampling(sub, subsampling)
+            sub = numpy_sampling(X, subsampling)
             # Evaluate randomly selected hyperparameters
             CD_scaled = sub.copy()
             if(standardised):
@@ -237,7 +237,7 @@ def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,fil
         #Run evaluation for each hyperparameter setting per num_iter
         for num in range(num_iter):
             start = time.time()
-            sub = numpy_sampling(sub, subsampling)
+            sub = numpy_sampling(X, subsampling)
             # Evaluate randomly selected hyperparameters
             CD_scaled = sub.copy()
             if(standardised):

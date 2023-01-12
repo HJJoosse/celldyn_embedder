@@ -113,7 +113,6 @@ class CDEmbeddingPerformance:
         -----------
         distance correlation score between 0 and 1. Higher means better
         """
-
         return dcor.distance_correlation(X_org,X_emb)
             
     

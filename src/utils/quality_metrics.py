@@ -7,7 +7,6 @@
 ### knn_overlap -> find knn in true space random sample. Then embedding do the same for indices -> jaccard score
 __author__ = "Bram van ES","Huibert-Jan Joosse","Chontira Chumsaeng"
 
-import scipy as sc
 from scipy.spatial.distance import jaccard, hamming
 import numpy as np
 from numpy.random import default_rng
@@ -24,7 +23,7 @@ class CDEmbeddingPerformance:
     Class for calulating the embedding quality. Metrics include trustworthiness, Knn overlap, distance correlation, and random triplet scores 
     """
 
-    def __init__(self,metric='euclidean',n_neighbours:int=10, knn_dist:str='hamming', num_triplets:int=5):
+    def __init__(self,metric='euclidean',n_neighbours:int=10, knn_dist:str='jaccard', num_triplets:int=5):
         """
         Setting up parameters for the quality metircs
         Paramters
@@ -115,6 +114,30 @@ class CDEmbeddingPerformance:
         return dcor.distance_correlation(X_org,X_emb)
             
     
+    @staticmethod
+    def calculate_distance_random_triplets(X:np.array,anchors, triplets):
+        """
+        HELPER function for random_triplet_eval to calculate distance for X and generate the labels
+        """
+        b = np.broadcast(anchors, triplets)
+        distances = np.empty(b.shape)
+        distances.flat = [np.linalg.norm(X[u] - X[v]) for (u,v) in b]
+        labels = distances[:, :, 0] < distances[: , :, 1]
+        return labels
+    
+    @staticmethod
+    def calculate_anchors_and_triplets(X:np.array, num_triplets:int):
+        """
+        HELPER function for random_triplet_eval to create the achors and triplets for evaluating the
+        triplets violation
+        """
+        anchors = np.arange(X.shape[0])
+        rng = default_rng()
+        triplets = rng.choice(anchors, (X.shape[0], num_triplets, 2))
+        triplet_labels = np.zeros((X.shape[0], num_triplets))
+        anchors = anchors.reshape((-1, 1, 1))
+        return anchors,triplets
+            
     def random_triplet_eval(self,X_org:np.array, X_emb:np.array):
         '''
         Author from Haiyang Huang https://github.com/hyhuang00/scRNA-DR2020/blob/main/experiments/run_eval.py
@@ -136,23 +159,13 @@ class CDEmbeddingPerformance:
         '''    
         # Sampling Triplets
         # Five triplet per point
-        anchors = np.arange(X_org.shape[0])
-        rng = default_rng()
-        triplets = rng.choice(anchors, (X_org.shape[0], self.num_triplets, 2))
-        triplet_labels = np.zeros((X_org.shape[0], self.num_triplets))
-        anchors = anchors.reshape((-1, 1, 1))
+        anchors,triplets = self.calculate_anchors_and_triplets(X_org,self.num_triplets)
         
         # Calculate the distances and generate labels
-        b = np.broadcast(anchors, triplets)
-        distances = np.empty(b.shape)
-        distances.flat = [np.linalg.norm(X_org[u] - X_org[v]) for (u,v) in b]
-        labels = distances[:, :, 0] < distances[: , :, 1]
+        labels = self.calculate_distance_random_triplets(X_org,anchors, triplets)
         
         # Calculate distances for LD
-        b = np.broadcast(anchors, triplets)
-        distances_l = np.empty(b.shape)
-        distances_l.flat = [np.linalg.norm(X_emb[u] - X_emb[v]) for (u,v) in b]
-        pred_vals = distances_l[:, :, 0] < distances_l[:, :, 1]
+        pred_vals = self.calculate_distance_random_triplets(X_emb,anchors, triplets)
 
         # Compare the labels and return the accuracy
         correct = np.sum(pred_vals == labels)

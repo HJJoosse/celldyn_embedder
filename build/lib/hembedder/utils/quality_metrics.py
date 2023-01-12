@@ -5,7 +5,7 @@
 
 
 ### knn_overlap -> find knn in true space random sample. Then embedding do the same for indices -> jaccard score
-__author__ = "Bram van ES","Chontira Chumsaeng"
+__author__ = "Bram van ES","Huibert-Jan Joosse","Chontira Chumsaeng"
 
 import scipy as sc
 from scipy.spatial.distance import jaccard, hamming

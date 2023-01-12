@@ -24,7 +24,7 @@ class CDEmbeddingPerformance:
     Class for calulating the embedding quality. Metrics include trustworthiness, Knn overlap, distance correlation, and random triplet scores 
     """
 
-    def __init__(self,metric='euclidean',n_neighbours:int=10, knn_dist:str='hamming', knn_return_median:bool = True, num_triplets:int=5):
+    def __init__(self,metric='euclidean',n_neighbours:int=10, knn_dist:str='hamming', num_triplets:int=5):
         """
         Setting up parameters for the quality metircs
         Paramters
@@ -35,15 +35,12 @@ class CDEmbeddingPerformance:
             number of neighbours for trustworiness and knn overlap scores
         knn_dist:string
             distance metric for calculating overlap between neighbours in knn overlap. 'hamming' or 'jaccard'
-        knn_return_median:bool
-            whether to return the median of the knn overlap scores. This should be true if knn is to be used with other methods here.
         num_triplets:int
             paramter for random triplets calculation.
         """
         self.metric = metric
         self.n_neighbours = n_neighbours
         self.knn_dist = knn_dist 
-        self.knn_return_median = knn_return_median
         self.num_triplets = num_triplets
 
     def _return_trustworthiness(self,X_org:np.array,X_emb:np.array):
@@ -72,7 +69,7 @@ class CDEmbeddingPerformance:
         D,I = index.search(X.astype(np.float32), k)
         return D,I
     
-    def _return_knn_overlap(self,X_org:np.array,X_emb:np.array):
+    def _return_knn_overlap(self,X_org:np.array,X_emb:np.array, knn_return_median:bool = True):
         """
         Function for returning nearest neighbourhood overlap score. Overlap between the high dimension and low dimension data
         Parameters
@@ -81,6 +78,8 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        knn_return_median:bool
+            whether to return the median of the knn overlap scores. This should be true if knn is to be used with other methods here.
         Returns
         -----------
         knn overlap score between 0 and 1. Lower means better
@@ -97,7 +96,7 @@ class CDEmbeddingPerformance:
             raise Exception(f"{self.knn_dist} is not a recognised distance measure for KNN overlap. Please use 'jaccard' or 'hamming'")
         for i in range(I.shape[0]):
             ds_arry[i] = dist(I[i,:],I_emb[i,:])
-        return np.median(ds_arry) if self.knn_return_median else ds_arry
+        return np.median(ds_arry) if knn_return_median else ds_arry
   
 
     def _return_distance_correlation(self,X_org:np.array,X_emb:np.array):

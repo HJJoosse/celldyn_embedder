@@ -8,6 +8,7 @@ import math
 import itertools
 from hembedder.utils.quality_metrics import metrics_scores_iter
 import csv
+from sklearn.preprocessing import StandardScaler
 
 
 
@@ -28,7 +29,7 @@ def roundup(x):
 
 
 
-def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,file_name:str,subsampling = False, max_evals:int = 300, num_iter:int = 5, random_state = None, **kwargs):
+def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,file_name:str,subsampling = False,standardised:bool = False, max_evals:int = 300, num_iter:int = 5, random_state = None, **kwargs):
     """
     Random hyperparameter optimization for embedding algorithm. Measuring the results using multiple evaluators
     Adapted from Will Koehrsen for randomized search of hyperpameters for embedding algorithm.
@@ -51,6 +52,8 @@ def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,f
     subsampling: optional, bool or int 
         needs to be an int if subsampling is to be used with a certain number of rows, otherwise the full dataset
         will be used. 
+    standardised:optional, bool
+        whether to standardise the data
     max_evals: optional, int
         max number of evaluation to seach for the ideal hyperparameter.
     num_iters: optional, int
@@ -109,12 +112,16 @@ def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,f
 
         #Run evaluation for each hyperparameter setting per num_iter
         for num in range(num_iter):
-            sub = X
+            sub = X.copy()
             start = time.time()
             if(type(subsampling) == int):
                 sub = numpy_sampling(sub, subsampling)
             # Evaluate randomly selected hyperparameters
-            embedded = embedder(**hyperparameters).fit_transform(sub)
+            CD_scaled = sub.copy()
+            if(standardised):
+                scaler = StandardScaler()
+                CD_scaled = scaler.fit_transform(sub)
+            embedded = embedder(**hyperparameters).fit_transform(CD_scaled)
             times.append(time.time()-start)
             metric_results = metrics_scores_iter(sub, embedded, evaluators, return_dict= True, verbose=False)
             for metric, score in metric_results.items():
@@ -148,7 +155,7 @@ def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,f
 
 
 
-def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,file_name:str,subsampling = False,num_iter:int = 5, random_state = None, **kwargs):
+def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,file_name:str,subsampling = False,standardised:bool = False,num_iter:int = 5, random_state = None, **kwargs):
     """
     Grid hyperparameter optimization for embedding algorithm. Measuring the results using multiple evaluators
     Adapted from Will Koehrsen for grid searching of hyperpameters for embedding algorithm.
@@ -170,6 +177,8 @@ def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,fil
     subsampling: optional, bool or int 
         needs to be an int if subsampling is to be used with a certain number of rows, otherwise the full dataset
         will be used. 
+    standardised:optional, bool
+        whether to standardise the data
     num_iters: optional, int
         number of iterations to run for each hyperparameter setting.
     random_state: optional, int
@@ -231,12 +240,16 @@ def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,fil
         times = []
         #Run evaluation for each hyperparameter setting per num_iter
         for num in range(num_iter):
-            sub = X
+            sub = X.copy()
             start = time.time()
             if(type(subsampling) == int):
                 sub = numpy_sampling(sub, subsampling)
             # Evaluate randomly selected hyperparameters
-            embedded = embedder(**hyperparameters).fit_transform(sub)            
+            CD_scaled = sub.copy()
+            if(standardised):
+                scaler = StandardScaler()
+                CD_scaled = scaler.fit_transform(sub)
+            embedded = embedder(**hyperparameters).fit_transform(CD_scaled)
             times.append(time.time()-start)
             metric_results = metrics_scores_iter(sub, embedded, evaluators, return_dict= True,verbose=False)
             for metric, score in metric_results.items():

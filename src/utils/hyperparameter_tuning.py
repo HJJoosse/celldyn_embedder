@@ -2,7 +2,6 @@ import random
 import numpy as np
 import pandas as pd
 import time
-from random import randint
 from collections import defaultdict
 import math
 import itertools
@@ -105,7 +104,7 @@ def random_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,f
         for k,v in hyperparameters.items():
             results.at[i,k] = v
 
-        num_labels = [] 
+        
         scores = defaultdict(list)
         times = []
 
@@ -231,7 +230,7 @@ def grid_seach(X, embedder, evaluators:dict, param_grid:dict ,ascending:list,fil
         # dictionary for storing average results 
         for k,v in hyperparameters.items():
             results.at[counter,k] = v
-        num_labels = [] 
+        
         scores = defaultdict(list)
         times = []
         #Run evaluation for each hyperparameter setting per num_iter

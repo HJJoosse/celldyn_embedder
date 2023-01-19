@@ -17,6 +17,7 @@ import time
 from tabulate import tabulate
 from collections import defaultdict
 from sklearn.neighbors import NearestNeighbors
+from joblib import Parallel, delayed
 
 
 class CDEmbeddingPerformance:
@@ -290,6 +291,19 @@ def print_means_metric_scores(results:dict):
     print("\n")
 
 
+def get_results(args):
+    """
+    HELPER function for parallelisation of this function in score_subsampling
+    """
+    sample = np.random.choice(np.arange(len(args["X"])),size = args["size"])
+    X_org_sub = args["X"][sample,:]
+    X_emb_sub = args["output"][sample,:]
+    results= metrics_scores_iter(X_org_sub,X_emb_sub,args["evaluators"], verbose=False, return_dict=True)
+    for name, score in results.items():
+        args["results"][name].append(score)
+    return args["results"]
+
+
 def score_subsampling(X:np.array,output:np.array, evaluators:dict, size:int=1000, 
                     num_iter:int = 10,verbose:bool=True, return_dict:bool = False):
     """
@@ -314,25 +328,26 @@ def score_subsampling(X:np.array,output:np.array, evaluators:dict, size:int=1000
     results: dict
         dictonary of metrics and their calculated scores.
     """
+    results = defaultdict(list)
     method_start = time.time()
-    output_results = defaultdict(list)
-    for iter in range(num_iter):
-        sample = np.random.choice(np.arange(len(X)),size = size)
-        X_org_sub = X[sample,:]
-        X_emb_sub = output[sample,:]
-        results = metrics_scores_iter(X_org_sub,X_emb_sub,evaluators, verbose=False, return_dict=True)
-        for name, score in results.items():
-            output_results[name].append(score)
-
-    final_results = defaultdict(list)
-    for name, scores in output_results.items():
-        final_results[name].append([np.mean(scores), np.std(scores)])
+    parallel_param = {'X':X,
+                       'output':output,
+                       'evaluators':evaluators,
+                       'size': size,
+                       "results": results}
+    results = Parallel(n_jobs=5,verbose=False,pre_dispatch='1.5*n_jobs')(delayed(get_results)((parallel_param)) for _ in range(num_iter))
     
+    results_dict = defaultdict(list)
+    for i in range(len(results)):
+        for k, v in results[i].items():
+            results_dict[k].append(v)
+    
+    final_results = defaultdict(list)
+    for name, scores in results_dict.items():
+        final_results[name].append([np.mean(scores), np.std(scores)])
     if(verbose):
         print_means_metric_scores(final_results)
         print(f"Supsampling of {size} samples for {num_iter} rounds each")
         print(f"Time taken {round((time.time()-method_start)/60, 2)} minutes")
-    
     if(return_dict):
         return final_results
-

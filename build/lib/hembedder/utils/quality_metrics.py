@@ -24,7 +24,7 @@ class CDEmbeddingPerformance:
     Class for calulating the embedding quality. Metrics include trustworthiness, Knn overlap, distance correlation, and random triplet scores 
     """
 
-    def __init__(self,metric='euclidean',n_neighbours:int=10, knn_dist:str='jaccard', num_triplets:int=5):
+    def __init__(self,metric='euclidean',n_neighbours:int=15, knn_dist:str='jaccard', num_triplets:int=5):
         """
         Setting up parameters for the quality metircs
         Paramters

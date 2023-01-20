@@ -335,7 +335,7 @@ def score_subsampling(X:np.array,output:np.array, evaluators:dict, size:int=1000
                        'evaluators':evaluators,
                        'size': size,
                        "results": results}
-    results = Parallel(n_jobs=5,verbose=False,pre_dispatch='1.5*n_jobs')(delayed(get_results)((parallel_param)) for _ in range(num_iter))
+    results = Parallel(n_jobs=10,verbose=False,pre_dispatch='1.5*n_jobs')(delayed(get_results)((parallel_param)) for _ in range(num_iter))
     
     results_dict = defaultdict(list)
     for i in range(len(results)):

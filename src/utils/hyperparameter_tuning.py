@@ -13,7 +13,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 
 class Hyperparameter_tuning:
     """
-    Class for calulating the embedding quality. Metrics include trustworthiness, Knn overlap, distance correlation, and random triplet scores 
+    Class for hyperparameter tuning of embedders.
     """
 
     def __init__(self,X, embedder, evaluators:dict, param_grid:dict ,ascending:list,file_name:str,subsampling:int,standardised:bool = False, num_iter:int = 5, random_state = None, **kwargs):

@@ -5,9 +5,8 @@
 
 
 ### knn_overlap -> find knn in true space random sample. Then embedding do the same for indices -> jaccard score
-__author__ = "Bram van ES","Chontira Chumsaeng"
+__author__ = "Bram van ES","Huibert-Jan Joosse","Chontira Chumsaeng"
 
-import scipy as sc
 from scipy.spatial.distance import jaccard, hamming
 import numpy as np
 from numpy.random import default_rng
@@ -17,6 +16,8 @@ import faiss
 import time
 from tabulate import tabulate
 from collections import defaultdict
+from sklearn.neighbors import NearestNeighbors
+from joblib import Parallel, delayed
 
 
 class CDEmbeddingPerformance:
@@ -24,7 +25,7 @@ class CDEmbeddingPerformance:
     Class for calulating the embedding quality. Metrics include trustworthiness, Knn overlap, distance correlation, and random triplet scores 
     """
 
-    def __init__(self,metric='euclidean',n_neighbours:int=10, knn_dist:str='jaccard', knn_return_median:bool = True, num_triplets:int=5):
+    def __init__(self,metric='euclidean',n_neighbours:int=15, knn_dist:str='jaccard', num_triplets:int=5):
         """
         Setting up parameters for the quality metircs
         Paramters
@@ -35,15 +36,12 @@ class CDEmbeddingPerformance:
             number of neighbours for trustworiness and knn overlap scores
         knn_dist:string
             distance metric for calculating overlap between neighbours in knn overlap. 'hamming' or 'jaccard'
-        knn_return_median:bool
-            whether to return the median of the knn overlap scores. This should be true if knn is to be used with other methods here.
         num_triplets:int
             paramter for random triplets calculation.
         """
         self.metric = metric
         self.n_neighbours = n_neighbours
         self.knn_dist = knn_dist 
-        self.knn_return_median = knn_return_median
         self.num_triplets = num_triplets
 
     def _return_trustworthiness(self,X_org:np.array,X_emb:np.array):
@@ -72,7 +70,7 @@ class CDEmbeddingPerformance:
         D,I = index.search(X.astype(np.float32), k)
         return D,I
     
-    def _return_knn_overlap(self,X_org:np.array,X_emb:np.array):
+    def _return_knn_overlap(self,X_org:np.array,X_emb:np.array, knn_return_median:bool = True):
         """
         Function for returning nearest neighbourhood overlap score. Overlap between the high dimension and low dimension data
         Parameters
@@ -81,6 +79,8 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        knn_return_median:bool
+            whether to return the median of the knn overlap scores. This should be true if knn is to be used with other methods here.
         Returns
         -----------
         knn overlap score between 0 and 1. Lower means better
@@ -97,7 +97,7 @@ class CDEmbeddingPerformance:
             raise Exception(f"{self.knn_dist} is not a recognised distance measure for KNN overlap. Please use 'jaccard' or 'hamming'")
         for i in range(I.shape[0]):
             ds_arry[i] = dist(I[i,:],I_emb[i,:])
-        return np.median(ds_arry) if self.knn_return_median else ds_arry
+        return np.median(ds_arry) if knn_return_median else ds_arry
   
 
     def _return_distance_correlation(self,X_org:np.array,X_emb:np.array):
@@ -116,50 +116,89 @@ class CDEmbeddingPerformance:
         return dcor.distance_correlation(X_org,X_emb)
             
     
+    @staticmethod
+    def calculate_distance_random_triplets(X:np.array,anchors, triplets):
+        """
+        HELPER function for random_triplet_eval to calculate distance for X and generate the labels
+        """
+        b = np.broadcast(anchors, triplets)
+        distances = np.empty(b.shape)
+        distances.flat = [np.linalg.norm(X[u] - X[v]) for (u,v) in b]
+        labels = distances[:, :, 0] < distances[: , :, 1]
+        return labels
+    
+    @staticmethod
+    def calculate_anchors_and_triplets(X:np.array, num_triplets:int):
+        """
+        HELPER function for random_triplet_eval to create the achors and triplets for evaluating the
+        triplets violation
+        """
+        anchors = np.arange(X.shape[0])
+        rng = default_rng()
+        triplets = rng.choice(anchors, (X.shape[0], num_triplets, 2))
+        triplet_labels = np.zeros((X.shape[0], num_triplets))
+        anchors = anchors.reshape((-1, 1, 1))
+        return anchors,triplets
+            
     def random_triplet_eval(self,X_org:np.array, X_emb:np.array):
         '''
-        Author from Haiyang Huang https://github.com/hyhuang00/scRNA-DR2020/blob/main/experiments/run_eval.py
-
+        Author: Haiyang Huang https://github.com/hyhuang00/scRNA-DR2020/blob/main/experiments/run_eval.py
         This is a function that is used to evaluate the lower dimension embedding.
         An triplet satisfaction score is calculated by evaluating how many randomly
         selected triplets have been violated. Each point will generate 5 triplets.
         Parameters
         ----------
-            X: A numpy array with the shape [N, p]. The higher dimension embedding
+            X_org: A numpy array with the shape [N, p]. The higher dimension embedding
             of some dataset. Expected to have some clusters.
-            X_new: A numpy array with the shape [N, k]. The lower dimension embedding
+            X_emb: A numpy array with the shape [N, k]. The lower dimension embedding
                 of some dataset. Expected to have some clusters as well.
-            y: A numpy array with the shape [N, 1]. The labels of the original
-            dataset. Used to identify clusters
         Returns
         ----------
             acc: The score generated by the algorithm.
         '''    
         # Sampling Triplets
         # Five triplet per point
-        anchors = np.arange(X_org.shape[0])
-        rng = default_rng()
-        triplets = rng.choice(anchors, (X_org.shape[0], self.num_triplets, 2))
-        triplet_labels = np.zeros((X_org.shape[0], self.num_triplets))
-        anchors = anchors.reshape((-1, 1, 1))
+        anchors,triplets = self.calculate_anchors_and_triplets(X_org,self.num_triplets)
         
         # Calculate the distances and generate labels
-        b = np.broadcast(anchors, triplets)
-        distances = np.empty(b.shape)
-        distances.flat = [np.linalg.norm(X_org[u] - X_org[v]) for (u,v) in b]
-        labels = distances[:, :, 0] < distances[: , :, 1]
+        labels = self.calculate_distance_random_triplets(X_org,anchors, triplets)
         
         # Calculate distances for LD
-        b = np.broadcast(anchors, triplets)
-        distances_l = np.empty(b.shape)
-        distances_l.flat = [np.linalg.norm(X_emb[u] - X_emb[v]) for (u,v) in b]
-        pred_vals = distances_l[:, :, 0] < distances_l[:, :, 1]
+        pred_vals = self.calculate_distance_random_triplets(X_emb,anchors, triplets)
 
         # Compare the labels and return the accuracy
         correct = np.sum(pred_vals == labels)
         acc = correct/X_org.shape[0]/self.num_triplets
         return acc
         
+    
+    def neighbor_kept_ratio_eval(self,X_org:np.array, X_emb:np.array):
+        '''
+        Author: Haiyang Huang https://github.com/hyhuang00/scRNA-DR2020/blob/main/experiments/run_eval.py
+        This is a function that evaluates the local structure preservation.
+        A nearest neighbor set is constructed on both the high dimensional space and
+        the low dimensional space.
+        Input:
+            X_org: A numpy array with the shape [N, p]. The higher dimension embedding
+            of some dataset. Expected to have some clusters.
+            X_emb: A numpy array with the shape [N, k]. The lower dimension embedding
+                of some dataset. Expected to have some clusters as well.
+        Output:
+            acc: The score generated by the algorithm.
+        '''
+        nn_hd = NearestNeighbors(n_neighbors=self.n_neighbours+1)
+        nn_ld = NearestNeighbors(n_neighbors=self.n_neighbours+1)
+        nn_hd.fit(X_org)
+        nn_ld.fit(X_emb)
+        # Construct a k-neighbors graph, where 1 indicates a neighbor relationship
+        # and 0 means otherwise, resulting in a graph of the shape n * n
+        graph_hd = nn_hd.kneighbors_graph(X_org).toarray()
+        graph_hd -= np.eye(X_org.shape[0]) # Removing diagonal
+        graph_ld = nn_ld.kneighbors_graph(X_emb).toarray()
+        graph_ld -= np.eye(X_org.shape[0]) # Removing diagonal
+        neighbor_kept = np.sum(graph_hd * graph_ld).astype(float)
+        neighbor_kept_ratio = neighbor_kept / self.n_neighbours / X_org.shape[0]
+        return neighbor_kept_ratio
 
     def score(self, X_org:np.array,X_emb:np.array, subsampling:int=1000, num_iter:int = 10, return_results:bool = False):
         """
@@ -185,7 +224,8 @@ class CDEmbeddingPerformance:
         evaluators = {'Trustworthiness': self._return_trustworthiness,
                     'Knn overlap': self._return_knn_overlap,
                     'Distance correlation': self._return_distance_correlation,
-                    'Random triplets' : self.random_triplet_eval}
+                    'Random triplets' : self.random_triplet_eval,
+                    'neighbor kept ratio' : self.neighbor_kept_ratio_eval}
         final_results=score_subsampling(X_org,X_emb,evaluators=evaluators, size=subsampling, num_iter=num_iter, verbose=True, return_dict=True)
         if(return_results):
             return final_results
@@ -251,6 +291,19 @@ def print_means_metric_scores(results:dict):
     print("\n")
 
 
+def get_results(args):
+    """
+    HELPER function for parallelisation of this function in score_subsampling
+    """
+    sample = np.random.choice(np.arange(len(args["X"])),size = args["size"])
+    X_org_sub = args["X"][sample,:]
+    X_emb_sub = args["output"][sample,:]
+    results= metrics_scores_iter(X_org_sub,X_emb_sub,args["evaluators"], verbose=False, return_dict=True)
+    for name, score in results.items():
+        args["results"][name].append(score)
+    return args["results"]
+
+
 def score_subsampling(X:np.array,output:np.array, evaluators:dict, size:int=1000, 
                     num_iter:int = 10,verbose:bool=True, return_dict:bool = False):
     """
@@ -275,25 +328,26 @@ def score_subsampling(X:np.array,output:np.array, evaluators:dict, size:int=1000
     results: dict
         dictonary of metrics and their calculated scores.
     """
+    results = defaultdict(list)
     method_start = time.time()
-    output_results = defaultdict(list)
-    for _ in range(num_iter):
-        sample = np.random.choice(np.arange(len(X)),size = size)
-        X_org_sub = X[sample,:]
-        X_emb_sub = output[sample,:]
-        results = metrics_scores_iter(X_org_sub,X_emb_sub,evaluators, verbose=False, return_dict=True)
-        for name, score in results.items():
-            output_results[name].append(score)
-
-    final_results = defaultdict(list)
-    for name, scores in output_results.items():
-        final_results[name].append([np.mean(scores), np.std(scores)])
+    parallel_param = {'X':X,
+                       'output':output,
+                       'evaluators':evaluators,
+                       'size': size,
+                       "results": results}
+    results = Parallel(n_jobs=10,verbose=False,pre_dispatch='1.5*n_jobs')(delayed(get_results)((parallel_param)) for _ in range(num_iter))
     
+    results_dict = defaultdict(list)
+    for i in range(len(results)):
+        for k, v in results[i].items():
+            results_dict[k].append(v)
+    
+    final_results = defaultdict(list)
+    for name, scores in results_dict.items():
+        final_results[name].append([np.mean(scores), np.std(scores)])
     if(verbose):
         print_means_metric_scores(final_results)
         print(f"Supsampling of {size} samples for {num_iter} rounds each")
         print(f"Time taken {round((time.time()-method_start)/60, 2)} minutes")
-    
     if(return_dict):
         return final_results
-

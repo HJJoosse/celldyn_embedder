@@ -16,12 +16,24 @@ class Hyperparameter_tuning:
     Class for hyperparameter tuning of embedders.
     """
 
-    def __init__(self,X, embedder, evaluators:dict, param_grid:dict ,ascending:list,file_name:str,subsampling:int,standardised:bool = False, num_iter:int = 5, random_state = None, **kwargs):
+    def __init__(
+            self,X:np.array,
+            embedder,
+            evaluators:dict,
+            param_grid:dict,
+            ascending:list,
+            file_name:str,
+            subsampling:int,
+            standardised:bool = False, 
+            num_iter:int = 10,
+            n_parjobs:int = 10,
+            random_state = None,
+            **kwargs):
         """
         Setting up parameters for the hyperpameter tuning. Two choices to choose from: random search or grid search.
         Paramters
         ---------
-        X: numpy array or dataframe
+        X: numpy array
             the data that needs to be fitted to the embedder.
         embedder: function
             the embedder that needs to be hyperparameter tunned.
@@ -45,7 +57,7 @@ class Hyperparameter_tuning:
         **kwargs:
             Whatever key words argument that are allow in the embedder 
         """
-        self.X = np.asarray(X, dtype=np.float32)
+        self.X = np.asarray(X, dtype=np.float16)
         self.embedder = embedder
         self.evaluators = evaluators 
         self.param_grid = param_grid
@@ -55,6 +67,7 @@ class Hyperparameter_tuning:
         self.standardised = standardised
         self.max_evals = None
         self.num_iter = num_iter
+        self.n_parjobs = n_parjobs
         self.random_state = random_state
         self.kwargs = kwargs
         self.percent_range = None
@@ -147,16 +160,11 @@ class Hyperparameter_tuning:
             # dictionary for storing average results 
             for k,v in hyperparameters.items():
                 self.results.at[counter,k] = v 
-            scores = defaultdict(list)
-            times = []
-            #Run evaluation for each hyperparameter setting per num_iter
-            scores = defaultdict(list)
-            times = []
             #Embedding data for each hyperparameter setting per num_iter
             embedded_data, times = self.get_embedded_data(hyperparameters)
             #Calculating performance for the embedded data using thread pool
-            pool = ThreadPool(10)
-            scores=pool.map(self.get_scores, embedded_data)
+            pool = ThreadPool(self.n_parjobs)
+            scores=pool.map(self.get_scores, (list(x.values())[:2] for x in embedded_data))
             pool.close()
             pool.join()
             self.store_param_results(counter,scores, hyperparameters, times)
@@ -165,7 +173,7 @@ class Hyperparameter_tuning:
         self.print_final_results()
         print("Finish tuning in ",round((time.time() - method_start)/60, 2), "minutes.")
 
-    def get_embedded_data(self,parameter):
+    def get_embedded_data(self,parameter:dict):
         #Get embedded data from original data by subsampling
         embedded_data = []
         times = []
@@ -179,8 +187,8 @@ class Hyperparameter_tuning:
                 CD_scaled = scaler.fit_transform(sub)
             # Create a dictionary for later reference in multi-thread
             emb_dict = {"original" : sub,
-                        "embedded" : self.embedder(**parameter).fit_transform(CD_scaled)}
-            emb_dict.update({"evaluators":self.evaluators})
+                        "embedded" : self.embedder(**parameter).fit_transform(CD_scaled),
+                        "evaluators":self.evaluators}
             embedded_data.append(emb_dict)
             times.append(time.time()-start)
         return embedded_data, times
@@ -188,16 +196,18 @@ class Hyperparameter_tuning:
     @staticmethod
     def get_scores(embedded_info): 
         #Get performance metrics for each subsampled embedder
-        sub = embedded_info["original"]
-        embedded = embedded_info["embedded"]
-        scores = metrics_scores_iter(sub, embedded, embedded_info["evaluators"], return_dict= True, verbose=False)
+        scores = metrics_scores_iter(
+            embedded_info["original"],
+            embedded_info["embedded"],
+            embedded_info["evaluators"],
+            return_dict= True, verbose=False)
         return scores
        
     def store_param_results(self,indx,scores, hyperparameters, times):
         #Store the results in dataframe and on disk
         scores_dict = defaultdict(list)
-        for s in range(len(scores)):
-            for k, v in scores[s].items():
+        for s in scores:
+            for k, v in s.items():
                 scores_dict[k].append(v)  
         for metric, score_ls in scores_dict.items():
             self.results.at[indx, metric]= np.mean(score_ls)

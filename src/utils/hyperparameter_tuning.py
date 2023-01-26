@@ -164,7 +164,7 @@ class Hyperparameter_tuning:
             embedded_data, times = self.get_embedded_data(hyperparameters)
             #Calculating performance for the embedded data using thread pool
             pool = ThreadPool(self.n_parjobs)
-            scores=pool.map(self.get_scores, (list(x.values())[:2] for x in embedded_data))
+            scores=pool.map(self.get_scores, (x for x in embedded_data))
             pool.close()
             pool.join()
             self.store_param_results(counter,scores, hyperparameters, times)

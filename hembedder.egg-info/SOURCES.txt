@@ -58,5 +58,6 @@ src/utils/__init__.py
 src/utils/base.py
 src/utils/distance.py
 src/utils/hyperparameter_tuning.py
+src/utils/hyperparameter_tuning_legacy.py
 src/utils/load_data.py
 src/utils/quality_metrics.py

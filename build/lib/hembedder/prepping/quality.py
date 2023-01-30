@@ -45,7 +45,7 @@ fail_mapping = {
 class QcControl(BaseEstimator, TransformerMixin):
     # cast in sklearn api
 
-    def __init__(self, param_file=None, filters=[], backend="pandas"):
+    def __init__(self, param_file=None, filters=[], backend="pandas", cols_include=[]):
         """
         Initialize the QC control object.
 
@@ -54,6 +54,7 @@ class QcControl(BaseEstimator, TransformerMixin):
         param_file : str -- path to the parameter file with hard bounds
         filters : list of str -- list of filters to apply to the data
         backend : str -- pandas, polars
+        meas_cols : list of str -- list of measurement columns to use
         """
 
         if param_file is not None:
@@ -61,6 +62,7 @@ class QcControl(BaseEstimator, TransformerMixin):
             self._parse_filter()
 
         self.backend = backend
+        self.cols_include = cols_include
 
         assert (filters, list), "filters must be a list"
         self._parse_filter_list(filters)
@@ -109,6 +111,10 @@ class QcControl(BaseEstimator, TransformerMixin):
     def _get_cols(self, df):
         self.count_columns = [c.lower() for c in df.columns if "c_cnt" in c]
         self.meas_columns = [c.lower() for c in df.columns if "c_b" in c] + ["PLT"]
+
+        if len(self.cols_include)>0:
+            self.meas_columns = [c.lower() for c in self.meas_columns if c in self.cols_include]
+
         self.mode_columns = [c.lower() for c in df.columns if "c_m" in c]
         self.susp_columns = [c.lower() for c in df.columns if "c_s" in c]
         self.alert_columns = [c.lower() for c in df.columns if "Alrt" in c]
@@ -301,7 +307,13 @@ class QcControl(BaseEstimator, TransformerMixin):
         return df
 
     def qc_plausible_range_filter(self, df: pd.DataFrame):
-        cut_offs = pd.read_csv(self.param_file, sep=";", encoding="latin1")
+        try:
+            cut_offs = pd.read_excel(
+                self.param_file
+            )  # , sep=";", encoding="latin1")
+        except Exception as e:
+            print("Could not read the parameter file: {}".format(e))
+            raise e
         col_names = cut_offs.columns
         cut_offs = pd.DataFrame(
             np.where(cut_offs == "-", np.nan, cut_offs), columns=col_names
@@ -365,16 +377,25 @@ class QcControl(BaseEstimator, TransformerMixin):
                 logger.debug(f"Exception: {e}, for {fail_name}")
         return df
 
+    def _check_feature_names(self, cols):
+        not_in_cols = []
+        for c in self.meas_columns:
+            if c not in cols:
+                not_in_cols.append(c)         
+        if len(not_in_cols)>0:
+            logger.debug(f"ERROR: Columns {not_in_cols} not in meas_columns")
+            raise ValueError(f"Columns: {c} not in meas_columns")
+
     def fit(self, X: pd.DataFrame, y=None):
+        X.columns = [c.lower() for c in X.columns]
+        self._get_cols(X)
         return self
 
     def transform(self, X: pd.DataFrame, y=None):
         self._start_logger()
+        self._check_feature_names([c.lower() for c in X.columns])
 
-        X.columns = [c.lower() for c in X.columns]
-        self._get_cols(X)
         _X = X.copy()
-
         for k, filter_fun in self.filters.items():
             logger.debug(f"Start filtering: {k}")
             _X = filter_fun(_X.copy())

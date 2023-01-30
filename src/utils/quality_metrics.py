@@ -8,6 +8,7 @@
 __author__ = "Bram van ES","Huibert-Jan Joosse","Chontira Chumsaeng"
 
 from scipy.spatial.distance import jaccard, hamming
+from scipy.spatial.distance import pdist
 import numpy as np
 from numpy.random import default_rng
 from sklearn.manifold import trustworthiness
@@ -100,7 +101,7 @@ class CDEmbeddingPerformance:
         return np.median(ds_arry) if knn_return_median else ds_arry
   
 
-    def _return_distance_correlation(self,X_org:np.array,X_emb:np.array):
+    def _return_distance_correlation(self, X_org:np.array, X_emb:np.array, level: int=1):
         """
         Function for returning distance correlation from dcor between the high dimension and low dimension data
         Parameters
@@ -109,11 +110,19 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        level: int
+            depth of correlation; 1 is distance correlation of data, 2 is distance correlation of distances
         Returns
         -----------
         distance correlation score between 0 and 1. Higher means better
         """
-        return dcor.distance_correlation(X_org,X_emb)
+        if level==1:
+            return dcor.distance_correlation(X_org,X_emb)
+        elif level==2:
+            return dcor.distance_correlation(pdist(X_org, metric='spearman'),
+                                             pdist(X_emb, metric='spearman'))
+        else:
+            raise Exception(f"{level} is not a recognised level for distance correlation. Please use 1 or 2")
             
     
     @staticmethod

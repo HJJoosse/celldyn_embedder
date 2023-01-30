@@ -139,6 +139,8 @@ class Hyperparameter_tuning:
         param_len = 1
         for v in values:
             param_len=param_len*len(v)
+        print(f"Total number of embedding runs :  {param_len*self.num_iter} with {self.subsampling} samples")
+
         param_len-=1
         method_start = time.time()
         self.percent_range = list(range(10,110,10))
@@ -187,7 +189,7 @@ class Hyperparameter_tuning:
                 CD_scaled = scaler.fit_transform(sub)
             # Create a dictionary for later reference in multi-thread
             emb_dict = {"original" : sub,
-                        "embedded" : self.embedder(**parameter).fit_transform(sub).astype(np.float16),
+                        "embedded" : self.embedder(**parameter).fit_transform(CD_scaled).astype(np.float16),
                         "evaluators":self.evaluators}
             embedded_data.append(emb_dict)
             times.append(time.time()-start)

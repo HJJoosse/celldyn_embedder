@@ -45,7 +45,7 @@ class CDEmbeddingPerformance:
         self.knn_dist = knn_dist 
         self.num_triplets = num_triplets
 
-    def _return_trustworthiness(self,X_org:np.array,X_emb:np.array):
+    def _return_trustworthiness(self, X_org:np.array, X_emb:np.array):
         """
         Function for returning trustworthiness score from sklearn.manifold.
         Parameters
@@ -71,7 +71,7 @@ class CDEmbeddingPerformance:
         D,I = index.search(X.astype(np.float32), k)
         return D,I
     
-    def _return_knn_overlap(self,X_org:np.array,X_emb:np.array, knn_return_median:bool = True):
+    def _return_knn_overlap(self, X_org:np.array,X_emb:np.array, knn_return_median:bool = True):
         """
         Function for returning nearest neighbourhood overlap score. Overlap between the high dimension and low dimension data
         Parameters
@@ -101,7 +101,7 @@ class CDEmbeddingPerformance:
         return np.median(ds_arry) if knn_return_median else ds_arry
   
 
-    def _return_distance_correlation(self, X_org:np.array, X_emb:np.array, level: int=1):
+    def _return_distance_correlation(self, X_org:np.array, X_emb:np.array, level: int=2):
         """
         Function for returning distance correlation from dcor between the high dimension and low dimension data
         Parameters
@@ -117,7 +117,7 @@ class CDEmbeddingPerformance:
         distance correlation score between 0 and 1. Higher means better
         """
         if level==1:
-            return dcor.distance_correlation(X_org,X_emb)
+            return dcor.distance_correlation(X_org, X_emb)
         elif level==2:
             return dcor.distance_correlation(pdist(X_org, metric='spearman'),
                                              pdist(X_emb, metric='spearman'))

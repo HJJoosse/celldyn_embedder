@@ -55,7 +55,7 @@ class Hyperparameter_tuning:
         random_state: optional, int
             set to None. If int is used e.g. 0, the randomness is deterministic
         **kwargs:
-            Whatever key words argument that are allow in the embedder 
+            Whatever key words argument that are allowed in the embedder 
         """
         self.X = np.asarray(X, dtype=np.float16)
         self.embedder = embedder
@@ -187,7 +187,7 @@ class Hyperparameter_tuning:
                 CD_scaled = scaler.fit_transform(sub)
             # Create a dictionary for later reference in multi-thread
             emb_dict = {"original" : sub,
-                        "embedded" : self.embedder(**parameter).fit_transform(CD_scaled),
+                        "embedded" : self.embedder(**parameter).fit_transform(CD_scaled).astype(np.float16),
                         "evaluators":self.evaluators}
             embedded_data.append(emb_dict)
             times.append(time.time()-start)

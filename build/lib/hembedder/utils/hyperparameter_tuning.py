@@ -192,10 +192,10 @@ class Hyperparameter_tuning:
             indexes_embedder = subsampling_return_indexes(self.X,size)
             # Evaluate randomly selected hyperparameters
             sub_original = self.X[indexes_embedder]
-            embedded_data = sub_original.copy()
+            embedded_data = sub_original.copy().astype(self.dtype)
             if(self.standardised):
                 scaler = StandardScaler()
-                embedded_data = scaler.fit_transform(sub_original)
+                embedded_data = scaler.fit_transform(sub_original).astype(self.dtype)
             # Create a dictionary for later reference in multi-thread
             indexes_metrics= subsampling_return_indexes(sub_original, self.metric_chuck_size)
             emb_dict = {"original" : sub_original[indexes_metrics],

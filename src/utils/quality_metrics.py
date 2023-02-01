@@ -26,9 +26,10 @@ class CDEmbeddingPerformance:
     Class for calulating the embedding quality. Metrics include trustworthiness, Knn overlap, distance correlation, and random triplet scores 
     """
 
-    def __init__(self,metric='euclidean',n_neighbours:int=15, knn_dist:str='jaccard', num_triplets:int=5):
+    def __init__(self,metric='euclidean',n_neighbours:int=15, knn_dist:str='jaccard',dcor_level:int = 2, num_triplets:int=5,dtype = np.float32):
         """
         Setting up parameters for the quality metircs
+
         Paramters
         ---------
         metric: string or function
@@ -37,23 +38,31 @@ class CDEmbeddingPerformance:
             number of neighbours for trustworiness and knn overlap scores
         knn_dist:string
             distance metric for calculating overlap between neighbours in knn overlap. 'hamming' or 'jaccard'
+        dcor_level:int
+            depth of correlation; 1 is distance correlation of data, 2 is distance correlation of distances
         num_triplets:int
             paramter for random triplets calculation.
+        dtype: float
+            for setting type of np.array to work with. If the data set is too large use np.float16
         """
         self.metric = metric
         self.n_neighbours = n_neighbours
         self.knn_dist = knn_dist 
         self.num_triplets = num_triplets
+        self.dtype = dtype
+        self.dcor_level = dcor_level
 
     def _return_trustworthiness(self, X_org:np.array, X_emb:np.array):
         """
         Function for returning trustworthiness score from sklearn.manifold.
+
         Parameters
         ----------
         X_org:np.array
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+
         Returns
         -----------
         Trustworithiness score between 0 and 1. Higher means better
@@ -62,18 +71,19 @@ class CDEmbeddingPerformance:
     
     
     @staticmethod
-    def _create_knn_search(X,k):
+    def _create_knn_search(X,k,dtype):
         """
         HELPER function for knn_overlap
         """
         index = faiss.IndexFlatL2(X.shape[1])
-        index.add(X.astype(np.float32))
-        D,I = index.search(X.astype(np.float32), k)
+        index.add(X.astype(dtype))
+        D,I = index.search(X.astype(dtype), k)
         return D,I
     
     def _return_knn_overlap(self, X_org:np.array,X_emb:np.array, knn_return_median:bool = True):
         """
         Function for returning nearest neighbourhood overlap score. Overlap between the high dimension and low dimension data
+
         Parameters
         ----------
         X_org:np.array
@@ -82,12 +92,13 @@ class CDEmbeddingPerformance:
             the embedded data as np.array
         knn_return_median:bool
             whether to return the median of the knn overlap scores. This should be true if knn is to be used with other methods here.
+
         Returns
         -----------
         knn overlap score between 0 and 1. Lower means better
         """
-        D,I = self._create_knn_search(X_org,self.n_neighbours)
-        D_emb,I_emb = self._create_knn_search(X_emb,self.n_neighbours)
+        D,I = self._create_knn_search(X_org,self.n_neighbours, self.dtype)
+        D_emb,I_emb = self._create_knn_search(X_emb,self.n_neighbours, self.dtype)
         ds_arry = np.zeros(I.shape[0]) 
         dist = None
         if self.knn_dist == 'jaccard':
@@ -101,28 +112,28 @@ class CDEmbeddingPerformance:
         return np.median(ds_arry) if knn_return_median else ds_arry
   
 
-    def _return_distance_correlation(self, X_org:np.array, X_emb:np.array, level: int=2):
+    def _return_distance_correlation(self, X_org:np.array, X_emb:np.array):
         """
         Function for returning distance correlation from dcor between the high dimension and low dimension data
+
         Parameters
         ----------
         X_org:np.array
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
-        level: int
-            depth of correlation; 1 is distance correlation of data, 2 is distance correlation of distances
+
         Returns
         -----------
         distance correlation score between 0 and 1. Higher means better
         """
-        if level==1:
+        if self.dcor_level==1:
             return dcor.distance_correlation(X_org, X_emb)
-        elif level==2:
+        elif self.dcor_level==2:
             return dcor.distance_correlation(pdist(X_org, metric='spearman'),
                                              pdist(X_emb, metric='spearman'))
         else:
-            raise Exception(f"{level} is not a recognised level for distance correlation. Please use 1 or 2")
+            raise Exception(f"{self.dcor_level} is not a recognised level for distance correlation. Please use 1 or 2")
             
     
     @staticmethod
@@ -155,12 +166,14 @@ class CDEmbeddingPerformance:
         This is a function that is used to evaluate the lower dimension embedding.
         An triplet satisfaction score is calculated by evaluating how many randomly
         selected triplets have been violated. Each point will generate 5 triplets.
+
         Parameters
         ----------
             X_org: A numpy array with the shape [N, p]. The higher dimension embedding
             of some dataset. Expected to have some clusters.
             X_emb: A numpy array with the shape [N, k]. The lower dimension embedding
                 of some dataset. Expected to have some clusters as well.
+
         Returns
         ----------
             acc: The score generated by the algorithm.
@@ -187,11 +200,13 @@ class CDEmbeddingPerformance:
         This is a function that evaluates the local structure preservation.
         A nearest neighbor set is constructed on both the high dimensional space and
         the low dimensional space.
+
         Input:
             X_org: A numpy array with the shape [N, p]. The higher dimension embedding
             of some dataset. Expected to have some clusters.
             X_emb: A numpy array with the shape [N, k]. The lower dimension embedding
                 of some dataset. Expected to have some clusters as well.
+
         Output:
             acc: The score generated by the algorithm.
         '''
@@ -205,13 +220,14 @@ class CDEmbeddingPerformance:
         graph_hd -= np.eye(X_org.shape[0]) # Removing diagonal
         graph_ld = nn_ld.kneighbors_graph(X_emb).toarray()
         graph_ld -= np.eye(X_org.shape[0]) # Removing diagonal
-        neighbor_kept = np.sum(graph_hd * graph_ld).astype(float)
+        neighbor_kept = np.sum(graph_hd * graph_ld).astype(self.dtype)
         neighbor_kept_ratio = neighbor_kept / self.n_neighbours / X_org.shape[0]
         return neighbor_kept_ratio
 
     def score(self, X_org:np.array,X_emb:np.array, subsampling:int=1000, num_iter:int = 10, return_results:bool = False):
         """
         Return embedding trustworithness, knn overlap, distance correlation, and random triplets scores.
+
         Parameters
         ----------
         X_org:np.array
@@ -224,6 +240,7 @@ class CDEmbeddingPerformance:
             the amount of iteration for the algorithms to cycle through for calculating the scores
         return_results:bool
             whether to return the results as dictionary
+
         Returns
         ----------
         final_results:dict, optional
@@ -245,6 +262,7 @@ def metrics_scores_iter(x:np.array, output:np.array, evaluators:dict ,
                         verbose:bool=True, return_dict:bool = False):
     """
     Calculates scores for embedder using different metrics (evaluators). 
+
     Parameters
     ---------
     x: np.array
@@ -256,6 +274,7 @@ def metrics_scores_iter(x:np.array, output:np.array, evaluators:dict ,
         if the functions take x and output as arguments.
     verbose: bool, optional
         whether to print the results.
+
     Returns
     ---------
     results: dict
@@ -273,6 +292,7 @@ def metrics_scores_iter(x:np.array, output:np.array, evaluators:dict ,
 def print_metric_scores(results:dict):
     """
     Print mertic scores in a table format.
+
     Parameters
     ---------
     results: dict
@@ -288,6 +308,7 @@ def print_metric_scores(results:dict):
 def print_means_metric_scores(results:dict):
     """
     Print means of metric scores in a table format with standard deviation.
+
     Parameters
     ---------
     results: dict
@@ -317,6 +338,7 @@ def score_subsampling(X:np.array,output:np.array, evaluators:dict, size:int=1000
                     num_iter:int = 10,verbose:bool=True, return_dict:bool = False):
     """
     Calculates quality metric scores with subsampling to reduce processing time.
+
     Parameters
     ---------
     x: np.array
@@ -332,6 +354,7 @@ def score_subsampling(X:np.array,output:np.array, evaluators:dict, size:int=1000
         the amount of iteration for the algorithms to cycle through for calculating the scores
     verbose: bool, optional
         whether to print the results.
+        
     Returns
     ---------
     results: dict

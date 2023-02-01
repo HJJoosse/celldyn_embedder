@@ -5,10 +5,11 @@ import time
 from collections import defaultdict
 import math
 import itertools
-from hembedder.utils.quality_metrics import metrics_scores_iter, score_subsampling
+from hembedder.utils.quality_metrics import metrics_scores_iter
 import csv
 from sklearn.preprocessing import StandardScaler
 from multiprocessing.dummy import Pool as ThreadPool
+from tqdm import tqdm
 
 class Hyperparameter_tuning:
     """
@@ -22,7 +23,7 @@ class Hyperparameter_tuning:
             param_grid:dict,
             ascending:list,
             file_name:str,
-            sample_size,
+            sample_size=10000,
             metric_chuck_size:int=5000,
             standardised:bool = False, 
             num_iter:int = 10,
@@ -77,9 +78,9 @@ class Hyperparameter_tuning:
         self.n_parjobs = n_parjobs
         self.random_state = random_state
         self.kwargs = kwargs
-        self.percent_range = None
         self.param_grid = param_grid
-        self.sample_size=[self.sample_size] if type(self.sample_size) == int else self.sample_size
+        self.sample_size=[self.sample_size] if type(self.sample_size) == int\
+                        else self.sample_size
         self.param_grid.update({'sample_size': self.sample_size}) 
         #Columns for the final result dataframe
         self.var_word = '_variance'
@@ -94,8 +95,7 @@ class Hyperparameter_tuning:
     
 
     def random_search(self, max_evals:int=300):
-        """
-        Random hyperparameter optimization for embedding algorithm. Measuring the results using multiple evaluators
+        """Random hyperparameter optimization for embedding algorithm. Measuring the results using multiple evaluators
         Adapted from Will Koehrsen for randomized search of hyperpameters for embedding algorithm.
         
         Parameters
@@ -104,11 +104,12 @@ class Hyperparameter_tuning:
             max number of evaluation to seach for the ideal hyperparameter.
         """
         method_start = time.time()
-        self.percent_range = list(range(10,110,10))
         #setting random state
         random.seed(self.random_state)
         # Dataframe for results
         self.max_evals = max_evals
+        print(f"Total number of embedding runs :  {self.max_evals} (combos)x{self.num_iter}(iterations)",
+            f"with {self.sample_size[0]} samples for the embedding")
         self.results = pd.DataFrame(columns = self.result_cols,
                                     index = list(range(self.max_evals)))                      
         #https://stackoverflow.com/questions/20347766/pythonically-add-header-to-a-csv-file
@@ -116,7 +117,7 @@ class Hyperparameter_tuning:
             writer = csv.writer(outcsv)
             writer.writerow(self.result_cols)
         # Keep searching until reach max evaluations
-        for i in range(self.max_evals):
+        for i in tqdm(range(self.max_evals)):
             #picked  hyperparameters
             hyperparameters = {k: random.sample(v, 1)[0] for k, v in self.param_grid.items()}
             hyperparameters.update(self.kwargs)
@@ -124,7 +125,7 @@ class Hyperparameter_tuning:
             for k,v in hyperparameters.items():self.results.at[i,k] = v
             scores = defaultdict(list)
             times = []
-            #Embedding data for each hyperparameter setting per num_iter
+            #Embedding data for each hyperparameter set per num_iter
             embedded_data, times = self.get_embedded_data(hyperparameters)
             #Calculating performance for the embedded data using thread pool
             pool = ThreadPool(10)
@@ -132,29 +133,23 @@ class Hyperparameter_tuning:
             pool.close()
             pool.join()
             self.store_param_results(i,scores, hyperparameters, times)
-            self.print_percentage_done(i)
         self.print_final_results()
         print("Finish tuning in ",round((time.time() - method_start)/60, 2), "minutes.")
   
 
     def grid_search(self):
-        """
-        Grid hyperparameter optimization for embedding algorithm. Measuring the results using multiple evaluators
+        """Grid hyperparameter optimization for embedding algorithm. Measuring the results using multiple evaluators
         Adapted from Will Koehrsen for grid searching of hyperpameters for embedding algorithm.
         """
         # https://codereview.stackexchange.com/questions/171173/list-all-possible-permutations-from-a-python-dictionary-of-lists
         keys, values = zip(*self.param_grid.items())
         # Keep the length of all set of the parameter combinations
         param_len = 1
-        for v in values:
-            param_len=param_len*len(v)
-        print(f"Total number of embedding runs :  {param_len} (combos)x{self.num_iter}(iterations) \
-              with {self.subsampling} samples for the embedding and \
-              {self.eval_sampling} samples for the evaluation")
-
+        for v in values:param_len=param_len*len(v)
+        print(f"Total number of embedding runs :  {param_len} (combos)x{self.num_iter}(iterations)",
+            f"with {self.sample_size[0]} samples for the embedding")
         param_len-=1
         method_start = time.time()
-        self.percent_range = list(range(10,110,10))
         #setting random state
         random.seed(self.random_state)
         self.max_evals = param_len
@@ -166,92 +161,132 @@ class Hyperparameter_tuning:
             writer = csv.writer(outcsv)
             writer.writerow(self.result_cols)
         counter = 0
-        for i in itertools.product(*values):
-            # Retrieving the parameter set for a given value i
-            hyperparameters = dict(zip(keys, i))
-            hyperparameters.update(self.kwargs)
-            # dictionary for storing average results 
-            for k,v in hyperparameters.items():self.results.at[counter,k] = v 
-            #Embedding data for each hyperparameter setting per num_iter
-            embedded_data, times = self.get_embedded_data(hyperparameters)
-            #Calculating performance for the embedded data using thread pool
-            pool = ThreadPool(self.n_parjobs)
-            scores=pool.map(self.get_scores, (x for x in embedded_data))
-            pool.close()
-            pool.join()
-            self.store_param_results(counter,scores, hyperparameters, times)
-            self.print_percentage_done(counter)
-            counter+=1
+        with tqdm(total=self.max_evals) as pbar:
+            for i in itertools.product(*values):
+                # Retrieving the parameter set for a given value i
+                hyperparameters = dict(zip(keys, i))
+                hyperparameters.update(self.kwargs)
+                # dictionary for storing average results 
+                for k,v in hyperparameters.items():self.results.at[counter,k] = v 
+                #Embedding data for each hyperparameter setting per num_iter
+                embedded_data, times = self.get_embedded_data(hyperparameters)
+                #Calculating performance for the embedded data using thread pool
+                pool = ThreadPool(self.n_parjobs)
+                scores=pool.map(self.get_scores, (x for x in embedded_data))
+                pool.close()
+                pool.join()
+                self.store_param_results(counter,scores, hyperparameters, times)
+                #self.print_percentage_done(counter)
+                counter+=1
+                pbar.update(1)
         self.print_final_results()
         print("Finish tuning in ",round((time.time() - method_start)/60, 2), "minutes.")
 
 
     def get_embedded_data(self,parameter:dict):
-        #Get embedded data from original data by subsampling
-        brenchmark_list = []
+        """(HELPER) Get embedded data from original data by subsampling and 
+        place them in a big list of dictionaries for further benchmarking
+
+        Parameter
+        ----------
+        paramter:dict
+            paramters for the embedder to be tuned
+        
+        Return
+        ---------
+        benchmark_list:list
+            big list of dictionaries containing the orignal data, the embedded data, 
+            and the evaluator list for further benchmarking. The number of sets of the orignal data 
+            and its corresponding embedded data depends on the number of iters (num_iter). 
+            The size of the data in the list can be reduced or increased by the 
+            metric_chuck_size argument. 
+        times: list
+            contains the time it takes to run once iteration of the tuning. 
+        """
+        benchmark_list = []
         times = []
+        #paramter contains sample_size so as to vary 
+        # the sample size when tuning
         size = parameter['sample_size']
         del parameter['sample_size']
         for iter in range(self.num_iter):
             start = time.time()
+            #Get indexes for subsampling of data for embedding
             indexes_embedder = subsampling_return_indexes(self.X,size)
             # Evaluate randomly selected hyperparameters
             sub_original = self.X[indexes_embedder]
             embedded_data = sub_original.copy().astype(self.dtype)
+            #Check for scaling
             if(self.standardised):
                 scaler = StandardScaler()
                 embedded_data = scaler.fit_transform(sub_original).astype(self.dtype)
+            #Get indexes for subsampling of data for benchmarking
+            indexes_metrics= subsampling_return_indexes(sub_original, 
+                                                self.metric_chuck_size)
             # Create a dictionary for later reference in multi-thread
-            indexes_metrics= subsampling_return_indexes(sub_original, self.metric_chuck_size)
             emb_dict = {"original" : sub_original[indexes_metrics],
-                        "embedded" : self.embedder(**parameter).fit_transform(embedded_data).astype(self.dtype)[indexes_metrics],
-                        "evaluators":self.evaluators}
-            brenchmark_list.append(emb_dict)
+                    "embedded" : self.embedder(**parameter).
+                    fit_transform(embedded_data).
+                    astype(self.dtype)[indexes_metrics],
+                    "evaluators":self.evaluators}
+            benchmark_list.append(emb_dict)
             times.append(time.time()-start)
-        return brenchmark_list, times
+        return benchmark_list, times
         
     @staticmethod
-    def get_scores(embedded_info): 
-        #Get performance metrics for each subsampled embedder
-        #scores = metrics_scores_iter(
-        #    embedded_info["original"],
-        #    embedded_info["embedded"],
-        #    embedded_info["evaluators"],
-        #   return_dict= True, verbose=False)
-        scores = score_subsampling(
-            embedded_info["original"],
-            embedded_info["embedded"],
-            embedded_info["evaluators"],
-            size=1000,
-            num_iter=10,
-           return_dict= True, verbose=False)
+    def get_scores(benchmark_dict): 
+        """(HELPER)Get performance metrics for the orignal data and the embedded data 
+
+        Parameter
+        ---------
+        benchmark_dict:dict
+            Dictionaries containing the orignal data, the embedded data, 
+            and the evaluator list for further benchmarking.
+        
+        Return
+        ---------
+            the benchmark scores
+        """
+        scores = metrics_scores_iter(
+            benchmark_dict["original"],
+            benchmark_dict["embedded"],
+            benchmark_dict["evaluators"],
+            return_dict= True, verbose=False)
         return scores
        
     def store_param_results(self,indx,scores, hyperparameters, times):
-        #Store the results in dataframe and on disk
+        """(HELPER) Store the results of the tuning in dataframe and on disk.
+        
+        Parameter
+        --------
+        indx:
+            position in the dataframe and disk to store the values
+        scores:
+            list of all the scores to be stored
+        hyperparameters:
+            dictionary of embedder parameters to be stored
+        times:
+            list of times taken for the embedder to finish. 
+        """
         scores_dict = defaultdict(list)
         for s in scores:
             for k, v in s.items():scores_dict[k].append(v)  
         for metric, score_ls in scores_dict.items():
             self.results.at[indx, metric]= np.mean(score_ls)
             self.results.at[indx, metric+self.var_word] = np.std(score_ls)
-        self.results.iloc[indx, :len(self.record_cols)] = [indx,hyperparameters,np.mean(times)]
+        self.results.iloc[indx, :len(self.record_cols)] = \
+            [indx,hyperparameters,np.mean(times)]
         with open(self.file_name,'a', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(list(self.results.iloc[indx,:].values))
-
-    def print_percentage_done(self, i):
-        #Print the percentage until finish
-        percent_done = roundup(int((i/self.max_evals)*100))
-        if(percent_done in self.percent_range):
-            print(f"Around {percent_done}% done." )
-            self.percent_range.remove(percent_done)
     
     def print_final_results(self):
-        # Sort with best score on top and print the final best results
-        self.results.sort_values(list(self.evaluators.keys()), ascending = self.ascending, inplace = True)
+        """Sort with best score on top and print the final best results"""
+        self.results.sort_values(list(self.evaluators.keys()), 
+        ascending = self.ascending, inplace = True)
         self.results.reset_index(inplace = True)
-        print(f"Hyperpameter tuning is done and the best scores are with {self.results.loc[0]['sample_size']} sample size")
+        print(f"Hyperpameter tuning is done and the best scores are with",
+        f"{int(self.results.loc[0]['sample_size'])} sample size")
         print(self.results.loc[0][list(self.evaluators.keys())]) 
         print("with parameter:", self.results['params'][0])
        

@@ -10,8 +10,6 @@ import csv
 from sklearn.preprocessing import StandardScaler
 from multiprocessing.dummy import Pool as ThreadPool
 
-from tqdm import tqdm
-
 class Hyperparameter_tuning:
     """
     Class for hyperparameter tuning of embedders.
@@ -168,30 +166,21 @@ class Hyperparameter_tuning:
             writer = csv.writer(outcsv)
             writer.writerow(self.result_cols)
         counter = 0
-
-        self.embedded_times = []
-        self.metric_times = []
-        for i in tqdm(itertools.product(*values)):
+        for i in itertools.product(*values):
             # Retrieving the parameter set for a given value i
             hyperparameters = dict(zip(keys, i))
             hyperparameters.update(self.kwargs)
             # dictionary for storing average results 
             for k,v in hyperparameters.items():self.results.at[counter,k] = v 
             #Embedding data for each hyperparameter setting per num_iter
-            emb_start = time.time()
             embedded_data, times = self.get_embedded_data(hyperparameters)
-            self.embedded_times.append(dict(zip(keys, i)).update({'embedding_time': time.time()-emb_start}))
-
             #Calculating performance for the embedded data using thread pool
-            metric_start = time.time()
             pool = ThreadPool(self.n_parjobs)
             scores=pool.map(self.get_scores, (x for x in embedded_data))
             pool.close()
             pool.join()
-            self.metric_times.append(dict(zip(keys, i)).update({'metric_time': time.time()-metric_start}))
-
             self.store_param_results(counter,scores, hyperparameters, times)
-            #self.print_percentage_done(counter)
+            self.print_percentage_done(counter)
             counter+=1
         self.print_final_results()
         print("Finish tuning in ",round((time.time() - method_start)/60, 2), "minutes.")

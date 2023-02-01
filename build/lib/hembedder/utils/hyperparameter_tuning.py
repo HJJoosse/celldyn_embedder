@@ -5,10 +5,12 @@ import time
 from collections import defaultdict
 import math
 import itertools
-from hembedder.utils.quality_metrics import metrics_scores_iter
+from hembedder.utils.quality_metrics import metrics_scores_iter, score_subsampling
 import csv
 from sklearn.preprocessing import StandardScaler
 from multiprocessing.dummy import Pool as ThreadPool
+
+from tqdm import tqdm
 
 class Hyperparameter_tuning:
     """
@@ -146,7 +148,12 @@ class Hyperparameter_tuning:
         keys, values = zip(*self.param_grid.items())
         # Keep the length of all set of the parameter combinations
         param_len = 1
-        for v in values:param_len=param_len*len(v)
+        for v in values:
+            param_len=param_len*len(v)
+        print(f"Total number of embedding runs :  {param_len} (combos)x{self.num_iter}(iterations) \
+              with {self.subsampling} samples for the embedding and \
+              {self.eval_sampling} samples for the evaluation")
+
         param_len-=1
         method_start = time.time()
         self.percent_range = list(range(10,110,10))
@@ -161,21 +168,30 @@ class Hyperparameter_tuning:
             writer = csv.writer(outcsv)
             writer.writerow(self.result_cols)
         counter = 0
-        for i in itertools.product(*values):
+
+        self.embedded_times = []
+        self.metric_times = []
+        for i in tqdm(itertools.product(*values)):
             # Retrieving the parameter set for a given value i
             hyperparameters = dict(zip(keys, i))
             hyperparameters.update(self.kwargs)
             # dictionary for storing average results 
             for k,v in hyperparameters.items():self.results.at[counter,k] = v 
             #Embedding data for each hyperparameter setting per num_iter
+            emb_start = time.time()
             embedded_data, times = self.get_embedded_data(hyperparameters)
+            self.embedded_times.append(dict(zip(keys, i)).update({'embedding_time': time.time()-emb_start}))
+
             #Calculating performance for the embedded data using thread pool
+            metric_start = time.time()
             pool = ThreadPool(self.n_parjobs)
             scores=pool.map(self.get_scores, (x for x in embedded_data))
             pool.close()
             pool.join()
+            self.metric_times.append(dict(zip(keys, i)).update({'metric_time': time.time()-metric_start}))
+
             self.store_param_results(counter,scores, hyperparameters, times)
-            self.print_percentage_done(counter)
+            #self.print_percentage_done(counter)
             counter+=1
         self.print_final_results()
         print("Finish tuning in ",round((time.time() - method_start)/60, 2), "minutes.")
@@ -208,11 +224,18 @@ class Hyperparameter_tuning:
     @staticmethod
     def get_scores(embedded_info): 
         #Get performance metrics for each subsampled embedder
-        scores = metrics_scores_iter(
+        #scores = metrics_scores_iter(
+        #    embedded_info["original"],
+        #    embedded_info["embedded"],
+        #    embedded_info["evaluators"],
+        #   return_dict= True, verbose=False)
+        scores = score_subsampling(
             embedded_info["original"],
             embedded_info["embedded"],
             embedded_info["evaluators"],
-            return_dict= True, verbose=False)
+            size=1000,
+            num_iter=10,
+           return_dict= True, verbose=False)
         return scores
        
     def store_param_results(self,indx,scores, hyperparameters, times):

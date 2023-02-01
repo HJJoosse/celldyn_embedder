@@ -116,6 +116,8 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        level: int
+            depth of correlation; 1 is distance correlation of data, 2 is distance correlation of distances
         Returns
         -----------
         distance correlation score between 0 and 1. Higher means better
@@ -348,7 +350,7 @@ def score_subsampling(X:np.array,output:np.array, evaluators:dict, size:int=1000
                        'evaluators':evaluators,
                        'size': size,
                        "results": results}
-    results = Parallel(n_jobs=10,verbose=False,pre_dispatch='1.5*n_jobs')(delayed(get_results)((parallel_param)) for _ in range(num_iter))
+    results = Parallel(n_jobs=8,verbose=False,pre_dispatch='1.5*n_jobs')(delayed(get_results)((parallel_param)) for _ in range(num_iter))
     
     results_dict = defaultdict(list)
     for i in range(len(results)):

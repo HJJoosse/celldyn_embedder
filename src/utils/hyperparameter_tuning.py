@@ -5,7 +5,7 @@ import time
 from collections import defaultdict
 import math
 import itertools
-from hembedder.utils.quality_metrics import metrics_scores_iter
+from hembedder.utils.quality_metrics import metrics_scores_iter, score_subsampling
 import csv
 from sklearn.preprocessing import StandardScaler
 from multiprocessing.dummy import Pool as ThreadPool
@@ -146,7 +146,12 @@ class Hyperparameter_tuning:
         keys, values = zip(*self.param_grid.items())
         # Keep the length of all set of the parameter combinations
         param_len = 1
-        for v in values:param_len=param_len*len(v)
+        for v in values:
+            param_len=param_len*len(v)
+        print(f"Total number of embedding runs :  {param_len} (combos)x{self.num_iter}(iterations) \
+              with {self.subsampling} samples for the embedding and \
+              {self.eval_sampling} samples for the evaluation")
+
         param_len-=1
         method_start = time.time()
         self.percent_range = list(range(10,110,10))
@@ -208,11 +213,18 @@ class Hyperparameter_tuning:
     @staticmethod
     def get_scores(embedded_info): 
         #Get performance metrics for each subsampled embedder
-        scores = metrics_scores_iter(
+        #scores = metrics_scores_iter(
+        #    embedded_info["original"],
+        #    embedded_info["embedded"],
+        #    embedded_info["evaluators"],
+        #   return_dict= True, verbose=False)
+        scores = score_subsampling(
             embedded_info["original"],
             embedded_info["embedded"],
             embedded_info["evaluators"],
-            return_dict= True, verbose=False)
+            size=1000,
+            num_iter=10,
+           return_dict= True, verbose=False)
         return scores
        
     def store_param_results(self,indx,scores, hyperparameters, times):

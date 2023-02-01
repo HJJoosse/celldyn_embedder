@@ -96,7 +96,7 @@ class Hyperparameter_tuning:
 
     def random_search(self, max_evals:int=300):
         """Random hyperparameter optimization for embedding algorithm. Measuring the results using multiple evaluators
-        Adapted from Will Koehrsen for randomized search of hyperpameters for embedding algorithm.
+        Adapted from Will Koehrsen for randomized search of hyperpameters for embedding algorithm. Adapted from Will Koehrsen.
         
         Parameters
         ---------
@@ -139,7 +139,7 @@ class Hyperparameter_tuning:
 
     def grid_search(self):
         """Grid hyperparameter optimization for embedding algorithm. Measuring the results using multiple evaluators
-        Adapted from Will Koehrsen for grid searching of hyperpameters for embedding algorithm.
+        Adapted from Will Koehrsen for grid searching of hyperpameters for embedding algorithm. Adapted from Will Koehrsen.
         """
         # https://codereview.stackexchange.com/questions/171173/list-all-possible-permutations-from-a-python-dictionary-of-lists
         keys, values = zip(*self.param_grid.items())

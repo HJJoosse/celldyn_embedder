@@ -199,7 +199,7 @@ class Hyperparameter_tuning:
             big list of dictionaries containing the orignal data, the embedded data, 
             and the evaluator list for further benchmarking. The number of sets of the orignal data 
             and its corresponding embedded data depends on the number of iters (num_iter). 
-            The size of the data in the list can be reduced or increased by the 
+            The size of the data in the benchmark_list can be reduced or increased by the 
             metric_chuck_size argument. 
         times: list
             contains the time it takes to run once iteration of the tuning.

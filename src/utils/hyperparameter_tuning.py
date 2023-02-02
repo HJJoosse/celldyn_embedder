@@ -109,7 +109,7 @@ class Hyperparameter_tuning:
         # Dataframe for results
         self.max_evals = max_evals
         print(f"Total number of embedding runs :  {self.max_evals} (combos)x{self.num_iter}(iterations)",
-            f"with {self.sample_size[0]} samples for the embedding")
+            f"with {self.sample_size} samples for the embedding")
         self.results = pd.DataFrame(columns = self.result_cols,
                                     index = list(range(self.max_evals)))                      
         #https://stackoverflow.com/questions/20347766/pythonically-add-header-to-a-csv-file
@@ -124,7 +124,6 @@ class Hyperparameter_tuning:
             # Store parameter values in results frame
             for k,v in hyperparameters.items():self.results.at[i,k] = v
             scores = defaultdict(list)
-            times = []
             #Embedding data for each hyperparameter set per num_iter
             embedded_data, times = self.get_embedded_data(hyperparameters)
             #Calculating performance for the embedded data using thread pool
@@ -147,7 +146,7 @@ class Hyperparameter_tuning:
         param_len = 1
         for v in values:param_len=param_len*len(v)
         print(f"Total number of embedding runs :  {param_len} (combos)x{self.num_iter}(iterations)",
-            f"with {self.sample_size[0]} samples for the embedding")
+            f"with {self.sample_size} samples for the embedding")
         param_len-=1
         method_start = time.time()
         #setting random state
@@ -176,7 +175,6 @@ class Hyperparameter_tuning:
                 pool.close()
                 pool.join()
                 self.store_param_results(counter,scores, hyperparameters, times)
-                #self.print_percentage_done(counter)
                 counter+=1
                 pbar.update(1)
         self.print_final_results()

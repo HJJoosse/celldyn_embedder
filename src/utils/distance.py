@@ -16,13 +16,14 @@ def poincarre_dist(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array]:
     """Compute the Poincarre distance between two points in the Poincarre disk model.
         Including the gradient
     """
+    eps = 1e-6
 
     normx = la.norm(x, ord=2)
     normy = la.norm(y, ord=2)
     normxy = la.norm(x - y, ord=2)
     a = 1 - normx ** 2
     b = 1 - normy ** 2
-    c = 1 + 2/a/b*normxy**2
+    c = 1 + (2/a/b)*normxy**2
     inp = numpy.dot(x,y)
     
     # distance
@@ -33,9 +34,8 @@ def poincarre_dist(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array]:
                             normxy**2/(a * b)
                         )
     )
-
     # gradient
-    gradient = 4/b/numpy.sqrt(c**2-1)*((normy**2 - 2*inp+1)/a**2 * x - y/a)
+    gradient = 4/b/numpy.sqrt(c**2-1+eps)*((normy**2 - 2*inp+1)/a**2 * x - y/a)
 
     return distance, gradient
 
@@ -49,7 +49,7 @@ def hyperboloid_dist(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array
 
 @njit(fastmath=True)
 def fractional_distance(x: numpy.array, y: numpy.array) -> Tuple[float, numpy.array]:
-    f = 0.5
+    f = 0.1
     # distance
     distance = numpy.power(numpy.sum(numpy.power(numpy.abs(x - y), f)), 1 / f)
     # gradient

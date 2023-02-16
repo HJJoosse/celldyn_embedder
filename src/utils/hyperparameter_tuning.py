@@ -149,7 +149,7 @@ class Hyperparameter_tuning:
         for v in values:param_len=param_len*len(v)
         print(f"Total number of embedding runs :  {param_len} (combos)x{self.num_iter}(iterations) with",
             f"{self.sample_size} sample_size for the embedding. Exceptions will be raised, if sample",
-            f" size is larger than data size which is {self.X.shape[0]}")
+            f"size is larger than data size which is {self.X.shape[0]}")
         param_len-=1
         method_start = time.time()
         #setting random state

@@ -2,170 +2,186 @@
 #include <algorithm>
 #include <cstdio>
 #include <iostream>
+#include <errno.h>
 #include "coranking.h"
+
+/*
 #include <R.h>
 #include <Rinternals.h>
-
-void CORANKING::coranking(const int *Ro, const int *R,
-                          const int N, int *Q)
+CORANKING::
+*/
+extern "C"
 {
-
-  for (int i = 0; i < (N - 1) * (N - 1); i++)
-    Q[i] = 0;
-
-  int ind;
-  int Qind;
-
-  for (int i = 0; i < N; i++)
+  void coranking(const int *Ro, const int *R,
+                 const int N, int *Q)
   {
-    for (int j = 0; j < N; j++)
+
+    for (int i = 0; i < (N - 1) * (N - 1); i++)
+      Q[i] = 0;
+
+    int ind;
+    int Qind;
+
+    for (int i = 0; i < N; i++)
     {
-      ind = i * N + j;
-      if (R[ind] > 0 && Ro[ind] > 0)
+      for (int j = 0; j < N; j++)
       {
-        Qind = (R[ind] - 1) * (N - 1) + Ro[ind] - 1;
-        Q[Qind] += 1;
+        ind = i * N + j;
+        if (R[ind] > 0 && Ro[ind] > 0)
+        {
+          Qind = (R[ind] - 1) * (N - 1) + Ro[ind] - 1;
+          Q[Qind] += 1;
+        }
       }
     }
   }
 }
-
-void CORANKING::rankmatrix(const double *DD,
-                           const int N, int *R)
+extern "C"
 {
-
-  int *inds = (int *)malloc(N * sizeof(int));
-  // int* ranks = (int*) malloc(N * sizeof(int));
-  const double *ptr;
-
-  for (int i = 0; i < N; i++)
+  void rankmatrix(const double *DD,
+                  const int N, int *R)
   {
 
-    ptr = &DD[i * N];
+    int *inds = (int *)malloc(N * sizeof(int));
+    // int* ranks = (int*) malloc(N * sizeof(int));
+    const double *ptr;
 
-    // init inds as 0:N
-    for (int j = 0; j < N; j++)
+    for (int i = 0; i < N; i++)
     {
-      // ranks[j] = j;
-      inds[j] = j;
-    }
 
-    // sort ranks with respect to DD[_,i]
-    std::sort(&inds[0], &inds[N],
-              [ptr](const int l, const int r)
-              { return ptr[l] < ptr[r]; });
+      ptr = &DD[i * N];
 
-    // we are in row i so inds[0] must be i
-    // std::cout << "inds[0] = " << inds[0] << "; i = " << i << std::endl;
-    if (inds[0] != i)
-    {
-      // inds == {5, 6, i, ...}
-      int iind = 0;
-      while (inds[iind] != i)
+      // init inds as 0:N
+      for (int j = 0; j < N; j++)
       {
-        // std::cout << "iind = " << iind << "; N = " << N << std::endl;
-        iind++;
-        if (iind >= N)
-          error("Error in C code: index out of range"); // can we guarantee that this will never happen?
+        // ranks[j] = j;
+        inds[j] = j;
       }
 
-      for (int j = iind; j > 0; j--)
+      // sort ranks with respect to DD[_,i]
+      std::sort(&inds[0], &inds[N],
+                [ptr](const int l, const int r)
+                { return ptr[l] < ptr[r]; });
+
+      // we are in row i so inds[0] must be i
+      // std::cout << "inds[0] = " << inds[0] << "; i = " << i << std::endl;
+      if (inds[0] != i)
       {
-        // std::cout << "j = " << j << std::endl;
-        inds[j] = inds[j - 1];
+        // inds == {5, 6, i, ...}
+        int iind = 0;
+        while (inds[iind] != i)
+        {
+          // std::cout << "iind = " << iind << "; N = " << N << std::endl;
+          iind++;
+          if (iind >= N)
+            perror("Error in C code: index out of range"); // can we guarantee that this will never happen?
+        }
+
+        for (int j = iind; j > 0; j--)
+        {
+          // std::cout << "j = " << j << std::endl;
+          inds[j] = inds[j - 1];
+        }
+
+        inds[0] = i;
       }
 
-      inds[0] = i;
+      for (int j = 0; j < N; j++)
+      {
+        R[i * N + inds[j]] = j;
+      }
+
+      // std::cout << "DD:" << std::endl;
+      // for(int j = 0; j < N; j++) {
+      //   std::cout << ptr[j] << ' ';
+      // }
+      // std::cout << std::endl;
+      // std::cout << "inds:" << std::endl;
+      // for(int j = 0; j < N; j++) {
+      //   std::cout << inds[j] << ' ';
+      // }
+      // std::cout << std::endl;
+      // std::cout << "ranks:" << std::endl;
+      // for(int j = 0; j < N; j++) {
+      //   std::cout << ranks[j] << ' ';
+      // }
+      // std::cout << std::endl;
+
+      // std::sort(&ranks[0], &ranks[N],
+      // 		     [inds] (const int l, const int r) {
+      // 		       return inds[l] < inds[r];
+      // 		     });
+
+      // put ranks in results
+
+      // for(int j = 0; j < N; j++) {
+      //   R[i*N + j] = ranks[j];
+      // }
     }
-
-    for (int j = 0; j < N; j++)
-    {
-      R[i * N + inds[j]] = j;
-    }
-
-    // std::cout << "DD:" << std::endl;
-    // for(int j = 0; j < N; j++) {
-    //   std::cout << ptr[j] << ' ';
-    // }
-    // std::cout << std::endl;
-    // std::cout << "inds:" << std::endl;
-    // for(int j = 0; j < N; j++) {
-    //   std::cout << inds[j] << ' ';
-    // }
-    // std::cout << std::endl;
-    // std::cout << "ranks:" << std::endl;
-    // for(int j = 0; j < N; j++) {
-    //   std::cout << ranks[j] << ' ';
-    // }
-    // std::cout << std::endl;
-
-    // std::sort(&ranks[0], &ranks[N],
-    // 		     [inds] (const int l, const int r) {
-    // 		       return inds[l] < inds[r];
-    // 		     });
-
-    // put ranks in results
-
-    // for(int j = 0; j < N; j++) {
-    //   R[i*N + j] = ranks[j];
-    // }
+    free(inds);
+    inds = NULL;
+    // free(ranks);
+    // ranks = NULL;
   }
-  free(inds);
-  inds = NULL;
-  // free(ranks);
-  // ranks = NULL;
 }
-
-void CORANKING::euclidean(const double *X, const int N,
-                          const int D, double *DD)
+extern "C"
 {
-  // d_ij = sqrt(||x_i||^2 + ||x_j||^2 - 2pq)
-
-  // vector of square norms ||x_i||^2:
-  double *sqnorms = (double *)calloc(N, sizeof(double));
-  // if(sqnorms == NULL) { printf("Memory allocation failed!\n"); exit(1); }
-  if (sqnorms == NULL)
-    throw 1;
-
-  for (int d = 0; d < D; d++)
+  void euclidean(const double *X, const int N,
+                 const int D, double *DD)
   {
+    // d_ij = sqrt(||x_i||^2 + ||x_j||^2 - 2pq)
+
+    // vector of square norms ||x_i||^2:
+    double *sqnorms = (double *)calloc(N, sizeof(double));
+    // if (sqnorms == NULL)
+    //{
+    //   printf("Memory allocation failed!\n");
+    //  exit(1);
+    // }
+    if (sqnorms == NULL)
+      throw 1;
+
+    for (int d = 0; d < D; d++)
+    {
+      for (int n = 0; n < N; n++)
+      {
+        sqnorms[n] += (X[d * N + n] * X[d * N + n]);
+      }
+    }
+
+    // double *DD = (double *)calloc(N * N, sizeof(double));
     for (int n = 0; n < N; n++)
     {
-      sqnorms[n] += (X[d * N + n] * X[d * N + n]);
-    }
-  }
-
-  for (int n = 0; n < N; n++)
-  {
-    for (int m = 0; m < N; m++)
-    {
-      DD[n * N + m] = sqnorms[n] + sqnorms[m];
-    }
-  }
-
-  double qp;
-  for (int i = 0; i < N; i++)
-  {
-    DD[i * N + i] = 0;
-    for (int j = i + 1; j < N; j++)
-    {
-      qp = 0.0;
-      for (int d = 0; d < D; d++)
+      for (int m = 0; m < N; m++)
       {
-        qp += X[d * N + i] * X[d * N + j];
+        DD[n * N + m] = sqnorms[n] + sqnorms[m];
       }
-      DD[i * N + j] -= 2.0 * qp;
-      DD[j * N + i] = DD[i * N + j];
     }
-  }
 
-  for (int i = 0; i < N * N; i++)
-  {
-    DD[i] = (DD[i] < 0 ? 0 : std::sqrt(DD[i]));
-  }
+    double qp;
+    for (int i = 0; i < N; i++)
+    {
+      DD[i * N + i] = 0;
+      for (int j = i + 1; j < N; j++)
+      {
+        qp = 0.0;
+        for (int d = 0; d < D; d++)
+        {
+          qp += X[d * N + i] * X[d * N + j];
+        }
+        DD[i * N + j] -= 2.0 * qp;
+        DD[j * N + i] = DD[i * N + j];
+      }
+    }
 
-  free(sqnorms);
-  sqnorms = NULL;
+    for (int i = 0; i < N * N; i++)
+    {
+      DD[i] = (DD[i] < 0 ? 0 : std::sqrt(DD[i]));
+    }
+
+    free(sqnorms);
+    sqnorms = NULL;
+  }
 }
 /*
 int main () {

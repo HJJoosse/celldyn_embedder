@@ -9,20 +9,21 @@ __author__ = "Bram van ES", "Huibert-Jan Joosse", "Chontira Chumsaeng"
 
 from scipy.spatial.distance import jaccard, hamming
 from scipy.spatial.distance import pdist
+import scipy as sc
+
 import numpy as np
 from numpy.random import default_rng
 from sklearn.manifold import trustworthiness
 import dcor
 import faiss
 import time
+import os
 from tabulate import tabulate
 from collections import defaultdict
 from sklearn.neighbors import NearestNeighbors
 from joblib import Parallel, delayed
 
 import ctypes
-
-c_coranking = ctypes.CDLL("./_ctypes/coranking.so")
 
 import hembedder.utils._cpython._metrics_cy as metrics_cy
 
@@ -87,7 +88,6 @@ class CDEmbeddingPerformance:
         self.dcor_level = dcor_level
         self.scaled = scaled
 
-    @lru_cache(maxsize=2)
     def _get_coranking_matrix(self, X_org: np.array, X_emb: np.array, backend="ctype"):
         """
         Function for returning the coranking matrix of the original data and the embedded data
@@ -103,12 +103,17 @@ class CDEmbeddingPerformance:
         -----------
         coranking matrix as np.array
         """
+        print("backend", backend)
 
         if backend == "python":
             # source: https://github.com/samueljackson92/coranking/blob/master/coranking/_coranking.py
             n, m = X_org.shape
-            high_distance = distance.squareform(distance.pdist(X_org))
-            low_distance = distance.squareform(distance.pdist(X_emb))
+            high_distance = sc.spatial.distance.squareform(
+                sc.spatial.distance.pdist(X_org)
+            )
+            low_distance = sc.spatial.distance.squareform(
+                sc.spatial.distance.pdist(X_emb)
+            )
 
             high_ranking = high_distance.argsort(axis=1).argsort(axis=1)
             low_ranking = low_distance.argsort(axis=1).argsort(axis=1)
@@ -120,18 +125,50 @@ class CDEmbeddingPerformance:
             Q = Q[1:, 1:]  # remove rankings which correspond to themselves
             return Q
         elif backend == "ctype":
-            high_distance = c_coranking.euclidean(X_org)
-            low_distance = c_coranking.euclidean(X_emb)
+            script_path = "/".join(str(os.path.abspath(__file__)).split("/")[:-1])
+            coranking = ctypes.CDLL(os.path.join(script_path, "_ctypes/coranking.so"))
+            # from hembedder.utils._ctypes import coranking
 
-            high_ranking = c_coranking.rankmatrix(high_distance)
-            low_ranking = c_coranking.rankmatrix(low_distance)
+            # print("Making ravelled arrays")
+            # X_org_vector = np.ravel(X_org, order="F")
+            # X_emb_vector = np.ravel(X_emb, order="F")
 
-            Q = c_coranking.coranking(high_ranking, low_ranking)
+            print("Making C-types variables")
+            c_double_C = ctypes.POINTER(ctypes.c_double)
+            X_org_C = X_org.ctypes.data_as(c_double_C)
+            X_emb_C = X_emb.ctypes.data_as(c_double_C)
+
+            # print("Setting up C-types function argument and return types")
+            coranking.euclidean.restype = ctypes.POINTER(ctypes.c_double)
+            coranking.euclidean.argtypes = [
+                ctypes.POINTER(ctypes.c_double),
+                ctypes.c_int,
+                ctypes.c_int,
+            ]
+
+            try:
+                print("Calling Ctype function on original data")
+                high_distance = coranking.euclidean(
+                    X_org_C, X_org.shape[0], X_org.shape[1]
+                )
+                print("Calling Ctype function on embedded data")
+                low_distance = coranking.euclidean(
+                    X_emb_C, X_emb.shape[0], X_emb.shape[1]
+                )
+            except Exception as e:
+                print("Ctype function failed")
+                print(e)
+                raise e
+
+            high_ranking = coranking.rankmatrix(high_distance)
+            low_ranking = coranking.rankmatrix(low_distance)
+
+            Q = coranking.coranking(high_ranking, low_ranking)
             return Q
         else:
             raise ValueError("Backend not supported")
 
-    def _return_Q(self, X_org: np.array, X_emb: np.array):
+    def _return_Qnx(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
         """
         Function for returning Qnx score from the original data and the embedded data
 
@@ -146,30 +183,15 @@ class CDEmbeddingPerformance:
         -----------
         Qnx score as float
         """
-
-        Q = self._get_coranking_matrix(X_org, X_emb)
-
-    def _return_Qnx(self, X_org: np.array, X_emb: np.array):
-        """
-        Function for returning Qnx score from the original data and the embedded data
-
-        Parameters
-        ----------
-        X_org:np.array
-            the original dataset as np.array
-        X_emb:np.array
-            the embedded data as np.array
-
-        Returns
-        -----------
-        Qnx score as float
-        """
-
-        Q = self._get_coranking_matrix(X_org, X_emb)
+        if Q is None:
+            print("calculating Q")
+            Q = self._get_coranking_matrix(X_org, X_emb)
 
         return metrics_cy.Qnx(Q, self.n_neighbours, self.scaled)
 
-    def _return_Qtrustworthiness(self, X_org: np.array, X_emb: np.array):
+    def _return_Qtrustworthiness(
+        self, X_org: np.array, X_emb: np.array, Q: np.array = None
+    ):
         """
         Function for returning trustworthiness score from sklearn.manifold.
 
@@ -184,12 +206,13 @@ class CDEmbeddingPerformance:
         -----------
         Trustworthiness score between 0 and 1. Higher means better
         """
-
-        Q = self._get_coranking_matrix(X_org, X_emb)
+        if Q is None:
+            print("calculating Q")
+            Q = self._get_coranking_matrix(X_org, X_emb)
 
         return metrics_cy.trustworthiness(Q, self.n_neighbours)
 
-    def _return_Qcontinuity(self, X_org: np.array, X_emb: np.array):
+    def _return_Qcontinuity(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
         """
         Function for returning trustworthiness score from sklearn.manifold.
 
@@ -204,12 +227,13 @@ class CDEmbeddingPerformance:
         -----------
         Continuity score between 0 and 1. Higher means better
         """
-
-        Q = self._get_coranking_matrix(X_org, X_emb)
+        if Q is None:
+            print("calculating Q")
+            Q = self._get_coranking_matrix(X_org, X_emb)
 
         return metrics_cy.continuity(Q, self.n_neighbours)
 
-    def _return_LCMC(self, X_org: np.array, X_emb: np.array):
+    def _return_LCMC(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
         """
         Function for returning LCMC score from the original data and the embedded data
 
@@ -224,12 +248,13 @@ class CDEmbeddingPerformance:
         -----------
         LCMC score as float
         """
-
-        Q = self._get_coranking_matrix(X_org, X_emb)
+        if Q is None:
+            print("calculating Q")
+            Q = self._get_coranking_matrix(X_org, X_emb)
 
         return metrics_cy.LCMC(Q, self.n_neighbours)
 
-    def _return_nMRRE(self, X_org: np.array, X_emb: np.array):
+    def _return_nMRRE(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
         """
         Function for returning LCMC score from the original data and the embedded data
 
@@ -244,12 +269,13 @@ class CDEmbeddingPerformance:
         -----------
         nMRRE score as float
         """
-
-        Q = self._get_coranking_matrix(X_org, X_emb)
+        if Q is None:
+            print("calculating Q")
+            Q = self._get_coranking_matrix(X_org, X_emb)
 
         return metrics_cy.nMRRE(Q, self.n_neighbours)
 
-    def _return_vMRRE(self, X_org: np.array, X_emb: np.array):
+    def _return_vMRRE(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
         """
         Function for returning LCMC score from the original data and the embedded data
 
@@ -264,8 +290,9 @@ class CDEmbeddingPerformance:
         -----------
         vMRRE score as float
         """
-
-        Q = self._get_coranking_matrix(X_org, X_emb)
+        if Q is None:
+            print("calculating Q")
+            Q = self._get_coranking_matrix(X_org, X_emb)
 
         return metrics_cy.vMRRE(Q, self.n_neighbours)
 
@@ -678,3 +705,42 @@ def score_subsampling(
         print(f"Time taken {round((time.time()-method_start)/60, 2)} minutes")
     if return_dict:
         return final_results
+
+
+# add main
+if __name__ == "__main__":
+    # make synthetic data
+    data_original = np.random.normal(size=(1000, 100))
+    data_embedding = np.random.normal(size=(1000, 5))
+
+    # make evaluator
+    quality = CDEmbeddingPerformance()
+
+    # make Qmatrix
+    print("Making Qmatrix")
+    Qmatrix = quality._get_coranking_matrix(
+        X_org=data_original, X_emb=data_embedding, backend="ctype"
+    )
+
+    # make scores
+    print("Making scores")
+    print("Qnx")
+    Qnx = quality._return_Qnx(X_org=data_original, X_emb=data_embedding, Q=Qmatrix)
+    print("Qtrust")
+    Qtrust = quality._return_Qtrustworthiness(
+        X_org=data_original, X_emb=data_embedding, Q=Qmatrix
+    )
+    print("Qcont")
+    Qcont = quality._return_Qcontinuity(
+        X_org=data_original, X_emb=RNAembedded, Q=Qmatrix
+    )
+    print("Qlcmc")
+    Qlcmc = quality._return_LCMC(X_org=data_original, X_emb=data_embedding, Q=Qmatrix)
+    print("QnMRRE")
+    QnMRRE = quality._return_nMRRE(X_org=data_original, X_emb=data_embedding, Q=Qmatrix)
+    print("QvMRRE")
+    QvMRRE = quality._return_vMRRE(X_org=data_original, X_emb=data_embedding, Q=Qmatrix)
+    print("DistCorr")
+    DistCorr = quality._return_dynamic_distance_correlation(
+        X_org=data_original, X_emb=data_embedding
+    )

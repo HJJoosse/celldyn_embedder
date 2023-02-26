@@ -5,6 +5,7 @@ Thumbs.db
 full_hdbscan_.ipynb
 main.py
 setup.py
+.vscode/c_cpp_properties.json
 artifacts/Thumbs.db
 artifacts/drawHour_vs_cb.pdf
 artifacts/meas_vs_age_neunrbc.pdf
@@ -67,3 +68,11 @@ src/utils/hyperparameter_tuning_legacy.py
 src/utils/load_data.py
 src/utils/quality_metrics.py
 src/utils/_cpython/_metrics_cy.c
+src/utils/_cpython/_metrics_cy.pyx
+src/utils/_ctypes/Makevars
+src/utils/_ctypes/READM.md
+src/utils/_ctypes/compile.sh
+src/utils/_ctypes/coranking.cpp
+src/utils/_ctypes/coranking.h
+src/utils/_ctypes/coranking.so
+src/utils/_ctypes/coranking_main.cpp

@@ -5,11 +5,6 @@
 #include <errno.h>
 #include "coranking.h"
 
-/*
-#include <R.h>
-#include <Rinternals.h>
-CORANKING::
-*/
 extern "C"
 {
   void coranking(const int *Ro, const int *R,
@@ -133,13 +128,13 @@ extern "C"
 
     // vector of square norms ||x_i||^2:
     double *sqnorms = (double *)calloc(N, sizeof(double));
-    // if (sqnorms == NULL)
-    //{
-    //   printf("Memory allocation failed!\n");
-    //  exit(1);
-    // }
     if (sqnorms == NULL)
-      throw 1;
+    {
+       printf("Memory allocation failed!\n");
+      exit(1);
+    }
+    //if (sqnorms == NULL)
+    //  throw 1;
 
     for (int d = 0; d < D; d++)
     {
@@ -149,7 +144,8 @@ extern "C"
       }
     }
 
-    // double *DD = (double *)calloc(N * N, sizeof(double));
+    //*DD = (double*)calloc(N * N, sizeof(double));
+
     for (int n = 0; n < N; n++)
     {
       for (int m = 0; m < N; m++)

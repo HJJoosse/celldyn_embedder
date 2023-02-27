@@ -128,7 +128,6 @@ class CDEmbeddingPerformance:
         elif backend == "ctype":
             script_path = "/".join(str(os.path.abspath(__file__)).split("/")[:-1])
             coranking = cdll.LoadLibrary(os.path.join(script_path, "_ctypes/coranking.so"))
-            #coranking = ctypes.CDLL(os.path.join(script_path, "_ctypes/coranking.so"))
             # from hembedder.utils._ctypes import coranking
 
             # print("Making ravelled arrays")

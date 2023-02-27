@@ -13,8 +13,10 @@ import numpy
 
 import os
 
-os.environ["LD_LIBRARY_PATH"] = "/usr/share/R/include:" + os.environ["LD_LIBRARY_PATH"]
+#os.environ["LD_LIBRARY_PATH"] = "/usr/share/R/include:" + os.environ["LD_LIBRARY_PATH"]
 
+#os.environ['CC'] = 'gcc'
+os.environ['CXX'] = 'g++'
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -57,8 +59,7 @@ try:
     ext_modules.append(
         CTypes(
             name="hembedder.utils._ctypes.coranking",
-            sources=["src/utils/_ctypes/coranking_main.cpp"],
-            libraries=["R"],
+            sources=["src/utils/_ctypes/coranking.cpp"]
         )
     )
 except ImportError:
@@ -70,7 +71,7 @@ except ImportError:
     ext_modules.append(
         CTypes(
             name="hembedder.utils._ctypes.coranking",
-            sources=["src/utils/_ctypes/coranking_main.cpp"],
+            sources=["src/utils/_ctypes/coranking.cpp"],
         )
     )
 # dlls = [("hembedder.utils._ctypes", ["src/utils/_ctypes/coranking.so"])]

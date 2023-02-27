@@ -129,7 +129,7 @@ class Hyperparameter_tuning:
             #Embedding data for each hyperparameter set per num_iter
             embedded_data, times = self.get_embedded_data(hyperparameters)
             #Calculating performance for the embedded data using thread pool
-            pool = ThreadPool(10)
+            pool = ThreadPool(self.n_parjobs)
             scores=pool.map(self.get_scores, embedded_data)
             pool.close()
             pool.join()
@@ -149,7 +149,7 @@ class Hyperparameter_tuning:
         for v in values:param_len=param_len*len(v)
         print(f"Total number of embedding runs :  {param_len} (combos)x{self.num_iter}(iterations) with",
             f"{self.sample_size} sample_size for the embedding. Exceptions will be raised, if sample",
-            f" size is larger than data size which is {self.X.shape[0]}")
+            f"size is larger than data size which is {self.X.shape[0]}")
         param_len-=1
         method_start = time.time()
         #setting random state

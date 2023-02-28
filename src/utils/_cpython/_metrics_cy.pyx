@@ -67,7 +67,37 @@ def _tc_normalisation_weight(K, n):
     elif K >= (n/2):
         return n*(n - K)*(n - K)
 
-#TODO: value seems to low at the moment, check
+def Qmatrix(np.ndarray[np.float64_t, ndim=2] Xor, np.ndarray[np.float64_t, ndim=2] Xemb):
+    """ Compute the co-ranking matrix for the given datasets
+
+    Args:
+        Xor: the original data 
+        Xemb: the reduced data
+
+    Returns:
+        The co-ranking matrix based on the two datasets Xorg and Xemb
+    """
+    cdef Py_ssize_t i, j, k, l
+    cdef Py_ssize_t n = Xor.shape[0]
+    cdef np.ndarray[np.int32_t, ndim=2] Q = np.zeros((n, n), dtype=np.int32)
+    cdef np.ndarray[np.float64_t, ndim=2] dists_or = np.zeros((n, n), dtype=np.float64)
+    cdef np.ndarray[np.float64_t, ndim=2] dists_emb = np.zeros((n, n), dtype=np.float64)
+
+    for i in range(n):
+        for j in range(n):
+            dists_or[i,j] = np.linalg.norm(Xor[i,:] - Xor[j,:])
+            dists_emb[i,j] = np.linalg.norm(Xemb[i,:] - Xemb[j,:])
+
+    # Sort the distances and indices
+    sindx_or = dists_or.argsort(axis=1).argsort(axis=1)
+    sindx_emb = dists_emb.argsort(axis=1).argsort(axis=1)
+
+    # Compute the co-ranking matrix
+    for i in range(n):
+        for j in range(n):
+            Q[sindx_or[i,j], sindx_emb[i,j]] += 1
+    return Q[1:, 1:]
+
 def LCMC(np.ndarray[np.int32_t, ndim=2] Q, Py_ssize_t K):
     """ The local continuity meta-criteria measures the number of mild
     intrusions and extrusions. This can be thought of as a measure of the
@@ -144,7 +174,6 @@ def vMRRE(np.ndarray[np.int32_t, ndim=2] Q, Py_ssize_t K):
 
     return 1./Hk * summation
 
-#TODO: value seems to low at the moment, check
 def Qnx(np.ndarray[np.int32_t, ndim=2] Q, Py_ssize_t K, scaled=False):
     """ 
     The Qnx according to J.A. Lee, M. Verleysen: https://doi.org/10.1016/j.neucom.2008.12.017

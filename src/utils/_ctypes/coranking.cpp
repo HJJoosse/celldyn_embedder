@@ -26,10 +26,10 @@ extern "C"
       for (int j = 0; j < N; j++)
       {
         ind = i * N + j;
-        k = Ro[ind];
-        l = R[ind];
+        k = R[ind];
+        l = Ro[ind];
         Qind = (k - 1) * (N - 1) + l - 1;
-        Q[Qind] += 1;
+        Q[Qind] = Q[Qind] + 1;
       }
     }
   }

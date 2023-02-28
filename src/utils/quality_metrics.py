@@ -109,15 +109,109 @@ def compute_coranking_matrix(data_ld, data_hd=None, D_hd=None):
     return Q
 
 
+@njit(fastmath=True)
+def qnx_crm(Q: np.array, n_neighbours: int):
+    """Average Normalized Agreement Between K-ary Neighborhoods (QNX)
+    # QNX measures the degree to which an embedding preserves the local
+    # neighborhood around each observation. For a value of K, the K closest
+    # neighbors of each observation are retrieved in the input and output space.
+    # For each observation, the number of shared neighbors can vary between 0
+    # and K. QNX is simply the average value of the number of shared neighbors,
+    # normalized by K, so that if the neighborhoods are perfectly preserved, QNX
+    # is 1, and if there is no neighborhood preservation, QNX is 0.
+    #
+    # For a random embedding, the expected value of QNX is approximately
+    # K / (N - 1) where N is the number of observations. Using RNX
+    # (\code{rnx_crm}) removes this dependency on K and the number of
+    # observations.
+    #
+    # @param crm Co-ranking matrix. Create from a pair of distance matrices with
+    # \code{coranking_matrix}.
+    # @param k Neighborhood size.
+    # @return QNX for \code{k}.
+    # @references
+    # Lee, J. A., & Verleysen, M. (2009).
+    # Quality assessment of dimensionality reduction: Rank-based criteria.
+    # \emph{Neurocomputing}, \emph{72(7)}, 1431-1443.
+
+    Python reimplmentation of code by jlmelville
+    (https://github.com/jlmelville/quadra/blob/master/R/neighbor.R)
+    source: https://timsainburg.com/coranking-matrix-python-numba.html
+    """
+    qnx_crm_sum = np.sum(Q[:n_neighbours, :n_neighbours])
+    return qnx_crm_sum / (n_neighbours * len(Q))
+
+
+@njit(fastmath=True)
+def rnx_crm(Q: np.array, n_neighbours: int):
+    """Rescaled Agreement Between K-ary Neighborhoods (RNX)
+    # RNX is a scaled version of QNX which measures the agreement between two
+    # embeddings in terms of the shared number of k-nearest neighbors for each
+    # observation. RNX gives a value of 1 if the neighbors are all preserved
+    # perfectly and a value of 0 for a random embedding.
+    #
+    # @param crm Co-ranking matrix. Create from a pair of distance matrices with
+    # \code{coranking_matrix}.
+    # @param k Neighborhood size.
+    # @return RNX for \code{k}.
+    # @references
+    # Lee, J. A., Renard, E., Bernard, G., Dupont, P., & Verleysen, M. (2013).
+    # Type 1 and 2 mixtures of Kullback-Leibler divergences as cost functions in
+    # dimensionality reduction based on similarity preservation.
+    # \emph{Neurocomputing}, \emph{112}, 92-108.
+
+    Python reimplmentation of code by jlmelville
+    (https://github.com/jlmelville/quadra/blob/master/R/neighbor.R)
+    source: https://timsainburg.com/coranking-matrix-python-numba.html
+    """
+    n = len(Q)
+    return ((qnx_crm(Q, n_neighbours) * (n - 1)) - n_neighbours) / (
+        n - 1 - n_neighbours
+    )
+
+
+@njit(fastmath=True)
+def rnx_auc_crm(Q: np.array):
+    """Area Under the RNX Curve
+    # The RNX curve is formed by calculating the \code{rnx_crm} metric for
+    # different sizes of neighborhood. Each value of RNX is scaled according to
+    # the natural log of the neighborhood size, to give a higher weight to smaller
+    # neighborhoods. An AUC of 1 indicates perfect neighborhood preservation, an
+    # AUC of 0 is due to random results.
+    #
+    # param crm Co-ranking matrix.
+    # return Area under the curve.
+    # references
+    # Lee, J. A., Peluffo-Ordo'nez, D. H., & Verleysen, M. (2015).
+    # Multi-scale similarities in stochastic neighbour embedding: Reducing
+    # dimensionality while preserving both local and global structure.
+    # \emph{Neurocomputing}, \emph{169}, 246-261.
+
+    Python reimplmentation of code by jlmelville
+    (https://github.com/jlmelville/quadra/blob/master/R/neighbor.R)
+    source: https://timsainburg.com/coranking-matrix-python-numba.html
+    """
+    n = len(Q)
+    num = 0
+    den = 0
+
+    qnx_crm_sum = 0
+    for k in range(1, n - 2):
+        # for k in (range(1, n - 2)):
+        qnx_crm_sum += (
+            np.sum(Q[(k - 1), :k]) + np.sum(Q[:k, (k - 1)]) - Q[(k - 1), (k - 1)]
+        )
+        qnx_crm = qnx_crm_sum / (k * len(Q))
+        rnx_crm = ((qnx_crm * (n - 1)) - k) / (n - 1 - k)
+        num += rnx_crm / k
+        den += 1 / k
+    return num / den
+
+
 class CDEmbeddingPerformance:
     """
     Class for calulating the embedding quality. Metrics include trustworthiness,
     Knn overlap, distance correlation, and random triplet scores
-
-    TODO: add co-ranking matrix
-    TODO: add T&C scores, see Quality assessment of dimensionality reduction: Rank-based criteria
-    TODO: add MRRE scores, see  ditto
-    TODO: add LCMC score, see ditto
     """
 
     def __init__(
@@ -199,6 +293,9 @@ class CDEmbeddingPerformance:
         elif backend == "numba":
             Q = compute_coranking_matrix(data_ld=X_emb, data_hd=X_org).astype(np.int32)
             return Q
+        elif backend == "cython":
+            Q = metrics_cy.Qmatrix(X_org, X_emb)
+            return Q
         elif backend == "ctype":
             script_path = "/".join(str(os.path.abspath(__file__)).split("/")[:-1])
             coranking = cdll.LoadLibrary(
@@ -225,28 +322,22 @@ class CDEmbeddingPerformance:
                 ctypes.POINTER(ctypes.c_double),
             ]
 
-            try:
-                print("Calling Ctype function on original data")
-                N = X_org.shape[0]
-                Dor = X_org.shape[1]
+            print("Calling Ctype function on original data")
+            N = X_org.shape[0]
+            Dor = X_org.shape[1]
 
-                DD = np.zeros((N, N), dtype=np.float64)
-                DD_ptr = DD.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
-                coranking.euclidean(X_org_C, N, Dor, DD_ptr)
-                high_distance = DD.copy()
+            DD = np.zeros((N, N), dtype=np.float64)
+            DD_ptr = DD.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+            coranking.euclidean(X_org_C, N, Dor, DD_ptr)
+            high_distance = DD.copy()
 
-                print("Calling Ctype function on embedded data")
-                Demb = X_emb.shape[1]
+            print("Calling Ctype function on embedded data")
+            Demb = X_emb.shape[1]
 
-                DD = np.zeros((N, N), dtype=np.float64)
-                DD_ptr = DD.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
-                coranking.euclidean(X_emb_C, N, Demb, DD_ptr)
-                low_distance = DD.copy()
-
-            except Exception as e:
-                print("Ctype function failed")
-                print(e)
-                raise e
+            DD = np.zeros((N, N), dtype=np.float64)
+            DD_ptr = DD.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+            coranking.euclidean(X_emb_C, N, Demb, DD_ptr)
+            low_distance = DD.copy()
 
             print("Calling Ctype function on rankmatrix, original")
             coranking.rankmatrix.restype = None
@@ -284,6 +375,7 @@ class CDEmbeddingPerformance:
                 ctypes.POINTER(ctypes.c_int),
             ]
 
+            print("Calling Ctype function on Qmatrix")
             Q = np.zeros((N - 1, N - 1), dtype=np.int32)
             Q_ptr = Q.ctypes.data_as(ctypes.POINTER(ctypes.c_int))
             coranking.coranking(
@@ -424,103 +516,50 @@ class CDEmbeddingPerformance:
 
         return metrics_cy.vMRRE(Q, self.n_neighbours)
 
-    @njit(fastmath=True)
-    def qnx_crm(self, Q):
-        """Average Normalized Agreement Between K-ary Neighborhoods (QNX)
-        # QNX measures the degree to which an embedding preserves the local
-        # neighborhood around each observation. For a value of K, the K closest
-        # neighbors of each observation are retrieved in the input and output space.
-        # For each observation, the number of shared neighbors can vary between 0
-        # and K. QNX is simply the average value of the number of shared neighbors,
-        # normalized by K, so that if the neighborhoods are perfectly preserved, QNX
-        # is 1, and if there is no neighborhood preservation, QNX is 0.
-        #
-        # For a random embedding, the expected value of QNX is approximately
-        # K / (N - 1) where N is the number of observations. Using RNX
-        # (\code{rnx_crm}) removes this dependency on K and the number of
-        # observations.
-        #
-        # @param crm Co-ranking matrix. Create from a pair of distance matrices with
-        # \code{coranking_matrix}.
-        # @param k Neighborhood size.
-        # @return QNX for \code{k}.
-        # @references
-        # Lee, J. A., & Verleysen, M. (2009).
-        # Quality assessment of dimensionality reduction: Rank-based criteria.
-        # \emph{Neurocomputing}, \emph{72(7)}, 1431-1443.
-
-        Python reimplmentation of code by jlmelville
-        (https://github.com/jlmelville/quadra/blob/master/R/neighbor.R)
-        source: https://timsainburg.com/coranking-matrix-python-numba.html
+    def _return_qnx_crm(self, Q: np.array):
         """
-        qnx_crm_sum = np.sum(Q[: self.n_neighbours, : self.n_neighbours])
-        return qnx_crm_sum / (self.n_neighbours * len(Q))
+        Function for returning qnx_crm score from the coranking matrix
 
-    @njit(fastmath=True)
-    def rnx_crm(self, Q):
-        """Rescaled Agreement Between K-ary Neighborhoods (RNX)
-        # RNX is a scaled version of QNX which measures the agreement between two
-        # embeddings in terms of the shared number of k-nearest neighbors for each
-        # observation. RNX gives a value of 1 if the neighbors are all preserved
-        # perfectly and a value of 0 for a random embedding.
-        #
-        # @param crm Co-ranking matrix. Create from a pair of distance matrices with
-        # \code{coranking_matrix}.
-        # @param k Neighborhood size.
-        # @return RNX for \code{k}.
-        # @references
-        # Lee, J. A., Renard, E., Bernard, G., Dupont, P., & Verleysen, M. (2013).
-        # Type 1 and 2 mixtures of Kullback-Leibler divergences as cost functions in
-        # dimensionality reduction based on similarity preservation.
-        # \emph{Neurocomputing}, \emph{112}, 92-108.
+        Parameters
+        ----------
+        Q:np.array
+            the coranking matrix as np.array
 
-        Python reimplmentation of code by jlmelville
-        (https://github.com/jlmelville/quadra/blob/master/R/neighbor.R)
-        source: https://timsainburg.com/coranking-matrix-python-numba.html
+        Returns
+        -----------
+        qnx_crm score as float
         """
-        n = len(Q)
-        return ((qnx_crm(Q, self.n_neighbours) * (n - 1)) - self.n_neighbours) / (
-            n - 1 - self.n_neighbours
-        )
+        return qnx_crm(Q, self.n_neighbours)
 
-    # @numba.njit(fastmath=True)
-    def rnx_auc_crm(self, Q):
-        """Area Under the RNX Curve
-        # The RNX curve is formed by calculating the \code{rnx_crm} metric for
-        # different sizes of neighborhood. Each value of RNX is scaled according to
-        # the natural log of the neighborhood size, to give a higher weight to smaller
-        # neighborhoods. An AUC of 1 indicates perfect neighborhood preservation, an
-        # AUC of 0 is due to random results.
-        #
-        # param crm Co-ranking matrix.
-        # return Area under the curve.
-        # references
-        # Lee, J. A., Peluffo-Ordo'nez, D. H., & Verleysen, M. (2015).
-        # Multi-scale similarities in stochastic neighbour embedding: Reducing
-        # dimensionality while preserving both local and global structure.
-        # \emph{Neurocomputing}, \emph{169}, 246-261.
-
-        Python reimplmentation of code by jlmelville
-        (https://github.com/jlmelville/quadra/blob/master/R/neighbor.R)
-        source: https://timsainburg.com/coranking-matrix-python-numba.html
+    def _return_rnx_crm(self, Q: np.array):
         """
-        n = len(Q)
-        num = 0
-        den = 0
+        Function for returning rnx_crm score from the coranking matrix
 
-        qnx_crm_sum = 0
-        for k in tqdm(range(1, n - 2)):
-            # for k in (range(1, n - 2)):
-            qnx_crm_sum += (
-                np.sum(crm[(k - 1), :k])
-                + np.sum(crm[:k, (k - 1)])
-                - crm[(k - 1), (k - 1)]
-            )
-            qnx_crm = qnx_crm_sum / (k * len(Q))
-            rnx_crm = ((qnx_crm * (n - 1)) - k) / (n - 1 - k)
-            num += rnx_crm / k
-            den += 1 / k
-        return num / den
+        Parameters
+        ----------
+        Q:np.array
+            the coranking matrix as np.array
+
+        Returns
+        -----------
+        rnx_crm score as float
+        """
+        return rnx_crm(Q, self.n_neighbours)
+
+    def _return_rnx_auc_crm(self, Q: np.array):
+        """
+        Function for returning rnx_auc_crm score from the coranking matrix
+
+        Parameters
+        ----------
+        Q:np.array
+            the coranking matrix as np.array
+
+        Returns
+        -----------
+        rnx_auc_crm score as float
+        """
+        return rnx_auc_crm(Q)
 
     def _return_trustworthiness(self, X_org: np.array, X_emb: np.array):
         """
@@ -948,7 +987,7 @@ if __name__ == "__main__":
     # make Qmatrix
     print("Making Qmatrix")
     Qmatrix = quality._get_coranking_matrix(
-        X_org=data_original, X_emb=data_embedding, backend="ctype"
+        X_org=data_original, X_emb=data_embedding, backend="numba"
     )
     print(f"Qmatrix: {Qmatrix[:10, :10]}")
 
@@ -989,3 +1028,10 @@ if __name__ == "__main__":
     print(
         f"DistCorr level 2: {dcor.distance_correlation(pdist(data_original, metric='cityblock'), pdist(data_embedding, metric='cityblock'))}"
     )
+
+    # quality.qnx_crm
+    print(f"Making Qnx_crm: {quality._return_qnx_crm(Qmatrix)}")
+    # quality.rnx_crm
+    print(f"Making Rnx_crm: {quality._return_rnx_crm(Qmatrix)}")
+    # quality.rnx_auc_crm
+    print(f"Making Qnx_auc_crm: {quality._return_rnx_auc_crm(Qmatrix)}")

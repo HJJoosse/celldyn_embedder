@@ -24,10 +24,11 @@ from sklearn.neighbors import NearestNeighbors
 from joblib import Parallel, delayed
 
 import ctypes
+from ctypes import cdll
 
 import hembedder.utils._cpython._metrics_cy as metrics_cy
 
-from functools import cache, lru_cache
+from functools import lru_cache
 
 """
 sources:
@@ -126,7 +127,10 @@ class CDEmbeddingPerformance:
             return Q
         elif backend == "ctype":
             script_path = "/".join(str(os.path.abspath(__file__)).split("/")[:-1])
-            coranking = ctypes.CDLL(os.path.join(script_path, "_ctypes/coranking.so"))
+            coranking = cdll.LoadLibrary(
+                os.path.join(script_path, "_ctypes/coranking.so")
+            )
+            # coranking = ctypes.CDLL(os.path.join(script_path, "_ctypes/coranking.so"))
             # from hembedder.utils._ctypes import coranking
 
             # print("Making ravelled arrays")
@@ -139,31 +143,85 @@ class CDEmbeddingPerformance:
             X_emb_C = X_emb.ctypes.data_as(c_double_C)
 
             # print("Setting up C-types function argument and return types")
-            coranking.euclidean.restype = ctypes.POINTER(ctypes.c_double)
+            coranking.euclidean.restype = None
             coranking.euclidean.argtypes = [
                 ctypes.POINTER(ctypes.c_double),
                 ctypes.c_int,
                 ctypes.c_int,
+                ctypes.POINTER(ctypes.c_double),
             ]
 
             try:
                 print("Calling Ctype function on original data")
-                high_distance = coranking.euclidean(
-                    X_org_C, X_org.shape[0], X_org.shape[1]
-                )
+                N = X_org.shape[0]
+                Dor = X_org.shape[1]
+
+                DD = np.zeros((N, N), dtype=np.float64)
+                DD_ptr = DD.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+                coranking.euclidean(X_org_C, N, Dor, DD_ptr)
+                high_distance = DD.copy()
+
                 print("Calling Ctype function on embedded data")
-                low_distance = coranking.euclidean(
-                    X_emb_C, X_emb.shape[0], X_emb.shape[1]
-                )
+                Demb = X_emb.shape[1]
+
+                DD = np.zeros((N, N), dtype=np.float64)
+                DD_ptr = DD.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+                coranking.euclidean(X_emb_C, N, Demb, DD_ptr)
+                low_distance = DD.copy()
+
             except Exception as e:
                 print("Ctype function failed")
                 print(e)
                 raise e
 
-            high_ranking = coranking.rankmatrix(high_distance)
-            low_ranking = coranking.rankmatrix(low_distance)
+            coranking.rankmatrix.restype = None
+            coranking.rankmatrix.argtypes = [
+                ctypes.POINTER(ctypes.c_double),
+                ctypes.c_int,
+                ctypes.POINTER(ctypes.c_double),
+            ]
 
-            Q = coranking.coranking(high_ranking, low_ranking)
+            Rm = np.zeros((N, N), dtype=np.float64)
+            Rm_ptr = Rm.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+            coranking.rankmatrix(
+                high_distance.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
+                N,
+                Rm_ptr,
+            )
+            high_ranking = Rm.copy()
+
+            Rm = np.zeros((N, N), dtype=np.float64)
+            Rm_ptr = Rm.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+            coranking.rankmatrix(
+                low_distance.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
+                N,
+                Rm_ptr,
+            )
+            low_ranking = Rm.copy()
+
+            coranking.coranking.restype = None
+            coranking.coranking.argtypes = [
+                ctypes.POINTER(ctypes.c_int),
+                ctypes.POINTER(ctypes.c_int),
+                ctypes.c_int,
+                ctypes.POINTER(ctypes.c_int),
+            ]
+
+            Q = np.zeros((N, N), dtype=np.int32)
+            Q_ptr = Q.ctypes.data_as(ctypes.POINTER(ctypes.c_int))
+            coranking.coranking(
+                high_ranking.ctypes.data_as(ctypes.POINTER(ctypes.c_int)),
+                low_ranking.ctypes.data_as(ctypes.POINTER(ctypes.c_int)),
+                N,
+                Q_ptr,
+            )
+
+            # print("Ctype freeing memory")
+            # coranking.free(Q_ptr)
+            # print("Ctype freeing memory")
+            # coranking.free(Rm_ptr)
+            # print("Ctype freeing memory")
+            # coranking.free(DD_ptr)
             return Q
         else:
             raise ValueError("Backend not supported")
@@ -724,23 +782,30 @@ if __name__ == "__main__":
 
     # make scores
     print("Making scores")
-    print("Qnx")
+
     Qnx = quality._return_Qnx(X_org=data_original, X_emb=data_embedding, Q=Qmatrix)
-    print("Qtrust")
+    print(f"Qnx: {Qnx}")
+
     Qtrust = quality._return_Qtrustworthiness(
         X_org=data_original, X_emb=data_embedding, Q=Qmatrix
     )
-    print("Qcont")
+    print(f"Qtrust: {Qtrust}")
+
     Qcont = quality._return_Qcontinuity(
-        X_org=data_original, X_emb=RNAembedded, Q=Qmatrix
+        X_org=data_original, X_emb=data_embedding, Q=Qmatrix
     )
-    print("Qlcmc")
+    print(f"Qcont: {Qcont}")
+
     Qlcmc = quality._return_LCMC(X_org=data_original, X_emb=data_embedding, Q=Qmatrix)
-    print("QnMRRE")
+    print(f"Qlcmc: {Qlcmc}")
+
     QnMRRE = quality._return_nMRRE(X_org=data_original, X_emb=data_embedding, Q=Qmatrix)
-    print("QvMRRE")
+    print(f"QnMRRE: {QnMRRE}")
+
     QvMRRE = quality._return_vMRRE(X_org=data_original, X_emb=data_embedding, Q=Qmatrix)
-    print("DistCorr")
+    print(f"QvMRRE: {QvMRRE}")
+
     DistCorr = quality._return_dynamic_distance_correlation(
         X_org=data_original, X_emb=data_embedding
     )
+    print(f"DistCorr: {DistCorr}")

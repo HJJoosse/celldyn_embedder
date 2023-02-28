@@ -12,21 +12,24 @@ extern "C"
   {
 
     for (int i = 0; i < (N - 1) * (N - 1); i++)
+    {
       Q[i] = 0;
+    }
 
     int ind;
     int Qind;
+    int k;
+    int l;
 
     for (int i = 0; i < N; i++)
     {
       for (int j = 0; j < N; j++)
       {
         ind = i * N + j;
-        if (R[ind] > 0 && Ro[ind] > 0)
-        {
-          Qind = (R[ind] - 1) * (N - 1) + Ro[ind] - 1;
-          Q[Qind] += 1;
-        }
+        k = Ro[ind];
+        l = R[ind];
+        Qind = (k - 1) * (N - 1) + l - 1;
+        Q[Qind] += 1;
       }
     }
   }
@@ -130,11 +133,11 @@ extern "C"
     double *sqnorms = (double *)calloc(N, sizeof(double));
     if (sqnorms == NULL)
     {
-       printf("Memory allocation failed!\n");
+      printf("Memory allocation failed!\n");
       exit(1);
     }
-    //if (sqnorms == NULL)
-    //  throw 1;
+    // if (sqnorms == NULL)
+    //   throw 1;
 
     for (int d = 0; d < D; d++)
     {

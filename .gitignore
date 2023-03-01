@@ -10,3 +10,6 @@ __pycache__/
 *.csv
 *.dat
 hembedder.egg-info/
+build/
+.vscode/
+dist/

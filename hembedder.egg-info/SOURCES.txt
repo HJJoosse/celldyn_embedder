@@ -53,6 +53,8 @@ sandbox/tuning_UMAP.ipynb
 sandbox/umap_julia.ipynb
 src/__init__.py
 src/config.py
+src/utils/_cpython/_metrics_cy.c
+src/utils/_ctypes/coranking.cpp
 src/embedder/__init__.py
 src/embedder/embedding.py
 src/prepping/__init__.py

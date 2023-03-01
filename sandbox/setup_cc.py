@@ -3,6 +3,8 @@ import os
 os.chdir("T:/laupodteam/AIOS/Chontira/CellDynClustering")
 
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 import pandas as pd
 from data.load_data import *
 
@@ -22,6 +24,24 @@ cell_dyn = cell_dyn_with_labels.loc[:, cols_c_b_combo]
 
 cluster_assignment_df = pd.read_csv("data/cluster_assignment.csv")
 cluster_labels = cluster_assignment_df["cluster_assignment"].values
+
+def performance_plot_different_files(score_ls,x,y, x_title ,y_title, legend_values, legend_title ):
+    for sample in score_ls:
+        sns.lineplot(data=sample,x=sample[x], y=sample[y])
+    
+    plt.legend(legend_values, title = legend_title, title_fontsize=8, loc= 'lower right')
+    plt.xlabel(x_title, fontsize=10)
+    plt.ylabel(y_title, fontsize=10)
+    plt.show()
+
+def performance_plot_same_file(scores,x,y, hue, x_title ,y_title, legend_title ):
+    
+    sns.lineplot(data=scores,x=x, y=y,hue=hue,palette=sns.color_palette(n_colors=len(np.unique(scores[hue].values))))
+    
+    plt.legend( title = legend_title, title_fontsize=8, loc= 'lower right')
+    plt.xlabel(x_title, fontsize=10)
+    plt.ylabel(y_title, fontsize=10)
+    plt.show()
 
 
 

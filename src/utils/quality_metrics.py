@@ -326,7 +326,7 @@ class CDEmbeddingPerformance:
             N = X_org.shape[0]
             Dor = X_org.shape[1]
 
-            DD = np.zeros((N, N), dtype=np.float64)
+            DD = np.zeros((N, N), dtype=self.dtype)
             DD_ptr = DD.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
             coranking.euclidean(X_org_C, N, Dor, DD_ptr)
             high_distance = DD.copy()
@@ -334,7 +334,7 @@ class CDEmbeddingPerformance:
             print("Calling Ctype function on embedded data")
             Demb = X_emb.shape[1]
 
-            DD = np.zeros((N, N), dtype=np.float64)
+            DD = np.zeros((N, N), dtype=self.dtype)
             DD_ptr = DD.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
             coranking.euclidean(X_emb_C, N, Demb, DD_ptr)
             low_distance = DD.copy()
@@ -398,6 +398,8 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
@@ -421,6 +423,8 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
@@ -442,6 +446,8 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
@@ -463,6 +469,8 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
@@ -484,6 +492,8 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
@@ -505,6 +515,8 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
@@ -513,15 +525,18 @@ class CDEmbeddingPerformance:
         if Q is None:
             print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.vMRRE(Q, self.n_neighbours)
 
-    def _return_qnx_crm(self, Q: np.array):
+    def _return_qnx_crm(self, X_org: np.array, X_emb: np.array,Q: np.array):
         """
         Function for returning qnx_crm score from the coranking matrix
 
         Parameters
         ----------
+        X_org:np.array
+            the original dataset as np.array
+        X_emb:np.array
+            the embedded data as np.array
         Q:np.array
             the coranking matrix as np.array
 
@@ -529,9 +544,12 @@ class CDEmbeddingPerformance:
         -----------
         qnx_crm score as float
         """
+        if Q is None:
+            print("calculating Q")
+            Q = self._get_coranking_matrix(X_org, X_emb)
         return qnx_crm(Q, self.n_neighbours)
 
-    def _return_rnx_crm(self, Q: np.array):
+    def _return_rnx_crm(self, X_org: np.array, X_emb: np.array, Q: np.array):
         """
         Function for returning rnx_crm score from the coranking matrix
 
@@ -544,9 +562,12 @@ class CDEmbeddingPerformance:
         -----------
         rnx_crm score as float
         """
+        if Q is None:
+            print("calculating Q")
+            Q = self._get_coranking_matrix(X_org, X_emb)
         return rnx_crm(Q, self.n_neighbours)
 
-    def _return_rnx_auc_crm(self, Q: np.array):
+    def _return_rnx_auc_crm(self, X_org: np.array, X_emb: np.array, Q: np.array):
         """
         Function for returning rnx_auc_crm score from the coranking matrix
 
@@ -559,6 +580,9 @@ class CDEmbeddingPerformance:
         -----------
         rnx_auc_crm score as float
         """
+        if Q is None:
+            print("calculating Q")
+            Q = self._get_coranking_matrix(X_org, X_emb)
         return rnx_auc_crm(Q)
 
     def _return_trustworthiness(self, X_org: np.array, X_emb: np.array):
@@ -1030,8 +1054,8 @@ if __name__ == "__main__":
     )
 
     # quality.qnx_crm
-    print(f"Making Qnx_crm: {quality._return_qnx_crm(Qmatrix)}")
+    print(f"Making Qnx_crm: {quality._return_qnx_crm(data_original, data_embedding,Qmatrix)}")
     # quality.rnx_crm
-    print(f"Making Rnx_crm: {quality._return_rnx_crm(Qmatrix)}")
+    print(f"Making Rnx_crm: {quality._return_rnx_crm(data_original, data_embedding,Qmatrix)}")
     # quality.rnx_auc_crm
-    print(f"Making Qnx_auc_crm: {quality._return_rnx_auc_crm(Qmatrix)}")
+    print(f"Making Qnx_auc_crm: {quality._return_rnx_auc_crm(data_original, data_embedding,Qmatrix)}")

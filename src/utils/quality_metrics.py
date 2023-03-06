@@ -408,7 +408,6 @@ class CDEmbeddingPerformance:
         if Q is None:
             print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.Qnx(Q, self.n_neighbours, self.scaled)
 
     def _return_Qtrustworthiness(
@@ -433,7 +432,6 @@ class CDEmbeddingPerformance:
         if Q is None:
             print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.trustworthiness(Q, self.n_neighbours)
 
     def _return_Qcontinuity(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
@@ -456,7 +454,6 @@ class CDEmbeddingPerformance:
         if Q is None:
             print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.continuity(Q, self.n_neighbours)
 
     def _return_LCMC(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
@@ -479,7 +476,6 @@ class CDEmbeddingPerformance:
         if Q is None:
             print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.LCMC(Q, self.n_neighbours)
 
     def _return_nMRRE(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
@@ -502,7 +498,6 @@ class CDEmbeddingPerformance:
         if Q is None:
             print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.nMRRE(Q, self.n_neighbours)
 
     def _return_vMRRE(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
@@ -555,6 +550,10 @@ class CDEmbeddingPerformance:
 
         Parameters
         ----------
+       X_org:np.array
+            the original dataset as np.array
+        X_emb:np.array
+            the embedded data as np.array
         Q:np.array
             the coranking matrix as np.array
 
@@ -573,6 +572,10 @@ class CDEmbeddingPerformance:
 
         Parameters
         ----------
+        X_org:np.array
+            the original dataset as np.array
+        X_emb:np.array
+            the embedded data as np.array
         Q:np.array
             the coranking matrix as np.array
 
@@ -861,6 +864,7 @@ def metrics_scores_iter(
     evaluators: dict,
     verbose: bool = True,
     return_dict: bool = False,
+    **args
 ):
     """Calculates scores for embedder using different metrics (evaluators).
 
@@ -883,7 +887,7 @@ def metrics_scores_iter(
     """
     results = {}
     for name, metric in evaluators.items():
-        results.update({name: metric(x, output)})
+        results.update({name: metric(x, output,**args)})
     if verbose:
         print_metric_scores(results)
     if return_dict:

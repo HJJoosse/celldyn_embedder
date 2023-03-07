@@ -86,7 +86,7 @@ def iterate_compute_distances(data):
     return D
 
 
-def compute_coranking_matrix(data_ld, data_hd=None, D_hd=None):
+def compute_coranking_matrix(data_ld, data_hd=None, D_hd=None, leave = True):
     """Compute the full coranking matrix"""
 
     # compute pairwise probabilities
@@ -102,7 +102,7 @@ def compute_coranking_matrix(data_ld, data_hd=None, D_hd=None):
     # compute coranking matrix from_ranking matrix
     m = len(rm_hd)
     Q = np.zeros(rm_hd.shape, dtype="int16")
-    for i in tqdm(range(m), desc="computing coranking matrix"):
+    for i in tqdm(range(m), desc="computing coranking matrix", leave = leave):
         Q = populate_Q(Q, i, m, rm_hd, rm_ld)
 
     Q = Q[1:, 1:]

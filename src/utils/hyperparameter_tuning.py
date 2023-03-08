@@ -6,9 +6,7 @@ from collections import defaultdict
 import math
 import itertools
 import csv
-from sklearn.preprocessing import StandardScaler
 from multiprocessing.dummy import Pool as ThreadPool
-import warnings
 from hembedder.utils.quality_metrics import compute_coranking_matrix
 from tqdm import tqdm
 
@@ -27,8 +25,7 @@ class Hyperparameter_tuning:
             file_name:str,
             sample_size=10000,
             metric_chuck_size:int=5000,
-            standardised:bool = False,
-            Q_matrix:bool = False, 
+            scaler=None,
             num_iter:int = 10,
             n_parjobs:int = 10,
             dtype = np.float32,
@@ -36,8 +33,13 @@ class Hyperparameter_tuning:
             **kwargs):
         """
         Setting up parameters for the hyperpameter tuning. Two choices to choose from: random search or grid search.
+        
         Can also benchmark different subsample sizes. To benchmark different subsample sizes, add a list of sizes 
         to sample_size e.g sample_size = [1000,2000] instead of an int.
+        
+        Can also evaluate using Q-matrix related metrics. Please include "Q_matrix" string in the name/key of the related
+        Q-matrix metrics in the evaluator dictionary to use this function.
+
         Paramters
         ---------
         X: numpy array
@@ -58,13 +60,8 @@ class Hyperparameter_tuning:
             X size.
         metric_chuck_size:int
             number of samples to size down to for metric calculations. Must not be more than sample_size
-        standardised:optional, bool
-            whether to standardise the data
-        Q_matrix: optional, bool
-            whether to pre-calculate Q-matrix for the Q-matrix metrics and its variances.
-            If Q_matrix is True, please include "Q_matrix" string in the name/key of the related
-            Q-matrix metrics in the evaluator dictionary. (Warning: causes an error if 
-            the evaluating Q-matrix metric function does not have "Q" as an argument)
+        scaler
+            whether to standardise the data using various scalers
         num_iters: optional, int
             number of iterations to run for each hyperparameter setting.
         dtype:numpy array of floats,
@@ -82,8 +79,7 @@ class Hyperparameter_tuning:
         self.file_name = file_name
         self.sample_size = sample_size
         self.metric_chuck_size = metric_chuck_size
-        self.standardised = standardised
-        self.Q_matrix = Q_matrix
+        self.scaler = scaler
         self.max_evals = None
         self.num_iter = num_iter
         self.n_parjobs = n_parjobs
@@ -103,11 +99,6 @@ class Hyperparameter_tuning:
         self.param_grid.update({'sample_size': self.sample_size}) 
         #result dataframe to be initialised in the search method
         self.results = None
-        if(self.Q_matrix):
-            warnings.warn("Causes an error if the evaluating "+ 
-                          "Q-matrix metric function "+
-                          "does not have Q as an argument.")
-
     
 
     def random_search(self, max_evals:int=300):
@@ -234,16 +225,12 @@ class Hyperparameter_tuning:
             indexes_embedder = subsampling_return_indexes(self.X,size)
             # Evaluate randomly selected hyperparameters
             sub_original = self.X[indexes_embedder]
-            embedding_data = sub_original.copy().astype(self.dtype)
-            #Check for scaling
-            if(self.standardised):
-                scaler = StandardScaler()
-                embedding_data = scaler.fit_transform(sub_original).astype(self.dtype)
+            #To scale or not to scale
+            embedding_data = to_scale(sub_original,self.scaler).astype(self.dtype)
             #Get indexes for subsampling of data for benchmarking
             indexes_metrics= subsampling_return_indexes(sub_original, 
                                                 self.metric_chuck_size)
             # Create a dictionary for later reference in multi-thread
-
             eval_original =  sub_original[indexes_metrics]
             eval_embedded = self.embedder(**parameter).\
                 fit_transform(embedding_data).\
@@ -251,9 +238,10 @@ class Hyperparameter_tuning:
             emb_dict = {"x" :eval_original,
                     "output" : eval_embedded,
                     "evaluators":self.evaluators}
-            if(self.Q_matrix):emb_dict.\
-                update({"Q":compute_coranking_matrix(eval_original, \
-                            eval_embedded, leave = False).astype(np.int32)})
+            if("Q_matrix" in ('_').join(self.evaluators.keys())):
+                emb_dict.update\
+                ({"Q":compute_coranking_matrix(eval_original, \
+                eval_embedded, leave = False).astype(np.int32)})
             benchmark_list.append(emb_dict)
             times.append(time.time()-start)
         return benchmark_list, times
@@ -310,7 +298,26 @@ class Hyperparameter_tuning:
         f"{int(self.results.loc[0]['sample_size'])} sample size are")
         print(self.results.loc[0][list(self.evaluators.keys())]) 
         print("with parameter:", self.results['params'][0])
-       
+
+def to_scale(x: np.array,scaler=None):
+    """To scale or not to scale that is the question for this function
+
+    Parameters
+    ---------
+    x: np.array
+        original unemedded data
+    scaler: function
+        function call for various scalers to scale the data
+
+    Returns
+    ---------
+    either scaled data or no scaled data
+    """
+    if(scaler is None):
+        return x
+    return scaler.fit_transform(x)
+
+
 def metrics_scores_iter(
     x: np.array,
     output: np.array,
@@ -337,12 +344,10 @@ def metrics_scores_iter(
     results = {}
     for name, metric in evaluators.items():
         if("Q" in args.keys() and "Q_matrix" in name):
-            results.update({name: metric(x, output,**args)})
+            results.update({name: metric(x, output,args["Q"])})
         else:
             results.update({name: metric(x, output)})
     return results
-
-
 
 def subsampling_return_indexes(X, subsampling):
     rand = np.random.default_rng()

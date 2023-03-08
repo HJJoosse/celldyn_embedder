@@ -1,4 +1,4 @@
-# trustworthiness --> sklearn
+#trustworthiness --> sklearn
 # distance correlation correlation --> zelf chefffen
 # knn-overlap - distance curve and integral
 # poincarre
@@ -270,7 +270,6 @@ class CDEmbeddingPerformance:
         -----------
         coranking matrix as np.array
         """
-        print("backend", backend)
 
         if backend == "python":
             # source: https://github.com/samueljackson92/coranking/blob/master/coranking/_coranking.py
@@ -406,7 +405,6 @@ class CDEmbeddingPerformance:
         Qnx score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
         return metrics_cy.Qnx(Q, self.n_neighbours, self.scaled)
 
@@ -430,7 +428,6 @@ class CDEmbeddingPerformance:
         Trustworthiness score between 0 and 1. Higher means better
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
         return metrics_cy.trustworthiness(Q, self.n_neighbours)
 
@@ -452,7 +449,6 @@ class CDEmbeddingPerformance:
         Continuity score between 0 and 1. Higher means better
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
         return metrics_cy.continuity(Q, self.n_neighbours)
 
@@ -474,7 +470,6 @@ class CDEmbeddingPerformance:
         LCMC score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
         return metrics_cy.LCMC(Q, self.n_neighbours)
 
@@ -496,7 +491,6 @@ class CDEmbeddingPerformance:
         nMRRE score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
         return metrics_cy.nMRRE(Q, self.n_neighbours)
 
@@ -518,11 +512,10 @@ class CDEmbeddingPerformance:
         vMRRE score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
         return metrics_cy.vMRRE(Q, self.n_neighbours)
 
-    def _return_qnx_crm(self, X_org: np.array, X_emb: np.array,Q: np.array):
+    def _return_qnx_crm(self, X_org: np.array, X_emb: np.array,Q: np.array=None):
         """
         Function for returning qnx_crm score from the coranking matrix
 
@@ -540,11 +533,10 @@ class CDEmbeddingPerformance:
         qnx_crm score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
         return qnx_crm(Q, self.n_neighbours)
 
-    def _return_rnx_crm(self, X_org: np.array, X_emb: np.array, Q: np.array):
+    def _return_rnx_crm(self, X_org: np.array, X_emb: np.array, Q: np.array=None):
         """
         Function for returning rnx_crm score from the coranking matrix
 
@@ -562,11 +554,10 @@ class CDEmbeddingPerformance:
         rnx_crm score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
         return rnx_crm(Q, self.n_neighbours)
 
-    def _return_rnx_auc_crm(self, X_org: np.array, X_emb: np.array, Q: np.array):
+    def _return_rnx_auc_crm(self, X_org: np.array, X_emb: np.array, Q: np.array=None):
         """
         Function for returning rnx_auc_crm score from the coranking matrix
 
@@ -584,7 +575,6 @@ class CDEmbeddingPerformance:
         rnx_auc_crm score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
         return rnx_auc_crm(Q)
 
@@ -1062,4 +1052,4 @@ if __name__ == "__main__":
     # quality.rnx_crm
     print(f"Making Rnx_crm: {quality._return_rnx_crm(data_original, data_embedding,Qmatrix)}")
     # quality.rnx_auc_crm
-    print(f"Making Qnx_auc_crm: {quality._return_rnx_auc_crm(data_original, data_embedding,Qmatrix)}")
+    print(f"Making Qnx_auc_crm: {quality._return_rnx_auc_crm(data_original, data_embedding)}")

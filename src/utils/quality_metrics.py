@@ -86,7 +86,7 @@ def iterate_compute_distances(data):
     return D
 
 
-def compute_coranking_matrix(data_ld, data_hd=None, D_hd=None, leave = True):
+def compute_coranking_matrix(data_ld, data_hd=None, D_hd=None, leave = False):
     """Compute the full coranking matrix"""
 
     # compute pairwise probabilities
@@ -223,6 +223,7 @@ class CDEmbeddingPerformance:
         num_triplets: int = 5,
         dtype=np.float32,
         scaled: bool = False,
+        verbose:bool = False
     ):
         """
         Setting up parameters for the quality metircs
@@ -246,6 +247,8 @@ class CDEmbeddingPerformance:
             too large use np.float16
         scaled: bool
             whether to use a scaled version of Qnx
+        verbose: bool
+            whether to print progress
         """
         self.metric = metric
         self.n_neighbours = n_neighbours
@@ -254,6 +257,7 @@ class CDEmbeddingPerformance:
         self.dtype = dtype
         self.dcor_level = dcor_level
         self.scaled = scaled
+        self.verbose = verbose
 
     def _get_coranking_matrix(self, X_org: np.array, X_emb: np.array, backend="numba"):
         """
@@ -290,7 +294,7 @@ class CDEmbeddingPerformance:
             Q = Q.astype(np.int32)
             return Q[:1, :1]
         elif backend == "numba":
-            Q = compute_coranking_matrix(data_ld=X_emb, data_hd=X_org).astype(np.int32)
+            Q = compute_coranking_matrix(data_ld=X_emb, data_hd=X_org,leave=self.verbose).astype(np.int32)
             return Q
         elif backend == "cython":
             Q = metrics_cy.Qmatrix(X_org, X_emb)

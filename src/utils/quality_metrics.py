@@ -692,6 +692,7 @@ class CDEmbeddingPerformance:
             the embedded data as np.array
         n_bins: int
             the number of quantile bins to extract the distance-distance correlation
+            
         Returns
         -----------
         dynamic distance correlation score between 0 and 1. Higher means better

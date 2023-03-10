@@ -42,7 +42,6 @@ class build_ext(build_ext):
 class CTypes(Extension):
     pass
 
-
 try:
     # Try building with Cython
     # from Cython.Distutils import build_ext
@@ -59,7 +58,8 @@ try:
     ext_modules.append(
         CTypes(
             name="hembedder.utils._ctypes.coranking",
-            sources=["src/utils/_ctypes/coranking.cpp"]
+            sources=["src/utils/_ctypes/coranking.cpp"],            
+            compile_options=['-O3', '-Wall', '-ffast-math']
         )
     )
 except ImportError:
@@ -72,6 +72,7 @@ except ImportError:
         CTypes(
             name="hembedder.utils._ctypes.coranking",
             sources=["src/utils/_ctypes/coranking.cpp"],
+            compile_options=['-fPIC', '-O3', '-ffast-math']
         )
     )
 # dlls = [("hembedder.utils._ctypes", ["src/utils/_ctypes/coranking.so"])]

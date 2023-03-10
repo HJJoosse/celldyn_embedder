@@ -996,13 +996,16 @@ def score_subsampling(
 # add main
 if __name__ == "__main__":
     # make synthetic data
-    from sklearn.datasets import make_regression
+    from sklearn.datasets import make_regression, make_blobs
     from sklearn.decomposition import PCA
+    from trimap import TRIMAP
 
-    data_original, _ = make_regression(
-        n_samples=500, n_features=100, n_informative=10, random_state=42
-    )
-    data_embedding = PCA(n_components=10).fit_transform(data_original)
+    #data_original, _ = make_regression(
+    #    n_samples=1000, n_features=100, n_informative=10, random_state=42
+    #)
+    data_original = make_blobs(n_samples=1000, n_features=100, random_state=42, centers=4)[0]
+    data_embedding = TRIMAP(n_dims=3).fit_transform(data_original)
+    #data_embedding = PCA(n_components=3).fit_transform(data_original)
 
     # make evaluator
     quality = CDEmbeddingPerformance()

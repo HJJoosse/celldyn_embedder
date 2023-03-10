@@ -1,4 +1,4 @@
-# trustworthiness --> sklearn
+#trustworthiness --> sklearn
 # distance correlation correlation --> zelf chefffen
 # knn-overlap - distance curve and integral
 # poincarre
@@ -86,7 +86,7 @@ def iterate_compute_distances(data):
     return D
 
 
-def compute_coranking_matrix(data_ld, data_hd=None, D_hd=None):
+def compute_coranking_matrix(data_ld, data_hd=None, D_hd=None, leave = False):
     """Compute the full coranking matrix"""
 
     # compute pairwise probabilities
@@ -102,7 +102,7 @@ def compute_coranking_matrix(data_ld, data_hd=None, D_hd=None):
     # compute coranking matrix from_ranking matrix
     m = len(rm_hd)
     Q = np.zeros(rm_hd.shape, dtype="int16")
-    for i in tqdm(range(m), desc="computing coranking matrix"):
+    for i in tqdm(range(m), desc="computing coranking matrix", leave = leave):
         Q = populate_Q(Q, i, m, rm_hd, rm_ld)
 
     Q = Q[1:, 1:]
@@ -223,6 +223,7 @@ class CDEmbeddingPerformance:
         num_triplets: int = 5,
         dtype=np.float32,
         scaled: bool = False,
+        verbose:bool = False
     ):
         """
         Setting up parameters for the quality metircs
@@ -246,6 +247,8 @@ class CDEmbeddingPerformance:
             too large use np.float16
         scaled: bool
             whether to use a scaled version of Qnx
+        verbose: bool
+            whether to print progress
         """
         self.metric = metric
         self.n_neighbours = n_neighbours
@@ -254,6 +257,7 @@ class CDEmbeddingPerformance:
         self.dtype = dtype
         self.dcor_level = dcor_level
         self.scaled = scaled
+        self.verbose = verbose
 
     def _get_coranking_matrix(self, X_org: np.array, X_emb: np.array, backend="numba"):
         """
@@ -270,7 +274,6 @@ class CDEmbeddingPerformance:
         -----------
         coranking matrix as np.array
         """
-        print("backend", backend)
 
         if backend == "python":
             # source: https://github.com/samueljackson92/coranking/blob/master/coranking/_coranking.py
@@ -291,7 +294,7 @@ class CDEmbeddingPerformance:
             Q = Q.astype(np.int32)
             return Q[:1, :1]
         elif backend == "numba":
-            Q = compute_coranking_matrix(data_ld=X_emb, data_hd=X_org).astype(np.int32)
+            Q = compute_coranking_matrix(data_ld=X_emb, data_hd=X_org,leave=self.verbose).astype(np.int32)
             return Q
         elif backend == "cython":
             Q = metrics_cy.Qmatrix(X_org, X_emb)
@@ -326,7 +329,7 @@ class CDEmbeddingPerformance:
             N = X_org.shape[0]
             Dor = X_org.shape[1]
 
-            DD = np.zeros((N, N), dtype=np.float64)
+            DD = np.zeros((N, N), dtype=self.dtype)
             DD_ptr = DD.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
             coranking.euclidean(X_org_C, N, Dor, DD_ptr)
             high_distance = DD.copy()
@@ -334,7 +337,7 @@ class CDEmbeddingPerformance:
             print("Calling Ctype function on embedded data")
             Demb = X_emb.shape[1]
 
-            DD = np.zeros((N, N), dtype=np.float64)
+            DD = np.zeros((N, N), dtype=self.dtype)
             DD_ptr = DD.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
             coranking.euclidean(X_emb_C, N, Demb, DD_ptr)
             low_distance = DD.copy()
@@ -398,15 +401,15 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
         Qnx score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.Qnx(Q, self.n_neighbours, self.scaled)
 
     def _return_Qtrustworthiness(
@@ -421,15 +424,15 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
         Trustworthiness score between 0 and 1. Higher means better
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.trustworthiness(Q, self.n_neighbours)
 
     def _return_Qcontinuity(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
@@ -442,15 +445,15 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
         Continuity score between 0 and 1. Higher means better
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.continuity(Q, self.n_neighbours)
 
     def _return_LCMC(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
@@ -463,15 +466,15 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
         LCMC score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.LCMC(Q, self.n_neighbours)
 
     def _return_nMRRE(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
@@ -484,15 +487,15 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
         nMRRE score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.nMRRE(Q, self.n_neighbours)
 
     def _return_vMRRE(self, X_org: np.array, X_emb: np.array, Q: np.array = None):
@@ -505,23 +508,27 @@ class CDEmbeddingPerformance:
             the original dataset as np.array
         X_emb:np.array
             the embedded data as np.array
+        Q:np.array
+            the coranking matrix as np.array
 
         Returns
         -----------
         vMRRE score as float
         """
         if Q is None:
-            print("calculating Q")
             Q = self._get_coranking_matrix(X_org, X_emb)
-
         return metrics_cy.vMRRE(Q, self.n_neighbours)
 
-    def _return_qnx_crm(self, Q: np.array):
+    def _return_qnx_crm(self, X_org: np.array, X_emb: np.array,Q: np.array=None):
         """
         Function for returning qnx_crm score from the coranking matrix
 
         Parameters
         ----------
+        X_org:np.array
+            the original dataset as np.array
+        X_emb:np.array
+            the embedded data as np.array
         Q:np.array
             the coranking matrix as np.array
 
@@ -529,14 +536,20 @@ class CDEmbeddingPerformance:
         -----------
         qnx_crm score as float
         """
+        if Q is None:
+            Q = self._get_coranking_matrix(X_org, X_emb)
         return qnx_crm(Q, self.n_neighbours)
 
-    def _return_rnx_crm(self, Q: np.array):
+    def _return_rnx_crm(self, X_org: np.array, X_emb: np.array, Q: np.array=None):
         """
         Function for returning rnx_crm score from the coranking matrix
 
         Parameters
         ----------
+       X_org:np.array
+            the original dataset as np.array
+        X_emb:np.array
+            the embedded data as np.array
         Q:np.array
             the coranking matrix as np.array
 
@@ -544,14 +557,20 @@ class CDEmbeddingPerformance:
         -----------
         rnx_crm score as float
         """
+        if Q is None:
+            Q = self._get_coranking_matrix(X_org, X_emb)
         return rnx_crm(Q, self.n_neighbours)
 
-    def _return_rnx_auc_crm(self, Q: np.array):
+    def _return_rnx_auc_crm(self, X_org: np.array, X_emb: np.array, Q: np.array=None):
         """
         Function for returning rnx_auc_crm score from the coranking matrix
 
         Parameters
         ----------
+        X_org:np.array
+            the original dataset as np.array
+        X_emb:np.array
+            the embedded data as np.array
         Q:np.array
             the coranking matrix as np.array
 
@@ -559,6 +578,8 @@ class CDEmbeddingPerformance:
         -----------
         rnx_auc_crm score as float
         """
+        if Q is None:
+            Q = self._get_coranking_matrix(X_org, X_emb)
         return rnx_auc_crm(Q)
 
     def _return_trustworthiness(self, X_org: np.array, X_emb: np.array):
@@ -837,6 +858,7 @@ def metrics_scores_iter(
     evaluators: dict,
     verbose: bool = True,
     return_dict: bool = False,
+    **args
 ):
     """Calculates scores for embedder using different metrics (evaluators).
 
@@ -859,7 +881,7 @@ def metrics_scores_iter(
     """
     results = {}
     for name, metric in evaluators.items():
-        results.update({name: metric(x, output)})
+        results.update({name: metric(x, output,**args)})
     if verbose:
         print_metric_scores(results)
     if return_dict:
@@ -1033,8 +1055,8 @@ if __name__ == "__main__":
     )
 
     # quality.qnx_crm
-    print(f"Making Qnx_crm: {quality._return_qnx_crm(Qmatrix)}")
+    print(f"Making Qnx_crm: {quality._return_qnx_crm(data_original, data_embedding,Qmatrix)}")
     # quality.rnx_crm
-    print(f"Making Rnx_crm: {quality._return_rnx_crm(Qmatrix)}")
+    print(f"Making Rnx_crm: {quality._return_rnx_crm(data_original, data_embedding,Qmatrix)}")
     # quality.rnx_auc_crm
-    print(f"Making Qnx_auc_crm: {quality._return_rnx_auc_crm(Qmatrix)}")
+    print(f"Making Qnx_auc_crm: {quality._return_rnx_auc_crm(data_original, data_embedding)}")

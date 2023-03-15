@@ -5,11 +5,11 @@ import time
 from collections import defaultdict
 import math
 import itertools
-from hembedder.utils.quality_metrics import metrics_scores_iter
 import csv
-from sklearn.preprocessing import StandardScaler
 from multiprocessing.dummy import Pool as ThreadPool
+from hembedder.utils.quality_metrics import compute_coranking_matrix
 from tqdm import tqdm
+
 
 class Hyperparameter_tuning:
     """
@@ -25,7 +25,7 @@ class Hyperparameter_tuning:
             file_name:str,
             sample_size=10000,
             metric_chuck_size:int=5000,
-            standardised:bool = False, 
+            scaler=None,
             num_iter:int = 10,
             n_parjobs:int = 10,
             dtype = np.float32,
@@ -33,8 +33,13 @@ class Hyperparameter_tuning:
             **kwargs):
         """
         Setting up parameters for the hyperpameter tuning. Two choices to choose from: random search or grid search.
+        
         Can also benchmark different subsample sizes. To benchmark different subsample sizes, add a list of sizes 
         to sample_size e.g sample_size = [1000,2000] instead of an int.
+        
+        Can also evaluate using Q-matrix related metrics. Please include "Q_matrix" string in the name/key of the related
+        Q-matrix metrics in the evaluator dictionary to use this function.
+
         Paramters
         ---------
         X: numpy array
@@ -55,8 +60,8 @@ class Hyperparameter_tuning:
             X size.
         metric_chuck_size:int
             number of samples to size down to for metric calculations. Must not be more than sample_size
-        standardised:optional, bool
-            whether to standardise the data
+        scaler
+            whether to standardise the data using various scalers
         num_iters: optional, int
             number of iterations to run for each hyperparameter setting.
         dtype:numpy array of floats,
@@ -74,7 +79,7 @@ class Hyperparameter_tuning:
         self.file_name = file_name
         self.sample_size = sample_size
         self.metric_chuck_size = metric_chuck_size
-        self.standardised = standardised
+        self.scaler = scaler
         self.max_evals = None
         self.num_iter = num_iter
         self.n_parjobs = n_parjobs
@@ -220,20 +225,23 @@ class Hyperparameter_tuning:
             indexes_embedder = subsampling_return_indexes(self.X,size)
             # Evaluate randomly selected hyperparameters
             sub_original = self.X[indexes_embedder]
-            embedding_data = sub_original.copy().astype(self.dtype)
-            #Check for scaling
-            if(self.standardised):
-                scaler = StandardScaler()
-                embedding_data = scaler.fit_transform(sub_original).astype(self.dtype)
+            #To scale or not to scale
+            embedding_data = to_scale(sub_original,self.scaler).astype(self.dtype)
             #Get indexes for subsampling of data for benchmarking
             indexes_metrics= subsampling_return_indexes(sub_original, 
                                                 self.metric_chuck_size)
             # Create a dictionary for later reference in multi-thread
-            emb_dict = {"original" : sub_original[indexes_metrics],
-                    "embedded" : self.embedder(**parameter).
-                    fit_transform(embedding_data).
-                    astype(self.dtype)[indexes_metrics],
+            eval_original =  sub_original[indexes_metrics]
+            eval_embedded = self.embedder(**parameter).\
+                fit_transform(embedding_data).\
+                astype(self.dtype)[indexes_metrics]
+            emb_dict = {"x" :eval_original,
+                    "output" : eval_embedded,
                     "evaluators":self.evaluators}
+            if("Q_matrix" in ('_').join(self.evaluators.keys())):
+                emb_dict.update\
+                ({"Q":compute_coranking_matrix(eval_original, \
+                eval_embedded, leave = False).astype(np.int32)})
             benchmark_list.append(emb_dict)
             times.append(time.time()-start)
         return benchmark_list, times
@@ -252,11 +260,7 @@ class Hyperparameter_tuning:
         ---------
             the benchmark scores
         """
-        scores = metrics_scores_iter(
-            benchmark_dict["original"],
-            benchmark_dict["embedded"],
-            benchmark_dict["evaluators"],
-            return_dict= True, verbose=False)
+        scores = metrics_scores_iter(**benchmark_dict)
         return scores
        
     def store_param_results(self,indx,scores, hyperparameters, times):
@@ -294,8 +298,57 @@ class Hyperparameter_tuning:
         f"{int(self.results.loc[0]['sample_size'])} sample size are")
         print(self.results.loc[0][list(self.evaluators.keys())]) 
         print("with parameter:", self.results['params'][0])
-       
-    
+
+def to_scale(x: np.array,scaler=None):
+    """To scale or not to scale that is the question for this function
+
+    Parameters
+    ---------
+    x: np.array
+        original unemedded data
+    scaler: function
+        function call for various scalers to scale the data
+
+    Returns
+    ---------
+    either scaled data or no scaled data
+    """
+    if(scaler is None):
+        return x
+    return scaler.fit_transform(x)
+
+
+def metrics_scores_iter(
+    x: np.array,
+    output: np.array,
+    evaluators: dict,
+    **args
+):
+    """Calculates scores for embedder using different metrics (evaluators).
+
+    Parameters
+    ---------
+    x: np.array
+        original unemedded data
+    output: np.array
+        output array from the embedder for evaluation
+    evaluators: dict
+        further arguments to include the metrics (as function statement in a dict)
+        if the functions take x and output as arguments.
+
+    Returns
+    ---------
+    results: dict
+        dictonary of metrics and their calculated scores.
+    """
+    results = {}
+    for name, metric in evaluators.items():
+        if("Q" in args.keys() and "Q_matrix" in name):
+            results.update({name: metric(x, output,args["Q"])})
+        else:
+            results.update({name: metric(x, output)})
+    return results
+
 def subsampling_return_indexes(X, subsampling):
     rand = np.random.default_rng()
     n_data = len(X) 

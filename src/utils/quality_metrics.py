@@ -80,7 +80,7 @@ def iterate_compute_distances(data):
     D = np.zeros((n, n), dtype="float32")
     col = 0
     for i, distances in enumerate(
-        pairwise_distances_chunked(data, n_jobs=-1),
+        pairwise_distances_chunked(data, n_jobs=-1,metric='cityblock'),
     ):
         D[col : col + len(distances)] = distances
     return D

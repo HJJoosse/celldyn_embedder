@@ -317,7 +317,7 @@ warnings.filterwarnings("ignore")
 
 class Sammon(BaseEstimator, TransformerMixin):
     # source: https://github.com/bghojogh/MDS-SammonMapping-Isomap
-
+    # source: https://github.com/cots-lab/sammon-mapping/blob/main/sammon/sammon.py
     def __init__(
         self,
         n_components,

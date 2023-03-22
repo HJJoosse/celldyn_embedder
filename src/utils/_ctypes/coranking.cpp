@@ -41,7 +41,6 @@ extern "C"
   {
 
     int *inds = (int *)malloc(N * sizeof(int));
-    // int* ranks = (int*) malloc(N * sizeof(int));
     const double *ptr;
 
     for (int i = 0; i < N; i++)

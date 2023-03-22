@@ -80,7 +80,7 @@ def iterate_compute_distances(data):
     D = np.zeros((n, n), dtype="float32")
     col = 0
     for i, distances in enumerate(
-        pairwise_distances_chunked(data, n_jobs=-1),
+        pairwise_distances_chunked(data, n_jobs=-1,metric='cityblock'),
     ):
         D[col : col + len(distances)] = distances
     return D
@@ -304,8 +304,8 @@ class CDEmbeddingPerformance:
             coranking = cdll.LoadLibrary(
                 os.path.join(script_path, "_ctypes/coranking.so")
             )
-            # coranking = ctypes.CDLL(os.path.join(script_path, "_ctypes/coranking.so"))
-            # from hembedder.utils._ctypes import coranking
+            #coranking = ctypes.CDLL(os.path.join(script_path, "_ctypes/coranking.so"))
+            #from hembedder.utils._ctypes import coranking
 
             # print("Making ravelled arrays")
             # X_org_vector = np.ravel(X_org, order="F")
@@ -369,6 +369,9 @@ class CDEmbeddingPerformance:
             )
             low_ranking = Rm.copy()
 
+            # print("Checking if rankmatrix is correct")
+            low_ranking_test = low_distance.argsort(axis=1).argsort(axis=1)
+            assert (low_ranking-low_ranking_test).sum() == 0, "Rankmatrix is not correct"
             ##
             coranking.coranking.restype = None
             coranking.coranking.argtypes = [
@@ -386,7 +389,7 @@ class CDEmbeddingPerformance:
                 low_ranking.ctypes.data_as(ctypes.POINTER(ctypes.c_int)),
                 N,
                 Q_ptr,
-            )
+            )         
             return Q
         else:
             raise ValueError("Backend not supported")

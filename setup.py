@@ -83,7 +83,7 @@ setup(
     description="A package for embedding  hematological data",
     author="Huibert-Jan Joosse, Bram van Es, Chontira Chumsaeng, Jille van der Togt",
     author_email="bes3@umcutrecht.nl",
-    packages=["hembedder.prepping", "hembedder.utils"],
+    packages=["hembedder.prepping", "hembedder.utils", "hembedder.embedder"],
     package_dir={"hembedder": "src"},
     py_modules=["hembedder"],
     # data_files=dlls,

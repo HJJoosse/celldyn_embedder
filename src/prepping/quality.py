@@ -78,10 +78,16 @@ class QcControl(BaseEstimator, TransformerMixin):
         """
         Start the logger.
         """
-        real_local_directory = os.path.dirname(os.path.realpath(__file__))
-        file_handler = logging.FileHandler("celldyn_qc.log")
-        file_handler.setFormatter(formatter)
-        logger.addHandler(file_handler)
+        #real_local_directory = os.path.dirname(os.path.realpath(__file__))
+        
+        try:
+            os.mkdir("logs")
+            file_handler = logging.FileHandler("logs/celldyn_qc.log")
+            file_handler.setFormatter(formatter)
+            logger.addHandler(file_handler)
+        except PermissionError:
+            logger.debug("Could not create logs directory")
+            pass
         logger.setLevel(logging.DEBUG)
 
     def _parse_filter_list(self, filters):
@@ -254,7 +260,8 @@ class QcControl(BaseEstimator, TransformerMixin):
         change_cols = ["c_b_phpr", "c_b_hdw", "c_b_phpo"]
         change_cols = list(set(change_cols).intersection(set(temp_cols)))
 
-        df.loc[lambda x: x.c_b_hdw < 0.0001, change_cols] = np.nan
+        if 'c_b_hdw' in change_cols:
+            df.loc[lambda x: x.c_b_hdw < 0.0001, change_cols] = np.nan
 
         change_cols = [
             "c_b_mchcr",
@@ -264,6 +271,7 @@ class QcControl(BaseEstimator, TransformerMixin):
             "c_b_phpo",
             "c_b_phpr",
         ]
+        change_cols = list(set(change_cols).intersection(set(temp_cols)))
 
         conds = {
             "c_b_mchr": ("<", 0.0001, np.nan),

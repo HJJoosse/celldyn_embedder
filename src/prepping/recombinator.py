@@ -108,30 +108,66 @@ class CellDynRecombinator(BaseEstimator, TransformerMixin):
 
     def transform(self, X, y=None):
         _X = self._combine(X.copy())
+        cols = _X.columns.tolist()
+        if self.base_combos:       
+            if all([c in cols for c in ["c_b_lym", "c_b_plto", "c_b_neu"]]):     
+                _X = _X.assign(COMBO_SII=_X.c_b_plto*_X.c_b_neu/(_X.c_b_lym))     
 
-        if self.base_combos:
-            _X = _X.assign(COMBO_SII=_X.c_b_plto*_X.c_b_neu/(_X.c_b_lym))
-            _X = _X.assign(COMBO_NHL=_X.c_b_neu*_X.c_b_hb/_X.c_b_lym)
-            _X = _X.assign(COMBO_NLR=_X.c_b_neu/_X.c_b_lym)
-            _X = _X.assign(COMBO_PLR=_X.c_b_plto/_X.c_b_lym)
-            _X = _X.assign(COMBO_HLR=_X.c_b_hb/_X.c_b_lym)
-            _X = _X.assign(COMBO_LMR=_X.c_b_lym/_X.c_b_mon)
-            _X = _X.assign(COMBO_WRR=_X.c_b_wbc/_X.c_b_rbco)
-            _X = _X.assign(COMBO_NWR=_X.c_b_neu/(1+_X.c_b_wbc-_X.c_b_neu))
-            _X = _X.assign(COMBO_WPR=_X.c_b_wbc/_X.c_b_plto)
-            _X = _X.assign(COMBO_PRR=_X.c_b_plto/_X.c_b_rbco)
-            _X = _X.assign(COMBO_RHR=_X.c_b_retc/_X.c_b_hb)
-            _X = _X.assign(COMBO_RIR=_X.c_b_rbco/(1+_X.c_b_retc+_X.c_b_irf))
-            _X = _X.assign(COMBO_HHR=_X.c_b_ht/_X.c_b_hb)
-            _X = _X.assign(COMBO_LSR=_X.c_b_limn/_X.c_b_seg)
-            _X = _X.assign(COMBO_PMR=_X.c_b_plto/np.clip(_X.c_b_pmac,0.1,100))
-            _X = _X.assign(COMBO_LPR=_X.c_b_limn/_X.c_b_pimn)
-            _X = _X.assign(COMBO_MHR=_X.c_b_pmac/_X.c_b_hb)
-            _X = _X.assign(COMBO_MMR=_X.c_b_pmac/_X.c_b_pmic)
+            if all([c in cols for c in ["c_b_lym", "c_b_hb", "c_b_neu"]]): 
+                _X = _X.assign(COMBO_NHL=_X.c_b_neu*_X.c_b_hb/_X.c_b_lym)
+
+            if all([c in cols for c in ["c_b_lym", "c_b_neu"]]):
+                _X = _X.assign(COMBO_NLR=_X.c_b_neu/_X.c_b_lym)
+            
+            if all([c in cols for c in ["c_b_lym", "c_b_plto"]]):   
+                _X = _X.assign(COMBO_PLR=_X.c_b_plto/_X.c_b_lym)  
+            
+            if all([c in cols for c in ["c_b_lym", "c_b_hb"]]):   
+                _X = _X.assign(COMBO_HLR=_X.c_b_hb/_X.c_b_lym)
+
+            if all([c in cols for c in ["c_b_lym", "c_b_mon"]]):   
+                _X = _X.assign(COMBO_LMR=_X.c_b_lym/_X.c_b_mon)
+                
+            if all([c in cols for c in ["c_b_wbc", "c_b_rbco"]]):   
+                _X = _X.assign(COMBO_WRR=_X.c_b_wbc/_X.c_b_rbco)
+                
+            if all([c in cols for c in ["c_b_wbc", "c_b_neu"]]):
+                _X = _X.assign(COMBO_NWR=_X.c_b_neu/(1+_X.c_b_wbc-_X.c_b_neu))
+                                
+            if all([c in cols for c in ["c_b_wbc", "c_b_plto"]]): 
+                _X = _X.assign(COMBO_WPR=_X.c_b_wbc/_X.c_b_plto)
+                
+            if all([c in cols for c in ["c_b_rbco", "c_b_plto"]]):   
+                _X = _X.assign(COMBO_PRR=_X.c_b_plto/_X.c_b_rbco)
+                
+            if all([c in cols for c in ["c_b_retc", "c_b_hb"]]):   
+                _X = _X.assign(COMBO_RHR=_X.c_b_retc/_X.c_b_hb)
+                
+            if all([c in cols for c in ["c_b_rbco", "c_b_retc", "c_b_irf"]]):   
+                _X = _X.assign(COMBO_RIR=_X.c_b_rbco/(1+_X.c_b_retc+_X.c_b_irf))
+                
+            if all([c in cols for c in ["c_b_ht", "c_b_hb"]]):   
+                _X = _X.assign(COMBO_HHR=_X.c_b_ht/_X.c_b_hb)
+                
+            if all([c in cols for c in ["c_b_limn", "c_b_seg"]]):   
+                _X = _X.assign(COMBO_LSR=_X.c_b_limn/_X.c_b_seg)
+                
+            if all([c in cols for c in ["c_b_plto", "c_b_pmac"]]):   
+                _X = _X.assign(COMBO_PMR=_X.c_b_plto/np.clip(_X.c_b_pmac,0.1,100))
+                
+            if all([c in cols for c in ["c_b_limn", "c_b_pimn"]]):   
+                _X = _X.assign(COMBO_LPR=_X.c_b_limn/_X.c_b_pimn)
+                
+            if all([c in cols for c in ["c_b_pmac", "c_b_hb"]]):   
+                _X = _X.assign(COMBO_MHR=_X.c_b_pmac/_X.c_b_hb)
+                
+            if all([c in cols for c in ["c_b_pmac", "c_b_pmic"]]):   
+                _X = _X.assign(COMBO_MMR=_X.c_b_pmac/_X.c_b_pmic)
+                
             
             for col, func in base_transformations.items():
                 try:
-                    X[col] =X[col].apply(func)
+                    _X[col] = _X[col].apply(func)
                     self.combo_cols.append(col)
                 except:
                     self.errors.append(('transformations', f'problem with {col}'))       

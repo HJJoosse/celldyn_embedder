@@ -81,7 +81,10 @@ class QcControl(BaseEstimator, TransformerMixin):
         #real_local_directory = os.path.dirname(os.path.realpath(__file__))
         
         try:
-            os.mkdir("logs")
+            try:
+                os.mkdir("logs")
+            except FileExistsError:
+                pass
             file_handler = logging.FileHandler("logs/celldyn_qc.log")
             file_handler.setFormatter(formatter)
             logger.addHandler(file_handler)
@@ -98,6 +101,7 @@ class QcControl(BaseEstimator, TransformerMixin):
                 "rbc": self.qc_rbc,
                 "ranges": self.qc_plausible_range_filter,
                 "suspect": self.suspect_flag_filter,
+                "fail": self.fail_filter
             }
         else:
             for _filter in filters:
@@ -116,16 +120,25 @@ class QcControl(BaseEstimator, TransformerMixin):
 
     def _get_cols(self, df):
         self.count_columns = [c.lower() for c in df.columns if "c_cnt" in c]
-        self.meas_columns = [c.lower() for c in df.columns if "c_b" in c] + ["PLT"]
+        self.meas_columns = [c.lower() for c in df.columns if "c_b" in c] + ["plt"]
 
         if len(self.cols_include)>0:
             self.meas_columns = [c.lower() for c in self.meas_columns if c in self.cols_include]
 
         self.mode_columns = [c.lower() for c in df.columns if "c_m" in c]
         self.susp_columns = [c.lower() for c in df.columns if "c_s" in c]
-        self.alert_columns = [c.lower() for c in df.columns if "Alrt" in c]
+        self.alert_columns = [c.lower() for c in df.columns if "alrt" in c]
         self.fail_columns = [c.lower() for c in df.columns if "fail" in c]
         self.meas_names = ["_".join(c.split("_")[2:]) for c in self.meas_columns]
+
+        if (len(self.susp_columns)==0) & ('suspect' in self.filters.keys()):
+            raise ValueError("Suspect flag filter is selected, \
+                             but no suspect columns are present in the data")
+        
+        if (len(self.fail_columns)==0) & ('fail' in self.filters.keys()):
+            raise ValueError("Fail flag filter is selected, \
+                             but no fail columns are present in the data")
+                
 
     def _parse_filter(self):
         try:
@@ -211,7 +224,7 @@ class QcControl(BaseEstimator, TransformerMixin):
                     logger.info(f"The {k} variable was not present in CELLDYN")
             return x
 
-        temp_cols = [c.lower() for c in df]
+        temp_cols = [c.lower() for c in df.columns]
         real_cols = [c for c in df]
         df.columns = temp_cols
 
@@ -347,11 +360,12 @@ class QcControl(BaseEstimator, TransformerMixin):
         def _flag_val_check(val, flag, _min, _max):
             if flag == 1:
                 return val
-            if flag == 2:
+            elif flag == 2:
                 return np.nan
-            if (val >= _min) & (val <= _max):
+            elif (val >= _min) & (val <= _max):
                 return val
-            return np.nan
+            else:
+                return np.nan
 
         for meas_name in self.meas_names:
             meas_val = "c_b_" + meas_name
@@ -362,15 +376,17 @@ class QcControl(BaseEstimator, TransformerMixin):
                 min_val = float(filters["Min"])
                 max_val = float(filters["Max"])
 
-                if (np.isnan(min_val)) | (np.isnan(max_val)):
-                    pass
-                else:
-                    df.loc[:, meas_val] = df[[meas_val, meas_flag]].apply(
+                if (np.isnan(min_val)):
+                    min_val = -1e10
+                if (np.isnan(max_val)):
+                    max_val = 1e10
+
+                df.loc[:, meas_val] = df[[meas_val, meas_flag]].apply(
                         lambda x: _flag_val_check(x[0], x[1], min_val, max_val), axis=1
                     )
 
             except Exception as e:
-                pass
+                logger.debug(f"Exception in suspect_flag_filter: {e}, for {meas_name}")
         return df
 
     def fail_filter(self, df: pd.DataFrame):
@@ -406,9 +422,8 @@ class QcControl(BaseEstimator, TransformerMixin):
         _X = X.copy()
         for k, filter_fun in self.filters.items():
             logger.debug(f"Start filtering: {k}")
-            _X = filter_fun(_X.copy())
+            _X = filter_fun(_X)
             logger.debug(f"Completed filtering: {k}")
-
         return _X
 
     def get_params(self, deep=True):
@@ -417,3 +432,16 @@ class QcControl(BaseEstimator, TransformerMixin):
     def set_params(self, **kwargs):
         self.kwargs = kwargs
         return self
+
+
+if __name__ == "__main__":
+    test_data = [
+        {'c_b_neu': 2., 'c_s_neu': 2, 'plt': 2}
+    ]
+    test_data_df = pd.DataFrame(test_data)
+
+    qc = QcControl(cols_include=['c_b_neu', 'plt'],
+                   param_file='../..//assets/CelldynParams.xlsx')
+    qc.fit(test_data_df)
+    checked = qc.transform(test_data_df)
+    print(checked)

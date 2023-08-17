@@ -1,0 +1,1363 @@
+2023-08-15 18:16:33,084:hembedder.prepping.quality:Start filtering: leuko
+2023-08-15 18:16:33,742:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-15 18:16:33,745:hembedder.prepping.quality:Start filtering: rbc
+2023-08-15 18:16:34,236:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-15 18:16:34,237:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-15 18:16:34,238:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-15 18:16:34,239:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-15 18:16:34,240:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-15 18:16:34,241:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-15 18:16:34,242:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-15 18:16:34,243:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-15 18:16:34,249:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-15 18:16:34,253:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-15 18:16:34,254:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-15 18:16:34,255:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-15 18:16:34,257:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-15 18:16:34,466:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-15 18:16:34,467:hembedder.prepping.quality:Start filtering: ranges
+2023-08-15 18:16:36,683:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,685:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,686:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,766:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,768:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,769:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,770:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,772:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,773:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,774:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,782:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,783:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,784:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,785:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,786:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,787:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,789:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,790:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,793:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:36,795:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-15 18:16:37,014:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-15 18:16:37,015:hembedder.prepping.quality:Start filtering: suspect
+2023-08-15 18:16:37,633:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-16 11:37:30,524:hembedder.prepping.quality:Start filtering: leuko
+2023-08-16 11:37:31,034:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-16 11:37:31,036:hembedder.prepping.quality:Start filtering: rbc
+2023-08-16 11:37:31,478:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-16 11:37:31,479:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-16 11:37:31,480:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-16 11:37:31,481:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-16 11:37:31,484:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-16 11:37:31,485:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-16 11:37:31,486:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-16 11:37:31,487:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-16 11:37:31,495:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-16 11:37:31,496:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-16 11:37:31,497:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-16 11:37:31,498:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-16 11:37:31,499:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-16 11:37:31,669:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-16 11:37:31,672:hembedder.prepping.quality:Start filtering: ranges
+2023-08-16 11:37:33,586:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,588:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,589:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,677:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,679:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,681:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,682:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,685:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,687:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,690:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,713:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,716:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,720:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,723:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,731:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,735:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,737:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,740:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,752:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,761:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:37:33,943:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-16 11:37:33,947:hembedder.prepping.quality:Start filtering: suspect
+2023-08-16 11:37:34,494:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-16 11:58:05,542:hembedder.prepping.quality:Start filtering: leuko
+2023-08-16 11:58:05,555:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-16 11:58:05,555:hembedder.prepping.quality:Start filtering: rbc
+2023-08-16 11:58:05,557:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-16 11:58:05,558:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-16 11:58:05,560:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-16 11:58:05,562:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-16 11:58:05,566:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-16 11:58:05,568:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-16 11:58:05,570:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-16 11:58:05,571:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-16 11:58:05,577:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-16 11:58:05,580:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-16 11:58:05,581:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-16 11:58:05,583:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-16 11:58:05,585:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-16 11:58:05,587:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-16 11:58:05,588:hembedder.prepping.quality:Start filtering: ranges
+2023-08-16 11:58:07,178:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,180:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,182:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,190:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,192:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,193:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,194:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,195:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,197:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,199:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,204:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,206:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,207:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,208:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,209:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,210:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,212:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,214:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,218:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,221:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 11:58:07,237:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-16 11:58:07,239:hembedder.prepping.quality:Start filtering: suspect
+2023-08-16 11:58:07,252:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-16 12:45:36,747:hembedder.prepping.quality:Start filtering: leuko
+2023-08-16 12:45:36,747:hembedder.prepping.quality:Start filtering: leuko
+2023-08-16 12:45:36,753:hembedder.prepping.quality:nacv or namn not in data
+2023-08-16 12:45:36,753:hembedder.prepping.quality:nacv or namn not in data
+2023-08-16 12:45:36,755:hembedder.prepping.quality:nicv or nimn not in data
+2023-08-16 12:45:36,755:hembedder.prepping.quality:nicv or nimn not in data
+2023-08-16 12:45:36,757:hembedder.prepping.quality:ndcv or ndmn not in data
+2023-08-16 12:45:36,757:hembedder.prepping.quality:ndcv or ndmn not in data
+2023-08-16 12:45:36,760:hembedder.prepping.quality:nfcv or nfmn not in data
+2023-08-16 12:45:36,760:hembedder.prepping.quality:nfcv or nfmn not in data
+2023-08-16 12:45:36,763:hembedder.prepping.quality:licv or limn not in data
+2023-08-16 12:45:36,763:hembedder.prepping.quality:licv or limn not in data
+2023-08-16 12:45:36,769:hembedder.prepping.quality:lacv or lamn not in data
+2023-08-16 12:45:36,769:hembedder.prepping.quality:lacv or lamn not in data
+2023-08-16 12:45:36,772:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-16 12:45:36,772:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-16 12:45:36,784:hembedder.prepping.quality:Start filtering: rbc
+2023-08-16 12:45:36,784:hembedder.prepping.quality:Start filtering: rbc
+2023-08-16 12:45:36,788:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-16 12:45:36,788:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-16 12:45:36,790:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-16 12:45:36,790:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-16 12:45:36,791:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-16 12:45:36,791:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-16 12:45:36,793:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-16 12:45:36,793:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-16 12:45:36,795:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-16 12:45:36,795:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-16 12:45:36,796:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-16 12:45:36,796:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-16 12:45:36,803:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-16 12:45:36,803:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-16 12:45:36,807:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-16 12:45:36,807:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-16 12:45:36,809:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-16 12:45:36,809:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-16 12:45:36,821:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-16 12:45:36,821:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-16 12:45:36,823:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-16 12:45:36,823:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-16 12:45:36,825:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-16 12:45:36,825:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-16 12:45:36,826:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-16 12:45:36,826:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-16 12:45:36,828:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-16 12:45:36,828:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-16 12:45:36,830:hembedder.prepping.quality:Start filtering: ranges
+2023-08-16 12:45:36,830:hembedder.prepping.quality:Start filtering: ranges
+2023-08-16 12:45:38,325:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,325:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,328:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,328:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,332:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,332:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,339:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,339:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,343:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,343:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,346:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,346:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,349:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,349:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,352:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,352:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,360:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,360:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,365:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,365:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,372:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,372:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,375:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,375:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 12:45:38,378:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-16 12:45:38,378:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-16 12:45:38,381:hembedder.prepping.quality:Start filtering: suspect
+2023-08-16 12:45:38,381:hembedder.prepping.quality:Start filtering: suspect
+2023-08-16 12:45:38,393:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-16 12:45:38,393:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-16 13:18:59,345:hembedder.prepping.quality:Start filtering: leuko
+2023-08-16 13:18:59,855:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-16 13:18:59,856:hembedder.prepping.quality:Start filtering: rbc
+2023-08-16 13:19:00,244:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-16 13:19:00,245:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-16 13:19:00,246:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-16 13:19:00,249:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-16 13:19:00,252:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-16 13:19:00,253:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-16 13:19:00,254:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-16 13:19:00,256:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-16 13:19:00,265:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-16 13:19:00,270:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-16 13:19:00,272:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-16 13:19:00,274:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-16 13:19:00,275:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-16 13:19:00,444:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-16 13:19:00,446:hembedder.prepping.quality:Start filtering: ranges
+2023-08-16 13:19:02,279:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,280:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,281:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,345:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,347:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,349:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,351:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,353:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,355:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,357:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,363:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,365:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,367:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,370:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,372:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,374:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,377:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,379:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,384:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,388:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:19:02,546:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-16 13:19:02,547:hembedder.prepping.quality:Start filtering: suspect
+2023-08-16 13:19:03,037:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-16 13:33:47,175:hembedder.prepping.quality:Start filtering: leuko
+2023-08-16 13:33:47,699:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-16 13:33:47,701:hembedder.prepping.quality:Start filtering: rbc
+2023-08-16 13:33:48,030:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-16 13:33:48,031:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-16 13:33:48,033:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-16 13:33:48,035:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-16 13:33:48,036:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-16 13:33:48,038:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-16 13:33:48,039:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-16 13:33:48,040:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-16 13:33:48,049:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-16 13:33:48,051:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-16 13:33:48,052:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-16 13:33:48,054:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-16 13:33:48,055:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-16 13:33:48,184:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-16 13:33:48,187:hembedder.prepping.quality:Start filtering: ranges
+2023-08-16 13:33:49,851:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,852:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,854:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,911:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,913:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,915:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,917:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,918:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,920:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,922:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,928:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,930:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,931:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,934:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,935:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,937:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,938:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,940:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,944:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:49,945:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 13:33:50,121:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-16 13:33:50,122:hembedder.prepping.quality:Start filtering: suspect
+2023-08-16 13:33:50,698:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-16 17:59:29,067:hembedder.prepping.quality:Start filtering: leuko
+2023-08-16 17:59:29,573:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-16 17:59:29,574:hembedder.prepping.quality:Start filtering: rbc
+2023-08-16 17:59:29,913:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-16 17:59:29,915:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-16 17:59:29,916:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-16 17:59:29,917:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-16 17:59:29,918:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-16 17:59:29,919:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-16 17:59:29,921:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-16 17:59:29,922:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-16 17:59:29,929:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-16 17:59:29,931:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-16 17:59:29,932:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-16 17:59:29,933:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-16 17:59:29,934:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-16 17:59:30,066:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-16 17:59:30,068:hembedder.prepping.quality:Start filtering: ranges
+2023-08-16 17:59:31,865:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,867:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,868:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,933:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,935:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,937:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,940:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,943:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,944:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,947:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,953:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,954:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,957:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,959:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,960:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,962:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,964:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,966:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,969:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:31,971:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-16 17:59:32,152:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-16 17:59:32,153:hembedder.prepping.quality:Start filtering: suspect
+2023-08-16 17:59:32,648:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 10:19:51,076:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 10:19:51,571:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 10:19:51,572:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 10:19:51,955:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 10:19:51,957:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 10:19:51,958:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 10:19:51,960:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 10:19:51,961:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 10:19:51,963:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 10:19:51,964:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 10:19:51,965:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 10:19:51,972:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 10:19:51,973:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 10:19:51,975:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 10:19:51,976:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 10:19:51,977:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 10:19:52,066:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 10:19:52,067:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 10:19:54,196:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,198:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,200:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,259:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,260:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,262:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,263:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,265:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,267:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,268:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,274:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,276:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,278:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,280:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,282:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,284:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,285:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,286:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,290:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,291:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 10:19:54,416:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 10:19:54,418:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 10:19:54,997:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 11:37:14,734:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 11:37:14,734:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 11:37:15,496:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 11:37:15,496:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 11:37:15,499:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 11:37:15,499:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 11:37:15,934:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 11:37:15,934:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 11:37:15,940:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 11:37:15,940:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 11:37:15,944:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 11:37:15,944:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 11:37:15,948:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 11:37:15,948:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 11:37:15,950:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 11:37:15,950:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 11:37:15,955:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 11:37:15,955:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 11:37:15,958:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 11:37:15,958:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 11:37:15,959:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 11:37:15,959:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 11:37:15,970:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 11:37:15,970:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 11:37:15,972:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 11:37:15,972:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 11:37:15,974:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 11:37:15,974:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 11:37:15,976:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 11:37:15,976:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 11:37:15,978:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 11:37:15,978:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 11:37:16,110:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 11:37:16,110:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 11:37:16,112:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 11:37:16,112:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 11:37:18,349:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,349:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,352:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,352:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,354:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,354:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,425:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,425:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,428:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,428:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,431:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,431:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,433:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,433:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,436:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,436:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,439:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,439:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,442:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,442:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,449:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,449:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,451:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,451:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,453:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,453:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,456:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,456:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,458:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,458:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,460:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,460:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,462:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,462:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,465:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,465:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,468:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,468:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,471:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,471:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 11:37:18,609:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 11:37:18,609:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 11:37:18,613:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 11:37:18,613:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 11:37:19,159:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 11:37:19,159:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 12:00:42,719:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 12:00:42,759:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 12:00:42,769:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 12:00:42,770:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 12:00:42,771:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 12:00:42,772:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 12:00:42,774:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 12:00:42,775:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 12:00:42,776:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 12:00:42,777:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 12:00:42,778:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 12:00:42,784:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 12:00:42,785:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 12:00:42,786:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 12:00:42,787:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 12:00:42,788:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 12:00:42,790:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 12:00:42,791:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 12:00:45,540:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,543:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,546:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,652:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,654:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,656:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,658:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,664:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,667:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,670:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,689:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,697:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,700:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,702:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,704:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,706:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,710:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,713:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,720:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,723:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,802:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 12:00:45,812:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 12:00:45,827:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 12:00:45,839:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_wbc'] not in index", for wbc
+2023-08-17 12:00:45,846:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for wvf
+2023-08-17 12:00:45,853:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_neu'] not in index", for neu
+2023-08-17 12:00:45,865:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_seg'] not in index", for seg
+2023-08-17 12:00:45,867:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_lym'] not in index", for lym
+2023-08-17 12:00:45,882:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for lyme
+2023-08-17 12:00:45,896:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mon'] not in index", for mon
+2023-08-17 12:00:45,902:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for mone
+2023-08-17 12:00:45,910:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_eos'] not in index", for eos
+2023-08-17 12:00:45,916:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_bas'] not in index", for bas
+2023-08-17 12:00:45,919:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pneu'] not in index", for pneu
+2023-08-17 12:00:45,921:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pseg'] not in index", for pseg
+2023-08-17 12:00:45,923:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_plym'] not in index", for plym
+2023-08-17 12:00:45,927:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for plyme
+2023-08-17 12:00:45,930:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pmon'] not in index", for pmon
+2023-08-17 12:00:45,931:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pmone
+2023-08-17 12:00:45,934:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_peos'] not in index", for peos
+2023-08-17 12:00:45,937:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pbas'] not in index", for pbas
+2023-08-17 12:00:45,939:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rbci'] not in index", for rbci
+2023-08-17 12:00:45,941:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rbco'] not in index", for rbco
+2023-08-17 12:00:45,943:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hgb_usa'] not in index", for hgb_usa
+2023-08-17 12:00:45,945:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mcv'] not in index", for mcv
+2023-08-17 12:00:45,947:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rdw'] not in index", for rdw
+2023-08-17 12:00:45,948:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmic', for pmic
+2023-08-17 12:00:45,949:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmac', for pmac
+2023-08-17 12:00:45,950:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mch_usa', for mch_usa
+2023-08-17 12:00:45,952:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc_usa'] not in index", for mchc_usa
+2023-08-17 12:00:45,954:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_ht'] not in index", for ht
+2023-08-17 12:00:45,957:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_plto'] not in index", for plto
+2023-08-17 12:00:45,960:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_plti'] not in index", for plti
+2023-08-17 12:00:45,962:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mpv'] not in index", for mpv
+2023-08-17 12:00:45,968:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pct
+2023-08-17 12:00:45,970:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pdw
+2023-08-17 12:00:45,973:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_retc'] not in index", for retc
+2023-08-17 12:00:45,974:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pretc
+2023-08-17 12:00:45,976:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for irf
+2023-08-17 12:00:45,977:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpo', for phpo
+2023-08-17 12:00:45,978:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpr', for phpr
+2023-08-17 12:00:45,980:hembedder.prepping.quality:Exception in suspect_flag_filter: 'hdw', for hdw
+2023-08-17 12:00:45,981:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mcvr', for mcvr
+2023-08-17 12:00:45,983:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchr', for mchr
+2023-08-17 12:00:45,984:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchcr', for mchcr
+2023-08-17 12:00:45,987:hembedder.prepping.quality:Exception in suspect_flag_filter: 'prp', for prp
+2023-08-17 12:00:45,989:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for namn
+2023-08-17 12:00:45,989:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nacv
+2023-08-17 12:00:45,991:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nimn
+2023-08-17 12:00:45,993:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nicv
+2023-08-17 12:00:46,001:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npmn
+2023-08-17 12:00:46,016:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npcv
+2023-08-17 12:00:46,018:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndmn
+2023-08-17 12:00:46,032:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndcv
+2023-08-17 12:00:46,038:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfmn
+2023-08-17 12:00:46,041:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfcv
+2023-08-17 12:00:46,046:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lamn', for lamn
+2023-08-17 12:00:46,050:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lacv', for lacv
+2023-08-17 12:00:46,056:hembedder.prepping.quality:Exception in suspect_flag_filter: 'limn', for limn
+2023-08-17 12:00:46,060:hembedder.prepping.quality:Exception in suspect_flag_filter: 'licv', for licv
+2023-08-17 12:00:46,061:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pimn', for pimn
+2023-08-17 12:00:46,063:hembedder.prepping.quality:Exception in suspect_flag_filter: 'picv', for picv
+2023-08-17 12:00:46,069:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppmn', for ppmn
+2023-08-17 12:00:46,071:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppcv', for ppcv
+2023-08-17 12:00:46,072:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcimn
+2023-08-17 12:00:46,073:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcicv
+2023-08-17 12:00:46,075:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfmn
+2023-08-17 12:00:46,077:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfcv
+2023-08-17 12:00:46,079:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfmn', for rtcfmn
+2023-08-17 12:00:46,086:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfcv', for rtcfcv
+2023-08-17 12:00:46,088:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hb'] not in index", for hb
+2023-08-17 12:00:46,090:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mch'] not in index", for mch
+2023-08-17 12:00:46,092:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc'] not in index", for mchc
+2023-08-17 12:00:46,094:hembedder.prepping.quality:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-08-17 12:00:46,096:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 12:00:46,096:hembedder.prepping.quality:Start filtering: fail
+2023-08-17 12:00:46,099:hembedder.prepping.quality:Completed filtering: fail
+2023-08-17 15:18:25,970:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 15:18:25,970:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 15:18:26,007:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 15:18:26,007:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 15:18:26,010:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 15:18:26,010:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 15:18:26,013:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:18:26,013:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:18:26,016:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:18:26,016:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:18:26,019:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:18:26,019:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:18:26,027:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:18:26,027:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:18:26,036:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:18:26,036:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:18:26,040:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:18:26,040:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:18:26,044:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:18:26,044:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:18:26,048:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:18:26,048:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:18:26,059:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:18:26,059:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:18:26,065:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:18:26,065:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:18:26,071:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:18:26,071:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:18:26,077:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:18:26,077:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:18:26,080:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:18:26,080:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:18:26,082:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 15:18:26,082:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 15:18:26,084:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 15:18:26,084:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 15:18:27,672:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,672:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,679:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,679:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,685:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,685:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,749:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,749:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,757:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,757:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,762:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,762:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,767:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,767:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,773:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,773:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,781:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,781:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,788:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,788:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,798:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,798:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,803:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,803:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,808:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,808:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,813:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,813:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,818:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,818:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,823:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,823:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,827:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,827:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,831:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,831:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,838:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,838:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,843:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,843:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,880:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,880:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:18:27,887:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 15:18:27,887:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 15:18:27,892:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 15:18:27,892:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 15:18:27,899:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_wbc'] not in index", for wbc
+2023-08-17 15:18:27,899:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_wbc'] not in index", for wbc
+2023-08-17 15:18:27,906:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for wvf
+2023-08-17 15:18:27,906:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for wvf
+2023-08-17 15:18:27,914:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_neu'] not in index", for neu
+2023-08-17 15:18:27,914:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_neu'] not in index", for neu
+2023-08-17 15:18:27,920:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_seg'] not in index", for seg
+2023-08-17 15:18:27,920:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_seg'] not in index", for seg
+2023-08-17 15:18:27,927:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_lym'] not in index", for lym
+2023-08-17 15:18:27,927:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_lym'] not in index", for lym
+2023-08-17 15:18:27,934:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for lyme
+2023-08-17 15:18:27,934:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for lyme
+2023-08-17 15:18:27,941:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mon'] not in index", for mon
+2023-08-17 15:18:27,941:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mon'] not in index", for mon
+2023-08-17 15:18:27,945:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for mone
+2023-08-17 15:18:27,945:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for mone
+2023-08-17 15:18:27,950:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_eos'] not in index", for eos
+2023-08-17 15:18:27,950:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_eos'] not in index", for eos
+2023-08-17 15:18:27,955:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_bas'] not in index", for bas
+2023-08-17 15:18:27,955:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_bas'] not in index", for bas
+2023-08-17 15:18:27,960:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pneu'] not in index", for pneu
+2023-08-17 15:18:27,960:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pneu'] not in index", for pneu
+2023-08-17 15:18:27,966:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pseg'] not in index", for pseg
+2023-08-17 15:18:27,966:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pseg'] not in index", for pseg
+2023-08-17 15:18:27,971:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_plym'] not in index", for plym
+2023-08-17 15:18:27,971:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_plym'] not in index", for plym
+2023-08-17 15:18:27,976:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for plyme
+2023-08-17 15:18:27,976:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for plyme
+2023-08-17 15:18:27,982:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pmon'] not in index", for pmon
+2023-08-17 15:18:27,982:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pmon'] not in index", for pmon
+2023-08-17 15:18:27,986:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pmone
+2023-08-17 15:18:27,986:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pmone
+2023-08-17 15:18:27,991:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_peos'] not in index", for peos
+2023-08-17 15:18:27,991:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_peos'] not in index", for peos
+2023-08-17 15:18:27,997:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pbas'] not in index", for pbas
+2023-08-17 15:18:27,997:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_pbas'] not in index", for pbas
+2023-08-17 15:18:28,003:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rbci'] not in index", for rbci
+2023-08-17 15:18:28,003:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rbci'] not in index", for rbci
+2023-08-17 15:18:28,008:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rbco'] not in index", for rbco
+2023-08-17 15:18:28,008:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rbco'] not in index", for rbco
+2023-08-17 15:18:28,014:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hgb_usa'] not in index", for hgb_usa
+2023-08-17 15:18:28,014:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hgb_usa'] not in index", for hgb_usa
+2023-08-17 15:18:28,019:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mcv'] not in index", for mcv
+2023-08-17 15:18:28,019:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mcv'] not in index", for mcv
+2023-08-17 15:18:28,025:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rdw'] not in index", for rdw
+2023-08-17 15:18:28,025:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rdw'] not in index", for rdw
+2023-08-17 15:18:28,030:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmic', for pmic
+2023-08-17 15:18:28,030:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmic', for pmic
+2023-08-17 15:18:28,035:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmac', for pmac
+2023-08-17 15:18:28,035:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmac', for pmac
+2023-08-17 15:18:28,039:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mch_usa', for mch_usa
+2023-08-17 15:18:28,039:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mch_usa', for mch_usa
+2023-08-17 15:18:28,044:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc_usa'] not in index", for mchc_usa
+2023-08-17 15:18:28,044:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc_usa'] not in index", for mchc_usa
+2023-08-17 15:18:28,050:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_ht'] not in index", for ht
+2023-08-17 15:18:28,050:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_ht'] not in index", for ht
+2023-08-17 15:18:28,057:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_plto'] not in index", for plto
+2023-08-17 15:18:28,057:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_plto'] not in index", for plto
+2023-08-17 15:18:28,063:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_plti'] not in index", for plti
+2023-08-17 15:18:28,063:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_plti'] not in index", for plti
+2023-08-17 15:18:28,068:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mpv'] not in index", for mpv
+2023-08-17 15:18:28,068:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mpv'] not in index", for mpv
+2023-08-17 15:18:28,100:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pct
+2023-08-17 15:18:28,100:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pct
+2023-08-17 15:18:28,107:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pdw
+2023-08-17 15:18:28,107:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pdw
+2023-08-17 15:18:28,114:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_retc'] not in index", for retc
+2023-08-17 15:18:28,114:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_retc'] not in index", for retc
+2023-08-17 15:18:28,122:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pretc
+2023-08-17 15:18:28,122:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pretc
+2023-08-17 15:18:28,128:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for irf
+2023-08-17 15:18:28,128:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for irf
+2023-08-17 15:18:28,134:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpo', for phpo
+2023-08-17 15:18:28,134:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpo', for phpo
+2023-08-17 15:18:28,142:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpr', for phpr
+2023-08-17 15:18:28,142:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpr', for phpr
+2023-08-17 15:18:28,149:hembedder.prepping.quality:Exception in suspect_flag_filter: 'hdw', for hdw
+2023-08-17 15:18:28,149:hembedder.prepping.quality:Exception in suspect_flag_filter: 'hdw', for hdw
+2023-08-17 15:18:28,156:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mcvr', for mcvr
+2023-08-17 15:18:28,156:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mcvr', for mcvr
+2023-08-17 15:18:28,162:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchr', for mchr
+2023-08-17 15:18:28,162:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchr', for mchr
+2023-08-17 15:18:28,168:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchcr', for mchcr
+2023-08-17 15:18:28,168:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchcr', for mchcr
+2023-08-17 15:18:28,174:hembedder.prepping.quality:Exception in suspect_flag_filter: 'prp', for prp
+2023-08-17 15:18:28,174:hembedder.prepping.quality:Exception in suspect_flag_filter: 'prp', for prp
+2023-08-17 15:18:28,181:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for namn
+2023-08-17 15:18:28,181:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for namn
+2023-08-17 15:18:28,188:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nacv
+2023-08-17 15:18:28,188:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nacv
+2023-08-17 15:18:28,195:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nimn
+2023-08-17 15:18:28,195:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nimn
+2023-08-17 15:18:28,202:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nicv
+2023-08-17 15:18:28,202:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nicv
+2023-08-17 15:18:28,209:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npmn
+2023-08-17 15:18:28,209:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npmn
+2023-08-17 15:18:28,216:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npcv
+2023-08-17 15:18:28,216:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npcv
+2023-08-17 15:18:28,224:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndmn
+2023-08-17 15:18:28,224:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndmn
+2023-08-17 15:18:28,232:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndcv
+2023-08-17 15:18:28,232:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndcv
+2023-08-17 15:18:28,237:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfmn
+2023-08-17 15:18:28,237:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfmn
+2023-08-17 15:18:28,243:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfcv
+2023-08-17 15:18:28,243:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfcv
+2023-08-17 15:18:28,250:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lamn', for lamn
+2023-08-17 15:18:28,250:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lamn', for lamn
+2023-08-17 15:18:28,258:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lacv', for lacv
+2023-08-17 15:18:28,258:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lacv', for lacv
+2023-08-17 15:18:28,265:hembedder.prepping.quality:Exception in suspect_flag_filter: 'limn', for limn
+2023-08-17 15:18:28,265:hembedder.prepping.quality:Exception in suspect_flag_filter: 'limn', for limn
+2023-08-17 15:18:28,272:hembedder.prepping.quality:Exception in suspect_flag_filter: 'licv', for licv
+2023-08-17 15:18:28,272:hembedder.prepping.quality:Exception in suspect_flag_filter: 'licv', for licv
+2023-08-17 15:18:28,279:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pimn', for pimn
+2023-08-17 15:18:28,279:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pimn', for pimn
+2023-08-17 15:18:28,287:hembedder.prepping.quality:Exception in suspect_flag_filter: 'picv', for picv
+2023-08-17 15:18:28,287:hembedder.prepping.quality:Exception in suspect_flag_filter: 'picv', for picv
+2023-08-17 15:18:28,294:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppmn', for ppmn
+2023-08-17 15:18:28,294:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppmn', for ppmn
+2023-08-17 15:18:28,300:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppcv', for ppcv
+2023-08-17 15:18:28,300:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppcv', for ppcv
+2023-08-17 15:18:28,308:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcimn
+2023-08-17 15:18:28,308:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcimn
+2023-08-17 15:18:28,315:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcicv
+2023-08-17 15:18:28,315:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcicv
+2023-08-17 15:18:28,322:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfmn
+2023-08-17 15:18:28,322:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfmn
+2023-08-17 15:18:28,329:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfcv
+2023-08-17 15:18:28,329:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfcv
+2023-08-17 15:18:28,337:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfmn', for rtcfmn
+2023-08-17 15:18:28,337:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfmn', for rtcfmn
+2023-08-17 15:18:28,346:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfcv', for rtcfcv
+2023-08-17 15:18:28,346:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfcv', for rtcfcv
+2023-08-17 15:18:28,661:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hb'] not in index", for hb
+2023-08-17 15:18:28,661:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hb'] not in index", for hb
+2023-08-17 15:18:28,669:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mch'] not in index", for mch
+2023-08-17 15:18:28,669:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mch'] not in index", for mch
+2023-08-17 15:18:28,678:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc'] not in index", for mchc
+2023-08-17 15:18:28,678:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc'] not in index", for mchc
+2023-08-17 15:18:28,689:hembedder.prepping.quality:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-08-17 15:18:28,689:hembedder.prepping.quality:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-08-17 15:18:28,695:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 15:18:28,695:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 15:18:28,702:hembedder.prepping.quality:Start filtering: fail
+2023-08-17 15:18:28,702:hembedder.prepping.quality:Start filtering: fail
+2023-08-17 15:18:28,708:hembedder.prepping.quality:Completed filtering: fail
+2023-08-17 15:18:28,708:hembedder.prepping.quality:Completed filtering: fail
+2023-08-17 15:28:27,604:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 15:28:27,604:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 15:28:27,604:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 15:28:27,690:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 15:28:27,690:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 15:28:27,690:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 15:28:27,694:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 15:28:27,694:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 15:28:27,694:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 15:28:27,697:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:28:27,697:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:28:27,697:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:28:27,701:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:28:27,701:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:28:27,701:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:28:27,704:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:28:27,704:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:28:27,704:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:28:27,708:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:28:27,708:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:28:27,708:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:28:27,712:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:28:27,712:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:28:27,712:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:28:27,715:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:28:27,715:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:28:27,715:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:28:27,718:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:28:27,718:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:28:27,718:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:28:27,722:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:28:27,722:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:28:27,722:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:28:27,739:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:28:27,739:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:28:27,739:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:28:27,743:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:28:27,743:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:28:27,743:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:28:27,746:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:28:27,746:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:28:27,746:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:28:27,749:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:28:27,749:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:28:27,749:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:28:27,752:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:28:27,752:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:28:27,752:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:28:27,755:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 15:28:27,755:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 15:28:27,755:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 15:28:27,758:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 15:28:27,758:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 15:28:27,758:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 15:28:29,214:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,214:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,214:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,218:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,218:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,218:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,222:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,222:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,222:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,325:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,325:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,325:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,329:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,329:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,329:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,333:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,333:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,333:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,336:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,336:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,336:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,339:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,339:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,339:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,342:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,342:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,342:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,346:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,346:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,346:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,353:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,353:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,353:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,357:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,357:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,357:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,360:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,360:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,360:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,364:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,364:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,364:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,368:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,368:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,368:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,372:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,372:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,372:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,376:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,376:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,376:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,380:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,380:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,380:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,386:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,386:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,386:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,390:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,390:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,390:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,436:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,436:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,436:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:29,440:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 15:28:29,440:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 15:28:29,440:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 15:28:29,444:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 15:28:29,444:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 15:28:29,444:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 15:28:36,323:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 15:28:36,323:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 15:28:36,323:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 15:28:36,323:hembedder.prepping.quality:Start filtering: leuko
+2023-08-17 15:28:36,418:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 15:28:36,418:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 15:28:36,418:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 15:28:36,418:hembedder.prepping.quality:Completed filtering: leuko
+2023-08-17 15:28:36,423:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 15:28:36,423:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 15:28:36,423:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 15:28:36,423:hembedder.prepping.quality:Start filtering: rbc
+2023-08-17 15:28:36,428:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:28:36,428:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:28:36,428:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:28:36,428:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:28:36,433:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:28:36,433:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:28:36,433:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:28:36,433:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:28:36,437:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:28:36,437:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:28:36,437:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:28:36,437:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:28:36,441:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:28:36,441:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:28:36,441:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:28:36,441:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:28:36,446:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:28:36,446:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:28:36,446:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:28:36,446:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:28:36,450:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:28:36,450:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:28:36,450:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:28:36,450:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:28:36,454:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:28:36,454:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:28:36,454:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:28:36,454:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:28:36,460:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:28:36,460:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:28:36,460:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:28:36,460:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:28:36,480:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:28:36,480:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:28:36,480:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:28:36,480:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:28:36,484:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:28:36,484:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:28:36,484:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:28:36,484:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:28:36,490:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:28:36,490:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:28:36,490:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:28:36,490:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:28:36,494:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:28:36,494:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:28:36,494:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:28:36,494:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:28:36,499:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:28:36,499:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:28:36,499:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:28:36,499:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:28:36,505:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 15:28:36,505:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 15:28:36,505:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 15:28:36,505:hembedder.prepping.quality:Completed filtering: rbc
+2023-08-17 15:28:36,510:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 15:28:36,510:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 15:28:36,510:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 15:28:36,510:hembedder.prepping.quality:Start filtering: ranges
+2023-08-17 15:28:37,913:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,913:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,913:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,913:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,918:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,918:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,918:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,918:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,924:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,924:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,924:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:37,924:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,021:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,021:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,021:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,021:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,026:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,026:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,026:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,026:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,031:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,031:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,031:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,031:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,036:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,036:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,036:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,036:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,041:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,041:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,041:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,041:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,045:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,045:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,045:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,045:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,051:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,051:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,051:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,051:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,059:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,059:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,059:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,059:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,064:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,064:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,064:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,064:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,069:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,069:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,069:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,069:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,074:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,074:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,074:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,074:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,078:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,078:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,078:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,078:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,084:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,084:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,084:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,084:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,090:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,090:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,090:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,090:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,096:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,096:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,096:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,096:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,103:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,103:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,103:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,103:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,108:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,108:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,108:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,108:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,164:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,164:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,164:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,164:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-08-17 15:28:38,171:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 15:28:38,171:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 15:28:38,171:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 15:28:38,171:hembedder.prepping.quality:Completed filtering: ranges
+2023-08-17 15:28:38,176:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 15:28:38,176:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 15:28:38,176:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 15:28:38,176:hembedder.prepping.quality:Start filtering: suspect
+2023-08-17 15:28:57,094:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for wvf
+2023-08-17 15:28:57,094:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for wvf
+2023-08-17 15:28:57,094:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for wvf
+2023-08-17 15:28:57,094:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for wvf
+2023-08-17 15:29:52,757:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for lyme
+2023-08-17 15:29:52,757:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for lyme
+2023-08-17 15:29:52,757:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for lyme
+2023-08-17 15:29:52,757:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for lyme
+2023-08-17 15:30:10,793:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for mone
+2023-08-17 15:30:10,793:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for mone
+2023-08-17 15:30:10,793:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for mone
+2023-08-17 15:30:10,793:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for mone
+2023-08-17 15:31:42,006:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for plyme
+2023-08-17 15:31:42,006:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for plyme
+2023-08-17 15:31:42,006:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for plyme
+2023-08-17 15:31:42,006:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for plyme
+2023-08-17 15:32:02,478:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pmone
+2023-08-17 15:32:02,478:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pmone
+2023-08-17 15:32:02,478:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pmone
+2023-08-17 15:32:02,478:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pmone
+2023-08-17 15:33:15,321:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hgb_usa'] not in index", for hgb_usa
+2023-08-17 15:33:15,321:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hgb_usa'] not in index", for hgb_usa
+2023-08-17 15:33:15,321:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hgb_usa'] not in index", for hgb_usa
+2023-08-17 15:33:15,321:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hgb_usa'] not in index", for hgb_usa
+2023-08-17 15:33:50,492:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmic', for pmic
+2023-08-17 15:33:50,492:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmic', for pmic
+2023-08-17 15:33:50,492:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmic', for pmic
+2023-08-17 15:33:50,492:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmic', for pmic
+2023-08-17 15:33:50,496:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmac', for pmac
+2023-08-17 15:33:50,496:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmac', for pmac
+2023-08-17 15:33:50,496:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmac', for pmac
+2023-08-17 15:33:50,496:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmac', for pmac
+2023-08-17 15:33:50,501:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mch_usa', for mch_usa
+2023-08-17 15:33:50,501:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mch_usa', for mch_usa
+2023-08-17 15:33:50,501:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mch_usa', for mch_usa
+2023-08-17 15:33:50,501:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mch_usa', for mch_usa
+2023-08-17 15:33:50,506:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc_usa'] not in index", for mchc_usa
+2023-08-17 15:33:50,506:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc_usa'] not in index", for mchc_usa
+2023-08-17 15:33:50,506:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc_usa'] not in index", for mchc_usa
+2023-08-17 15:33:50,506:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc_usa'] not in index", for mchc_usa
+2023-08-17 15:35:01,130:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pct
+2023-08-17 15:35:01,130:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pct
+2023-08-17 15:35:01,130:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pct
+2023-08-17 15:35:01,130:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pct
+2023-08-17 15:35:01,134:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pdw
+2023-08-17 15:35:01,134:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pdw
+2023-08-17 15:35:01,134:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pdw
+2023-08-17 15:35:01,134:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pdw
+2023-08-17 15:35:19,384:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pretc
+2023-08-17 15:35:19,384:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pretc
+2023-08-17 15:35:19,384:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pretc
+2023-08-17 15:35:19,384:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for pretc
+2023-08-17 15:35:19,390:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for irf
+2023-08-17 15:35:19,390:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for irf
+2023-08-17 15:35:19,390:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for irf
+2023-08-17 15:35:19,390:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for irf
+2023-08-17 15:35:19,395:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpo', for phpo
+2023-08-17 15:35:19,395:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpo', for phpo
+2023-08-17 15:35:19,395:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpo', for phpo
+2023-08-17 15:35:19,395:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpo', for phpo
+2023-08-17 15:35:19,399:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpr', for phpr
+2023-08-17 15:35:19,399:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpr', for phpr
+2023-08-17 15:35:19,399:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpr', for phpr
+2023-08-17 15:35:19,399:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpr', for phpr
+2023-08-17 15:35:19,402:hembedder.prepping.quality:Exception in suspect_flag_filter: 'hdw', for hdw
+2023-08-17 15:35:19,402:hembedder.prepping.quality:Exception in suspect_flag_filter: 'hdw', for hdw
+2023-08-17 15:35:19,402:hembedder.prepping.quality:Exception in suspect_flag_filter: 'hdw', for hdw
+2023-08-17 15:35:19,402:hembedder.prepping.quality:Exception in suspect_flag_filter: 'hdw', for hdw
+2023-08-17 15:35:19,406:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mcvr', for mcvr
+2023-08-17 15:35:19,406:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mcvr', for mcvr
+2023-08-17 15:35:19,406:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mcvr', for mcvr
+2023-08-17 15:35:19,406:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mcvr', for mcvr
+2023-08-17 15:35:19,410:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchr', for mchr
+2023-08-17 15:35:19,410:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchr', for mchr
+2023-08-17 15:35:19,410:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchr', for mchr
+2023-08-17 15:35:19,410:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchr', for mchr
+2023-08-17 15:35:19,413:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchcr', for mchcr
+2023-08-17 15:35:19,413:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchcr', for mchcr
+2023-08-17 15:35:19,413:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchcr', for mchcr
+2023-08-17 15:35:19,413:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchcr', for mchcr
+2023-08-17 15:35:19,417:hembedder.prepping.quality:Exception in suspect_flag_filter: 'prp', for prp
+2023-08-17 15:35:19,417:hembedder.prepping.quality:Exception in suspect_flag_filter: 'prp', for prp
+2023-08-17 15:35:19,417:hembedder.prepping.quality:Exception in suspect_flag_filter: 'prp', for prp
+2023-08-17 15:35:19,417:hembedder.prepping.quality:Exception in suspect_flag_filter: 'prp', for prp
+2023-08-17 15:35:19,421:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for namn
+2023-08-17 15:35:19,421:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for namn
+2023-08-17 15:35:19,421:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for namn
+2023-08-17 15:35:19,421:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for namn
+2023-08-17 15:35:19,425:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nacv
+2023-08-17 15:35:19,425:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nacv
+2023-08-17 15:35:19,425:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nacv
+2023-08-17 15:35:19,425:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nacv
+2023-08-17 15:35:19,428:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nimn
+2023-08-17 15:35:19,428:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nimn
+2023-08-17 15:35:19,428:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nimn
+2023-08-17 15:35:19,428:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nimn
+2023-08-17 15:35:19,432:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nicv
+2023-08-17 15:35:19,432:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nicv
+2023-08-17 15:35:19,432:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nicv
+2023-08-17 15:35:19,432:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nicv
+2023-08-17 15:35:19,435:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npmn
+2023-08-17 15:35:19,435:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npmn
+2023-08-17 15:35:19,435:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npmn
+2023-08-17 15:35:19,435:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npmn
+2023-08-17 15:35:19,439:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npcv
+2023-08-17 15:35:19,439:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npcv
+2023-08-17 15:35:19,439:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npcv
+2023-08-17 15:35:19,439:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for npcv
+2023-08-17 15:35:19,443:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndmn
+2023-08-17 15:35:19,443:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndmn
+2023-08-17 15:35:19,443:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndmn
+2023-08-17 15:35:19,443:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndmn
+2023-08-17 15:35:19,446:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndcv
+2023-08-17 15:35:19,446:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndcv
+2023-08-17 15:35:19,446:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndcv
+2023-08-17 15:35:19,446:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for ndcv
+2023-08-17 15:35:19,451:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfmn
+2023-08-17 15:35:19,451:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfmn
+2023-08-17 15:35:19,451:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfmn
+2023-08-17 15:35:19,451:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfmn
+2023-08-17 15:35:19,457:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfcv
+2023-08-17 15:35:19,457:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfcv
+2023-08-17 15:35:19,457:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfcv
+2023-08-17 15:35:19,457:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for nfcv
+2023-08-17 15:35:19,461:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lamn', for lamn
+2023-08-17 15:35:19,461:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lamn', for lamn
+2023-08-17 15:35:19,461:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lamn', for lamn
+2023-08-17 15:35:19,461:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lamn', for lamn
+2023-08-17 15:35:19,465:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lacv', for lacv
+2023-08-17 15:35:19,465:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lacv', for lacv
+2023-08-17 15:35:19,465:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lacv', for lacv
+2023-08-17 15:35:19,465:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lacv', for lacv
+2023-08-17 15:35:19,469:hembedder.prepping.quality:Exception in suspect_flag_filter: 'limn', for limn
+2023-08-17 15:35:19,469:hembedder.prepping.quality:Exception in suspect_flag_filter: 'limn', for limn
+2023-08-17 15:35:19,469:hembedder.prepping.quality:Exception in suspect_flag_filter: 'limn', for limn
+2023-08-17 15:35:19,469:hembedder.prepping.quality:Exception in suspect_flag_filter: 'limn', for limn
+2023-08-17 15:35:19,473:hembedder.prepping.quality:Exception in suspect_flag_filter: 'licv', for licv
+2023-08-17 15:35:19,473:hembedder.prepping.quality:Exception in suspect_flag_filter: 'licv', for licv
+2023-08-17 15:35:19,473:hembedder.prepping.quality:Exception in suspect_flag_filter: 'licv', for licv
+2023-08-17 15:35:19,473:hembedder.prepping.quality:Exception in suspect_flag_filter: 'licv', for licv
+2023-08-17 15:35:19,477:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pimn', for pimn
+2023-08-17 15:35:19,477:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pimn', for pimn
+2023-08-17 15:35:19,477:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pimn', for pimn
+2023-08-17 15:35:19,477:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pimn', for pimn
+2023-08-17 15:35:19,481:hembedder.prepping.quality:Exception in suspect_flag_filter: 'picv', for picv
+2023-08-17 15:35:19,481:hembedder.prepping.quality:Exception in suspect_flag_filter: 'picv', for picv
+2023-08-17 15:35:19,481:hembedder.prepping.quality:Exception in suspect_flag_filter: 'picv', for picv
+2023-08-17 15:35:19,481:hembedder.prepping.quality:Exception in suspect_flag_filter: 'picv', for picv
+2023-08-17 15:35:19,485:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppmn', for ppmn
+2023-08-17 15:35:19,485:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppmn', for ppmn
+2023-08-17 15:35:19,485:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppmn', for ppmn
+2023-08-17 15:35:19,485:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppmn', for ppmn
+2023-08-17 15:35:19,488:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppcv', for ppcv
+2023-08-17 15:35:19,488:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppcv', for ppcv
+2023-08-17 15:35:19,488:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppcv', for ppcv
+2023-08-17 15:35:19,488:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppcv', for ppcv
+2023-08-17 15:35:19,492:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcimn
+2023-08-17 15:35:19,492:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcimn
+2023-08-17 15:35:19,492:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcimn
+2023-08-17 15:35:19,492:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcimn
+2023-08-17 15:35:19,496:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcicv
+2023-08-17 15:35:19,496:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcicv
+2023-08-17 15:35:19,496:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcicv
+2023-08-17 15:35:19,496:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcicv
+2023-08-17 15:35:19,500:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfmn
+2023-08-17 15:35:19,500:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfmn
+2023-08-17 15:35:19,500:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfmn
+2023-08-17 15:35:19,500:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfmn
+2023-08-17 15:35:19,504:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfcv
+2023-08-17 15:35:19,504:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfcv
+2023-08-17 15:35:19,504:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfcv
+2023-08-17 15:35:19,504:hembedder.prepping.quality:Exception in suspect_flag_filter: could not convert string to float: '-', for rbcfcv
+2023-08-17 15:35:19,508:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfmn', for rtcfmn
+2023-08-17 15:35:19,508:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfmn', for rtcfmn
+2023-08-17 15:35:19,508:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfmn', for rtcfmn
+2023-08-17 15:35:19,508:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfmn', for rtcfmn
+2023-08-17 15:35:19,515:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfcv', for rtcfcv
+2023-08-17 15:35:19,515:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfcv', for rtcfcv
+2023-08-17 15:35:19,515:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfcv', for rtcfcv
+2023-08-17 15:35:19,515:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfcv', for rtcfcv
+2023-08-17 15:36:13,048:hembedder.prepping.quality:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-08-17 15:36:13,048:hembedder.prepping.quality:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-08-17 15:36:13,048:hembedder.prepping.quality:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-08-17 15:36:13,048:hembedder.prepping.quality:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-08-17 15:36:13,122:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 15:36:13,122:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 15:36:13,122:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 15:36:13,122:hembedder.prepping.quality:Completed filtering: suspect
+2023-08-17 15:36:13,154:hembedder.prepping.quality:Start filtering: fail
+2023-08-17 15:36:13,154:hembedder.prepping.quality:Start filtering: fail
+2023-08-17 15:36:13,154:hembedder.prepping.quality:Start filtering: fail
+2023-08-17 15:36:13,154:hembedder.prepping.quality:Start filtering: fail
+2023-08-17 15:36:13,208:hembedder.prepping.quality:Processing failmode
+2023-08-17 15:36:13,208:hembedder.prepping.quality:Processing failmode
+2023-08-17 15:36:13,208:hembedder.prepping.quality:Processing failmode
+2023-08-17 15:36:13,208:hembedder.prepping.quality:Processing failmode
+2023-08-17 15:36:13,276:hembedder.prepping.quality:Exception: 'failmode', for failmode
+2023-08-17 15:36:13,276:hembedder.prepping.quality:Exception: 'failmode', for failmode
+2023-08-17 15:36:13,276:hembedder.prepping.quality:Exception: 'failmode', for failmode
+2023-08-17 15:36:13,276:hembedder.prepping.quality:Exception: 'failmode', for failmode
+2023-08-17 15:36:13,364:hembedder.prepping.quality:Processing failreti
+2023-08-17 15:36:13,364:hembedder.prepping.quality:Processing failreti
+2023-08-17 15:36:13,364:hembedder.prepping.quality:Processing failreti
+2023-08-17 15:36:13,364:hembedder.prepping.quality:Processing failreti
+2023-08-17 15:36:30,184:hembedder.prepping.quality:Processing failpreti
+2023-08-17 15:36:30,184:hembedder.prepping.quality:Processing failpreti
+2023-08-17 15:36:30,184:hembedder.prepping.quality:Processing failpreti
+2023-08-17 15:36:30,184:hembedder.prepping.quality:Processing failpreti
+2023-08-17 15:36:46,898:hembedder.prepping.quality:Processing failirf
+2023-08-17 15:36:46,898:hembedder.prepping.quality:Processing failirf
+2023-08-17 15:36:46,898:hembedder.prepping.quality:Processing failirf
+2023-08-17 15:36:46,898:hembedder.prepping.quality:Processing failirf
+2023-08-17 15:37:03,670:hembedder.prepping.quality:Processing failimn
+2023-08-17 15:37:03,670:hembedder.prepping.quality:Processing failimn
+2023-08-17 15:37:03,670:hembedder.prepping.quality:Processing failimn
+2023-08-17 15:37:03,670:hembedder.prepping.quality:Processing failimn
+2023-08-17 15:38:16,001:hembedder.prepping.quality:Processing failicv
+2023-08-17 15:38:16,001:hembedder.prepping.quality:Processing failicv
+2023-08-17 15:38:16,001:hembedder.prepping.quality:Processing failicv
+2023-08-17 15:38:16,001:hembedder.prepping.quality:Processing failicv
+2023-08-17 15:39:08,470:hembedder.prepping.quality:Processing failfmn
+2023-08-17 15:39:08,470:hembedder.prepping.quality:Processing failfmn
+2023-08-17 15:39:08,470:hembedder.prepping.quality:Processing failfmn
+2023-08-17 15:39:08,470:hembedder.prepping.quality:Processing failfmn
+2023-08-17 15:39:57,632:hembedder.prepping.quality:Processing failfcv
+2023-08-17 15:39:57,632:hembedder.prepping.quality:Processing failfcv
+2023-08-17 15:39:57,632:hembedder.prepping.quality:Processing failfcv
+2023-08-17 15:39:57,632:hembedder.prepping.quality:Processing failfcv
+2023-08-17 15:40:48,479:hembedder.prepping.quality:Processing failmchcr
+2023-08-17 15:40:48,479:hembedder.prepping.quality:Processing failmchcr
+2023-08-17 15:40:48,479:hembedder.prepping.quality:Processing failmchcr
+2023-08-17 15:40:48,479:hembedder.prepping.quality:Processing failmchcr
+2023-08-17 15:41:05,751:hembedder.prepping.quality:Processing failhdw
+2023-08-17 15:41:05,751:hembedder.prepping.quality:Processing failhdw
+2023-08-17 15:41:05,751:hembedder.prepping.quality:Processing failhdw
+2023-08-17 15:41:05,751:hembedder.prepping.quality:Processing failhdw
+2023-08-17 15:41:22,503:hembedder.prepping.quality:Processing failmchr
+2023-08-17 15:41:22,503:hembedder.prepping.quality:Processing failmchr
+2023-08-17 15:41:22,503:hembedder.prepping.quality:Processing failmchr
+2023-08-17 15:41:22,503:hembedder.prepping.quality:Processing failmchr
+2023-08-17 15:41:39,416:hembedder.prepping.quality:Processing failmcvr
+2023-08-17 15:41:39,416:hembedder.prepping.quality:Processing failmcvr
+2023-08-17 15:41:39,416:hembedder.prepping.quality:Processing failmcvr
+2023-08-17 15:41:39,416:hembedder.prepping.quality:Processing failmcvr
+2023-08-17 15:41:57,802:hembedder.prepping.quality:Processing failhpo
+2023-08-17 15:41:57,802:hembedder.prepping.quality:Processing failhpo
+2023-08-17 15:41:57,802:hembedder.prepping.quality:Processing failhpo
+2023-08-17 15:41:57,802:hembedder.prepping.quality:Processing failhpo
+2023-08-17 15:42:14,822:hembedder.prepping.quality:Processing failhpr
+2023-08-17 15:42:14,822:hembedder.prepping.quality:Processing failhpr
+2023-08-17 15:42:14,822:hembedder.prepping.quality:Processing failhpr
+2023-08-17 15:42:14,822:hembedder.prepping.quality:Processing failhpr
+2023-08-17 15:42:31,150:hembedder.prepping.quality:Processing failnacv
+2023-08-17 15:42:31,150:hembedder.prepping.quality:Processing failnacv
+2023-08-17 15:42:31,150:hembedder.prepping.quality:Processing failnacv
+2023-08-17 15:42:31,150:hembedder.prepping.quality:Processing failnacv
+2023-08-17 15:42:48,605:hembedder.prepping.quality:Processing failnicv
+2023-08-17 15:42:48,605:hembedder.prepping.quality:Processing failnicv
+2023-08-17 15:42:48,605:hembedder.prepping.quality:Processing failnicv
+2023-08-17 15:42:48,605:hembedder.prepping.quality:Processing failnicv
+2023-08-17 15:43:05,861:hembedder.prepping.quality:Processing failndcv
+2023-08-17 15:43:05,861:hembedder.prepping.quality:Processing failndcv
+2023-08-17 15:43:05,861:hembedder.prepping.quality:Processing failndcv
+2023-08-17 15:43:05,861:hembedder.prepping.quality:Processing failndcv
+2023-08-17 15:43:23,036:hembedder.prepping.quality:Processing failnfcv
+2023-08-17 15:43:23,036:hembedder.prepping.quality:Processing failnfcv
+2023-08-17 15:43:23,036:hembedder.prepping.quality:Processing failnfcv
+2023-08-17 15:43:23,036:hembedder.prepping.quality:Processing failnfcv
+2023-08-17 15:43:40,729:hembedder.prepping.quality:Processing failnpcv
+2023-08-17 15:43:40,729:hembedder.prepping.quality:Processing failnpcv
+2023-08-17 15:43:40,729:hembedder.prepping.quality:Processing failnpcv
+2023-08-17 15:43:40,729:hembedder.prepping.quality:Processing failnpcv
+2023-08-17 15:43:58,125:hembedder.prepping.quality:Processing faillicv
+2023-08-17 15:43:58,125:hembedder.prepping.quality:Processing faillicv
+2023-08-17 15:43:58,125:hembedder.prepping.quality:Processing faillicv
+2023-08-17 15:43:58,125:hembedder.prepping.quality:Processing faillicv
+2023-08-17 15:44:16,012:hembedder.prepping.quality:Processing faillacv
+2023-08-17 15:44:16,012:hembedder.prepping.quality:Processing faillacv
+2023-08-17 15:44:16,012:hembedder.prepping.quality:Processing faillacv
+2023-08-17 15:44:16,012:hembedder.prepping.quality:Processing faillacv
+2023-08-17 15:44:33,586:hembedder.prepping.quality:Completed filtering: fail
+2023-08-17 15:44:33,586:hembedder.prepping.quality:Completed filtering: fail
+2023-08-17 15:44:33,586:hembedder.prepping.quality:Completed filtering: fail
+2023-08-17 15:44:33,586:hembedder.prepping.quality:Completed filtering: fail

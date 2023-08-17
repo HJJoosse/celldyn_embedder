@@ -38,7 +38,7 @@ base_transformations = {
 
 
 default_combinations = [
-    (["mon", "mone", "plto"], ["lym", "lyme", "vlym"]),
+    (["mon", "mone", "plto", "rbci"], ["lym", "lyme", "vlym", "wbc"]),
     (["bas", "eos", "neu"], ["seg", "bnd", "mon", "vlym", "lym", "lyme", "nrbc"]),
     (["pmon", "pmone"], ["pvlym", "plym", "plyme"]),
     (
@@ -50,7 +50,9 @@ default_combinations = [
 lambda_fun = lambda x, y: (np.log10(x + 1) + 1) / (np.log(y + 1) + 1)
 lambda_col_fun = lambda col1, col2: f"COMBO_{col1}_over_{col2}"
 
-default_combo_functions = [(lambda_fun, lambda_col_fun)]
+default_combo_functions = [(lambda_fun, lambda_col_fun), 
+                           (lambda x,y: np.abs(x)-np.abs(y), 
+                            lambda c1,c2: f"ABS_COMBO_{c1}_minus_{c2}")]
 default_removal = [
     "COMBO_pneu_over_pseg",
     "COMBO_pbas_over_pseg",
@@ -173,7 +175,7 @@ class CellDynRecombinator(BaseEstimator, TransformerMixin):
                     self.errors.append(('transformations', f'problem with {col}'))       
 
         if len(self.removal) > 0:
-            _X.drop(self.removal, axis=1, inplace=True)
+            _X.drop(self.removal, axis=1, inplace=True, errors='ignore')
         if self.scaler is not None:
             _X.loc[:, self.combo_cols] = self.scaler(
                 **self.scaler_kwargs

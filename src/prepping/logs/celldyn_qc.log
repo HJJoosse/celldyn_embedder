@@ -1,0 +1,64 @@
+2023-08-17 15:14:31,892:__main__:ERROR: Columns ['plt'] not in meas_columns
+2023-08-17 15:14:58,422:__main__:Start filtering: leuko
+2023-08-17 15:14:58,424:__main__:nacv or namn not in data
+2023-08-17 15:14:58,425:__main__:nicv or nimn not in data
+2023-08-17 15:14:58,427:__main__:ndcv or ndmn not in data
+2023-08-17 15:14:58,428:__main__:nfcv or nfmn not in data
+2023-08-17 15:14:58,429:__main__:npcv or npmn not in data
+2023-08-17 15:14:58,432:__main__:licv or limn not in data
+2023-08-17 15:14:58,434:__main__:lacv or lamn not in data
+2023-08-17 15:14:58,435:__main__:Completed filtering: leuko
+2023-08-17 15:14:58,437:__main__:Start filtering: rbc
+2023-08-17 15:14:58,439:__main__:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:14:58,441:__main__:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:14:58,442:__main__:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:14:58,444:__main__:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:14:58,445:__main__:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:14:58,447:__main__:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:14:58,449:__main__:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:14:58,450:__main__:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:14:58,451:__main__:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:14:58,452:__main__:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:14:58,453:__main__:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:14:58,455:__main__:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:14:58,456:__main__:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:14:58,458:__main__:Completed filtering: rbc
+2023-08-17 15:14:58,459:__main__:Start filtering: ranges
+2023-08-17 15:17:19,481:__main__:Start filtering: suspect
+2023-08-17 15:17:19,485:__main__:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-08-17 15:17:19,486:__main__:Completed filtering: suspect
+2023-08-17 15:18:12,728:__main__:Start filtering: suspect
+2023-08-17 15:18:12,732:__main__:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-08-17 15:18:12,733:__main__:Completed filtering: suspect
+2023-08-17 15:25:07,867:__main__:Start filtering: leuko
+2023-08-17 15:25:07,869:__main__:nacv or namn not in data
+2023-08-17 15:25:07,870:__main__:nicv or nimn not in data
+2023-08-17 15:25:07,871:__main__:ndcv or ndmn not in data
+2023-08-17 15:25:07,872:__main__:nfcv or nfmn not in data
+2023-08-17 15:25:07,873:__main__:npcv or npmn not in data
+2023-08-17 15:25:07,874:__main__:licv or limn not in data
+2023-08-17 15:25:07,874:__main__:lacv or lamn not in data
+2023-08-17 15:25:07,875:__main__:Completed filtering: leuko
+2023-08-17 15:25:07,876:__main__:Start filtering: rbc
+2023-08-17 15:25:07,877:__main__:The c_mode_rtc variable was not present in CELLDYN
+2023-08-17 15:25:07,878:__main__:The c_b_retc variable was not present in CELLDYN
+2023-08-17 15:25:07,879:__main__:The c_b_pretc variable was not present in CELLDYN
+2023-08-17 15:25:07,880:__main__:The c_b_irf variable was not present in CELLDYN
+2023-08-17 15:25:07,881:__main__:The c_b_rbcicv variable was not present in CELLDYN
+2023-08-17 15:25:07,882:__main__:The c_b_rbcimn variable was not present in CELLDYN
+2023-08-17 15:25:07,883:__main__:The c_b_rbcfmn variable was not present in CELLDYN
+2023-08-17 15:25:07,884:__main__:The c_b_rbcfcv variable was not present in CELLDYN
+2023-08-17 15:25:07,885:__main__:The c_b_mchr variable was not present in CELLDYN
+2023-08-17 15:25:07,886:__main__:The c_b_mchcr variable was not present in CELLDYN
+2023-08-17 15:25:07,887:__main__:The c_b_mcvr variable was not present in CELLDYN
+2023-08-17 15:25:07,888:__main__:The c_b_phpo variable was not present in CELLDYN
+2023-08-17 15:25:07,889:__main__:The c_b_phpr variable was not present in CELLDYN
+2023-08-17 15:25:07,890:__main__:Completed filtering: rbc
+2023-08-17 15:25:07,891:__main__:Start filtering: ranges
+2023-08-17 15:25:08,709:__main__:single positional indexer is out-of-bounds
+2023-08-17 15:25:08,711:__main__:Completed filtering: ranges
+2023-08-17 15:25:08,713:__main__:Start filtering: suspect
+2023-08-17 15:25:08,716:__main__:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-08-17 15:25:08,717:__main__:Completed filtering: suspect
+2023-08-17 15:25:08,718:__main__:Start filtering: fail
+2023-08-17 15:25:08,720:__main__:Completed filtering: fail

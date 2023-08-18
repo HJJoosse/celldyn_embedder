@@ -373,8 +373,12 @@ class QcControl(BaseEstimator, TransformerMixin):
 
             try:
                 filters = self.filter_dict[meas_name]
-                min_val = float(filters["Min"])
-                max_val = float(filters["Max"])
+                try:
+                    min_val = float(filters["Min"])
+                    max_val = float(filters["Max"])
+                except ValueError:
+                    min_val = np.nan
+                    max_val = np.nan
 
                 if (np.isnan(min_val)):
                     min_val = -1e10

@@ -70,6 +70,7 @@ class CellDynRecombinator(BaseEstimator, TransformerMixin):
         scaler=None,
         scaler_kwargs: dict = {},
         base_combos: bool = True,
+        only_output_combos = False
     ):
         """
         Combines columns in X according to the specified combinations.
@@ -92,6 +93,7 @@ class CellDynRecombinator(BaseEstimator, TransformerMixin):
         self.base_combos = base_combos
         self.combo_cols = []
         self.errors = []
+        self.only_output_combos = only_output_combos
 
     def _combine(self, X: pd.DataFrame) -> pd.DataFrame:
         cols = X.columns.tolist()
@@ -181,7 +183,10 @@ class CellDynRecombinator(BaseEstimator, TransformerMixin):
                 **self.scaler_kwargs
             ).fit_transform(_X[self.combo_cols])
         self.out_columns = _X.columns.tolist()
-        return _X
+        if self.only_output_combos:
+            return _X[self.combo_cols]
+        else:
+            return _X
 
     def get_params(self, deep=True):
         return self.kwargs

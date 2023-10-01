@@ -1510,3 +1510,106 @@
 2023-08-17 18:55:05,400:hembedder.prepping.quality:Processing faillicv
 2023-08-17 18:55:21,739:hembedder.prepping.quality:Processing faillacv
 2023-08-17 18:55:37,976:hembedder.prepping.quality:Completed filtering: fail
+2023-09-18 10:31:39,010:hembedder.prepping.quality:Start filtering: leuko
+2023-09-18 10:31:39,140:hembedder.prepping.quality:Completed filtering: leuko
+2023-09-18 10:31:39,141:hembedder.prepping.quality:Start filtering: rbc
+2023-09-18 10:31:39,143:hembedder.prepping.quality:The c_mode_rtc variable was not present in CELLDYN
+2023-09-18 10:31:39,144:hembedder.prepping.quality:The c_b_retc variable was not present in CELLDYN
+2023-09-18 10:31:39,145:hembedder.prepping.quality:The c_b_pretc variable was not present in CELLDYN
+2023-09-18 10:31:39,147:hembedder.prepping.quality:The c_b_irf variable was not present in CELLDYN
+2023-09-18 10:31:39,148:hembedder.prepping.quality:The c_b_rbcicv variable was not present in CELLDYN
+2023-09-18 10:31:39,150:hembedder.prepping.quality:The c_b_rbcimn variable was not present in CELLDYN
+2023-09-18 10:31:39,151:hembedder.prepping.quality:The c_b_rbcfmn variable was not present in CELLDYN
+2023-09-18 10:31:39,152:hembedder.prepping.quality:The c_b_rbcfcv variable was not present in CELLDYN
+2023-09-18 10:31:39,174:hembedder.prepping.quality:The c_b_mchr variable was not present in CELLDYN
+2023-09-18 10:31:39,175:hembedder.prepping.quality:The c_b_mchcr variable was not present in CELLDYN
+2023-09-18 10:31:39,177:hembedder.prepping.quality:The c_b_mcvr variable was not present in CELLDYN
+2023-09-18 10:31:39,177:hembedder.prepping.quality:The c_b_phpo variable was not present in CELLDYN
+2023-09-18 10:31:39,178:hembedder.prepping.quality:The c_b_phpr variable was not present in CELLDYN
+2023-09-18 10:31:39,180:hembedder.prepping.quality:Completed filtering: rbc
+2023-09-18 10:31:39,181:hembedder.prepping.quality:Start filtering: ranges
+2023-09-18 10:31:41,034:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,036:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,038:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,146:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,149:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,151:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,153:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,155:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,156:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,158:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,163:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,166:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,168:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,170:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,171:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,172:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,174:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,175:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,180:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,183:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,240:hembedder.prepping.quality:single positional indexer is out-of-bounds
+2023-09-18 10:31:41,241:hembedder.prepping.quality:Completed filtering: ranges
+2023-09-18 10:31:41,242:hembedder.prepping.quality:Start filtering: suspect
+2023-09-18 10:38:14,926:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_hgb_usa'] not in index", for hgb_usa
+2023-09-18 10:38:51,906:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmic', for pmic
+2023-09-18 10:38:51,910:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pmac', for pmac
+2023-09-18 10:38:51,911:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mch_usa', for mch_usa
+2023-09-18 10:38:51,913:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_mchc_usa'] not in index", for mchc_usa
+2023-09-18 10:41:36,772:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpo', for phpo
+2023-09-18 10:41:36,774:hembedder.prepping.quality:Exception in suspect_flag_filter: 'phpr', for phpr
+2023-09-18 10:41:36,775:hembedder.prepping.quality:Exception in suspect_flag_filter: 'hdw', for hdw
+2023-09-18 10:41:36,776:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mcvr', for mcvr
+2023-09-18 10:41:36,778:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchr', for mchr
+2023-09-18 10:41:36,781:hembedder.prepping.quality:Exception in suspect_flag_filter: 'mchcr', for mchcr
+2023-09-18 10:41:36,782:hembedder.prepping.quality:Exception in suspect_flag_filter: 'prp', for prp
+2023-09-18 10:41:36,785:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_namn'] not in index", for namn
+2023-09-18 10:41:36,788:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_nacv'] not in index", for nacv
+2023-09-18 10:41:36,791:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_nimn'] not in index", for nimn
+2023-09-18 10:41:36,794:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_nicv'] not in index", for nicv
+2023-09-18 10:41:36,795:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_npmn'] not in index", for npmn
+2023-09-18 10:41:36,797:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_npcv'] not in index", for npcv
+2023-09-18 10:41:36,799:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_ndmn'] not in index", for ndmn
+2023-09-18 10:41:36,802:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_ndcv'] not in index", for ndcv
+2023-09-18 10:41:36,807:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_nfmn'] not in index", for nfmn
+2023-09-18 10:41:36,810:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_nfcv'] not in index", for nfcv
+2023-09-18 10:41:36,812:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lamn', for lamn
+2023-09-18 10:41:36,815:hembedder.prepping.quality:Exception in suspect_flag_filter: 'lacv', for lacv
+2023-09-18 10:41:36,816:hembedder.prepping.quality:Exception in suspect_flag_filter: 'limn', for limn
+2023-09-18 10:41:36,818:hembedder.prepping.quality:Exception in suspect_flag_filter: 'licv', for licv
+2023-09-18 10:41:36,821:hembedder.prepping.quality:Exception in suspect_flag_filter: 'pimn', for pimn
+2023-09-18 10:41:36,824:hembedder.prepping.quality:Exception in suspect_flag_filter: 'picv', for picv
+2023-09-18 10:41:36,825:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppmn', for ppmn
+2023-09-18 10:41:36,831:hembedder.prepping.quality:Exception in suspect_flag_filter: 'ppcv', for ppcv
+2023-09-18 10:41:36,834:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rbcimn'] not in index", for rbcimn
+2023-09-18 10:41:36,837:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rbcicv'] not in index", for rbcicv
+2023-09-18 10:41:36,840:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rbcfmn'] not in index", for rbcfmn
+2023-09-18 10:41:36,842:hembedder.prepping.quality:Exception in suspect_flag_filter: "['c_s_rbcfcv'] not in index", for rbcfcv
+2023-09-18 10:41:36,846:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfmn', for rtcfmn
+2023-09-18 10:41:36,849:hembedder.prepping.quality:Exception in suspect_flag_filter: 'rtcfcv', for rtcfcv
+2023-09-18 10:42:32,671:hembedder.prepping.quality:Exception in suspect_flag_filter: "None of [Index(['c_b_', 'c_s_'], dtype='object')] are in the [columns]", for 
+2023-09-18 10:42:32,673:hembedder.prepping.quality:Completed filtering: suspect
+2023-09-18 10:42:32,674:hembedder.prepping.quality:Start filtering: fail
+2023-09-18 10:42:32,675:hembedder.prepping.quality:Processing failmode
+2023-09-18 10:42:32,677:hembedder.prepping.quality:Exception: 'failmode', for failmode
+2023-09-18 10:42:32,678:hembedder.prepping.quality:Processing failreti
+2023-09-18 10:42:49,941:hembedder.prepping.quality:Processing failpreti
+2023-09-18 10:43:07,306:hembedder.prepping.quality:Processing failirf
+2023-09-18 10:43:24,653:hembedder.prepping.quality:Processing failimn
+2023-09-18 10:44:38,257:hembedder.prepping.quality:Processing failicv
+2023-09-18 10:45:34,232:hembedder.prepping.quality:Processing failfmn
+2023-09-18 10:46:26,323:hembedder.prepping.quality:Processing failfcv
+2023-09-18 10:47:16,516:hembedder.prepping.quality:Processing failmchcr
+2023-09-18 10:47:35,322:hembedder.prepping.quality:Processing failhdw
+2023-09-18 10:47:52,168:hembedder.prepping.quality:Processing failmchr
+2023-09-18 10:48:09,436:hembedder.prepping.quality:Processing failmcvr
+2023-09-18 10:48:26,950:hembedder.prepping.quality:Processing failhpo
+2023-09-18 10:48:43,149:hembedder.prepping.quality:Processing failhpr
+2023-09-18 10:48:59,770:hembedder.prepping.quality:Processing failnacv
+2023-09-18 10:49:20,256:hembedder.prepping.quality:Processing failnicv
+2023-09-18 10:49:40,035:hembedder.prepping.quality:Processing failndcv
+2023-09-18 10:50:01,243:hembedder.prepping.quality:Processing failnfcv
+2023-09-18 10:50:23,811:hembedder.prepping.quality:Processing failnpcv
+2023-09-18 10:50:42,530:hembedder.prepping.quality:Processing faillicv
+2023-09-18 10:51:03,271:hembedder.prepping.quality:Processing faillacv
+2023-09-18 10:51:22,732:hembedder.prepping.quality:Completed filtering: fail

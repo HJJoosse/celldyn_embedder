@@ -16,6 +16,15 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter("%(asctime)s:%(name)s:%(message)s")
 
+# c_b measurement
+# c_s suspect flag
+    # 1 good
+    # 2 invalid
+    # 3 NaN
+    # 4 out of range (low), no reportable data
+    # 5 out of range (high)
+# fail_ see mapping below
+
 
 fail_mapping = {
     "faillacv": ["c_b_nacv"],
